@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="ko" data-device="pc">
+
+<head>
+  <meta charset="utf-8" />
+  <title>타이틀</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <!-- 소개 -->
+  <meta name="description" content="title" />
+  <!-- 검색엔진 -->
+  <meta name="keywords" content="title" />
+  <!-- 제작자 -->
+  <meta name="author" content="title" />
+  <!-- 전화, 주소, 이메일 자동링크 없앨때 -->
+  <meta name="format-detection" content="telephone=no, address=no, email=no" />
+
+  <!-- Favicon -->
+  <!-- <link rel="shortcut icon" href="favicon/favicon.png" /> -->
+
+  <!-- Icon -->
+  <link rel="stylesheet" href="">
+
+  <!-- Custom :: CSS -->
+  <link rel="stylesheet" href="css/index.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Jquery -->
+  <script src="js/vendor/jquery.min.js"></script>
+  <!-- simplebar -->
+  <!-- <script src="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.js"></script> -->
+  <!-- HTLM5shiv ie6~8 -->
+  <!--[if lt IE 9]>
+      <script src="js/vendor/html5shiv.min.js"></script>
+      <script type="text/javascript">
+        alert(
+          "현재 당신이 보는 브라우저는 지원하지 않습니다. 최신 브라우저로 업데이트해주세요!"
+        );
+      </script>
+    <![endif]-->
+</head>
+
+<body>
+  <!-- 전체 영역 -->
+  <div id="wrap" data-page="main">
+    <!-- 헤더 영역 -->
+    <header id="header">
+      <div class="inner">
+        <h1 class="logo"><a href="index.html">UI/UX 가이드라인</a></h1>
+        <nav class="gnb">
+          <ul>
+            <li class="on"><a href="index.html">HOME</a></li>
+            <li><a href="sub_3depth.html">스타일가이드</a></li>
+            <li><a href="#">컴포넌트</a></li>
+          </ul>
+        </nav>
+        <button type="button" class="mob-menu"><span class="sr-only">전체메뉴</span></button>
+      </div>
+    </header>
+    <!-- //헤더 영역 -->
+    <!-- 컨테이너 영역 -->
+    <div id="container" class="container fl-row">
+      <!-- 왼쪽메뉴 영역 -->
+      <aside id="sideMenu" role="sidemenu">
+        <div class="side-menu-logo fl-row justify-center align-center">
+          <!-- Logo-->
+          <a href="index.html" class="logo">
+            <span class="logo-sm">
+              <img src="images/logo/logo-sm.png" alt="pc-logo" height="22">
+            </span>
+          </a>
+        </div>
+        <div id="simpleBar" class="dropdown-wrap">
+          <ul class="accordion dropdown-ul">
+            <li class="accordion-item">
+              <a href="#" class="accordion-header fl-row justify-between align-center">
+                <div class="left-tit fl-row justify-between align-center gap-10">
+                  <div class="icon img-box">
+                    <img src="images/svg/menu_1.svg" alt="home">
+                  </div>
+                  <span>Base UI</span>
+                </div>
+                <i class="fa-solid fa-angle-right"></i>
+              </a>
+              <div class="accordion-content">
+                <ul class="sub-accordion dropdown-ul">
+                  <li class="sub-accordion-item">
+                    <a href="#" class="sub-accordion-header fl-row justify-between">
+                      <span>Color</span>
+                      <span><i class="fa-solid fa-angle-right"></i></span>
+                    </a>
+                    <div class="sub-accordion-content">
+                      <ul class="last-accordion dropdown-ul">
+                        <li class="last-accordion-item"><a href="#" class="last-accordion-header">one</a></li>
+                        <li class="last-accordion-item"><a href="#" class="last-accordion-header">two</a></li>
+                        <li class="last-accordion-item"><a href="#" class="last-accordion-header">three</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="sub-accordion-item">
+                    <a href="#" class="sub-accordion-header fl-row justify-between">
+                      <span>Layout</span>
+                      <span><i class="fa-solid fa-angle-right"></i></span>
+                    </a>
+                    <div class="sub-accordion-content">
+                      <ul class="last-accordion dropdown-ul">
+                        <li class="last-accordion-item"><a href="#" class="last-accordion-header">one</a></li>
+                        <li class="last-accordion-item"><a href="#" class="last-accordion-header">two</a></li>
+                        <li class="last-accordion-item"><a href="#" class="last-accordion-header">three</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="accordion-item">
+              <a href="#" class="accordion-header fl-row justify-between align-center">
+                <div class="left-tit fl-row fl-justify-between fl-align-center gap-10">
+                  <div class="icon img-box">
+                    <img src="images/svg/menu_2.svg" alt="home">
+                  </div>
+                  <span>Pages</span>
+                </div>
+                <i class="fa-solid fa-angle-right"></i>
+              </a>
+              <div class="accordion-content">
+                <ul class="sub-accordion dropdown-ul">
+                  <li class="sub-accordion-item">
+                    <a href="#" class="sub-accordion-header fl-row justify-between">
+                      <span>Gallery</span>
+                      <span><i class="fa-solid fa-angle-right"></i></span>
+                    </a>
+                    <div class="sub-accordion-content">
+                      <ul class="last-accordion dropdown-ul">
+                        <li class="last-accordion-item"><a href="#" class="last-accordion-header">one</a></li>
+                        <li class="last-accordion-item"><a href="#" class="last-accordion-header">two</a></li>
+                        <li class="last-accordion-item"><a href="#" class="last-accordion-header">three</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="sub-accordion-item">
+                    <a href="#" class="sub-accordion-header fl-row justify-between">
+                      <span>Landing</span>
+                      <span><i class="fa-solid fa-angle-right"></i></span>
+                    </a>
+                    <div class="sub-accordion-content">
+                      <ul class="last-accordion dropdown-ul">
+                        <li class="last-accordion-item"><a href="#" class="last-accordion-header">one</a></li>
+                        <li class="last-accordion-item"><a href="#" class="last-accordion-header">two</a></li>
+                        <li class="last-accordion-item"><a href="#" class="last-accordion-header">three</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="accordion-item">
+              <a href="#" class="accordion-header fl-row justify-between align-center">
+                <div class="left-tit fl-row fl-justify-between fl-align-center gap-10">
+                  <div class="icon img-box">
+                    <img src="images/svg/menu_1.svg" alt="home">
+                  </div>
+                  <span>Tables</span>
+                </div>
+                <i class="fa-solid fa-angle-right"></i>
+              </a>
+              <div class="accordion-content">
+                <ul class="sub-accordion dropdown-ul">
+                  <li class="sub-accordion-item">
+                    <a href="#" class="sub-accordion-header fl-row justify-between">
+                      <span>Chart</span>
+                      <span><i class="fa-solid fa-angle-right"></i></span>
+                    </a>
+                    <div class="sub-accordion-content">
+                      <ul class="last-accordion dropdown-ul">
+                        <li class="last-accordion-item"><a href="#" class="last-accordion-header">one</a></li>
+                        <li class="last-accordion-item"><a href="#" class="last-accordion-header">two</a></li>
+                        <li class="last-accordion-item"><a href="#" class="last-accordion-header">three</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="sub-accordion-item">
+                    <a href="#" class="sub-accordion-header fl-row justify-between">
+                      <span>Maps</span>
+                      <span><i class="fa-solid fa-angle-right"></i></span>
+                    </a>
+                    <div class="sub-accordion-content">
+                      <ul class="last-accordion dropdown-ul">
+                        <li class="last-accordion-item"><a href="#" class="last-accordion-header">one</a></li>
+                        <li class="last-accordion-item"><a href="#" class="last-accordion-header">two</a></li>
+                        <li class="last-accordion-item"><a href="#" class="last-accordion-header">three</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+      </aside>
+      <!-- //왼쪽메뉴 영역 -->
+      <!-- 컨텐츠 영역 -->
+      <section id="contents" class="contents">
+        <!-- 배너 -->
+        <article class="visual-area">
+          <div class="inner">
+            <h2 class="tit">
+              Web 프로젝트 <br>
+              UI/UX 가이드라인
+            </h2>
+            <p class="desc">
+              누구나 쉽고 편리하게 이용할 수 있도록 <br>
+              사용자 중심의 공공 웹·앱을 구축, 운영 및 관리 하도록 지원합니다
+            </p>
+          </div>
+        </article>
+        <!-- //배너 -->
+        <!-- 검색 -->
+        <article class="search-area" id="keyword_sch_area">
+          <div class="inner">
+
+            <h3 class="area-tit">스타일가이드 (<span id="styLength"></span>)</h3>
+            <!-- keyword list -->
+            <ul class="search-list sty-guide">
+              <li class="li">
+                <a href="./images/test.pdf" target="_blank">
+                  <div class="img-wrap sty_guide_1"></div>
+                  <div class="conts-wrap">
+                    <div class="badge-wrap">
+                      <span class="krds-badge keyword">스타일가이드</span>
+                    </div>
+                    <h4 class="tit keyword">색상 <span class="sub">(Color)</span></h4>
+                    <p class="desc keyword">색상은 정보 전달과 브랜드 정체성 구축하는 요소이다.</p>
+                  </div>
+                </a>
+              </li>
+              <li class="li">
+                <a href="./images/test.pdf" target="_blank">
+                  <div class="img-wrap sty_guide_2"></div>
+                  <div class="conts-wrap">
+                    <div class="badge-wrap">
+                      <span class="krds-badge keyword">스타일가이드</span>
+                    </div>
+                    <h4 class="tit keyword">서체 <span class="sub">(Typography)</span></h4>
+                    <p class="desc keyword">서체는 정보를 전달하고 일관된 경험을 제공하는 중요한 요소다. </p>
+                  </div>
+                </a>
+              </li>
+
+              <li class="li">
+                <a href="./images/test.pdf" target="_blank">
+                  <div class="img-wrap sty_guide_3"></div>
+                  <div class="conts-wrap">
+                    <div class="badge-wrap">
+                      <span class="krds-badge keyword">스타일가이드</span>
+                    </div>
+                    <h4 class="tit keyword">형태 <span class="sub">(Shape)</span></h4>
+                    <p class="desc keyword">컴포넌트들의 형태를 radius로 정의할 수 있으며 각 기관의 아이텐티티를 표현할 수 있다.</p>
+                  </div>
+                </a>
+              </li>
+
+              <li class="li">
+                <a href="./images/test.pdf" target="_blank">
+                  <div class="img-wrap sty_guide_4"></div>
+                  <div class="conts-wrap">
+                    <div class="badge-wrap">
+                      <span class="krds-badge keyword">스타일가이드</span>
+                    </div>
+                    <h4 class="tit keyword">배치 <span class="sub">(Layout)</span></h4>
+                    <p class="desc keyword">배치는 화면에 있는 요소들의 시각적 배열을 다양한 디바이스에서도 일관성을 유지할 수 있도록 도와준다.</p>
+                  </div>
+                </a>
+              </li>
+
+              <li class="li">
+                <a href="./images/test.pdf" target="_blank">
+                  <div class="img-wrap sty_guide_5"></div>
+                  <div class="conts-wrap">
+                    <div class="badge-wrap">
+                      <span class="krds-badge keyword">스타일가이드</span>
+                    </div>
+                    <h4 class="tit keyword">아이콘 <span class="sub">(System icon)</span></h4>
+                    <p class="desc keyword">시스템 아이콘은 간단한 동작, 기능을 나타내거나 사물의 상징을 기호로 만든 시각 언어로 한정된 공간에서 효율적으로 정보를 전달하는 역할을
+                      한다.</p>
+                  </div>
+                </a>
+              </li>
+            </ul>
+            <!-- //keyword list -->
+            <h3 class="area-tit" style="margin-top: var(--krds-spacer-6);">가이드 검색</h3>
+            <!-- 검색 입력폼 -->
+            <fieldset>
+              <legend>가이드 관련 키워드 검색</legend>
+              <div class="search-top-box">
+                <div class="sch-form-wrap">
+                  <div class="sch-input">
+                    <input type="text" id="keyword_search" class="form-control" placeholder="키워드 입력" title="키워드 입력">
+                    <button type="button" class="btn btn-ico ico-sch btn-exec">
+                      <span class="sr-only">검색</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </fieldset>
+            <!-- //검색 입력폼 -->
+
+            <h3 class="area-tit">컴포넌트 (<span id="comLength"></span>)</h3>
+            <!-- keyword list -->
+            <ul class="search-list compo-guide">
+              <li class="li">
+                <a href="#" target="_blank">
+                  <div class="img-wrap com_guide_1"></div>
+                  <div class="conts-wrap">
+                    <div class="badge-wrap">
+                      <span class="krds-badge keyword">컴포넌트</span>
+                    </div>
+                    <h4 class="tit keyword">헤더 <span class="sub">(Header)</span></h4>
+                    <p class="desc keyword">헤더는 사용자가 웹사이트에 접속하자마자 마주하게 되는 화면의 최상단 영역으로 디지털 정부 서비스의 브랜드 이미지를 전달하는 핵심
+                      영역이다.</p>
+                  </div>
+                </a>
+              </li>
+              <li class="li">
+                <a href="#" target="_blank">
+                  <div class="img-wrap com_guide_2"></div>
+                  <div class="conts-wrap">
+                    <div class="badge-wrap">
+                      <span class="krds-badge keyword">컴포넌트</span>
+                    </div>
+                    <h4 class="tit keyword">푸터 <span class="sub">(Footer)</span></h4>
+                    <p class="desc keyword">푸터는 화면을 구성하는 가장 마지막 요소로 헤더와 본문에서 원하는 정보를 찾지 못하였거나 사이트 구조 탐색 중에 길을 잃은 사용자들이
+                      대면하게 되는 정보이다.</p>
+                  </div>
+                </a>
+              </li>
+              <li class="li">
+                <a href="https://grizzly-taxi-9c5.notion.site/Skip-link-a4a0bd6e7312455bb3e377b48c1c3f8b?pvs=4"
+                  target="_blank">
+                  <div class="img-wrap com_guide_3"></div>
+                  <div class="conts-wrap">
+                    <div class="badge-wrap">
+                      <span class="krds-badge keyword">컴포넌트</span>
+                    </div>
+                    <h4 class="tit keyword">건너뛰기링크 <span class="sub">(Skip link)</span></h4>
+                    <p class="desc keyword">건너뛰기 링크는 웹사이트에서 웹 페이지의 주요 콘텐츠 섹션의 탐색을 도와주는 페이지 내부 링크이다. </p>
+                  </div>
+                </a>
+              </li>
+              <li class="li">
+                <a href="#" target="_blank">
+                  <div class="img-wrap com_guide_4"></div>
+                  <div class="conts-wrap">
+                    <div class="badge-wrap">
+                      <span class="krds-badge keyword">컴포넌트</span>
+                    </div>
+                    <h4 class="tit keyword">브레드크럼 <span class="sub">(Breadcrumb)</span></h4>
+                    <p class="desc keyword">브레드크럼은 탐색 계층 구조를 표시하여 사용자가 현재 위치를 파악하고 계층 구조의 수준을 이동할 수 있게 해준다.</p>
+                  </div>
+                </a>
+              </li>
+              <li class="li">
+                <a href="#" target="_blank">
+                  <div class="img-wrap com_guide_5"></div>
+                  <div class="conts-wrap">
+                    <div class="badge-wrap">
+                      <span class="krds-badge keyword">컴포넌트</span>
+                    </div>
+                    <h4 class="tit keyword">사이드메뉴 <span class="sub">(Side navigation)</span></h4>
+                    <p class="desc keyword">사이드 메뉴는 서브 화면 내에서의 이동을 위해 사용하는 메뉴이다.</p>
+                  </div>
+                </a>
+              </li>
+              <li class="li">
+                <a href="#" target="_blank">
+                  <div class="img-wrap com_guide_6"></div>
+                  <div class="conts-wrap">
+                    <div class="badge-wrap">
+                      <span class="krds-badge keyword">컴포넌트</span>
+                    </div>
+                    <h4 class="tit keyword">콘텐츠 내 탐색 <span class="sub">(In-page navigation)</span></h4>
+                    <p class="desc keyword">콘텐츠 내 탐색은 사용자가 본문의 구조를 훑어보고 원하는 콘텐츠로 빠르게 이동할 수 있도록 하는 탐색 수단이다.</p>
+                  </div>
+                </a>
+              </li>
+              <li class="li">
+                <a href="https://grizzly-taxi-9c5.notion.site/Pagination-f2d4060beef64c8fa92d5fbfafc5a123?pvs=4"
+                  target="_blank">
+                  <div class="img-wrap com_guide_7"></div>
+                  <div class="conts-wrap">
+                    <div class="badge-wrap">
+                      <span class="krds-badge keyword">컴포넌트</span>
+                    </div>
+                    <h4 class="tit keyword">페이지네이션 <span class="sub">(Pagination)</span></h4>
+                    <p class="desc keyword">페이지네이션은 많은 양의 콘텐츠를 탐색하기 쉽도록 여러 화면에 나누고, 분할된 화면을 탐색하는 데 사용되는 요소이다.</p>
+                  </div>
+                </a>
+              </li>
+              <li class="li">
+                <a href="#" target="_blank">
+                  <div class="img-wrap com_guide_8"></div>
+                  <div class="conts-wrap">
+                    <div class="badge-wrap">
+                      <span class="krds-badge keyword">컴포넌트</span>
+                    </div>
+                    <h4 class="tit keyword">달력 <span class="sub">(Calendar)</span></h4>
+                    <p class="desc keyword">달력은 날짜와 관련된 정보와 기능을 제공하는 데 사용한다.</p>
+                  </div>
+                </a>
+              </li>
+              <li class="li">
+                <a href="#" target="_blank">
+                  <div class="img-wrap com_guide_9"></div>
+                  <div class="conts-wrap">
+                    <div class="badge-wrap">
+                      <span class="krds-badge keyword">컴포넌트</span>
+                    </div>
+                    <h4 class="tit keyword">디스클로저 <span class="sub">(Disclosure)</span></h4>
+                    <p class="desc keyword">디스클로저는 특정한 정보/컨트롤/섹션에 관련된 부가적인 정보를 표시하거나 숨기는 데 사용되는 요소이다.</p>
+                  </div>
+                </a>
+              </li>
+              <li class="li">
+                <a href="#" target="_blank">
+                  <div class="img-wrap com_guide_10"></div>
+                  <div class="conts-wrap">
+                    <div class="badge-wrap">
+                      <span class="krds-badge keyword">컴포넌트</span>
+                    </div>
+                    <h4 class="tit keyword">모달 <span class="sub">(Modal)</span></h4>
+                    <p class="desc keyword">모달은 대화창의 한 종류로 기본 창에 종속된 요소이다.</p>
+                  </div>
+                </a>
+              </li>
+              <li class="li">
+                <a href="#" target="_blank">
+                  <div class="img-wrap com_guide_11"></div>
+                  <div class="conts-wrap">
+                    <div class="badge-wrap">
+                      <span class="krds-badge keyword">컴포넌트</span>
+                    </div>
+                    <h4 class="tit keyword">배지 <span class="sub">(Badge)</span></h4>
+                    <p class="desc keyword">컴포넌트에 대한 빠른 인지와 탐색을 돕기 위해 컴포넌트 근처에 표시되는 작은 문자 또는 숫자 데이터이다.</p>
+                  </div>
+                </a>
+              </li>
+              <li class="li">
+                <a href="#" target="_blank">
+                  <div class="img-wrap com_guide_12"></div>
+                  <div class="conts-wrap">
+                    <div class="badge-wrap">
+                      <span class="krds-badge keyword">컴포넌트</span>
+                    </div>
+                    <h4 class="tit keyword">아코디언 <span class="sub">(Accordion)</span></h4>
+                    <p class="desc keyword">아코디언은 한 페이지에서 관련 있는 여러 콘텐츠 섹션을 확인할 수 있도록 하는 컴포넌트로 콘텐츠 섹션의 헤더 목록이 수직으로 쌓여 있는
+                      형태로 표현된다.</p>
+                  </div>
+                </a>
+              </li>
+              <li class="li">
+                <a href="#" target="_blank">
+                  <div class="img-wrap com_guide_13"></div>
+                  <div class="conts-wrap">
+                    <div class="badge-wrap">
+                      <span class="krds-badge keyword">컴포넌트</span>
+                    </div>
+                    <h4 class="tit keyword">캐러셀 <span class="sub">(Carousel)</span></h4>
+                    <p class="desc keyword">캐러셀은 하나의 콘텐츠 영역 내에 여러 개의 서로 다른 콘텐츠를 표시할 수 있는 컴포넌트이다.</p>
+                  </div>
+                </a>
+              </li>
+              <li class="li">
+                <a href="#" target="_blank">
+                  <div class="img-wrap com_guide_14"></div>
+                  <div class="conts-wrap">
+                    <div class="badge-wrap">
+                      <span class="krds-badge keyword">컴포넌트</span>
+                    </div>
+                    <h4 class="tit keyword">탭 <span class="sub">(Tab)</span></h4>
+                    <p class="desc keyword">탭은 버튼을 눌러 상호배타적인 여러 개의 콘텐츠 섹션을 전환할 수 있는 컴포넌트이다.</p>
+                  </div>
+                </a>
+              </li>
+              <li class="li">
+                <a href="#" target="_blank">
+                  <div class="img-wrap com_guide_15"></div>
+                  <div class="conts-wrap">
+                    <div class="badge-wrap">
+                      <span class="krds-badge keyword">컴포넌트</span>
+                    </div>
+                    <h4 class="tit keyword">표 <span class="sub">(Table)</span></h4>
+                    <p class="desc keyword">표는 데이터를 하나 이상의 행과 열로 조직화하여 표현하는 형식으로 사용자가 빠르게 많은 양의 정보를 확인하고 비교할 수 있도록 도와준다.
+                    </p>
+                  </div>
+                </a>
+              </li>
+              <li class="li">
+                <a href="#" target="_blank">
+                  <div class="img-wrap com_guide_16"></div>
+                  <div class="conts-wrap">
+                    <div class="badge-wrap">
+                      <span class="krds-badge keyword">컴포넌트</span>
+                    </div>
+                    <h4 class="tit keyword">링크 <span class="sub">(Link)</span></h4>
+                    <p class="desc keyword">링크는 다른 서비스/애플리케이션, 한 서비스 내의 다른 화면, 한 화면 내의 다른 섹션 등으로 이동하는 데 사용되는 탐색 요소이다.
+                    </p>
+                  </div>
+                </a>
+              </li>
+              <li class="li">
+                <a href="#" target="_blank">
+                  <div class="img-wrap com_guide_17"></div>
+                  <div class="conts-wrap">
+                    <div class="badge-wrap">
+                      <span class="krds-badge keyword">컴포넌트</span>
+                    </div>
+                    <h4 class="tit keyword">버튼 <span class="sub">(Button)</span></h4>
+                    <p class="desc keyword">버튼은 어떤 기능이나 동작을 실행하거나 기능을 사용하기 위한 상태로 변경하는 요소이다.</p>
+                  </div>
+                </a>
+              </li>
+              <li class="li">
+                <a href="#" target="_blank">
+                  <div class="img-wrap com_guide_18"></div>
+                  <div class="conts-wrap">
+                    <div class="badge-wrap">
+                      <span class="krds-badge keyword">컴포넌트</span>
+                    </div>
+                    <h4 class="tit keyword">라디오 버튼 <span class="sub">(Radio button)</span></h4>
+                    <p class="desc keyword">라디오 버튼은 사용자가 여러 개의 옵션 중 한 개의 값을 선택할 수 있도록 하는 경우에 사용한다.</p>
+                  </div>
+                </a>
+              </li>
+              <li class="li">
+                <a href="#" target="_blank">
+                  <div class="img-wrap com_guide_19"></div>
+                  <div class="conts-wrap">
+                    <div class="badge-wrap">
+                      <span class="krds-badge keyword">컴포넌트</span>
+                    </div>
+                    <h4 class="tit keyword">체크박스 <span class="sub">(Checkbox)</span></h4>
+                    <p class="desc keyword">체크박스는 사용자가 여러 개의 옵션 중 한 개 이상의 값을 선택할 수 있도록 하는 경우에 사용한다.</p>
+                  </div>
+                </a>
+              </li>
+              <li class="li">
+                <a href="#" target="_blank">
+                  <div class="img-wrap com_guide_20"></div>
+                  <div class="conts-wrap">
+                    <div class="badge-wrap">
+                      <span class="krds-badge keyword">컴포넌트</span>
+                    </div>
+                    <h4 class="tit keyword">셀렉트박스 <span class="sub">(SelectBox)</span></h4>
+                    <p class="desc keyword">셀렉트는 사용자에게 여러 개의 옵션 목록을 팝업으로 제공하여 그 중 한 개의 값을 선택할 수 있도록 하는 경우에 사용한다.</p>
+                  </div>
+                </a>
+              </li>
+              <li class="li">
+                <a href="#" target="_blank">
+                  <div class="img-wrap com_guide_21"></div>
+                  <div class="conts-wrap">
+                    <div class="badge-wrap">
+                      <span class="krds-badge keyword">컴포넌트</span>
+                    </div>
+                    <h4 class="tit keyword">태그 <span class="sub">(Tag)</span></h4>
+                    <p class="desc keyword">태그는 키워드 또는 레이블을 사용하여 콘텐츠를 분류하는 수단이다.</p>
+                  </div>
+                </a>
+              </li>
+              <li class="li">
+                <a href="#" target="_blank">
+                  <div class="img-wrap com_guide_22"></div>
+                  <div class="conts-wrap">
+                    <div class="badge-wrap">
+                      <span class="krds-badge keyword">컴포넌트</span>
+                    </div>
+                    <h4 class="tit keyword">단계 표시기 <span class="sub">(Step indicator)</span></h4>
+                    <p class="desc keyword">단계 표시기는 서비스 이용을 위해 사용자가 거쳐야 하는 일련의 단계를 시각화하여 표현한 것으로 진행 상태에 대한 피드백을 사용자에게
+                      전달한다.</p>
+                  </div>
+                </a>
+              </li>
+              <li class="li">
+                <a href="#" target="_blank">
+                  <div class="img-wrap com_guide_23"></div>
+                  <div class="conts-wrap">
+                    <div class="badge-wrap">
+                      <span class="krds-badge keyword">컴포넌트</span>
+                    </div>
+                    <h4 class="tit keyword">스피너(로딩) <span class="sub">(Spinner)</span></h4>
+                    <p class="desc keyword">스피너는 페이지나 요소의 다양한 처리 상태를 시각적으로 표시한 것으로 화면 전체나 일부 요소에 접근하기 위해 일정 시간 동안 대기해야
+                      함을 사용자에게 안내한다.</p>
+                  </div>
+                </a>
+              </li>
+              <li class="li">
+                <a href="#" target="_blank">
+                  <div class="img-wrap com_guide_24"></div>
+                  <div class="conts-wrap">
+                    <div class="badge-wrap">
+                      <span class="krds-badge keyword">컴포넌트</span>
+                    </div>
+                    <h4 class="tit keyword">툴팁 <span class="sub">(Tooltip)</span></h4>
+                    <p class="desc keyword">컴포넌트 주변에 배치되어 해당 컴포넌트의 상태나 관련된 상세 정보를 제공하는 컴포넌트이다.</p>
+                  </div>
+                </a>
+              </li>
+              <li class="li">
+                <a href="#" target="_blank">
+                  <div class="img-wrap com_guide_25"></div>
+                  <div class="conts-wrap">
+                    <div class="badge-wrap">
+                      <span class="krds-badge keyword">컴포넌트</span>
+                    </div>
+                    <h4 class="tit keyword">코치마크 <span class="sub">(Coach mark)</span></h4>
+                    <p class="desc keyword">여러 단계를 거쳐 수행해야 하는 복잡한 과업을 사용자가 보다 쉽게 완료할 수 있도록 세부 수행 단계별로 고맥락적 도움말을 제공하는
+                      컴포넌트이다.</p>
+                  </div>
+                </a>
+              </li>
+              <li class="li">
+                <a href="#" target="_blank">
+                  <div class="img-wrap com_guide_26"></div>
+                  <div class="conts-wrap">
+                    <div class="badge-wrap">
+                      <span class="krds-badge keyword">컴포넌트</span>
+                    </div>
+                    <h4 class="tit keyword">날짜 입력 피드 <span class="sub">(Date input)</span></h4>
+                    <p class="desc keyword">날짜 입력 필드는 사용자가 특정 날짜 또는 기간을 입력하거나 선택하는 데 사용되는 요소이다.</p>
+                  </div>
+                </a>
+              </li>
+              <li class="li">
+                <a href="#" target="_blank">
+                  <div class="img-wrap com_guide_27"></div>
+                  <div class="conts-wrap">
+                    <div class="badge-wrap">
+                      <span class="krds-badge keyword">컴포넌트</span>
+                    </div>
+                    <h4 class="tit keyword">텍스트 입력 필드 <span class="sub">(Text input)</span></h4>
+                    <p class="desc keyword">텍스트 입력 필드는 사용자가 키보드로 글자, 숫자, 기호 등이 조합된 한 줄의 짧은 텍스트를 입력하는 경우에 사용하는 요소이다.</p>
+                  </div>
+                </a>
+              </li>
+              <li class="li">
+                <a href="#" target="_blank">
+                  <div class="img-wrap com_guide_28"></div>
+                  <div class="conts-wrap">
+                    <div class="badge-wrap">
+                      <span class="krds-badge keyword">컴포넌트</span>
+                    </div>
+                    <h4 class="tit keyword">텍스트 영역 <span class="sub">(Textarea)</span></h4>
+                    <p class="desc keyword">텍스트 영역은 사용자가 키보드로 글자, 숫자, 기호 등이 조합된 여러 줄의 텍스트를 입력하는 경우에 사용하는 요소이다.</p>
+                  </div>
+                </a>
+              </li>
+              <li class="li">
+                <a href="#" target="_blank">
+                  <div class="img-wrap com_guide_29"></div>
+                  <div class="conts-wrap">
+                    <div class="badge-wrap">
+                      <span class="krds-badge keyword">컴포넌트</span>
+                    </div>
+                    <h4 class="tit keyword">파일 업로드 <span class="sub">(File upload)</span></h4>
+                    <p class="desc keyword">파일 업로드는 하나 이상의 디바이스의 로컬 파일을 선택하고 첨부하는 데 사용하는 입력 컴포넌트이다.</p>
+                  </div>
+                </a>
+              </li>
+              <li class="li">
+                <a href="#" target="_blank">
+                  <div class="img-wrap com_guide_30"></div>
+                  <div class="conts-wrap">
+                    <div class="badge-wrap">
+                      <span class="krds-badge keyword">컴포넌트</span>
+                    </div>
+                    <h4 class="tit keyword">개인 식별 정보 입력 <span class="sub"></span></h4>
+                    <p class="desc keyword">개인 식별 정보는 사용자 본인을 포함하여 특정한 개인의 신원을 밝히거나 개인/단체에 대한 기본 정보 확인에 사용되는 모든 정보를
+                      의미한다.</p>
+                  </div>
+                </a>
+              </li>
+              <li class="li">
+                <a href="#" target="_blank">
+                  <div class="img-wrap com_guide_31"></div>
+                  <div class="conts-wrap">
+                    <div class="badge-wrap">
+                      <span class="krds-badge keyword">컴포넌트</span>
+                    </div>
+                    <h4 class="tit keyword">검색 <span class="sub">(Search)</span></h4>
+                    <p class="desc keyword">검색은 사용자가 큰 데이터 집합에서 원하는 정보를 찾을 수 있도록 도와주는 기능이다.</p>
+                  </div>
+                </a>
+              </li>
+              <li class="li">
+                <a href="#" target="_blank">
+                  <div class="img-wrap com_guide_32"></div>
+                  <div class="conts-wrap">
+                    <div class="badge-wrap">
+                      <span class="krds-badge keyword">컴포넌트</span>
+                    </div>
+                    <h4 class="tit keyword">오류 <span class="sub">(Error)</span></h4>
+                    <p class="desc keyword">오류는 사용자가 요청한 작업을 시스템이 완료하지 못하는 문제가 발생했을 때 제공된다.</p>
+                  </div>
+                </a>
+              </li>
+              <li class="li">
+                <a href="#" target="_blank">
+                  <div class="img-wrap com_guide_33"></div>
+                  <div class="conts-wrap">
+                    <div class="badge-wrap">
+                      <span class="krds-badge keyword">컴포넌트</span>
+                    </div>
+                    <h4 class="tit keyword">로그인 폼 <span class="sub">(Login Form)</span></h4>
+                    <p class="desc keyword">로그인은 사용자의 신원을 확인하는 과정으로 사용자가 서비스에 접근할 수 있도록 하는 수단이다.</p>
+                  </div>
+                </a>
+              </li>
+              <li class="li">
+                <a href="#" target="_blank">
+                  <div class="img-wrap com_guide_34"></div>
+                  <div class="conts-wrap">
+                    <div class="badge-wrap">
+                      <span class="krds-badge keyword">컴포넌트</span>
+                    </div>
+                    <h4 class="tit keyword">필터링 정렬폼 <span class="sub">(Filtering & Sorting)</span></h4>
+                    <p class="desc keyword">필터링·정렬은 데이터 집합에서 사용자가 원하는 속성과 범주에 속하는 데이터 항목을 선별적으로 표시하거나 특정 속성/범주를 기준으로
+                      조직화하는 방법이다.</p>
+                  </div>
+                </a>
+              </li>
+            </ul>
+            <!-- //keyword list -->
+
+
+            <!-- no data -->
+            <div class="no-data hide">검색결과가 없습니다.</div>
+            <!-- //no data -->
+          </div>
+        </article>
+        <!-- //검색 -->
+      </section>
+      <!-- //컨텐츠 영역 -->
+    </div>
+    <!-- //컨테이너 영역 -->
+    <!-- 푸터 영역 -->
+    <footer id="footer" class="includeJsGuide" data-include-file="layout/guide_footer.html">
+      <div class="inner">
+        <div class="logo">박지연</div>
+        <div class="main-footer-wrap">
+          <ul class="info-cs">
+            <li><strong class="strong">전화번호 </strong><span><a href="tel:010-4546-3388">010-4546-3388</a></span></li>
+            <li>
+              <strong class="strong">이메일 </strong>
+              <span>
+                <a href="mailto:jypark@agics.co.kr">jypark@agics.co.kr</a>
+              </span>
+            </li>
+          </ul>
+          <span class="copyright">Copyright 2022. AGICS Inc. all rights reserved.</span>
+        </div>
+      </div>
+    </footer>
+    <!-- //푸터 영역 -->
+  </div>
+  <!-- //전체 영역 -->
+
+  <script src="js/common.js"></script>
+</body>
+
+</html>
