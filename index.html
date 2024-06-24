@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8" />
-  <title>타이틀</title>
+  <title>UIUX가이드라인 by박지연</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
   <!-- 소개 -->
@@ -28,6 +28,7 @@
 
   <!-- Jquery -->
   <script src="js/vendor/jquery.min.js"></script>
+
   <!-- simplebar -->
   <!-- <script src="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.js"></script> -->
   <!-- HTLM5shiv ie6~8 -->
@@ -51,8 +52,8 @@
         <nav class="gnb">
           <ul>
             <li class="on"><a href="index.html">HOME</a></li>
-            <li><a href="sub_3depth.html">스타일가이드</a></li>
-            <li><a href="#">컴포넌트</a></li>
+            <li><a href="#section1">스타일가이드</a></li>
+            <li><a href="#section2">컴포넌트</a></li>
           </ul>
         </nav>
         <button type="button" class="mob-menu"><span class="sr-only">전체메뉴</span></button>
@@ -63,14 +64,6 @@
     <div id="container" class="container fl-row">
       <!-- 왼쪽메뉴 영역 -->
       <aside id="sideMenu" role="sidemenu">
-        <div class="side-menu-logo fl-row justify-center align-center">
-          <!-- Logo-->
-          <a href="index.html" class="logo">
-            <span class="logo-sm">
-              <img src="images/logo/logo-sm.png" alt="pc-logo" height="22">
-            </span>
-          </a>
-        </div>
         <div id="simpleBar" class="dropdown-wrap">
           <ul class="accordion dropdown-ul">
             <li class="accordion-item">
@@ -198,7 +191,6 @@
             </li>
           </ul>
         </div>
-
       </aside>
       <!-- //왼쪽메뉴 영역 -->
       <!-- 컨텐츠 영역 -->
@@ -220,10 +212,10 @@
         <!-- 검색 -->
         <article class="search-area" id="keyword_sch_area">
           <div class="inner">
-
-            <h3 class="area-tit">스타일가이드 (<span id="styLength"></span>)</h3>
+            <!-- //검색 입력폼 -->
             <!-- keyword list -->
-            <ul class="search-list sty-guide">
+            <h3 id="section1" class="area-tit">스타일가이드 (<span id="styLength"></span>)</h3>
+            <ul class="page search-list sty-guide">
               <li class="li">
                 <a href="./images/test.pdf" target="_blank">
                   <div class="img-wrap sty_guide_1"></div>
@@ -290,8 +282,8 @@
               </li>
             </ul>
             <!-- //keyword list -->
-            <h3 class="area-tit" style="margin-top: var(--krds-spacer-6);">가이드 검색</h3>
             <!-- 검색 입력폼 -->
+            <h3 id="section2" class="area-tit" style="margin-top: var(--krds-spacer-6);">가이드 검색</h3>
             <fieldset>
               <legend>가이드 관련 키워드 검색</legend>
               <div class="search-top-box">
@@ -307,10 +299,9 @@
               </div>
             </fieldset>
             <!-- //검색 입력폼 -->
-
-            <h3 class="area-tit">컴포넌트 (<span id="comLength"></span>)</h3>
             <!-- keyword list -->
-            <ul class="search-list compo-guide">
+            <h3 class="area-tit">컴포넌트 (<span id="comLength"></span>)</h3>
+            <ul class="page search-list compo-guide">
               <li class="li">
                 <a href="#" target="_blank">
                   <div class="img-wrap com_guide_1"></div>
@@ -733,11 +724,9 @@
               </li>
             </ul>
             <!-- //keyword list -->
-
-
             <!-- no data -->
-            <div class="no-data hide">검색결과가 없습니다.</div>
-            <!-- //no data -->
+            <div id="searchResultsMessage" class="hide">검색결과가 없습니다</div>
+            <!-- no data -->
           </div>
         </article>
         <!-- //검색 -->
@@ -767,7 +756,69 @@
   </div>
   <!-- //전체 영역 -->
 
+
   <script src="js/common.js"></script>
+  <script>
+    // Navigation click event
+    $(".gnb > ul > li > a").click(function (e) {
+      var href = $(this).attr("href");
+      var targetTop = $(href).offset().top;
+
+      $("html, body").stop().animate({ scrollTop: targetTop }, 300);
+
+      e.preventDefault();
+    });
+
+    function Page__updateIndicatorActive() {
+      var scrollTop = $(window).scrollTop();
+
+      // 역순으로 검색해야 편하다
+      $($(".page").get().reverse()).each(function (index, node) {
+        var $node = $(node);
+        var offsetTop = parseInt($node.attr("data-offset-top"));
+
+        if (scrollTop >= offsetTop) {
+          // 기존 녀석에게 활성화 풀고
+          $(".gnb > ul > li.active").removeClass("active");
+          // 해당하는 녀석에게 활성화 넣고
+
+          var currentPageId = $node.attr("id");
+          $(".gnb > ul > li > a[href='#" + currentPageId + "']").parent().addClass("active");
+
+          $("html").attr("data-current-page-index", index);
+
+          return false; // 더 이상 다른 페이지를 검사하지 않는다.
+        }
+      });
+    }
+
+    // 각 페이지의 offsetTop 속성을 업데이트
+    function Page__updateOffsetTop() {
+      $(".page").each(function (index, node) {
+        var $page = $(node);
+        var offsetTop = $page.offset().top;
+
+        $page.attr("data-offset-top", offsetTop);
+      });
+
+      // 계산이 바뀌었으니까, 다시 상태 업데이트
+      Page__updateIndicatorActive();
+    }
+
+    function Page__init() {
+      Page__updateOffsetTop();
+    }
+
+    // 초기화
+    Page__init();
+
+    // 화면이 리사이즈 할 때 마다, offsetTop을 다시 계산
+    $(window).resize(Page__updateOffsetTop);
+
+    // 스크롤이 될 때 마다, 인디케이터의 상태를 갱신
+    $(window).scroll(Page__updateIndicatorActive);
+  </script>
+
 </body>
 
 </html>
