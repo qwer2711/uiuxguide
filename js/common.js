@@ -11,7 +11,9 @@ var common = (function () {
     init: function () {
       common.sideMenu();
       common.guideListLength();
+      common.searchText();
     },
+    // 서브페이지 사이드메뉴
     sideMenu: function () {
       const accordionHeaders = document.querySelectorAll(".accordion-header");
       const subAccordionHeaders = document.querySelectorAll(
@@ -78,6 +80,7 @@ var common = (function () {
         });
       }
     },
+    // 가이드 개수표시
     guideListLength: function () {
       const styLength = document.querySelectorAll(".sty-guide > li");
       const comLength = document.querySelectorAll(".compo-guide > li");
@@ -89,6 +92,31 @@ var common = (function () {
 
       styInputNum.innerText = styNum;
       comInputNum.innerText = comNum;
+    },
+    // 가이드검색(1)
+    searchText: function () {
+      document
+        .getElementById("searchText")
+        .addEventListener("input", common.filter);
+    },
+    // 가이드검색(2)
+    filter: function () {
+      let search = document.getElementById("searchText").value;
+      let listInner = document.querySelectorAll(".compo-guide li");
+
+      for (let i = 0; i < listInner.length; i++) {
+        let city = listInner[i].getElementsByClassName("tit");
+        // let country = listInner[i].getElementsByClassName("desc");
+        if (
+          city[0].innerHTML.indexOf(search) != -1
+          // country[0].innerHTML.indexOf(search) != -1
+        ) {
+          console.log(city[0].innerHTML.indexOf(search));
+          listInner[i].style.display = "block";
+        } else {
+          listInner[i].style.display = "none";
+        }
+      }
     },
   };
 })();
