@@ -198,9 +198,6 @@
   width: 20px;
   height: 20px;
 }
-.accordion > li.open > a {
-  color: rgba(255, 255, 255, 1);
-}
 .accordion-item.open .accordion-header i {
   transform: rotate(90deg);
 }
@@ -222,12 +219,7 @@
 .sub-accordion {
   margin-left: 31px;
 }
-.sub-accordion-item.open .sub-accordion-header i {
-  transform: rotate(90deg);
-}
-.sub-accordion > li.open > a {
-  color: rgba(255, 255, 255, 1);
-}
+
 .sub-accordion-header {
   position: relative;
   padding: 8px 24px;
@@ -241,44 +233,6 @@
   width: 6px;
   height: 1px;
   background: #fff;
-}
-.sub-accordion-content {
-  opacity: 0;
-  visibility: hidden;
-  overflow: hidden;
-  max-height: 0;
-}
-.sub-accordion-item.open .sub-accordion-content {
-  opacity: 1;
-  visibility: visible;
-  max-height: auto;
-  transition: 0.3s ease-in-out max-height;
-}
-
-/* 사이드메뉴_last-depth */
-
-.last-accordion {
-  margin-left: 24px;
-}
-.last-accordion > li.open > a {
-  color: rgba(255, 255, 255, 1);
-}
-.last-accordion-header {
-  position: relative;
-  display: block;
-  padding: 8px 15px;
-  cursor: pointer;
-}
-.last-accordion-header::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  left: 0;
-  width: 4px;
-  height: 4px;
-  border-radius: 50%;
-  border: 1px solid #fff;
 }
 
 /* ****************** <!-- 콘텐츠 영역 --> ********************** */
