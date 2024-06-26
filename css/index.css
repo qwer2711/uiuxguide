@@ -468,6 +468,10 @@
   border-bottom: 1px solid var(--krds-gray-40);
 }
 
+li + a:link {
+  display: none !important;
+}
+
 .sty-guide .img-wrap.sty_guide_1 {
   background-image: url(../images/img_sty_guide_1.png);
 }

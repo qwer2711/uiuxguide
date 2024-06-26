@@ -289,7 +289,7 @@
               <div class="search-top-box">
                 <div class="sch-form-wrap">
                   <div class="sch-input">
-                    <input type="text" id="searchText" class="form-control" onkeyup="common.filter()"
+                    <input type="text" id="searchText" class="form-control" onkeyup="keyFilter.filter()"
                       placeholder="키워드 입력" title="키워드 입력">
                     <button type="button" class="btn btn-ico ico-sch btn-exec">
                       <span class="sr-only">검색</span>
@@ -342,7 +342,8 @@
                 </a>
               </li>
               <li class="li">
-                <a href="#" target="_blank">
+                <a href="https://grizzly-taxi-9c5.notion.site/Breadcrumb-bc653c241a624a3184752ffac1085239?pvs=4"
+                  target="_blank">
                   <div class="img-wrap com_guide_4"></div>
                   <div class="conts-wrap">
                     <div class="badge-wrap">
@@ -354,7 +355,8 @@
                 </a>
               </li>
               <li class="li">
-                <a href="#" target="_blank">
+                <a href="https://grizzly-taxi-9c5.notion.site/Side-navigation-c7e927905f274a87a067e47576e0465f?pvs=4"
+                  target="_blank">
                   <div class="img-wrap com_guide_5"></div>
                   <div class="conts-wrap">
                     <div class="badge-wrap">
@@ -366,7 +368,8 @@
                 </a>
               </li>
               <li class="li">
-                <a href="#" target="_blank">
+                <a href="https://grizzly-taxi-9c5.notion.site/In-page-navigation-2617195de42446fb9b3cdb47dce91783?pvs=4"
+                  target="_blank">
                   <div class="img-wrap com_guide_6"></div>
                   <div class="conts-wrap">
                     <div class="badge-wrap">
@@ -404,7 +407,8 @@
                 </a>
               </li>
               <li class="li">
-                <a href="#" target="_blank">
+                <a href="https://grizzly-taxi-9c5.notion.site/Disclosure-3f000a9776be4048a4ced4b47b531d4a?pvs=4"
+                  target="_blank">
                   <div class="img-wrap com_guide_9"></div>
                   <div class="conts-wrap">
                     <div class="badge-wrap">
@@ -416,7 +420,8 @@
                 </a>
               </li>
               <li class="li">
-                <a href="#" target="_blank">
+                <a href="https://grizzly-taxi-9c5.notion.site/Modal-0eb96431efda4c9380021e419ebf0f7b?pvs=4"
+                  target="_blank">
                   <div class="img-wrap com_guide_10"></div>
                   <div class="conts-wrap">
                     <div class="badge-wrap">
@@ -428,7 +433,8 @@
                 </a>
               </li>
               <li class="li">
-                <a href="#" target="_blank">
+                <a href="https://grizzly-taxi-9c5.notion.site/Badge-058baa62ffc140bfafaa8a6448862d7e?pvs=4"
+                  target="_blank">
                   <div class="img-wrap com_guide_11"></div>
                   <div class="conts-wrap">
                     <div class="badge-wrap">
@@ -440,7 +446,8 @@
                 </a>
               </li>
               <li class="li">
-                <a href="#" target="_blank">
+                <a href="https://grizzly-taxi-9c5.notion.site/Accordion-bdb9afa129fa402f9773294dd465d76f?pvs=4"
+                  target="_blank">
                   <div class="img-wrap com_guide_12"></div>
                   <div class="conts-wrap">
                     <div class="badge-wrap">
@@ -618,7 +625,8 @@
                 </a>
               </li>
               <li class="li">
-                <a href="#" target="_blank">
+                <a href="https://grizzly-taxi-9c5.notion.site/Date-input-55e8826b20ba496da5838774f55220ee?pvs=4"
+                  target="_blank">
                   <div class="img-wrap com_guide_26"></div>
                   <div class="conts-wrap">
                     <div class="badge-wrap">
@@ -764,66 +772,68 @@
 
   <script src="js/common.js"></script>
   <script>
-    // Navigation click event
-    $(".gnb > ul > li > a").click(function (e) {
-      var href = $(this).attr("href");
-      var targetTop = $(href).offset().top;
-
-      $("html, body").stop().animate({ scrollTop: targetTop }, 300);
-
-      e.preventDefault();
-    });
-
-    function Page__updateIndicatorActive() {
-      var scrollTop = $(window).scrollTop();
-
-      // 역순으로 검색해야 편하다
-      $($(".page").get().reverse()).each(function (index, node) {
-        var $node = $(node);
-        var offsetTop = parseInt($node.attr("data-offset-top"));
-
-        if (scrollTop >= offsetTop) {
-          // 기존 녀석에게 활성화 풀고
-          $(".gnb > ul > li.active").removeClass("active");
-          // 해당하는 녀석에게 활성화 넣고
-
-          var currentPageId = $node.attr("id");
-          $(".gnb > ul > li > a[href='#" + currentPageId + "']").parent().addClass("active");
-
-          $("html").attr("data-current-page-index", index);
-
-          return false; // 더 이상 다른 페이지를 검사하지 않는다.
+    const keyFilter = {
+      filter: () => {
+        const searchTextInput = document.getElementById("searchText");
+        if (searchTextInput) {
+          searchTextInput.addEventListener("input", keyFilter.exec);
         }
-      });
+      },
+      exec: () => {
+        let search = document.getElementById("searchText").value.trim();
+        let listInner = document.querySelectorAll(".compo-guide li");
+        let resultsCount1 = 0;
+
+        for (let i = 0; i < listInner.length; i++) {
+          let city = listInner[i].getElementsByClassName("tit");
+          if (city[0].innerHTML.indexOf(search) != -1) {
+            listInner[i].style.display = "block";
+            resultsCount1++;
+          } else {
+            listInner[i].style.display = "none";
+          }
+        }
+        // 검색결과 메시지 표시
+        const searchResultsMessage = document.getElementById(
+          "searchResultsMessage"
+        );
+        const comLength = document.querySelector("#comLength");
+
+        if (resultsCount1 === 0) {
+          searchResultsMessage.classList.replace("hide", "show");
+          comLength.innerText = `0`;
+        } else {
+          searchResultsMessage.classList.replace("show", "hide");
+          comLength.innerText = `${resultsCount1}`;
+        }
+      }
     }
 
-    // 각 페이지의 offsetTop 속성을 업데이트
-    function Page__updateOffsetTop() {
-      $(".page").each(function (index, node) {
-        var $page = $(node);
-        var offsetTop = $page.offset().top;
+    const guideListLength = {
+      exec: () => {
+        const styLength = document.querySelectorAll(".sty-guide > li");
+        const comLength = document.querySelectorAll(".compo-guide > li");
+        const styInputNum = document.querySelector("#styLength");
+        const comInputNum = document.querySelector("#comLength");
 
-        $page.attr("data-offset-top", offsetTop);
-      });
+        const styNum = styLength.length;
+        const comNum = comLength.length;
 
-      // 계산이 바뀌었으니까, 다시 상태 업데이트
-      Page__updateIndicatorActive();
+        if (styInputNum) {
+          styInputNum.innerText = styNum;
+        }
+
+        if (comInputNum) {
+          comInputNum.innerText = comNum;
+        }
+      }
     }
 
-    function Page__init() {
-      Page__updateOffsetTop();
-    }
-
-    // 초기화
-    Page__init();
-
-    // 화면이 리사이즈 할 때 마다, offsetTop을 다시 계산
-    $(window).resize(Page__updateOffsetTop);
-
-    // 스크롤이 될 때 마다, 인디케이터의 상태를 갱신
-    $(window).scroll(Page__updateIndicatorActive);
+    window.addEventListener("DOMContentLoaded", () => {
+      keyFilter.exec();
+      guideListLength.exec();
+    });
   </script>
-
 </body>
 
 </html>
