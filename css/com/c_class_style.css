@@ -1,0 +1,247 @@
+@charset "utf-8";
+
+/* *******************************************************
+* 파일이름 : c_class_style.css
+* 파일설명 :HTML 태그에 직접 클래스를 추가하여 스타일 변경이 필요한 경우
+           Class를 추가하여 Style을 변경함
+
+=== 이 CSS 파일은 담당자만 수정, 추가, 삭제할 수 있습니다. ===
+
+* 최종업데이트 : 2024-06-27-목
+
+******************************************************** */
+
+/* 리스트(검색 시 활용) */
+/* **** 공통class_01 :: Flex ****/
+/* **** 공통class_02 :: Width/Height  ****/
+/* **** 공통class_03 :: Position ****/
+/* **** 공통class_04 :: Text ****/
+/* **** 공통class_05 :: Scrollbar ****/
+/* **** 공통class_06 :: Image ****/
+/* **** 공통class_07 :: Ir ****/
+
+/* --------------------- 시작 --------------------- */
+
+/* ************** 공통class_01 :: Flex **************/
+
+/* flex-direction */
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+/* justify-content */
+.justify-center {
+  justify-content: center;
+}
+.justify-around {
+  justify-content: space-around;
+}
+.justify-between {
+  justify-content: space-between;
+}
+.justify-evenly {
+  justify-content: space-evenly;
+}
+.justify-end {
+  justify-content: end;
+}
+
+/* align-items */
+.align-start {
+  align-items: start;
+}
+.align-center {
+  align-items: center;
+}
+.align-end {
+  align-items: end;
+}
+
+/* ************** 공통class_02 :: Width / Height ************** */
+.wd-100 {
+  width: 100%;
+}
+.wd-50 {
+  width: calc(100% / 2);
+}
+.wd-33 {
+  width: calc(100% / 3);
+}
+.wd-25 {
+  width: calc(100% / 4);
+}
+.wd-20 {
+  width: calc(100% / 5);
+}
+
+.ht-100 {
+  height: 100%;
+}
+.ht-50 {
+  height: calc(100% / 2);
+}
+.ht-33 {
+  height: calc(100% / 3);
+}
+.ht-25 {
+  height: calc(100% / 4);
+}
+.ht-20 {
+  height: calc(100% / 5);
+}
+
+.wdht-100 {
+  width: 100%;
+  height: 100%;
+}
+.wdht-50 {
+  width: calc(100% / 2);
+  height: calc(100% / 2);
+}
+.wdht-33 {
+  width: calc(100% / 3);
+  height: calc(100% / 3);
+}
+.wdht-25 {
+  width: calc(100% / 4);
+  height: calc(100% / 4);
+}
+.wdht-20 {
+  width: calc(100% / 5);
+  height: calc(100% / 5);
+}
+
+/* ************** 공통class_03 :: Position ************** */
+.relative {
+  position: relative;
+}
+.absolute {
+  position: absolute;
+}
+.fixed {
+  position: fixed;
+}
+.sticky {
+  position: sticky;
+}
+
+/* ************** 공통class_04 :: Text ************** */
+
+/* text-align */
+.t-al {
+  text-align: left;
+}
+.t-ac {
+  text-align: center;
+}
+.t-ar {
+  text-align: right;
+}
+/* word-break */
+.t-ba {
+  word-break: break-all;
+}
+.t-ka {
+  word-break: keep-all;
+}
+
+/* ellipsis */
+.t-el-1 {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.t-el-2 {
+  display: block;
+  max-width: 100%;
+  height: 68px;
+  margin: 0 auto;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.t-el-3 {
+  display: block;
+  max-width: 100%;
+  height: 68px;
+  margin: 0 auto;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ************** 공통class_05 :: scrollbar ************** */
+.scr-bar {
+  overflow-y: auto;
+}
+/* 너비*/
+.scr-bar::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+/* 막대 */
+.scr-bar::-webkit-scrollbar-thumb {
+  height: 30px;
+  background: var(--color-primary);
+  border-radius: 10px;
+  /* background-clip: padding-box; */
+  border: 2px solid transparent;
+}
+/* 배경 */
+.scr-bar::-webkit-scrollbar-track {
+  background-color: #d5d7df;
+}
+/* ************** 공통class_06 :: Image ************** */
+.img-box > img {
+  display: block;
+  width: 100%;
+}
+.img-wdht-100 > img {
+  width: 100%;
+  height: 100%;
+}
+.img-wd-100 > img {
+  width: 100%;
+}
+.img-ht-100 > img {
+  height: 100%;
+}
+/* ************** 공통class_07 :: ir기법 ************** */
+
+/*  이미지를 볼 수 없는 사용자에게 적절한 대체 텍스트 제공  */
+/* css background-image 배경이 투명일경우 */
+.ir-pm {
+  display: block;
+  overflow: hidden;
+  font-size: 0;
+  line-height: 0;
+  text-indent: -9999px;
+}
+
+/* 중요한 이미지가 로딩이 되지 않거나 손실되어 off될 때 대체 텍스트 제공 */
+/* ex)버튼이 css background-image이미지라서 로딩이 느려질경우 */
+.ir-wa {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+}
+
+/* 스크린리더기 인식x  / for 접근성 준수*/
+.screen-out {
+  overflow: hidden;
+  position: absolute;
+  width: 0;
+  height: 0;
+  line-height: 0;
+  text-indent: -9999px;
+}

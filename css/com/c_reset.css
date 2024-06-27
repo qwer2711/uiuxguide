@@ -1,16 +1,23 @@
 @charset "utf-8";
 
 /* *******************************************************
- * 파일이름 : default.css
- * 설명 : reset 초기화 작업
- * 업데이트 : 2024-05-09
- ******************************************************** */
+* 파일이름 : c_reset.css
+* 파일설명 : 퍼블리싱 환경 초기화 reset작업
+
+=== 이 CSS 파일은 담당자만 수정, 추가, 삭제할 수 있습니다. ===
+
+* 최종업데이트 : 2024-06-27-목
+
+******************************************************** */
+
+/* --------------------- 시작 --------------------- */
+
 html,
 body {
   position: relative;
   width: 100%;
   height: 100%;
-  font-family: "Pretendard400", sans-serif;
+  font-family: "Pretendard GOV", sans-serif;
   color: var(--krds-gray-90);
   font-weight: 400;
   line-height: 1.5;
@@ -75,8 +82,8 @@ li,
 span,
 em,
 label,
-:before,
-:after {
+::before,
+::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;

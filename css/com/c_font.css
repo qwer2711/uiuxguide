@@ -1,0 +1,37 @@
+@charset "utf-8";
+
+/* *******************************************************
+* 파일이름 : c_font.css
+* 파일설명 : 기본 글꼴로 국문과 영문 모두 Pretendard GOV를 사용
+
+=== 이 CSS 파일은 담당자만 수정, 추가, 삭제할 수 있습니다. ===
+
+* 최종업데이트 : 2024-06-27-목
+
+******************************************************** */
+
+/* --------------------- 시작 --------------------- */
+
+@font-face {
+  font-family: "Pretendard GOV";
+  font-weight: 400;
+  font-style: normal;
+  src: url("../../font/pretendardGOV/PretendardGOV-Regular.subset.woff")
+    format("woff");
+}
+/* Medium */
+@font-face {
+  font-family: "Pretendard GOV";
+  font-weight: 500;
+  font-style: normal;
+  src: url("../../font/pretendardGOV/PretendardGOV-Medium.subset.woff")
+    format("woff");
+}
+/* Bold */
+@font-face {
+  font-family: "Pretendard GOV";
+  font-weight: 700;
+  font-style: normal;
+  src: url("../../font/pretendardGOV/PretendardGOV-Bold.subset.woff")
+    format("woff");
+}

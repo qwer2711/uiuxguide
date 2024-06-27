@@ -1,0 +1,380 @@
+@charset "UTF-8";
+/* *******************************************************
+* 파일이름 : sc_component.css
+* 파일설명 : 공통 컴포넌트 체계화
+
+=== 이 CSS 파일은 담당자만 수정, 추가, 삭제할 수 있습니다. ===
+
+* 최종업데이트 : 2024-06-27-목
+
+******************************************************** */
+
+/* 리스트(검색 시 활용) */
+/* **** 공통component_01 :: 스킵네비게이션 **** */
+/* **** 공통component_02 :: 브레드크럼 **** */
+/* **** 공통component_03 :: 콘텐츠 내 탐색 **** */
+/* **** 공통component_04 :: 페이지네이션 **** */
+/* **** 공통component_05 :: 달력 **** */
+/* **** 공통component_06 :: 디스클로저 **** */
+/* **** 공통component_07 :: 모달 **** */
+/* **** 공통component_08 :: 배지 **** */
+/* **** 공통component_09 :: 아코디언 **** */
+/* **** 공통component_10 :: 캐러셀 **** */
+/* **** 공통component_11 :: 탭 **** */
+/* **** 공통component_12 :: 표 **** */
+/* **** 공통component_13 :: 링크 **** */
+/* **** 공통component_14 :: 버튼 **** */
+/* **** 공통component_15 :: 라디오버튼(Input) **** */
+/* **** 공통component_16 :: 체크박스(Input) **** */
+/* **** 공통component_17 :: 셀렉트박스 **** */
+/* **** 공통component_18 :: 태그 **** */
+/* **** 공통component_19 :: 단계표시기 **** */
+/* **** 공통component_20 :: 스피너(로딩) **** */
+/* **** 공통component_21 :: 툴팁 **** */
+/* **** 공통component_22 :: 코치마크 **** */
+/* **** 공통component_23 :: 날짜입력피드(Input) **** */
+/* **** 공통component_24 :: 텍스트입력필드(Input) **** */
+/* **** 공통component_25 :: 텍스트영역(Textarea) **** */
+/* **** 공통component_26 :: 파일업로드 **** */
+/* **** 공통component_27 :: 개인식별정보입력 **** */
+/* **** 공통component_28 :: 검색 **** */
+/* **** 공통component_29 :: 오류 **** */
+/* **** 공통component_30 :: 로그인폼 **** */
+/* **** 공통component_31 :: 필터링 정렬폼 **** */
+
+/* --------------------- 시작 --------------------- */
+
+/* ************** 공통component_01 :: 스킵네비게이션 ************** */
+#skipNav {
+  position: relative;
+}
+#skipNav a {
+  position: absolute;
+  left: 0px;
+  top: -50px;
+  border: 1px solid #fff;
+  color: #fff;
+  background: #333;
+  line-height: 30px;
+  width: 100%;
+  text-align: center;
+  z-index: 1000;
+}
+#skipNav a:active,
+#skipNav a:focus {
+  top: 0;
+}
+
+/* ************** 공통component_02 :: 브레드크럼 ************** */
+/* ************** 공통component_03 :: 콘텐츠 내 탐색 ************** */
+/* ************** 공통component_04 :: 페이지네이션 ************** */
+/* ************** 공통component_05 :: 달력 ************** */
+/* ************** 공통component_06 :: 디스클로저 ************** */
+/* ************** 공통component_07 :: 모달 ************** */
+.mdal-bg {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-black);
+  opacity: 0.5;
+  z-index: 1000;
+  -webkit-backdrop-filter: blur(3px);
+  backdrop-filter: blur(3px);
+  display: none;
+}
+
+.mdal-bg.on {
+  display: block;
+}
+
+.mdal-box {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1002;
+  background: var(--color-background);
+}
+
+/* ************** 공통component_08 :: 배지 ************** */
+/* ************** 공통component_09 :: 아코디언 ************** */
+/* ************** 공통component_10 :: 캐러셀 ************** */
+/* ************** 공통component_11 :: 탭 ************** */
+/* ************** 공통component_12 :: 표 ************** */
+table {
+  width: 100%;
+  border-left: 1px solid var(--color-border);
+  border: 1px solid var(--color-border);
+  text-align: center;
+  word-break: keep-all;
+}
+
+table th {
+  border-right: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+  background: var(--color-table-header);
+  vertical-align: middle;
+  font-weight: 600;
+  height: 30px;
+  font-size: 1.6rem;
+}
+
+table th:last-child,
+table tr td:last-child {
+  border-right: 0;
+}
+
+table tr:last-child td {
+  border-bottom: 0;
+}
+
+table td {
+  border-right: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+  vertical-align: middle;
+  word-break: keep-all;
+  padding: 12px;
+  font-size: 1.4rem;
+}
+/* ************** 공통component_13 :: 링크 ************** */
+/* ************** 공통component_14 :: 버튼 ************** */
+button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 3px;
+}
+/* ************** 공통 :: 라디오버튼 & 체크박스 ************** */
+/* 공통 */
+.chk-area {
+  display: flex;
+  gap: var(--krds-spacer-6);
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+.form-check input[type="radio"] ~ label,
+.form-check input[type="checkbox"] ~ label {
+  position: relative;
+  display: inline-flex;
+  min-height: var(--krds-rdo-size-md);
+  padding-left: calc(var(--krds-rdo-size-md) + var(--krds-spacer-2));
+  font-size: var(--krds-rdo-fz-md);
+  line-height: var(--krds-rdo-size-md);
+}
+
+.form-check input[type="radio"] ~ label:before,
+.form-check input[type="radio"] ~ label:after,
+.form-check input[type="checkbox"] ~ label:before,
+.form-check input[type="checkbox"] ~ label:after {
+  content: "";
+  display: block;
+  transition: 0.4s cubic-bezier(0.4, 0, 0.23, 1);
+  box-sizing: border-box;
+}
+
+/* ************** 공통component_15 :: 라디오버튼(Input) ************** */
+/* 큰 circle */
+.form-check input[type="radio"] ~ label:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: var(--krds-rdo-size-md);
+  height: var(--krds-rdo-size-md);
+  background-color: var(--krds-white);
+  border: 1px solid var(--krds-gray-60);
+  border-radius: var(--krds-rd-full);
+}
+
+/* 작은 circle */
+.form-check input[type="radio"] ~ label:after {
+  position: absolute;
+  top: calc((var(--krds-rdo-size-md) - var(--krds-rdo-chk-md)) / 2);
+  left: calc((var(--krds-rdo-size-md) - var(--krds-rdo-chk-md)) / 2);
+  width: var(--krds-rdo-chk-md);
+  height: var(--krds-rdo-chk-md);
+  background-color: var(--krds-white);
+  border-radius: var(--krds-rd-full);
+}
+
+/* circle z-index 작업 */
+.form-check input[type="radio"] ~ label:before,
+.form-check input[type="checkbox"] ~ label:before {
+  z-index: 3;
+}
+
+.form-check input[type="radio"] ~ label:after,
+.form-check input[type="checkbox"] ~ label:after {
+  z-index: 4;
+}
+
+/* 선택된 라디오버튼 */
+.form-check input[type="radio"]:checked ~ label:after {
+  background-color: var(--krds-primary);
+}
+
+.form-check input[type="radio"]:checked ~ label:before {
+  border-color: var(--krds-primary);
+}
+
+/* 비활성화 라디오버튼 */
+.form-check input[type="radio"]:disabled + label,
+.form-check input[type="checkbox"]:disabled + label {
+  color: var(--krds-gray-50);
+  cursor: default;
+}
+
+.form-check input[type="radio"]:disabled ~ label:before {
+  border-color: var(--krds-gray-40);
+  background-color: var(--krds-gray-20);
+}
+
+.form-check input[type="radio"]:disabled ~ label:after {
+  display: none;
+  background-color: var(--krds-gray-40);
+}
+
+/* 선택된 비활성화 라디오버튼 */
+.form-check input[type="radio"]:checked:disabled ~ label:after {
+  display: block;
+  background-color: var(--krds-gray-40);
+}
+/* ************** 공통component_16 :: 체크박스(Input) ************** */
+
+/* === 체크박스 === */
+.form-check input[type="checkbox"] ~ label:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: var(--krds-chk-size-md);
+  height: var(--krds-chk-size-md);
+  background-color: var(--krds-white);
+  border: 1px solid var(--krds-gray-60);
+  border-radius: var(--krds-rd-4);
+}
+
+.form-check input[type="checkbox"] ~ label:after {
+  position: absolute;
+  top: calc((var(--krds-chk-size-md) - var(--krds-chk-primary-chk-md)) / 2);
+  left: calc((var(--krds-chk-size-md) - var(--krds-chk-primary-chk-md)) / 2);
+  width: var(--krds-chk-primary-chk-md);
+  height: var(--krds-chk-primary-chk-md);
+  background: url(https://uiux.egovframe.go.kr/resources/img/component/common/ico_check_primary_checked.svg)
+    no-repeat 0 0;
+  background-size: contain;
+  opacity: 0;
+}
+
+.form-check input[type="checkbox"]:checked ~ label:before {
+  background-color: var(--krds-primary);
+  border-color: var(--krds-primary);
+}
+
+.form-check input[type="checkbox"]:checked ~ label:after {
+  opacity: 1;
+  transition-delay: 0.2s;
+}
+
+.form-check input[type="checkbox"]:disabled ~ label:before {
+  border-color: var(--krds-gray-40);
+  background-color: var(--krds-gray-20);
+}
+
+.form-check input[type="checkbox"]:disabled ~ label:after {
+  background-image: url(https://uiux.egovframe.go.kr/resources/img/component/common/ico_check_primary_checked.svg);
+}
+
+.form-check input[type="checkbox"]:disabled ~ label:after {
+  background-image: url(https://uiux.egovframe.go.kr/resources/img/component/common/ico_check_primary_disabled.svg);
+}
+
+/* 크기별 */
+.form-check.sm > [type="checkbox"] ~ label {
+  font-size: var(--krds-chk-fz-sm);
+  line-height: var(--krds-chk-size-sm);
+  min-height: var(--krds-chk-size-sm);
+  padding-left: calc(var(--krds-chk-size-sm) + var(--krds-spacer-2));
+}
+
+.form-check.sm > [type="checkbox"] ~ label::before {
+  width: var(--krds-chk-size-sm);
+  height: var(--krds-chk-size-sm);
+}
+
+.form-check.sm > [type="checkbox"] ~ label::after {
+  width: var(--krds-chk-primary-chk-sm);
+  height: var(--krds-chk-primary-chk-sm);
+}
+
+.form-check.lg > [type="checkbox"] ~ label {
+  font-size: var(--krds-chk-fz-lg);
+  line-height: var(--krds-chk-size-lg);
+  min-height: var(--krds-chk-size-lg);
+  padding-left: calc(var(--krds-chk-size-lg) + var(--krds-spacer-2));
+}
+
+.form-check.lg > [type="checkbox"] ~ label::before {
+  width: var(--krds-chk-size-lg);
+  height: var(--krds-chk-size-lg);
+}
+
+.form-check.lg > [type="checkbox"] ~ label::after {
+  width: var(--krds-chk-primary-chk-lg);
+  height: var(--krds-chk-primary-chk-lg);
+}
+
+/* ************** 공통component_17 :: 셀렉트박스 ************** */
+select {
+  background-image: url(../../images/icon/down.png);
+  background-position: calc(100% - 5px);
+  background-repeat: no-repeat;
+  appearance: none;
+}
+
+/* ************** 공통 :: input / 셀렉트박스 / 텍스트영역  ************** */
+
+input,
+select {
+  height: 32px;
+}
+
+input,
+select,
+textarea {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  vertical-align: middle;
+  padding: 0 10px;
+  font-size: 1.4rem;
+  color: #333333;
+  box-sizing: border-box;
+}
+
+/* ************** 공통component_18 :: 태그 ************** */
+/* ************** 공통component_19 :: 단계표시기 ************** */
+/* ************** 공통component_20 :: 스피너(로딩) ************** */
+/* ************** 공통component_21 :: 툴팁 ************** */
+/* ************** 공통component_22 :: 코치마크 ************** */
+/* ************** 공통component_23 :: 날짜입력피드(Input) ************** */
+/* ************** 공통component_24 :: 텍스트입력필드(Input) ************** */
+/* ************** 공통component_25 :: 텍스트영역(Textarea) ************** */
+/* ************** 공통component_26 :: 파일업로드 ************** */
+/* ************** 공통component_27 :: 개인식별정보입력 ************** */
+/* ************** 공통component_28 :: 검색 ************** */
+/* ************** 공통component_29 :: 오류 ************** */
+/* ************** 공통component_30 :: 로그인폼 ************** */
+/* ************** 공통component_31 :: 필터링 정렬폼 ************** */

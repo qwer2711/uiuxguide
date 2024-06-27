@@ -1,0 +1,351 @@
+@charset "utf-8";
+
+/* *******************************************************
+* 파일이름 : c_shape.css
+* 파일설명 : 컴포넌트들의 크기를 Root 공통체계로 정의
+
+=== 이 CSS 파일은 담당자만 수정, 추가, 삭제할 수 있습니다. ===
+
+* 최종업데이트 : 2024-06-27-목
+
+******************************************************** */
+
+/* 리스트(검색 시 활용) */
+/* **** 공통shape_01 :: Font-size ****/
+/* **** 공통shape_02 :: Border-radius  ****/
+/* **** 공통shape_03 :: Button ****/
+/* **** 공통shape_04 :: BtnChipFill ****/
+/* **** 공통shape_05 :: BtnChipOutline ****/
+/* **** 공통shape_06 :: Input ****/
+/* **** 공통shape_07 :: Radiobox ****/
+/* **** 공통shape_08 :: Checkbox ****/
+/* **** 공통shape_09 :: Selectbox ****/
+/* **** 공통shape_10 :: Switch ****/
+/* **** 공통shape_11 :: Tab ****/
+/* **** 공통shape_12 :: Space ****/
+
+/* --------------------- 시작 --------------------- */
+
+:root {
+  /* **** 공통shape_01 :: Font-size ****/
+  --krds-fz-display-sm: 4rem;
+  --krds-fz-display-md: 5rem;
+  --krds-fz-display-lg: 6.6rem;
+  --krds-fz-heading-sm: 3.2rem;
+  --krds-fz-heading-md: 4rem;
+  --krds-fz-heading-lg: 5rem;
+  --krds-fz-title-xsm: 1.5rem;
+  --krds-fz-title-sm: 1.7rem;
+  --krds-fz-title-md: 1.9rem;
+  --krds-fz-title-lg: 2.1rem;
+  --krds-fz-title-xlg: 2.5rem;
+  --krds-fz-title-xxlg: 3.2rem;
+  --krds-fz-body-sm: 1.5rem;
+  --krds-fz-body-md: 1.7rem;
+  --krds-fz-body-lg: 1.9rem;
+  --krds-fz-link-sm: 1.5rem;
+  --krds-fz-link-md: 1.7rem;
+  --krds-fz-link-lg: 1.9rem;
+  --krds-fz-detail-sm: 1.3rem;
+  --krds-fz-detail-md: 1.5rem;
+  --krds-fz-detail-lg: 1.7rem;
+  --krds-fz-label-xsm: 1.3rem;
+  --krds-fz-label-sm: 1.5rem;
+  --krds-fz-label-md: 1.7rem;
+  --krds-fz-label-lg: 1.9rem;
+
+  /* **** 공통shape_02 :: border-radius ****/
+  --krds-rd-1: 0.1rem;
+  --krds-rd-2: 0.2rem;
+  --krds-rd-4: 0.4rem;
+  --krds-rd-6: 0.6rem;
+  --krds-rd-8: 0.8rem;
+  --krds-rd-10: 1rem;
+  --krds-rd-12: 1.2rem;
+  --krds-rd-full: 100%;
+
+  /* **** 공통shape_03 :: Button ****/
+  /* height */
+  --krds-btn-h-xsm: 3.2rem;
+  --krds-btn-h-sm: 4rem;
+  --krds-btn-h-md: 4.8rem;
+  --krds-btn-h-lg: 5.6rem;
+  --krds-btn-h-xlg: 6.4rem;
+  /* padding */
+  --krds-btn-px-xsm: 1rem;
+  --krds-btn-px-sm: 1.2rem;
+  --krds-btn-px-md: 1.6rem;
+  --krds-btn-px-lg: 2rem;
+  --krds-btn-px-xlg: 2.4rem;
+  /* border-radius */
+  --krds-btn-rd-xsm: 0.6rem;
+  --krds-btn-rd-sm: 0.6rem;
+  --krds-btn-rd-md: 0.8rem;
+  --krds-btn-rd-lg: 0.8rem;
+  --krds-btn-rd-xlg: 0.8rem;
+  /* font-size */
+  --krds-btn-fz-xsm: 1.5rem;
+  --krds-btn-fz-sm: 1.7rem;
+  --krds-btn-fz-md: 1.7rem;
+  --krds-btn-fz-lg: 1.9rem;
+  --krds-btn-fz-xlg: 1.9rem;
+
+  /* **** 공통shape_04 :: BtnChipFill ****/
+  /* height */
+  --krds-btnChipFill-h-md: 3.2rem;
+  --krds-btnChipFill-h-lg: 3.6rem;
+  /* padding */
+  --krds-btnChipFill-pd-md: 0rem 1.2rem;
+  --krds-btnChipFill-pd-lg: 0rem 1.2rem;
+  /* border-radius */
+  --krds-btnChipFill-rd-md: 0.6rem;
+  --krds-btnChipFill-rd-lg: 0.6rem;
+  /* font-size */
+  --krds-btnChipFill-fz-md: 1.5rem;
+  --krds-btnChipFill-fz-lg: 1.7rem;
+
+  /* **** 공통shape_05 :: btnChipOutline ****/
+  /* height */
+  --krds-btnChipOutline-h-md: 3.2rem;
+  --krds-btnChipOutline-h-lg: 3.6rem;
+  /* padding */
+  --krds-btnChipOutline-pd-md: 0rem 1.2rem;
+  --krds-btnChipOutline-pd-lg: 0rem 1.2rem;
+  /* border-radius */
+  --krds-btnChipOutline-rd-md: 10rem;
+  --krds-btnChipOutline-rd-lg: 10rem;
+  /* font-size */
+  --krds-btnChipOutline-fz-md: 1.5rem;
+  --krds-btnChipOutline-fz-lg: 1.7rem;
+  /* gap */
+  --krds-btnChipOutline-gap-md: 0.2rem;
+  --krds-btnChipOutline-gap-lg: 0.2rem;
+  /* size */
+  --krds-btnChipOutline-size-md: 1.2rem;
+  --krds-btnChipOutline-size-lg: 1.6rem;
+
+  /* **** 공통shape_06 :: Input ****/
+  /* height */
+  --krds-input-h-sm: 4rem;
+  --krds-input-h-md: 4.8rem;
+  --krds-input-h-lg: 5.6rem;
+  --krds-input-h-xlg: 8rem;
+  /* padding */
+  --krds-input-px-sm: 1.6rem;
+  --krds-input-px-md: 1.6rem;
+  --krds-input-px-lg: 1.6rem;
+  --krds-input-px-xlg: 2.4rem;
+  /* border-radius */
+  --krds-input-rd-sm: 0.6rem;
+  --krds-input-rd-md: 0.8rem;
+  --krds-input-rd-lg: 0.8rem;
+  --krds-input-rd-xlg: 1.2rem;
+  /* border-font-size */
+  --krds-input-fz-sm: 1.5rem;
+  --krds-input-fz-md: 1.7rem;
+  --krds-input-fz-lg: 1.9rem;
+  --krds-input-fz-xlg: 2.5rem;
+
+  /* **** 공통shape_07 :: Radiobox ****/
+  /* size*/
+  --krds-rdo-size-sm: 1.6rem;
+  --krds-rdo-size-md: 2rem;
+  --krds-rdo-size-lg: 2.4rem;
+  /* chk*/
+  --krds-rdo-chk-sm: 0.8rem;
+  --krds-rdo-chk-md: 1rem;
+  --krds-rdo-chk-lg: 1.4rem;
+  /* pos*/
+  --krds-rdo-pos-sm: 0.2rem;
+  --krds-rdo-pos-md: 0.5rem;
+  --krds-rdo-pos-lg: 1rem;
+  /* font-size*/
+  --krds-rdo-fz-sm: 1.5rem;
+  --krds-rdo-fz-md: 1.7rem;
+  --krds-rdo-fz-lg: 1.9rem;
+  /* height */
+  --krds-rdoChipOutline-h-sm: 3.2rem;
+  --krds-rdoChipOutline-h-md: 4rem;
+  --krds-rdoChipOutline-h-lg: 4.8rem;
+  /* padding */
+  --krds-rdoChipOutline-pd-sm: 0 1rem;
+  --krds-rdoChipOutline-pd-md: 0 1.2rem;
+  --krds-rdoChipOutline-pd-lg: 0 1.6rem;
+  /* border-radius */
+  --krds-rdoChipOutline-rd-sm: 0.6rem;
+  --krds-rdoChipOutline-rd-md: 0.6rem;
+  --krds-rdoChipOutline-rd-lg: 0.8rem;
+  /*font-size */
+  --krds-rdoChipOutline-fz-sm: 1.5rem;
+  --krds-rdoChipOutline-fz-md: 1.7rem;
+  --krds-rdoChipOutline-fz-lg: 1.7rem;
+
+  /* **** 공통shape_08 :: Checkbox ****/
+  /* size*/
+  --krds-chk-size-sm: 1.6rem;
+  --krds-chk-size-md: 2rem;
+  --krds-chk-size-lg: 2.4rem;
+  /* primary*/
+  --krds-chk-primary-chk-sm: 1.2rem;
+  --krds-chk-primary-chk-md: 1.6rem;
+  --krds-chk-primary-chk-lg: 2rem;
+  /* secondary*/
+  --krds-chk-secondary-chk-md: 2rem;
+  /* pos*/
+  --krds-chk-pos-md: 0.5rem;
+  /* font-size*/
+  --krds-chk-fz-sm: 1.5rem;
+  --krds-chk-fz-md: 1.7rem;
+  --krds-chk-fz-lg: 1.9rem;
+  /* height */
+  --krds-chkChipOutline-h-sm: 3.2rem;
+  --krds-chkChipOutline-h-md: 4rem;
+  --krds-chkChipOutline-h-lg: 4.8rem;
+  /* padding */
+  --krds-chkChipOutline-pd-sm: 0 1rem 0 0.8rem;
+  --krds-chkChipOutline-pd-md: 0 1.2rem 0 1rem;
+  --krds-chkChipOutline-pd-lg: 0 1.6rem 0 1.2rem;
+  /* border-radius */
+  --krds-chkChipOutline-rd-sm: 0.6rem;
+  --krds-chkChipOutline-rd-md: 0.6rem;
+  --krds-chkChipOutline-rd-lg: 0.8rem;
+  /* font-size */
+  --krds-chkChipOutline-fz-sm: 1.5rem;
+  --krds-chkChipOutline-fz-md: 1.7rem;
+  --krds-chkChipOutline-fz-lg: 1.7rem;
+  /* gap */
+  --krds-chkChipOutline-gap-sm: 0.4rem;
+  --krds-chkChipOutline-gap-md: 0.4rem;
+  --krds-chkChipOutline-gap-lg: 0.4rem;
+  /* icon */
+  --krds-chkChipOutline-ico-sm: 1.6rem;
+  --krds-chkChipOutline-ico-md: 2rem;
+  --krds-chkChipOutline-ico-lg: 2rem;
+
+  /* **** 공통shape_09 :: Selectkbox ****/
+  /* height */
+  --krds-select-h-sm: 4rem;
+  --krds-select-h-md: 4.8rem;
+  --krds-select-h-lg: 5.6rem;
+  /* padding */
+  --krds-select-pd-sm: 0 5.2rem 0 1.6rem;
+  --krds-select-pd-md: 0 5.2rem 0 1.6rem;
+  --krds-select-pd-lg: 0 5.2rem 0 1.6rem;
+  /* border-radius */
+  --krds-select-rd-sm: 0.6rem;
+  --krds-select-rd-md: 0.8rem;
+  --krds-select-rd-lg: 0.8rem;
+  /* font-size */
+  --krds-select-fz-sm: 1.5rem;
+  --krds-select-fz-md: 1.7rem;
+  --krds-select-fz-lg: 1.9rem;
+  /* rn */
+  --krds-select-rn-sm: 1.6rem;
+  --krds-select-rn-md: 1.6rem;
+  --krds-select-rn-lg: 1.6rem;
+  /* background-size */
+  --krds-select-bgs-sm: 2rem;
+  --krds-select-bgs-md: 2rem;
+  --krds-select-bgs-lg: 2.4rem;
+
+  /* **** 공통shape_10 :: Switch ****/
+  /* height */
+  --krds-switch-h-md: 2rem;
+  --krds-switch-h-lg: 2.4rem;
+  /* width */
+  --krds-switch-w-md: 3.2rem;
+  --krds-switch-w-lg: 4rem;
+  /* box */
+  --krds-switch-b-md: 1.6rem;
+  --krds-switch-b-lg: 2rem;
+  /* box */
+  --krds-switch-br-md: 0.2rem;
+  --krds-switch-br-lg: 0.2rem;
+  /* padding */
+  --krds-switch-pd-md: 0.8rem;
+  --krds-switch-pd-lg: 0.8rem;
+  /* border-radius */
+  --krds-switch-rd-md: 4rem;
+  --krds-switch-rd-lg: 4rem;
+  /* font-size */
+  --krds-switch-fz-md: 1.7rem;
+  --krds-switch-fz-lg: 1.9rem;
+
+  /* **** 공통shape_11 :: Tap ****/
+  /* height */
+  --krds-tab-h-full: 5.6rem;
+  --krds-tab-h-fill: 4.8rem;
+  --krds-tab-h-line: 4.8rem;
+  /* font-size */
+  --krds-tab-fz-full: 1.9rem;
+  --krds-tab-fz-fill: 1.9rem;
+  --krds-tab-fz-ilne: 1.9rem;
+  /* padding */
+  --krds-tab-px-full: 0;
+  --krds-tab-px-fill: 1.6rem;
+  --krds-tab-px-line: 0.2rem;
+  /* margin-left */
+  --krds-tab-ml-full: 0;
+  --krds-tab-ml-fill: 0.8rem;
+  --krds-tab-ml-line: 1.6rem;
+  /* border-radius */
+  --krds-tab-rd-full: 0.8rem;
+  --krds-tab-rd-fill: 0.8rem;
+  --krds-tab-rd-line: 0;
+
+  /* **** 공통shape_12 :: Space ****/
+  --krds-spacer-50: 20rem;
+  --krds-spacer-49: 19.6rem;
+  --krds-spacer-48: 19.2rem;
+  --krds-spacer-47: 18.8rem;
+  --krds-spacer-46: 18.4rem;
+  --krds-spacer-45: 18rem;
+  --krds-spacer-44: 17.6rem;
+  --krds-spacer-43: 17.2rem;
+  --krds-spacer-42: 16.8rem;
+  --krds-spacer-41: 16.4rem;
+  --krds-spacer-40: 16rem;
+  --krds-spacer-39: 15.6rem;
+  --krds-spacer-38: 15.2rem;
+  --krds-spacer-37: 14.8rem;
+  --krds-spacer-36: 14.4rem;
+  --krds-spacer-35: 14rem;
+  --krds-spacer-34: 13.6rem;
+  --krds-spacer-33: 13.2rem;
+  --krds-spacer-32: 12.8rem;
+  --krds-spacer-31: 12.4rem;
+  --krds-spacer-30: 12rem;
+  --krds-spacer-29: 11.6rem;
+  --krds-spacer-28: 11.2rem;
+  --krds-spacer-27: 10.8rem;
+  --krds-spacer-26: 10.4rem;
+  --krds-spacer-25: 10rem;
+  --krds-spacer-24: 9.6rem;
+  --krds-spacer-23: 9.2rem;
+  --krds-spacer-22: 8.8rem;
+  --krds-spacer-21: 8.4rem;
+  --krds-spacer-20: 8rem;
+  --krds-spacer-19: 7.6rem;
+  --krds-spacer-18: 7.2rem;
+  --krds-spacer-17: 6.8rem;
+  --krds-spacer-16: 6.4rem;
+  --krds-spacer-15: 6rem;
+  --krds-spacer-14: 5.6rem;
+  --krds-spacer-13: 5.2rem;
+  --krds-spacer-12: 4.8rem;
+  --krds-spacer-11: 4.4rem;
+  --krds-spacer-10: 4rem;
+  --krds-spacer-9: 3.6rem;
+  --krds-spacer-8: 3.2rem;
+  --krds-spacer-7: 2.8rem;
+  --krds-spacer-6: 2.4rem;
+  --krds-spacer-5: 2rem;
+  --krds-spacer-4: 1.6rem;
+  --krds-spacer-3: 1.2rem;
+  --krds-spacer-2: 0.8rem;
+  --krds-spacer-1: 0.4rem;
+  --krds-spacer-0: 0;
+  --krds-spacer-default: 0.1rem;
+  --krds-spacer-default2: 0.2rem;
+  --krds-spacer-full: 100%;
+}
