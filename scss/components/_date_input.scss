@@ -1,0 +1,113 @@
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--krds-spacer-3);
+  width: 100%;
+}
+
+input[type="date"]::-webkit-datetime-edit-text {
+  -webkit-appearance: none;
+  color: transparent;
+}
+input[type="date"]:valid::-webkit-datetime-edit-text {
+  color: inherit;
+}
+input[type="date"]::-webkit-calendar-picker-indicator {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  color: transparent;
+  cursor: pointer;
+}
+
+input[type="date"]::-webkit-datetime-edit-month-field {
+  color: transparent;
+}
+
+input[type="date"]::-webkit-datetime-edit-day-field {
+  color: transparent;
+}
+
+input[type="date"]::-webkit-datetime-edit-year-field {
+  color: transparent;
+}
+
+input[type="date"]:valid::-webkit-datetime-edit-month-field {
+  color: #000;
+}
+
+input[type="date"]:valid::-webkit-datetime-edit-day-field {
+  color: #000;
+}
+
+input[type="date"]:valid::-webkit-datetime-edit-year-field {
+  color: #000;
+}
+
+.date-form-control {
+  position: relative;
+  width: 100%;
+  height: var(--krds-input-h-lg);
+  padding: 0 60px;
+  background-color: var(--krds-white);
+  border: 1px solid var(--krds-gray-60);
+  border-radius: var(--krds-input-rd-lg);
+  font-family: inherit;
+  font-size: var(--krds-input-fz-lg);
+  transition: 0.4s ease-in-out;
+  padding-top: 3px;
+}
+
+input[type="date"] {
+  position: relative;
+}
+
+input[type="date"]::before {
+  content: attr(placeholder);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  color: var(--krds-gray-60);
+  padding-top: 1px;
+  letter-spacing: -1px;
+}
+input[type="date"]:valid::before {
+  display: none;
+}
+input[type="date"]::after {
+  content: "";
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 50%;
+  left: 18px;
+  transform: translateY(-50%);
+  background: url(https://uiux.egovframe.go.kr/resources/img/component/common/ico_calendar.svg)
+    no-repeat;
+  background-position: center;
+  cursor: pointer;
+}
+
+.form-group [class^="form-hint"] {
+  font-size: var(--krds-fz-label-sm);
+  color: var(--krds-gray-70);
+  padding-left: calc(2rem + var(--krds-spacer-1));
+}
+
+.form-group [class^="form-hint"]::before {
+  display: inline-flex;
+  width: 2rem;
+  height: 2rem;
+  flex-shrink: 0;
+  flex-grow: 0;
+  content: "";
+  margin-left: calc((2rem + var(--krds-spacer-1)) * -1);
+  margin-right: var(--krds-spacer-1);
+  vertical-align: top;
+  background: url(https://uiux.egovframe.go.kr/resources/img/component/common/ico_hint_20.svg)
+    no-repeat center;
+  background-size: contain;
+}

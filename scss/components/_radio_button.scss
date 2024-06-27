@@ -1,0 +1,100 @@
+/* 큰 circle */
+.form-check input[type="radio"] ~ label:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: var(--krds-rdo-size-md);
+  height: var(--krds-rdo-size-md);
+  background-color: var(--krds-white);
+  border: 1px solid var(--krds-gray-60);
+  border-radius: var(--krds-rd-full);
+}
+
+/* 작은 circle */
+.form-check input[type="radio"] ~ label:after {
+  position: absolute;
+  top: calc((var(--krds-rdo-size-md) - var(--krds-rdo-chk-md)) / 2);
+  left: calc((var(--krds-rdo-size-md) - var(--krds-rdo-chk-md)) / 2);
+  width: var(--krds-rdo-chk-md);
+  height: var(--krds-rdo-chk-md);
+  background-color: var(--krds-white);
+  border-radius: var(--krds-rd-full);
+}
+
+/* circle z-index 작업 */
+.form-check input[type="radio"] ~ label:before,
+.form-check input[type="checkbox"] ~ label:before {
+  z-index: 3;
+}
+
+.form-check input[type="radio"] ~ label:after,
+.form-check input[type="checkbox"] ~ label:after {
+  z-index: 4;
+}
+
+/* 선택된 라디오버튼 */
+.form-check input[type="radio"]:checked ~ label:after {
+  background-color: var(--krds-primary);
+}
+
+.form-check input[type="radio"]:checked ~ label:before {
+  border-color: var(--krds-primary);
+}
+
+/* 비활성화 라디오버튼 */
+.form-check input[type="radio"]:disabled + label,
+.form-check input[type="checkbox"]:disabled + label {
+  color: var(--krds-gray-50);
+  cursor: default;
+}
+
+.form-check input[type="radio"]:disabled ~ label:before {
+  border-color: var(--krds-gray-40);
+  background-color: var(--krds-gray-20);
+}
+
+.form-check input[type="radio"]:disabled ~ label:after {
+  display: none;
+  background-color: var(--krds-gray-40);
+}
+
+/* 선택된 비활성화 라디오버튼 */
+.form-check input[type="radio"]:checked:disabled ~ label:after {
+  display: block;
+  background-color: var(--krds-gray-40);
+}
+
+/* === 라디오버튼 박스형  === */
+
+.g-example {
+  padding: var(--krds-spacer-10) var(--krds-spacer-10);
+  background-color: #fff;
+  border: 1px solid var(--krds-gray-40);
+}
+.chk-group-area .chk-group-wrap {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: var(--krds-spacer-6);
+}
+
+.chk-group-area .chk-group-wrap > li {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: var(--krds-spacer-6);
+  width: 100%;
+  padding: var(--krds-spacer-6);
+  border: 1px solid var(--krds-gray-40);
+  border-radius: var(--krds-rd-12);
+  transition: 0.4s ease-in-out;
+}
+.chk-group-area .chk-group-wrap > li.checked {
+  border-color: var(--krds-primary);
+}
+.chk-group-area .chk-group-wrap > li.disabled {
+  background-color: var(--krds-gray-5);
+  border-color: var(--krds-gray-30);
+}

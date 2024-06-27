@@ -1,6 +1,78 @@
 button {
-  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 3px;
 }
-p {
-  padding-right: 32000px;
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  width: auto;
+  height: var(--krds-btn-h-lg);
+  padding: 0 var(--krds-btn-px-lg);
+  background-color: var(--krds-primary);
+  border: 1px solid var(--krds-primary);
+  border-radius: var(--krds-btn-rd-lg);
+  font-size: var(--krds-fz-body-lg);
+  color: var(--krds-white);
+  font-weight: 400;
+  line-height: 1;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: 0.4s ease-in-out;
+}
+
+.btn-txt:hover {
+  background-color: var(--krds-secondary-5);
+}
+.btn-txt {
+  color: inherit;
+  border: 0;
+  background-color: inherit;
+  padding: 0 var(--krds-spacer-default2) !important;
+}
+
+.btn-txt.underline {
+  text-decoration: underline;
+}
+
+.btn-txt.sm[class*="ico-"]::before,
+.btn-txt.sm[class*="ico-"]::after {
+  width: 2rem;
+  height: 2rem;
+}
+.btn.sm {
+  height: 4rem;
+  padding: 0 var(--krds-btn-px-sm);
+  border-radius: var(--krds-btn-rd-sm);
+  font-size: var(--krds-btn-fz-sm);
+}
+.btn[class*="ico-"]::after {
+  display: inline-flex;
+  content: "";
+  width: 2.4rem;
+  height: 2.4rem;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.btn-txt[class*="ico-"]::after {
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.ico-arr::after {
+  background-image: url(https://uiux.egovframe.go.kr/resources/img/component/common/ico_arr_20_right.svg);
+}
+.btn-txt.ico-go::before,
+.btn-txt.ico-go::after {
+  background-image: url(https://uiux.egovframe.go.kr/resources/img/component/common/ico_go_20.svg);
+}
+
+.btn-txt.ico-more::after {
+  background-image: url(https://uiux.egovframe.go.kr/resources/img/component/common/ico_arr1_20_right.svg);
 }

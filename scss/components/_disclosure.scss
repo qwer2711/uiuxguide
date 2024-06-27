@@ -1,0 +1,70 @@
+.conts-expand-area .btn-conts-expand {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+  position: relative;
+  border-radius: 0;
+}
+
+.conts-expand-area .expand-wrap {
+  position: relative;
+  overflow: hidden;
+  transition: max-height 0.5s cubic-bezier(0, 1, 0, 1);
+}
+
+.krds-disclosure .expand-wrap {
+  max-height: 0;
+}
+.conts-expand-area.active .expand-wrap {
+  max-height: 1000vh !important;
+  transition: max-height 1.5s ease-in-out;
+}
+
+.krds-disclosure .btn-conts-expand::before {
+  display: inline-flex;
+  content: "";
+  width: 2rem;
+  height: 2rem;
+  margin-right: var(--krds-spacer-1);
+  background-image: url(https://uiux.egovframe.go.kr/resources/img/component/common/ico_arr_func_20.svg);
+  background-size: contain;
+  transition: 0.4s ease-in-out;
+  transform: rotate(0);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.krds-disclosure.active .btn-conts-expand::before {
+  transform: rotate(-90deg);
+}
+
+.conts-expand-area .expand-wrap {
+  position: relative;
+  overflow: hidden;
+  transition: max-height 0.5s cubic-bezier(0, 1, 0, 1);
+}
+.krds-disclosure .expand-wrap .expand-in {
+  padding: var(--krds-spacer-6);
+}
+
+.list-bullet {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: var(--krds-spacer-6);
+}
+
+.list-bullet > li {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: row;
+  gap: var(--krds-spacer-1);
+  color: var(--krds-gray-70);
+}
+
+.list-bullet > li::before {
+  content: "•";
+}

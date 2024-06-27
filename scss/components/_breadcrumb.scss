@@ -1,0 +1,68 @@
+.breadcrumb-wrap {
+  display: flex;
+  justify-content: center;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: row;
+  padding-top: var(--krds-spacer-6);
+}
+
+.breadcrumb-wrap .breadcrumb {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+  gap: var(--krds-spacer-1);
+  width: 100%;
+  max-width: 130rem;
+  padding-left: var(--krds-spacer-1);
+  padding-right: var(--krds-spacer-1);
+}
+
+.breadcrumb-wrap .breadcrumb .home {
+  gap: 0;
+}
+.breadcrumb-wrap .breadcrumb li {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+  font-size: 1.5rem;
+}
+
+.breadcrumb-wrap .breadcrumb li .txt {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+  line-height: 1.2;
+  border-bottom: 0.1rem solid var(--krds-gray-50);
+}
+
+.breadcrumb-wrap .breadcrumb .home::before {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+  content: "";
+  width: 2.4rem;
+  height: 2.4rem;
+  background: url(https://uiux.egovframe.go.kr/resources/img/pattern/common/ico_bread_home.svg)
+    no-repeat;
+  background-size: contain;
+}
+
+.breadcrumb-wrap .breadcrumb li:not(:last-child)::after {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+  content: "";
+  width: 1.6rem;
+  height: 1.6rem;
+  margin-left: var(--krds-spacer-1);
+  background: url(https://uiux.egovframe.go.kr/resources/img/pattern/common/ico_bread_arr.svg)
+    no-repeat;
+  background-size: contain;
+}

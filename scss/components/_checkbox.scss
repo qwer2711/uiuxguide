@@ -1,0 +1,81 @@
+/* === 체크박스 === */
+.form-check input[type="checkbox"] ~ label:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: var(--krds-chk-size-md);
+  height: var(--krds-chk-size-md);
+  background-color: var(--krds-white);
+  border: 1px solid var(--krds-gray-60);
+  border-radius: var(--krds-rd-4);
+}
+
+.form-check input[type="checkbox"] ~ label:after {
+  position: absolute;
+  top: calc((var(--krds-chk-size-md) - var(--krds-chk-primary-chk-md)) / 2);
+  left: calc((var(--krds-chk-size-md) - var(--krds-chk-primary-chk-md)) / 2);
+  width: var(--krds-chk-primary-chk-md);
+  height: var(--krds-chk-primary-chk-md);
+  background: url(https://uiux.egovframe.go.kr/resources/img/component/common/ico_check_primary_checked.svg)
+    no-repeat 0 0;
+  background-size: contain;
+  opacity: 0;
+}
+
+.form-check input[type="checkbox"]:checked ~ label:before {
+  background-color: var(--krds-primary);
+  border-color: var(--krds-primary);
+}
+
+.form-check input[type="checkbox"]:checked ~ label:after {
+  opacity: 1;
+  transition-delay: 0.2s;
+}
+
+.form-check input[type="checkbox"]:disabled ~ label:before {
+  border-color: var(--krds-gray-40);
+  background-color: var(--krds-gray-20);
+}
+
+.form-check input[type="checkbox"]:disabled ~ label:after {
+  background-image: url(https://uiux.egovframe.go.kr/resources/img/component/common/ico_check_primary_checked.svg);
+}
+
+.form-check input[type="checkbox"]:disabled ~ label:after {
+  background-image: url(https://uiux.egovframe.go.kr/resources/img/component/common/ico_check_primary_disabled.svg);
+}
+
+/* 크기별 */
+.form-check.sm > [type="checkbox"] ~ label {
+  font-size: var(--krds-chk-fz-sm);
+  line-height: var(--krds-chk-size-sm);
+  min-height: var(--krds-chk-size-sm);
+  padding-left: calc(var(--krds-chk-size-sm) + var(--krds-spacer-2));
+}
+
+.form-check.sm > [type="checkbox"] ~ label::before {
+  width: var(--krds-chk-size-sm);
+  height: var(--krds-chk-size-sm);
+}
+
+.form-check.sm > [type="checkbox"] ~ label::after {
+  width: var(--krds-chk-primary-chk-sm);
+  height: var(--krds-chk-primary-chk-sm);
+}
+
+.form-check.lg > [type="checkbox"] ~ label {
+  font-size: var(--krds-chk-fz-lg);
+  line-height: var(--krds-chk-size-lg);
+  min-height: var(--krds-chk-size-lg);
+  padding-left: calc(var(--krds-chk-size-lg) + var(--krds-spacer-2));
+}
+
+.form-check.lg > [type="checkbox"] ~ label::before {
+  width: var(--krds-chk-size-lg);
+  height: var(--krds-chk-size-lg);
+}
+
+.form-check.lg > [type="checkbox"] ~ label::after {
+  width: var(--krds-chk-primary-chk-lg);
+  height: var(--krds-chk-primary-chk-lg);
+}

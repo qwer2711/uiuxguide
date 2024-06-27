@@ -1,0 +1,37 @@
+// select {
+//   background-image: url(../../images/icon/down.png);
+//   background-position: calc(100% - 5px);
+//   background-repeat: no-repeat;
+//   appearance: none;
+// }
+.form-select {
+  width: 100%;
+  height: var(--krds-select-h-lg);
+  padding: var(--krds-select-pd-lg);
+  background-color: var(--krds-white);
+  background-image: url(https://uiux.egovframe.go.kr/resources/img/component/common/ico_select_lg.svg);
+  background-repeat: no-repeat;
+  background-position: center right var(--krds-select-rn-lg);
+  border: 1px solid var(--krds-gray-60);
+  border-radius: var(--krds-select-rd-lg);
+  font-family: inherit;
+  font-size: var(--krds-select-fz-lg);
+  color: var(--krds-gray-90);
+  opacity: 1;
+}
+
+.form-select.md {
+  height: 4.8rem;
+  padding: var(--krds-select-pd-md);
+  border-radius: var(--krds-select-rd-md);
+  font-size: var(--krds-select-fz-md);
+  background-size: var(--krds-select-bgs-md);
+}
+
+.form-select.sm {
+  height: 4rem;
+  padding: var(--krds-select-pd-sm);
+  border-radius: var(--krds-select-rd-sm);
+  font-size: var(--krds-select-fz-sm);
+  background-size: var(--krds-select-bgs-sm);
+}

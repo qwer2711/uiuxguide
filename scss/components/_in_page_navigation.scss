@@ -1,0 +1,84 @@
+.quick-nav-area {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: var(--krds-spacer-10);
+  position: sticky;
+  top: 24.4rem;
+  width: 29.6rem;
+  transition: 0.4s ease-in-out;
+}
+.quick-nav-area {
+  top: 6rem;
+}
+
+.quick-nav-area > * {
+  width: 100%;
+}
+
+.guide-txt {
+  font-size: var(--krds-fz-body-md);
+  padding: var(--krds-spacer-4) var(--krds-spacer-6);
+  border-radius: 0.8rem;
+  background-color: var(--krds-secondary-5);
+}
+
+.quick-title-wrap .guide-txt {
+  padding: 0 0 var(--krds-spacer-4) 0;
+  background-color: transparent;
+  border-radius: 0;
+  font-size: var(--krds-fz-title-xsm);
+}
+
+.sec-tit {
+  font-size: var(--krds-fz-title-xlg);
+  font-weight: 700;
+}
+
+.quick-nav-area > * {
+  width: 100%;
+}
+
+.quick-list li > a {
+  display: block;
+  position: relative;
+  padding: 0.7rem 0 0.7rem 2.6rem;
+  transition: 0.4s ease-in-out;
+}
+
+.quick-list li > a.active {
+  background-color: var(--krds-secondary-5);
+  color: var(--krds-secondary);
+  font-weight: 700;
+}
+
+.quick-list li > a.active::before {
+  width: 0.4rem;
+  background-color: var(--krds-secondary);
+}
+.quick-list li > a::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  width: 0.2rem;
+  height: 100%;
+  background-color: var(--krds-secondary-10);
+  transition: 0.4s ease-in-out;
+}
+
+.quick-nav-area .btn-wrap .btn {
+  width: 100%;
+}
+.btn-wrap .guide-txt {
+  padding: var(--krds-spacer-4) 0 0 0;
+  background-color: transparent;
+  border-radius: 0;
+  text-align: center;
+}
+.btn.primary {
+  background-color: var(--krds-primary);
+  border: 1px solid var(--krds-primary);
+  color: var(--krds-white);
+}

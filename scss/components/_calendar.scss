@@ -1,0 +1,132 @@
+#source-calendar {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 20px;
+}
+
+/* border 제거 */
+
+.fc-theme-standard .fc-scrollgrid {
+  border: 0 !important;
+}
+.fc-theme-standard td,
+.fc-theme-standard th {
+  border: 0 !important;
+}
+
+/* --- table header ---*/
+
+.fc-col-header-cell {
+  background: var(--color-white);
+}
+
+.fc-scrollgrid th {
+  background: transparent;
+}
+
+/* 위치조정 */
+
+.fc-col-header-cell .fc-scrollgrid-sync-inner {
+  line-height: 30px;
+}
+.fc .fc-daygrid-day-top {
+  justify-content: center;
+}
+
+/* 글씨색 변경 */
+
+.fc-scrollgrid-sync-inner a {
+  color: var(--color-text-50);
+}
+
+/* 버튼 효과 변경 */
+
+.fc-button {
+  box-shadow: none !important;
+}
+.fc .fc-button-primary {
+  color: var(--color-primary);
+  border-color: transparent;
+  background: transparent;
+}
+.fc .fc-button-primary:hover {
+  color: var(--color-primary);
+  border-color: transparent;
+  background: var(--color-white);
+}
+.fc .fc-button-primary:disabled {
+  color: var(--color-primary);
+  border-color: transparent;
+  background: var(--color-white);
+}
+.fc .fc-button-primary:focus {
+  color: var(--color-primary);
+  border-color: transparent;
+  background: var(--color-white);
+}
+.fc .fc-button-primary:not(:disabled):active,
+.fc .fc-button-primary:not(:disabled).fc-button-active {
+  color: var(--color-primary);
+  border-color: transparent;
+  background: var(--color-white);
+}
+.fc .fc-button-primary:not(:disabled):active:focus,
+.fc .fc-button-primary:not(:disabled).fc-button-active:focus {
+  color: var(--color-primary);
+  border-color: transparent;
+  background: var(--color-white);
+}
+
+/* 날짜 */
+.fc .fc-toolbar-title {
+  font-size: var(--font-size-16);
+  font-weight: var(--font-weight-200);
+}
+
+/* 버튼 위치 수정 */
+.fc-toolbar-ltr {
+  position: relative;
+}
+.fc-toolbar-chunk {
+  position: absolute;
+}
+.fc-toolbar-chunk:nth-child(1) {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.fc-toolbar-chunk:nth-child(2) {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.fc .fc-button-group {
+  position: absolute;
+  display: inline-flex;
+  vertical-align: middle;
+  top: 44%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60%;
+  justify-content: space-between;
+}
+.fc .fc-button-group > .fc-button {
+  position: relative;
+  flex: auto;
+}
+.fc-today-button {
+  position: absolute;
+  right: 0;
+}
+
+.fc .fc-toolbar.fc-header-toolbar {
+  margin-bottom: 0;
+  height: 35px;
+}
+
+/* 스크롤 없애기 */
+
+.fc-scrollgrid thead .fc-scroller {
+  overflow: hidden !important;
+}

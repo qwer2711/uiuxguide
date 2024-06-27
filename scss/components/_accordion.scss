@@ -1,0 +1,47 @@
+.accordion {
+  width: 300px;
+  border-top: 1px solid var(--krds-gray-40);
+}
+.accordion-item {
+  background-color: var(--krds-white);
+  border-bottom: 1px solid var(--krds-gray-40);
+}
+.accordion-item .accordion-collapse {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s cubic-bezier(0, 1, 0, 1);
+}
+
+.accordion-item.active .accordion-collapse {
+  height: auto;
+  max-height: 1000vh;
+  transition: max-height 1.5s ease-in-out;
+}
+
+.accordion-item .accordion-body {
+  padding-top: var(--krds-spacer-1);
+  padding-bottom: var(--krds-spacer-5);
+}
+
+.accordion-item .btn-accordion {
+  position: relative;
+  width: 100%;
+  min-height: 6.4rem;
+  padding: var(--krds-spacer-5) var(--krds-spacer-10) var(--krds-spacer-5) 0;
+  font-size: var(--krds-fz-body-lg);
+  font-weight: 700;
+  text-align: left;
+}
+.accordion-item .btn-accordion::after {
+  position: absolute;
+  top: 2.2rem;
+  right: 0;
+  content: "";
+  width: 2.4rem;
+  height: 2.4rem;
+  background: url(https://uiux.egovframe.go.kr/resources/img/component/common/ico_arr_accordion.svg)
+    no-repeat center;
+  background-size: 2rem;
+  transition: 0.4s ease-in-out;
+  transform: rotate(0deg);
+}

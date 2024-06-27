@@ -1,0 +1,118 @@
+/* 공통 */
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+[class^="swiper-button-"]::after {
+  content: "";
+  font-size: 0 !important;
+  width: 2.4rem;
+  height: 2.4rem;
+  background-repeat: no-repeat;
+}
+
+[class^="swiper-button-"] {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  width: 4rem;
+  height: 4rem;
+  border-radius: var(--krds-rd-full);
+  border: 0.1rem solid var(--krds-gray-20);
+  background-color: var(--krds-white);
+}
+.swiper-button-prev::after {
+  background-image: url(https://uiux.egovframe.go.kr/resources/img/component/common/ico_swiper_prev.svg);
+}
+.swiper-button-next::after {
+  background-image: url(https://uiux.egovframe.go.kr/resources/img/component/common/ico_swiper_next.svg);
+}
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  background-position: center;
+  background-size: contain;
+}
+.swiper-button-stop::after {
+  background-image: url(https://uiux.egovframe.go.kr/resources/img/component/common/ico_swiper_stop.svg);
+}
+.swiper-button-play::after {
+  background-image: url(https://uiux.egovframe.go.kr/resources/img/component/common/ico_swiper_play.svg);
+}
+
+/* 커스텀 */
+
+.swiper-1 {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  border: 1px solid black;
+}
+
+.swiper-2 {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  display: flex;
+  align-items: normal;
+  justify-content: flex-start;
+  flex-direction: column;
+  z-index: 1;
+  border: 1px solid black;
+}
+.swiper-indicator {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  gap: var(--krds-spacer-2);
+  flex-shrink: 0;
+}
+.swiper-indicator .swiper-pagination {
+  top: auto;
+  bottom: auto;
+  width: auto;
+}
+.swiper-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  position: relative;
+  top: auto;
+  bottom: auto;
+  height: 4rem;
+}
+
+.swiper-2 .swiper-indicator .swiper-pagination,
+.swiper-2 .swiper-indicator .swiper-navigation,
+.swiper-2 .swiper-indicator .swiper-controller {
+  display: flex;
+  flex-direction: row;
+}
+.swiper-2 .swiper-indicator .swiper-navigation {
+  gap: var(--krds-spacer-2);
+}
+
+.swiper-indicator .swiper-pagination {
+  top: auto;
+  bottom: auto;
+  width: auto;
+}
+.swiper-indicator .swiper-button-next,
+.swiper-indicator .swiper-button-prev {
+  position: relative;
+  top: auto;
+  left: auto;
+  right: auto;
+  margin: auto;
+}
