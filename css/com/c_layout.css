@@ -129,56 +129,63 @@
 
 /* ************** 공통layout_04 :: 왼쪽메뉴 영역 ************** */
 #sideMenu {
-  width: var(--rt-side-menu-width);
-  height: calc(100vh - var(--rt-top-bar-height));
-  background: var(--rt-primary);
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 300px;
+  height: 100vh;
+  background: rgba(29, 34, 139, 0.9);
   z-index: 999;
 }
-
-[data-page="main"] #sideMenu {
-  display: none;
-}
-
 /* logo */
 .side-menu-logo {
   width: 100%;
-  height: var(--rt-top-bar-height);
+  height: 100px;
   text-align: center;
   -webkit-transition: all 0.1s ease-out;
   transition: all 0.1s ease-out;
 }
+.side-menu-logo .logo-mb {
+  display: none;
+}
+/* [data-device="pc"] .side-menu-logo .logo-pc,
+[data-device="mobile"] .side-menu-logo .logo-mb {
+    display: none;
+}
+[data-device="pc"] .side-menu-logo .logo-lg,
+[data-device="mobile"] .side-menu-logo .logo-mb {
+    display: block;
+} */
 
-/* 사이드메뉴_드롭다운 */
+/* dropdown-menu */
 .dropdown-wrap {
   width: 100%;
-  height: calc(100% - var(--rt-top-bar-height));
+  height: 90vh;
   box-sizing: border-box;
 }
 
-/* 사이드메뉴_드롭다운_공통 */
-.side-menu .dropdown-ul li a {
+/* 공통 */
+.dropdown-ul li a {
   color: rgba(255, 255, 255, 0.568);
 }
 
-.side-menu .dropdown-ul li a:hover {
-  color: rgb(255, 255, 255);
+.dropdown-ul li a:hover {
+  color: rgba(0, 0, 0, 1);
   transition: color 0.15s ease-in;
 }
-
-.side-menu .accordion li .left-tit .icon img {
+.accordion li .left-tit .icon img {
   filter: opacity(0.5);
 }
-
-.side-menu .accordion li.open .left-tit .icon img {
+.accordion li.open .left-tit .icon img {
   filter: opacity(1);
 }
 
-.side-menu .dropdown-ul li a i {
+.dropdown-ul li a i {
   font-size: 10px;
   transition: transform 0.2s;
 }
 
-/* 사이드메뉴_one-depth */
+/* one-depth */
 .accordion {
   width: 100%;
 }
@@ -188,14 +195,13 @@
   padding: 10px 24px;
   cursor: pointer;
 }
-
 .accordion-header .left-tit .icon {
   width: 20px;
   height: 20px;
 }
 
-.accordion-item.open .accordion-header i {
-  transform: rotate(90deg);
+.accordion > li.open > a {
+  color: rgba(255, 255, 255, 1);
 }
 
 .accordion-item .accordion-content {
@@ -204,17 +210,25 @@
   overflow: hidden;
   max-height: 0;
 }
-
 .accordion-item.open .accordion-content {
   opacity: 1;
   visibility: visible;
   max-height: auto;
+  /* transition: max-height 0.5s ease; */
   transition: 0.3s ease-in-out max-height;
 }
 
-/* 사이드메뉴_two-depth */
+/* two-depth */
 .sub-accordion {
   margin-left: 31px;
+}
+
+.sub-accordion-item.open .sub-accordion-header i {
+  transform: rotate(90deg);
+}
+
+.sub-accordion > li.open > a {
+  color: rgba(255, 255, 255, 1);
 }
 
 .sub-accordion-header {
@@ -231,6 +245,47 @@
   width: 6px;
   height: 1px;
   background: #fff;
+}
+
+.sub-accordion-content {
+  opacity: 0;
+  visibility: hidden;
+  overflow: hidden;
+  max-height: 0;
+}
+
+.sub-accordion-item.open .sub-accordion-content {
+  opacity: 1;
+  visibility: visible;
+  max-height: auto;
+  transition: 0.3s ease-in-out max-height;
+}
+/* last-depth */
+.last-accordion {
+  margin-left: 24px;
+}
+
+.last-accordion > li.open > a {
+  color: rgba(255, 255, 255, 1);
+}
+
+.last-accordion-header {
+  position: relative;
+  display: block;
+  padding: 8px 15px;
+  cursor: pointer;
+}
+
+.last-accordion-header::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  border: 1px solid #fff;
 }
 
 /* ************** 공통layout_05 :: 콘텐츠 영역 ************** */
