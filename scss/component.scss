@@ -733,10 +733,352 @@
 }
 
 /* ************** 공통component_08 :: 배지 ************** */
+
+.btn-txt.ico-filter {
+  position: relative;
+}
+.btn-txt {
+  color: inherit;
+  border: 0;
+  background-color: inherit;
+  padding: 0 var(--krds-spacer-default2) !important;
+}
+.btn-txt.ico-filter .num {
+  display: inline-flex;
+  position: absolute;
+  right: 0.1rem;
+  z-index: 1;
+  height: 2rem;
+  font-size: var(--krds-fz-label-sm);
+  color: var(--krds-white);
+  padding: 0 var(--krds-spacer-2);
+  margin-top: -3rem;
+  border-radius: 2rem;
+  background-color: var(--krds-primary);
+}
+
+.btn-txt.ico-filter::before,
+.btn-txt.ico-filter::after {
+  background-image: url(https://uiux.egovframe.go.kr/resources/img/component/common/ico_filter_20.svg);
+}
+
+.btn[class*="ico-"]::after {
+  display: inline-flex;
+  content: "";
+  width: 2.4rem;
+  height: 2.4rem;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
 /* ************** 공통component_09 :: 아코디언 ************** */
+.accordion {
+  width: 300px;
+  border-top: 1px solid var(--krds-gray-40);
+}
+.accordion-item {
+  background-color: var(--krds-white);
+  border-bottom: 1px solid var(--krds-gray-40);
+}
+.accordion-item .accordion-collapse {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s cubic-bezier(0, 1, 0, 1);
+}
+
+.accordion-item.active .accordion-collapse {
+  height: auto;
+  max-height: 1000vh;
+  transition: max-height 1.5s ease-in-out;
+}
+
+.accordion-item .accordion-body {
+  padding-top: var(--krds-spacer-1);
+  padding-bottom: var(--krds-spacer-5);
+}
+
+.accordion-item .btn-accordion {
+  position: relative;
+  width: 100%;
+  min-height: 6.4rem;
+  padding: var(--krds-spacer-5) var(--krds-spacer-10) var(--krds-spacer-5) 0;
+  font-size: var(--krds-fz-body-lg);
+  font-weight: 700;
+  text-align: left;
+}
+.accordion-item .btn-accordion::after {
+  position: absolute;
+  top: 2.2rem;
+  right: 0;
+  content: "";
+  width: 2.4rem;
+  height: 2.4rem;
+  background: url(https://uiux.egovframe.go.kr/resources/img/component/common/ico_arr_accordion.svg)
+    no-repeat center;
+  background-size: 2rem;
+  transition: 0.4s ease-in-out;
+  transform: rotate(0deg);
+}
 /* ************** 공통component_10 :: 캐러셀 ************** */
+
+/* 공통  */
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+[class^="swiper-button-"]::after {
+  content: "";
+  font-size: 0 !important;
+  width: 2.4rem;
+  height: 2.4rem;
+  background-repeat: no-repeat;
+}
+
+[class^="swiper-button-"] {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  width: 4rem;
+  height: 4rem;
+  border-radius: var(--krds-rd-full);
+  border: 0.1rem solid var(--krds-gray-20);
+  background-color: var(--krds-white);
+}
+.swiper-button-prev::after {
+  background-image: url(https://uiux.egovframe.go.kr/resources/img/component/common/ico_swiper_prev.svg);
+}
+.swiper-button-next::after {
+  background-image: url(https://uiux.egovframe.go.kr/resources/img/component/common/ico_swiper_next.svg);
+}
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  background-position: center;
+  background-size: contain;
+}
+.swiper-button-stop::after {
+  background-image: url(https://uiux.egovframe.go.kr/resources/img/component/common/ico_swiper_stop.svg);
+}
+.swiper-button-play::after {
+  background-image: url(https://uiux.egovframe.go.kr/resources/img/component/common/ico_swiper_play.svg);
+}
+
+/* 커스텀 */
+
+.swiper-1 {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  border: 1px solid black;
+}
+
+.swiper-2 {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  display: flex;
+  align-items: normal;
+  justify-content: flex-start;
+  flex-direction: column;
+  z-index: 1;
+  border: 1px solid black;
+}
+.swiper-indicator {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  gap: var(--krds-spacer-2);
+  flex-shrink: 0;
+}
+.swiper-indicator .swiper-pagination {
+  top: auto;
+  bottom: auto;
+  width: auto;
+}
+.swiper-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  position: relative;
+  top: auto;
+  bottom: auto;
+  height: 4rem;
+}
+
+.swiper-2 .swiper-indicator .swiper-pagination,
+.swiper-2 .swiper-indicator .swiper-navigation,
+.swiper-2 .swiper-indicator .swiper-controller {
+  display: flex;
+  flex-direction: row;
+}
+.swiper-2 .swiper-indicator .swiper-navigation {
+  gap: var(--krds-spacer-2);
+}
+
+.swiper-indicator .swiper-pagination {
+  top: auto;
+  bottom: auto;
+  width: auto;
+}
+.swiper-indicator .swiper-button-next,
+.swiper-indicator .swiper-button-prev {
+  position: relative;
+  top: auto;
+  left: auto;
+  right: auto;
+  margin: auto;
+}
+
 /* ************** 공통component_11 :: 탭 ************** */
+.tab.full {
+  width: 100%;
+}
+
+.tab > ul {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  position: relative;
+  width: 100%;
+}
+
+.tab button:focus {
+  outline: 0px solid rgba(36, 107, 235, 0.8);
+}
+
+.tab.full > ul > li {
+  flex: 1 1 0px;
+  min-width: 0;
+}
+
+.tab li,
+.tab .btn-tab {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  position: relative;
+  white-space: nowrap;
+}
+
+.tab .btn-tab {
+  width: 100%;
+  height: 60px !important;
+  background-color: var(--krds-white);
+  border: 1px solid var(--krds-white);
+  color: var(--krds-gray-70);
+  font-weight: 700;
+  transition: 0.4s ease-in-out;
+}
+
+.tab.line .active .btn-tab {
+  color: var(--krds-secondary);
+}
+.tab.line .btn-tab:before {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  content: "";
+  width: 0;
+  height: 0.2rem;
+  background-color: var(--krds-secondary);
+  transition: 0.4s ease-in-out;
+}
+
+.tab.line .btn-tab {
+  padding-left: 0;
+  padding-right: 0;
+  border: 0;
+  border-bottom: 2px solid var(--krds-gray-30);
+}
+.tab.line .active .btn-tab:before {
+  position: absolute;
+  left: 0;
+  width: 100%;
+}
+
+.tab-conts {
+  display: none;
+  margin-top: var(--krds-spacer-10);
+}
+.tab-conts.active {
+  display: flex;
+  align-items: normal;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: var(--krds-spacer-10);
+}
+
+.helper-box {
+  width: 100%;
+  padding: var(--krds-spacer-6);
+  background-color: var(--krds-secondary-5);
+  border: 1px solid var(--krds-gray-20);
+  border-radius: 0.6rem;
+}
+.helper-box .helper-tit {
+  display: flex;
+  position: relative;
+  color: var(--krds-secondary);
+  font-weight: 700;
+}
+.helper-box .helper-tit::before {
+  margin-right: var(--krds-spacer-1);
+  content: "";
+  width: 2rem;
+  height: 2rem;
+  margin-top: var(--krds-spacer-default2);
+  background-image: url(https://uiux.egovframe.go.kr/resources/img/pattern/content/ico_helper_info.svg);
+  background-size: contain;
+}
+
+.helper-box .helper-desc-wrap {
+  margin-top: var(--krds-spacer-5);
+  margin-left: var(--krds-spacer-6);
+}
+
+.helper-box .helper-desc-wrap .info-list:first-child {
+  margin-top: 0;
+}
+
+.info-list > li {
+  position: relative;
+  padding-left: var(--krds-spacer-3);
+  color: var(--krds-gray-70);
+}
+
+.info-list.decimal > li::before {
+  content: "•";
+}
+
+.link-txt {
+  text-decoration: underline;
+}
+
 /* ************** 공통component_12 :: 표 ************** */
+
+/* ==========  테이블 스크롤시 head 고정 시 넣어줘야하는 코드 ========== */
+
+table thead tr {
+  position: sticky;
+  top: 0px;
+  background-color: gray !important;
+  border-top: 1px solid gray;
+  border-bottom: 1px solid gray;
+  box-sizing: border-box;
+}
 table {
   width: 100%;
   border-left: 1px solid var(--color-border);
@@ -781,6 +1123,78 @@ button {
   align-items: center;
   gap: 3px;
 }
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  width: auto;
+  height: var(--krds-btn-h-lg);
+  padding: 0 var(--krds-btn-px-lg);
+  background-color: var(--krds-primary);
+  border: 1px solid var(--krds-primary);
+  border-radius: var(--krds-btn-rd-lg);
+  font-size: var(--krds-fz-body-lg);
+  color: var(--krds-white);
+  font-weight: 400;
+  line-height: 1;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: 0.4s ease-in-out;
+}
+
+.btn-txt:hover {
+  background-color: var(--krds-secondary-5);
+}
+.btn-txt {
+  color: inherit;
+  border: 0;
+  background-color: inherit;
+  padding: 0 var(--krds-spacer-default2) !important;
+}
+
+.btn-txt.underline {
+  text-decoration: underline;
+}
+
+.btn-txt.sm[class*="ico-"]::before,
+.btn-txt.sm[class*="ico-"]::after {
+  width: 2rem;
+  height: 2rem;
+}
+.btn.sm {
+  height: 4rem;
+  padding: 0 var(--krds-btn-px-sm);
+  border-radius: var(--krds-btn-rd-sm);
+  font-size: var(--krds-btn-fz-sm);
+}
+.btn[class*="ico-"]::after {
+  display: inline-flex;
+  content: "";
+  width: 2.4rem;
+  height: 2.4rem;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.btn-txt[class*="ico-"]::after {
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.ico-arr::after {
+  background-image: url(https://uiux.egovframe.go.kr/resources/img/component/common/ico_arr_20_right.svg);
+}
+.btn-txt.ico-go::before,
+.btn-txt.ico-go::after {
+  background-image: url(https://uiux.egovframe.go.kr/resources/img/component/common/ico_go_20.svg);
+}
+
+.btn-txt.ico-more::after {
+  background-image: url(https://uiux.egovframe.go.kr/resources/img/component/common/ico_arr1_20_right.svg);
+}
+
 /* ************** 공통 :: 라디오버튼 & 체크박스 ************** */
 /* 공통 */
 .chk-area {
@@ -887,6 +1301,42 @@ input[type="checkbox"] {
   display: block;
   background-color: var(--krds-gray-40);
 }
+
+/* === 라디오버튼 박스형  === */
+
+.g-example {
+  padding: var(--krds-spacer-10) var(--krds-spacer-10);
+  background-color: #fff;
+  border: 1px solid var(--krds-gray-40);
+}
+.chk-group-area .chk-group-wrap {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: var(--krds-spacer-6);
+}
+
+.chk-group-area .chk-group-wrap > li {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: var(--krds-spacer-6);
+  width: 100%;
+  padding: var(--krds-spacer-6);
+  border: 1px solid var(--krds-gray-40);
+  border-radius: var(--krds-rd-12);
+  transition: 0.4s ease-in-out;
+}
+.chk-group-area .chk-group-wrap > li.checked {
+  border-color: var(--krds-primary);
+}
+.chk-group-area .chk-group-wrap > li.disabled {
+  background-color: var(--krds-gray-5);
+  border-color: var(--krds-gray-30);
+}
+
 /* ************** 공통component_16 :: 체크박스(Input) ************** */
 
 /* === 체크박스 === */
@@ -972,11 +1422,42 @@ input[type="checkbox"] {
 }
 
 /* ************** 공통component_17 :: 셀렉트박스 ************** */
-select {
-  background-image: url(../../images/icon/down.png);
-  background-position: calc(100% - 5px);
+// select {
+//   background-image: url(../../images/icon/down.png);
+//   background-position: calc(100% - 5px);
+//   background-repeat: no-repeat;
+//   appearance: none;
+// }
+.form-select {
+  width: 100%;
+  height: var(--krds-select-h-lg);
+  padding: var(--krds-select-pd-lg);
+  background-color: var(--krds-white);
+  background-image: url(https://uiux.egovframe.go.kr/resources/img/component/common/ico_select_lg.svg);
   background-repeat: no-repeat;
-  appearance: none;
+  background-position: center right var(--krds-select-rn-lg);
+  border: 1px solid var(--krds-gray-60);
+  border-radius: var(--krds-select-rd-lg);
+  font-family: inherit;
+  font-size: var(--krds-select-fz-lg);
+  color: var(--krds-gray-90);
+  opacity: 1;
+}
+
+.form-select.md {
+  height: 4.8rem;
+  padding: var(--krds-select-pd-md);
+  border-radius: var(--krds-select-rd-md);
+  font-size: var(--krds-select-fz-md);
+  background-size: var(--krds-select-bgs-md);
+}
+
+.form-select.sm {
+  height: 4rem;
+  padding: var(--krds-select-pd-sm);
+  border-radius: var(--krds-select-rd-sm);
+  font-size: var(--krds-select-fz-sm);
+  background-size: var(--krds-select-bgs-sm);
 }
 
 /* ************** 공통 :: input / 셀렉트박스 / 텍스트영역  ************** */
@@ -1004,6 +1485,120 @@ textarea {
 /* ************** 공통component_21 :: 툴팁 ************** */
 /* ************** 공통component_22 :: 코치마크 ************** */
 /* ************** 공통component_23 :: 날짜입력피드(Input) ************** */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--krds-spacer-3);
+  width: 100%;
+}
+
+input[type="date"]::-webkit-datetime-edit-text {
+  -webkit-appearance: none;
+  color: transparent;
+}
+input[type="date"]:valid::-webkit-datetime-edit-text {
+  color: inherit;
+}
+input[type="date"]::-webkit-calendar-picker-indicator {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  color: transparent;
+  cursor: pointer;
+}
+
+input[type="date"]::-webkit-datetime-edit-month-field {
+  color: transparent;
+}
+
+input[type="date"]::-webkit-datetime-edit-day-field {
+  color: transparent;
+}
+
+input[type="date"]::-webkit-datetime-edit-year-field {
+  color: transparent;
+}
+
+input[type="date"]:valid::-webkit-datetime-edit-month-field {
+  color: #000;
+}
+
+input[type="date"]:valid::-webkit-datetime-edit-day-field {
+  color: #000;
+}
+
+input[type="date"]:valid::-webkit-datetime-edit-year-field {
+  color: #000;
+}
+
+.date-form-control {
+  position: relative;
+  width: 100%;
+  height: var(--krds-input-h-lg);
+  padding: 0 60px;
+  background-color: var(--krds-white);
+  border: 1px solid var(--krds-gray-60);
+  border-radius: var(--krds-input-rd-lg);
+  font-family: inherit;
+  font-size: var(--krds-input-fz-lg);
+  transition: 0.4s ease-in-out;
+  padding-top: 3px;
+}
+
+input[type="date"] {
+  position: relative;
+}
+
+input[type="date"]::before {
+  content: attr(placeholder);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  color: var(--krds-gray-60);
+  padding-top: 1px;
+  letter-spacing: -1px;
+}
+input[type="date"]:valid::before {
+  display: none;
+}
+input[type="date"]::after {
+  content: "";
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 50%;
+  left: 18px;
+  transform: translateY(-50%);
+  background: url(https://uiux.egovframe.go.kr/resources/img/component/common/ico_calendar.svg)
+    no-repeat;
+  background-position: center;
+  cursor: pointer;
+}
+
+.form-group [class^="form-hint"] {
+  font-size: var(--krds-fz-label-sm);
+  color: var(--krds-gray-70);
+  padding-left: calc(2rem + var(--krds-spacer-1));
+}
+
+.form-group [class^="form-hint"]::before {
+  display: inline-flex;
+  width: 2rem;
+  height: 2rem;
+  flex-shrink: 0;
+  flex-grow: 0;
+  content: "";
+  margin-left: calc((2rem + var(--krds-spacer-1)) * -1);
+  margin-right: var(--krds-spacer-1);
+  vertical-align: top;
+  background: url(https://uiux.egovframe.go.kr/resources/img/component/common/ico_hint_20.svg)
+    no-repeat center;
+  background-size: contain;
+}
+
 /* ************** 공통component_24 :: 텍스트입력필드(Input) ************** */
 /* ************** 공통component_25 :: 텍스트영역(Textarea) ************** */
 /* ************** 공통component_26 :: 파일업로드 ************** */
