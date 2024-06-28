@@ -383,7 +383,7 @@
   text-overflow: ellipsis;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 5;
-  height: 70%;
+  height: 60%;
 }
 
 .move-link {
@@ -393,10 +393,22 @@
 
 .move-link a {
   text-decoration: underline;
+  font-size: var(--krds-btn-fz-sm);
   font-weight: 700;
 }
 
 .move-link a:hover {
   color: var(--krds-primary);
   text-decoration: underline;
+}
+
+.sty-guide .move-link {
+  gap: 1rem;
+  align-self: flex-end;
+}
+
+.sty-guide .move-link a {
+  text-decoration: underline;
+  font-size: var(--krds-btn-fz-xsm);
+  font-weight: 700;
 }
