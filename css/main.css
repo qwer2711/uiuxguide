@@ -9,45 +9,16 @@
 * 최종업데이트 : 2024-07-01-월
 
 ******************************************************** */
-/* abstracts */
-/* *******************************************************
-* 파일이름 : _variables.scss
-* 파일설명 : Scss 환경 전역변수
-
-=== 이 CSS 파일은 담당자만 수정, 추가, 삭제할 수 있습니다. ===
-
-* 최종업데이트 : 2024-06-27-목
-
-******************************************************** */
-/* *******************************************************
-* 파일이름 : _mixins.scss
-* 파일설명 : Scss 환경 함수
-
-=== 이 CSS 파일은 담당자만 수정, 추가, 삭제할 수 있습니다. ===
-
-* 최종업데이트 : 2024-06-27-목
-
-******************************************************** */
-/* *******************************************************
-* 파일이름 : _variables.scss
-* 파일설명 : Scss 환경 전역변수
-
-=== 이 CSS 파일은 담당자만 수정, 추가, 삭제할 수 있습니다. ===
-
-* 최종업데이트 : 2024-06-27-목
-
-******************************************************** */
-/* base */
-/* *******************************************************
-* 파일이름 : c_reset.scss
-* 파일설명 : 퍼블리싱 환경 초기화 reset작업
-
-=== 이 CSS 파일은 담당자만 수정, 추가, 삭제할 수 있습니다. ===
-
-* 최종업데이트 : 2024-06-27-목
-
-******************************************************** */
-/* --------------------- 시작 --------------------- */
+/* *****************************
+* 폴더구조_01 : abstracts
+******************************** */
+/* @import variables.scss */
+/* @import mixins.scss */
+/* *****************************
+* 폴더구조_02 : base
+******************************** */
+/*  @import reset.scss */
+@import url(../../css/plugin/fullcalender.min.css);
 html,
 body {
   position: relative;
@@ -306,32 +277,9 @@ caption {
   display: block !important;
 }
 
-/* *******************************************************
-* 파일이름 : color.scss
-* 파일설명 : 공통 색상 스타일
-
-=== 이 CSS 파일은 담당자만 수정, 추가, 삭제할 수 있습니다. ===
-
-* 최종업데이트 : 2024-06-27-목
-
-******************************************************** */
-/* 리스트(검색 시 활용) */
-/* **** 공통color_01 :: System_color : 시스템 색상 ****/
-/* **** 공통color_02 :: Primary_color : 주요 색상 ****/
-/* **** 공통color_03 :: Secondary_color : 보조 색상 ****/
-/* **** 공통color_04 :: Point_color : 집중 색상 ****/
-/* **** 공통color_05 :: Grayscale : BG, Text, Line 색상 ****/
-/* *******************************************************
-* 파일이름 : _variables.scss
-* 파일설명 : Scss 환경 전역변수
-
-=== 이 CSS 파일은 담당자만 수정, 추가, 삭제할 수 있습니다. ===
-
-* 최종업데이트 : 2024-06-27-목
-
-******************************************************** */
-/* --------------------- 시작 --------------------- */
+/*  @import root.scss */
 :root {
+  /* **** 공통color_01 :: System_color : 시스템 색상 ****/
   --krds-white: #fff;
   --krds-black: #000;
   --krds-primary: #246beb;
@@ -341,6 +289,7 @@ caption {
   --krds-warning: #ffb724;
   --krds-success: #008a1e;
   --krds-information: #2768ff;
+  /* **** 공통color_02 :: Primary_color : 주요 색상 ****/
   --krds-primary-5: #eff5ff;
   --krds-primary-10: #d3e1fb;
   --krds-primary-20: #a7c4f7;
@@ -350,6 +299,7 @@ caption {
   --krds-primary-70: #16408d;
   --krds-primary-80: #0e2b5e;
   --krds-primary-90: #07152f;
+  /* **** 공통color_03 :: Secondary_color : 보조 색상 ****/
   --krds-secondary-5: #edf1f5;
   --krds-secondary-10: #cdd7e4;
   --krds-secondary-20: #b4c4d6;
@@ -359,6 +309,7 @@ caption {
   --krds-secondary-70: #002046;
   --krds-secondary-80: #00162f;
   --krds-secondary-90: #000b17;
+  /* **** 공통color_04 :: Point_color : 집중 색상 ****/
   --krds-point-5: #fdf2f3;
   --krds-point-10: #fad1d3;
   --krds-point-20: #f5a3a8;
@@ -368,6 +319,7 @@ caption {
   --krds-point-70: #8b0e16;
   --krds-point-80: #5c0a0f;
   --krds-point-90: #2e0507;
+  /* **** 공통color_05 :: Grayscale : BG, Text, Line 색상 ****/
   --krds-gray-5: #f8f8f8;
   --krds-gray-10: #f0f0f0;
   --krds-gray-20: #e4e4e4;
@@ -378,62 +330,6 @@ caption {
   --krds-gray-70: #555555;
   --krds-gray-80: #2d2d2d;
   --krds-gray-90: #1d1d1d;
-}
-
-/* *******************************************************
-* 파일이름 : font.scss
-* 파일설명 : 공통 폰트 스타일
-
-=== 이 CSS 파일은 담당자만 수정, 추가, 삭제할 수 있습니다. ===
-
-* 최종업데이트 : 2024-06-27-목
-
-******************************************************** */
-/* --------------------- 시작 --------------------- */
-@font-face {
-  font-family: "Pretendard GOV";
-  font-weight: 400;
-  font-style: normal;
-  src: url("../../font/pretendardGOV/PretendardGOV-Regular.subset.woff") format("woff");
-}
-/* Medium */
-@font-face {
-  font-family: "Pretendard GOV";
-  font-weight: 500;
-  font-style: normal;
-  src: url("../../font/pretendardGOV/PretendardGOV-Medium.subset.woff") format("woff");
-}
-/* Bold */
-@font-face {
-  font-family: "Pretendard GOV";
-  font-weight: 700;
-  font-style: normal;
-  src: url("../../font/pretendardGOV/PretendardGOV-Bold.subset.woff") format("woff");
-}
-/* *******************************************************
-* 파일이름 : shape.scss
-* 파일설명 : 퍼블리싱 환경 초기화 reset작업
-
-=== 이 CSS 파일은 담당자만 수정, 추가, 삭제할 수 있습니다. ===
-
-* 최종업데이트 : 2024-06-27-목
-
-******************************************************** */
-/* 리스트(검색 시 활용) */
-/* **** 공통shape_01 :: Font-size ****/
-/* **** 공통shape_02 :: Border-radius  ****/
-/* **** 공통shape_03 :: Button ****/
-/* **** 공통shape_04 :: BtnChipFill ****/
-/* **** 공통shape_05 :: BtnChipOutline ****/
-/* **** 공통shape_06 :: Input ****/
-/* **** 공통shape_07 :: Radiobox ****/
-/* **** 공통shape_08 :: Checkbox ****/
-/* **** 공통shape_09 :: Selectbox ****/
-/* **** 공통shape_10 :: Switch ****/
-/* **** 공통shape_11 :: Tab ****/
-/* **** 공통shape_12 :: Space ****/
-/* --------------------- 시작 --------------------- */
-:root {
   /* **** 공통shape_01 :: Font-size ****/
   --krds-fz-display-sm: 4rem;
   --krds-fz-display-md: 5rem;
@@ -460,309 +356,599 @@ caption {
   --krds-fz-label-sm: 1.5rem;
   --krds-fz-label-md: 1.7rem;
   --krds-fz-label-lg: 1.9rem;
-  /* **** 공통shape_02 :: border-radius ****/
-  --krds-rd-1: 0.1rem;
-  --krds-rd-2: 0.2rem;
-  --krds-rd-4: 0.4rem;
-  --krds-rd-6: 0.6rem;
-  --krds-rd-8: 0.8rem;
+  /* **** 공통shape_02 :: Border-radius  ****/
+  --krds-rd-1: .1rem;
+  --krds-rd-2: .2rem;
+  --krds-rd-4: .4rem;
+  --krds-rd-6: .6rem;
+  --krds-rd-8: .8rem;
   --krds-rd-10: 1rem;
   --krds-rd-12: 1.2rem;
   --krds-rd-full: 100%;
   /* **** 공통shape_03 :: Button ****/
-  /* height */
   --krds-btn-h-xsm: 3.2rem;
   --krds-btn-h-sm: 4rem;
   --krds-btn-h-md: 4.8rem;
   --krds-btn-h-lg: 5.6rem;
   --krds-btn-h-xlg: 6.4rem;
-  /* padding */
   --krds-btn-px-xsm: 1rem;
   --krds-btn-px-sm: 1.2rem;
   --krds-btn-px-md: 1.6rem;
   --krds-btn-px-lg: 2rem;
   --krds-btn-px-xlg: 2.4rem;
-  /* border-radius */
-  --krds-btn-rd-xsm: 0.6rem;
-  --krds-btn-rd-sm: 0.6rem;
-  --krds-btn-rd-md: 0.8rem;
-  --krds-btn-rd-lg: 0.8rem;
-  --krds-btn-rd-xlg: 0.8rem;
-  /* font-size */
+  --krds-btn-rd-xsm: .6rem;
+  --krds-btn-rd-sm: .6rem;
+  --krds-btn-rd-md: .8rem;
+  --krds-btn-rd-lg: .8rem;
+  --krds-btn-rd-xlg: .8rem;
   --krds-btn-fz-xsm: 1.5rem;
   --krds-btn-fz-sm: 1.7rem;
   --krds-btn-fz-md: 1.7rem;
   --krds-btn-fz-lg: 1.9rem;
   --krds-btn-fz-xlg: 1.9rem;
   /* **** 공통shape_04 :: BtnChipFill ****/
-  /* height */
   --krds-btnChipFill-h-md: 3.2rem;
   --krds-btnChipFill-h-lg: 3.6rem;
-  /* padding */
   --krds-btnChipFill-pd-md: 0rem 1.2rem;
   --krds-btnChipFill-pd-lg: 0rem 1.2rem;
-  /* border-radius */
-  --krds-btnChipFill-rd-md: 0.6rem;
-  --krds-btnChipFill-rd-lg: 0.6rem;
-  /* font-size */
+  --krds-btnChipFill-rd-md: .6rem;
+  --krds-btnChipFill-rd-lg: .6rem;
   --krds-btnChipFill-fz-md: 1.5rem;
   --krds-btnChipFill-fz-lg: 1.7rem;
-  /* **** 공통shape_05 :: btnChipOutline ****/
-  /* height */
+  /* **** 공통shape_05 :: BtnChipOutline ****/
   --krds-btnChipOutline-h-md: 3.2rem;
   --krds-btnChipOutline-h-lg: 3.6rem;
-  /* padding */
   --krds-btnChipOutline-pd-md: 0rem 1.2rem;
   --krds-btnChipOutline-pd-lg: 0rem 1.2rem;
-  /* border-radius */
   --krds-btnChipOutline-rd-md: 10rem;
   --krds-btnChipOutline-rd-lg: 10rem;
-  /* font-size */
   --krds-btnChipOutline-fz-md: 1.5rem;
   --krds-btnChipOutline-fz-lg: 1.7rem;
-  /* gap */
-  --krds-btnChipOutline-gap-md: 0.2rem;
-  --krds-btnChipOutline-gap-lg: 0.2rem;
-  /* size */
+  --krds-btnChipOutline-gap-md: .2rem;
+  --krds-btnChipOutline-gap-lg: .2rem;
   --krds-btnChipOutline-size-md: 1.2rem;
   --krds-btnChipOutline-size-lg: 1.6rem;
   /* **** 공통shape_06 :: Input ****/
-  /* height */
-  --krds-input-h-sm: 4rem;
-  --krds-input-h-md: 4.8rem;
-  --krds-input-h-lg: 5.6rem;
-  --krds-input-h-xlg: 8rem;
-  /* padding */
-  --krds-input-px-sm: 1.6rem;
-  --krds-input-px-md: 1.6rem;
-  --krds-input-px-lg: 1.6rem;
-  --krds-input-px-xlg: 2.4rem;
-  /* border-radius */
-  --krds-input-rd-sm: 0.6rem;
-  --krds-input-rd-md: 0.8rem;
-  --krds-input-rd-lg: 0.8rem;
-  --krds-input-rd-xlg: 1.2rem;
-  /* border-font-size */
-  --krds-input-fz-sm: 1.5rem;
-  --krds-input-fz-md: 1.7rem;
-  --krds-input-fz-lg: 1.9rem;
-  --krds-input-fz-xlg: 2.5rem;
   /* **** 공통shape_07 :: Radiobox ****/
-  /* size*/
-  --krds-rdo-size-sm: 1.6rem;
-  --krds-rdo-size-md: 2rem;
-  --krds-rdo-size-lg: 2.4rem;
-  /* chk*/
-  --krds-rdo-chk-sm: 0.8rem;
-  --krds-rdo-chk-md: 1rem;
-  --krds-rdo-chk-lg: 1.4rem;
-  /* pos*/
-  --krds-rdo-pos-sm: 0.2rem;
-  --krds-rdo-pos-md: 0.5rem;
-  --krds-rdo-pos-lg: 1rem;
-  /* font-size*/
-  --krds-rdo-fz-sm: 1.5rem;
-  --krds-rdo-fz-md: 1.7rem;
-  --krds-rdo-fz-lg: 1.9rem;
-  /* height */
-  --krds-rdoChipOutline-h-sm: 3.2rem;
-  --krds-rdoChipOutline-h-md: 4rem;
-  --krds-rdoChipOutline-h-lg: 4.8rem;
-  /* padding */
-  --krds-rdoChipOutline-pd-sm: 0 1rem;
-  --krds-rdoChipOutline-pd-md: 0 1.2rem;
-  --krds-rdoChipOutline-pd-lg: 0 1.6rem;
-  /* border-radius */
-  --krds-rdoChipOutline-rd-sm: 0.6rem;
-  --krds-rdoChipOutline-rd-md: 0.6rem;
-  --krds-rdoChipOutline-rd-lg: 0.8rem;
-  /*font-size */
-  --krds-rdoChipOutline-fz-sm: 1.5rem;
-  --krds-rdoChipOutline-fz-md: 1.7rem;
-  --krds-rdoChipOutline-fz-lg: 1.7rem;
   /* **** 공통shape_08 :: Checkbox ****/
-  /* size*/
-  --krds-chk-size-sm: 1.6rem;
-  --krds-chk-size-md: 2rem;
-  --krds-chk-size-lg: 2.4rem;
-  /* primary*/
-  --krds-chk-primary-chk-sm: 1.2rem;
-  --krds-chk-primary-chk-md: 1.6rem;
-  --krds-chk-primary-chk-lg: 2rem;
-  /* secondary*/
-  --krds-chk-secondary-chk-md: 2rem;
-  /* pos*/
-  --krds-chk-pos-md: 0.5rem;
-  /* font-size*/
-  --krds-chk-fz-sm: 1.5rem;
-  --krds-chk-fz-md: 1.7rem;
-  --krds-chk-fz-lg: 1.9rem;
-  /* height */
-  --krds-chkChipOutline-h-sm: 3.2rem;
-  --krds-chkChipOutline-h-md: 4rem;
-  --krds-chkChipOutline-h-lg: 4.8rem;
-  /* padding */
-  --krds-chkChipOutline-pd-sm: 0 1rem 0 0.8rem;
-  --krds-chkChipOutline-pd-md: 0 1.2rem 0 1rem;
-  --krds-chkChipOutline-pd-lg: 0 1.6rem 0 1.2rem;
-  /* border-radius */
-  --krds-chkChipOutline-rd-sm: 0.6rem;
-  --krds-chkChipOutline-rd-md: 0.6rem;
-  --krds-chkChipOutline-rd-lg: 0.8rem;
-  /* font-size */
-  --krds-chkChipOutline-fz-sm: 1.5rem;
-  --krds-chkChipOutline-fz-md: 1.7rem;
-  --krds-chkChipOutline-fz-lg: 1.7rem;
-  /* gap */
-  --krds-chkChipOutline-gap-sm: 0.4rem;
-  --krds-chkChipOutline-gap-md: 0.4rem;
-  --krds-chkChipOutline-gap-lg: 0.4rem;
-  /* icon */
-  --krds-chkChipOutline-ico-sm: 1.6rem;
-  --krds-chkChipOutline-ico-md: 2rem;
-  --krds-chkChipOutline-ico-lg: 2rem;
-  /* **** 공통shape_09 :: Selectkbox ****/
-  /* height */
-  --krds-select-h-sm: 4rem;
-  --krds-select-h-md: 4.8rem;
-  --krds-select-h-lg: 5.6rem;
-  /* padding */
-  --krds-select-pd-sm: 0 5.2rem 0 1.6rem;
-  --krds-select-pd-md: 0 5.2rem 0 1.6rem;
-  --krds-select-pd-lg: 0 5.2rem 0 1.6rem;
-  /* border-radius */
-  --krds-select-rd-sm: 0.6rem;
-  --krds-select-rd-md: 0.8rem;
-  --krds-select-rd-lg: 0.8rem;
-  /* font-size */
-  --krds-select-fz-sm: 1.5rem;
-  --krds-select-fz-md: 1.7rem;
-  --krds-select-fz-lg: 1.9rem;
-  /* rn */
-  --krds-select-rn-sm: 1.6rem;
-  --krds-select-rn-md: 1.6rem;
-  --krds-select-rn-lg: 1.6rem;
-  /* background-size */
-  --krds-select-bgs-sm: 2rem;
-  --krds-select-bgs-md: 2rem;
-  --krds-select-bgs-lg: 2.4rem;
+  /* **** 공통shape_09 :: Selectbox ****/
   /* **** 공통shape_10 :: Switch ****/
-  /* height */
-  --krds-switch-h-md: 2rem;
-  --krds-switch-h-lg: 2.4rem;
-  /* width */
-  --krds-switch-w-md: 3.2rem;
-  --krds-switch-w-lg: 4rem;
-  /* box */
-  --krds-switch-b-md: 1.6rem;
-  --krds-switch-b-lg: 2rem;
-  /* box */
-  --krds-switch-br-md: 0.2rem;
-  --krds-switch-br-lg: 0.2rem;
-  /* padding */
-  --krds-switch-pd-md: 0.8rem;
-  --krds-switch-pd-lg: 0.8rem;
-  /* border-radius */
-  --krds-switch-rd-md: 4rem;
-  --krds-switch-rd-lg: 4rem;
-  /* font-size */
-  --krds-switch-fz-md: 1.7rem;
-  --krds-switch-fz-lg: 1.9rem;
-  /* **** 공통shape_11 :: Tap ****/
-  /* height */
-  --krds-tab-h-full: 5.6rem;
-  --krds-tab-h-fill: 4.8rem;
-  --krds-tab-h-line: 4.8rem;
-  /* font-size */
-  --krds-tab-fz-full: 1.9rem;
-  --krds-tab-fz-fill: 1.9rem;
-  --krds-tab-fz-ilne: 1.9rem;
-  /* padding */
-  --krds-tab-px-full: 0;
-  --krds-tab-px-fill: 1.6rem;
-  --krds-tab-px-line: 0.2rem;
-  /* margin-left */
-  --krds-tab-ml-full: 0;
-  --krds-tab-ml-fill: 0.8rem;
-  --krds-tab-ml-line: 1.6rem;
-  /* border-radius */
-  --krds-tab-rd-full: 0.8rem;
-  --krds-tab-rd-fill: 0.8rem;
-  --krds-tab-rd-line: 0;
+  /* **** 공통shape_11 :: Tab ****/
   /* **** 공통shape_12 :: Space ****/
-  --krds-spacer-50: 20rem;
-  --krds-spacer-49: 19.6rem;
-  --krds-spacer-48: 19.2rem;
-  --krds-spacer-47: 18.8rem;
-  --krds-spacer-46: 18.4rem;
-  --krds-spacer-45: 18rem;
-  --krds-spacer-44: 17.6rem;
-  --krds-spacer-43: 17.2rem;
-  --krds-spacer-42: 16.8rem;
-  --krds-spacer-41: 16.4rem;
-  --krds-spacer-40: 16rem;
-  --krds-spacer-39: 15.6rem;
-  --krds-spacer-38: 15.2rem;
-  --krds-spacer-37: 14.8rem;
-  --krds-spacer-36: 14.4rem;
-  --krds-spacer-35: 14rem;
-  --krds-spacer-34: 13.6rem;
-  --krds-spacer-33: 13.2rem;
-  --krds-spacer-32: 12.8rem;
-  --krds-spacer-31: 12.4rem;
-  --krds-spacer-30: 12rem;
-  --krds-spacer-29: 11.6rem;
-  --krds-spacer-28: 11.2rem;
-  --krds-spacer-27: 10.8rem;
-  --krds-spacer-26: 10.4rem;
-  --krds-spacer-25: 10rem;
-  --krds-spacer-24: 9.6rem;
-  --krds-spacer-23: 9.2rem;
-  --krds-spacer-22: 8.8rem;
-  --krds-spacer-21: 8.4rem;
-  --krds-spacer-20: 8rem;
-  --krds-spacer-19: 7.6rem;
-  --krds-spacer-18: 7.2rem;
-  --krds-spacer-17: 6.8rem;
-  --krds-spacer-16: 6.4rem;
-  --krds-spacer-15: 6rem;
-  --krds-spacer-14: 5.6rem;
-  --krds-spacer-13: 5.2rem;
-  --krds-spacer-12: 4.8rem;
-  --krds-spacer-11: 4.4rem;
-  --krds-spacer-10: 4rem;
-  --krds-spacer-9: 3.6rem;
-  --krds-spacer-8: 3.2rem;
-  --krds-spacer-7: 2.8rem;
-  --krds-spacer-6: 2.4rem;
-  --krds-spacer-5: 2rem;
-  --krds-spacer-4: 1.6rem;
-  --krds-spacer-3: 1.2rem;
-  --krds-spacer-2: 0.8rem;
-  --krds-spacer-1: 0.4rem;
-  --krds-spacer-0: 0;
-  --krds-spacer-default: 0.1rem;
-  --krds-spacer-default2: 0.2rem;
-  --krds-spacer-full: 100%;
+}
+.btn.xsm {
+  height: 3.2rem;
+  padding: 0 var(--krds-btn-px-xsm);
+  border-radius: var(--krds-btn-rd-xsm);
+  font-size: var(--krds-btn-fz-xsm);
 }
 
-/* *******************************************************
-* 파일이름 : class.scss
-* 파일설명 : 공통 통합 클래스
+.btn.sm {
+  height: 4rem;
+  padding: 0 var(--krds-btn-px-sm);
+  border-radius: var(--krds-btn-rd-sm);
+  font-size: var(--krds-btn-fz-sm);
+}
 
-=== 이 CSS 파일은 담당자만 수정, 추가, 삭제할 수 있습니다. ===
+.btn.md {
+  height: 4.8rem;
+  padding: 0 var(--krds-btn-px-md);
+  border-radius: var(--krds-btn-rd-md);
+  font-size: var(--krds-btn-fz-md);
+}
 
-* 최종업데이트 : 2024-06-27-목
+.btn.lg {
+  height: 5.6rem;
+  padding: 0 var(--krds-btn-px-lg);
+  border-radius: var(--krds-btn-rd-lg);
+  font-size: var(--krds-btn-fz-lg);
+}
 
-******************************************************** */
-/* 리스트(검색 시 활용) */
-/* **** 공통class_01 :: Flex ****/
-/* **** 공통class_02 :: Width/Height  ****/
-/* **** 공통class_03 :: Position ****/
-/* **** 공통class_04 :: Text ****/
-/* **** 공통class_05 :: Scrollbar ****/
-/* **** 공통class_06 :: Image ****/
-/* **** 공통class_07 :: Ir ****/
+.btn.xlg {
+  height: 6.4rem;
+  padding: 0 var(--krds-btn-px-xlg);
+  border-radius: var(--krds-btn-rd-xlg);
+  font-size: var(--krds-btn-fz-xlg);
+}
+
+.btn-chip-fill.md {
+  height: var(--krds-btnChipFill-h-md);
+  padding: var(--krds-btnChipFill-pd-md);
+  border-radius: var(--krds-btnChipFill-rd-md);
+  font-size: var(--krds-btnChipFill-fz-md);
+}
+
+.btn-chip-fill {
+  height: var(--krds-btnChipFill-h-lg);
+  padding: var(--krds-btnChipFill-pd-lg);
+  border-radius: var(--krds-btnChipFill-rd-lg);
+  font-size: var(--krds-btnChipFill-fz-lg);
+}
+.btn-chip-fill:focus {
+  outline-offset: 0.4rem;
+  outline: 2px solid rgba(36, 107, 235, 0.8);
+}
+
+.btn-chip-fill.lg {
+  height: var(--krds-btnChipFill-h-lg);
+  padding: var(--krds-btnChipFill-pd-lg);
+  border-radius: var(--krds-btnChipFill-rd-lg);
+  font-size: var(--krds-btnChipFill-fz-lg);
+}
+
+.btn-chip-fill {
+  height: var(--krds-btnChipFill-h-lg);
+  padding: var(--krds-btnChipFill-pd-lg);
+  border-radius: var(--krds-btnChipFill-rd-lg);
+  font-size: var(--krds-btnChipFill-fz-lg);
+}
+.btn-chip-fill:focus {
+  outline-offset: 0.4rem;
+  outline: 2px solid rgba(36, 107, 235, 0.8);
+}
+
+.btn-chip-fill {
+  height: var(--krds-btnChipFill-h-lg);
+  padding: var(--krds-btnChipFill-pd-lg);
+  border-radius: var(--krds-btnChipFill-rd-lg);
+  font-size: var(--krds-btnChipFill-fz-lg);
+}
+.btn-chip-fill:focus {
+  outline-offset: 0.4rem;
+  outline: 2px solid rgba(36, 107, 235, 0.8);
+}
+
+.btn-chip-fill {
+  height: var(--krds-btnChipFill-h-lg);
+  padding: var(--krds-btnChipFill-pd-lg);
+  border-radius: var(--krds-btnChipFill-rd-lg);
+  font-size: var(--krds-btnChipFill-fz-lg);
+}
+.btn-chip-fill:focus {
+  outline-offset: 0.4rem;
+  outline: 2px solid rgba(36, 107, 235, 0.8);
+}
+
+.btn-chip-fill {
+  height: var(--krds-btnChipFill-h-lg);
+  padding: var(--krds-btnChipFill-pd-lg);
+  border-radius: var(--krds-btnChipFill-rd-lg);
+  font-size: var(--krds-btnChipFill-fz-lg);
+}
+.btn-chip-fill:focus {
+  outline-offset: 0.4rem;
+  outline: 2px solid rgba(36, 107, 235, 0.8);
+}
+
+.btn-chip-fill {
+  height: var(--krds-btnChipFill-h-lg);
+  padding: var(--krds-btnChipFill-pd-lg);
+  border-radius: var(--krds-btnChipFill-rd-lg);
+  font-size: var(--krds-btnChipFill-fz-lg);
+}
+.btn-chip-fill:focus {
+  outline-offset: 0.4rem;
+  outline: 2px solid rgba(36, 107, 235, 0.8);
+}
+
+.btn-chip-fill {
+  height: var(--krds-btnChipFill-h-lg);
+  padding: var(--krds-btnChipFill-pd-lg);
+  border-radius: var(--krds-btnChipFill-rd-lg);
+  font-size: var(--krds-btnChipFill-fz-lg);
+}
+.btn-chip-fill:focus {
+  outline-offset: 0.4rem;
+  outline: 2px solid rgba(36, 107, 235, 0.8);
+}
+
+.btn-chip-fill {
+  height: var(--krds-btnChipFill-h-lg);
+  padding: var(--krds-btnChipFill-pd-lg);
+  border-radius: var(--krds-btnChipFill-rd-lg);
+  font-size: var(--krds-btnChipFill-fz-lg);
+}
+.btn-chip-fill:focus {
+  outline-offset: 0.4rem;
+  outline: 2px solid rgba(36, 107, 235, 0.8);
+}
+
+/*  @import color.scss */
+/* colors */
+.text-white {
+  color: #fff;
+}
+
+.bg-white {
+  background-color: #fff;
+}
+
+.text-black {
+  color: #000;
+}
+
+.bg-black {
+  background-color: #000;
+}
+
+.text-primary {
+  color: #246beb;
+}
+
+.bg-primary {
+  background-color: #246beb;
+}
+
+.text-secondary {
+  color: #003675;
+}
+
+.bg-secondary {
+  background-color: #003675;
+}
+
+.text-point {
+  color: #e71825;
+}
+
+.bg-point {
+  background-color: #e71825;
+}
+
+.text-danger {
+  color: #eb003b;
+}
+
+.bg-danger {
+  background-color: #eb003b;
+}
+
+.text-warning {
+  color: #ffb724;
+}
+
+.bg-warning {
+  background-color: #ffb724;
+}
+
+.text-success {
+  color: #008a1e;
+}
+
+.bg-success {
+  background-color: #008a1e;
+}
+
+.text-information {
+  color: #2768ff;
+}
+
+.bg-information {
+  background-color: #2768ff;
+}
+
+/* primary-colors */
+.text-primary-5 {
+  color: #eff5ff;
+}
+
+.bg-primary-5 {
+  background-color: #eff5ff;
+}
+
+.text-primary-10 {
+  color: #d3e1fb;
+}
+
+.bg-primary-10 {
+  background-color: #d3e1fb;
+}
+
+.text-primary-20 {
+  color: #a7c4f7;
+}
+
+.bg-primary-20 {
+  background-color: #a7c4f7;
+}
+
+.text-primary-30 {
+  color: #7ca6f3;
+}
+
+.bg-primary-30 {
+  background-color: #7ca6f3;
+}
+
+.text-primary-40 {
+  color: #5089ef;
+}
+
+.bg-primary-40 {
+  background-color: #5089ef;
+}
+
+.text-primary-60 {
+  color: #1d56bc;
+}
+
+.bg-primary-60 {
+  background-color: #1d56bc;
+}
+
+.text-primary-70 {
+  color: #16408d;
+}
+
+.bg-primary-70 {
+  background-color: #16408d;
+}
+
+.text-primary-80 {
+  color: #0e2b5e;
+}
+
+.bg-primary-80 {
+  background-color: #0e2b5e;
+}
+
+.text-primary-90 {
+  color: #07152f;
+}
+
+.bg-primary-90 {
+  background-color: #07152f;
+}
+
+/* secondary-colors */
+.text-secondary-5 {
+  color: #edf1f5;
+}
+
+.bg-secondary-5 {
+  background-color: #edf1f5;
+}
+
+.text-secondary-10 {
+  color: #cdd7e4;
+}
+
+.bg-secondary-10 {
+  background-color: #cdd7e4;
+}
+
+.text-secondary-20 {
+  color: #b4c4d6;
+}
+
+.bg-secondary-20 {
+  background-color: #b4c4d6;
+}
+
+.text-secondary-30 {
+  color: #99b0cb;
+}
+
+.bg-secondary-30 {
+  background-color: #99b0cb;
+}
+
+.text-secondary-40 {
+  color: #2a5c96;
+}
+
+.bg-secondary-40 {
+  background-color: #2a5c96;
+}
+
+.text-secondary-60 {
+  color: #002b5e;
+}
+
+.bg-secondary-60 {
+  background-color: #002b5e;
+}
+
+.text-secondary-70 {
+  color: #002046;
+}
+
+.bg-secondary-70 {
+  background-color: #002046;
+}
+
+.text-secondary-80 {
+  color: #00162f;
+}
+
+.bg-secondary-80 {
+  background-color: #00162f;
+}
+
+.text-secondary-90 {
+  color: #000b17;
+}
+
+.bg-secondary-90 {
+  background-color: #000b17;
+}
+
+/* point-colors */
+.text-point-5 {
+  color: #fdf2f3;
+}
+
+.bg-point-5 {
+  background-color: #fdf2f3;
+}
+
+.text-point-10 {
+  color: #fad1d3;
+}
+
+.bg-point-10 {
+  background-color: #fad1d3;
+}
+
+.text-point-20 {
+  color: #f5a3a8;
+}
+
+.bg-point-20 {
+  background-color: #f5a3a8;
+}
+
+.text-point-30 {
+  color: #f1747c;
+}
+
+.bg-point-30 {
+  background-color: #f1747c;
+}
+
+.text-point-40 {
+  color: #ec4651;
+}
+
+.bg-point-40 {
+  background-color: #ec4651;
+}
+
+.text-point-60 {
+  color: #b9131e;
+}
+
+.bg-point-60 {
+  background-color: #b9131e;
+}
+
+.text-point-70 {
+  color: #8b0e16;
+}
+
+.bg-point-70 {
+  background-color: #8b0e16;
+}
+
+.text-point-80 {
+  color: #5c0a0f;
+}
+
+.bg-point-80 {
+  background-color: #5c0a0f;
+}
+
+.text-point-90 {
+  color: #2e0507;
+}
+
+.bg-point-90 {
+  background-color: #2e0507;
+}
+
+/* gray-colors */
+.text-gray-5 {
+  color: #f8f8f8;
+}
+
+.bg-gray-5 {
+  background-color: #f8f8f8;
+}
+
+.text-gray-10 {
+  color: #f0f0f0;
+}
+
+.bg-gray-10 {
+  background-color: #f0f0f0;
+}
+
+.text-gray-20 {
+  color: #e4e4e4;
+}
+
+.bg-gray-20 {
+  background-color: #e4e4e4;
+}
+
+.text-gray-30 {
+  color: #d8d8d8;
+}
+
+.bg-gray-30 {
+  background-color: #d8d8d8;
+}
+
+.text-gray-40 {
+  color: #c6c6c6;
+}
+
+.bg-gray-40 {
+  background-color: #c6c6c6;
+}
+
+.text-gray-50 {
+  color: #8e8e8e;
+}
+
+.bg-gray-50 {
+  background-color: #8e8e8e;
+}
+
+.text-gray-60 {
+  color: #717171;
+}
+
+.bg-gray-60 {
+  background-color: #717171;
+}
+
+.text-gray-70 {
+  color: #555555;
+}
+
+.bg-gray-70 {
+  background-color: #555555;
+}
+
+.text-gray-80 {
+  color: #2d2d2d;
+}
+
+.bg-gray-80 {
+  background-color: #2d2d2d;
+}
+
+.text-gray-90 {
+  color: #1d1d1d;
+}
+
+.bg-gray-90 {
+  background-color: #1d1d1d;
+}
+
+/*  @import font.scss */
+@font-face {
+  font-family: "Pretendard GOV";
+  font-weight: 400;
+  font-style: normal;
+  src: url("../../font/pretendardGOV/PretendardGOV-Regular.subset.woff") format("woff");
+}
+/* Medium */
+@font-face {
+  font-family: "Pretendard GOV";
+  font-weight: 500;
+  font-style: normal;
+  src: url("../../font/pretendardGOV/PretendardGOV-Medium.subset.woff") format("woff");
+}
+/* Bold */
+@font-face {
+  font-family: "Pretendard GOV";
+  font-weight: 700;
+  font-style: normal;
+  src: url("../../font/pretendardGOV/PretendardGOV-Bold.subset.woff") format("woff");
+}
+/* @import class.scss */
 /* ************** 공통class_01 :: Flex **************/
 /* flex-direction */
 .flex-row {
@@ -1020,16 +1206,15 @@ caption {
   text-indent: -9999px;
 }
 
-/* *******************************************************
-* 파일이름 : icon.scss
-* 파일설명 : 공통 아이콘 스타일
+/* ************** 공통class_08 :: no_scroll ************** */
+.scroll-no {
+  overflow: hidden;
+}
 
-=== 이 CSS 파일은 담당자만 수정, 추가, 삭제할 수 있습니다. ===
-
-* 최종업데이트 : 2024-06-27-목
-
-******************************************************** */
-/* layout */
+/*  @import icon.scss */
+/* *****************************
+* 폴더구조_03 : layout
+******************************** */
 /* *******************************************************
 * 파일이름 : header.scss
 * 파일설명 : 공통 헤더 영역
@@ -1422,7 +1607,9 @@ caption {
   gap: 6.4rem;
 }
 
-/* components */
+/* *****************************
+* 폴더구조_04 : components
+******************************** */
 #skipNav {
   position: relative;
 }
@@ -1760,8 +1947,8 @@ caption {
 }
 
 #source-calendar {
-  width: 100%;
-  height: 100%;
+  width: 500px;
+  height: 500px;
   box-sizing: border-box;
   padding: 20px;
 }
@@ -1972,21 +2159,32 @@ caption {
   content: "•";
 }
 
+.modal-back,
+.modal {
+  display: none;
+  visibility: hidden;
+  z-index: -1;
+}
+.modal-back.in,
+.modal.in {
+  visibility: visible;
+}
+
 .modal-back {
   position: fixed;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
-  background-color: rgba(0, 0, 0, 0.25);
+  background-color: rgba(0, 0, 0, 0.75);
 }
-
 .modal-back.in {
   display: block;
   z-index: 1000;
 }
 
 .modal {
+  /*@include flex-layout($ai: center, $jc: center, $fd: column);*/
   display: none;
   position: fixed;
   top: 0;
@@ -2000,42 +2198,31 @@ caption {
   width: 100%;
   height: 100%;
   opacity: 0;
+  font-family: var(--krds--fz-body-md);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: left;
+  text-decoration: none;
+  text-shadow: none;
+  text-transform: none;
+  letter-spacing: normal;
+  white-space: normal;
+  word-spacing: normal;
+  line-break: auto;
   transition: visibility 0.15s 0.3s, z-index 0s 0.3s, opacity 0.2s;
 }
-
+.modal > * {
+  width: 100%;
+}
 .modal.in {
   z-index: 1010;
   transition-delay: 0s;
   opacity: 1;
 }
-
 .modal.shown {
   display: block;
 }
-
-.modal-back,
-.modal {
-  display: none;
-  visibility: hidden;
-  z-index: -1;
-}
-
-.modal-back,
-.modal.in {
-  visibility: visible;
-}
-
-.modal-back.in,
-.modal.in {
-  visibility: visible;
-}
-
-.modal.in {
-  z-index: 1010;
-  transition-delay: 0s;
-  opacity: 1;
-}
-
 .modal .modal-dialog {
   display: flex;
   align-items: center;
@@ -2048,7 +2235,6 @@ caption {
   min-height: calc(100% - var(--krds-spacer-20) * 2);
   margin: var(--krds-spacer-20) auto;
 }
-
 .modal .modal-dialog .modal-content {
   display: flex;
   align-items: center;
@@ -2063,7 +2249,13 @@ caption {
   outline-color: transparent;
   transition: outline-color 0.1s;
 }
-
+.modal .modal-dialog .modal-content > * {
+  width: 100%;
+}
+.modal .modal-dialog .modal-content:focus {
+  outline-offset: 0.4rem;
+  outline: 2px solid rgba(255, 255, 255, 0.9);
+}
 .modal .modal-dialog .modal-header {
   width: 100%;
   padding: var(--krds-spacer-10) 6.8rem var(--krds-spacer-8) var(--krds-spacer-10);
@@ -2071,7 +2263,15 @@ caption {
   border-top-left-radius: inherit;
   border-top-right-radius: inherit;
 }
-
+.modal .modal-dialog .modal-header .modal-title {
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  font-size: var(--krds-fz-title-sm);
+  font-weight: 700;
+}
 .modal .modal-dialog .modal-conts {
   display: flex;
   align-items: flex-start;
@@ -2084,7 +2284,23 @@ caption {
   padding: 0 var(--krds-spacer-10);
   color: var(--krds-gray-90);
 }
-
+.modal .modal-dialog .modal-conts > * {
+  width: 100%;
+}
+.modal .modal-dialog .modal-conts .conts-tit {
+  font-size: var(--krds-fz-title-md);
+  font-weight: 700;
+}
+.modal .modal-dialog .modal-conts .conts-area {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: var(--krds-spacer-8);
+}
+.modal .modal-dialog .modal-conts .conts-area > * {
+  width: 100%;
+}
 .modal .modal-dialog .modal-btn {
   display: flex;
   align-items: center;
@@ -2094,7 +2310,9 @@ caption {
   width: 100%;
   padding: var(--krds-spacer-8) var(--krds-spacer-10) var(--krds-spacer-10);
 }
-
+.modal .modal-dialog .modal-btn .btn {
+  min-width: 9.2rem;
+}
 .modal .modal-dialog .btn-close {
   position: absolute;
   top: 3.2rem;
@@ -2102,31 +2320,23 @@ caption {
   z-index: 901;
   width: 3.6rem;
   height: 3.6rem;
-  background: url(https://uiux.egovframe.go.kr/resources/img/component/common/ico_close_modal.svg) no-repeat center;
+  background: url(../../img/component/common/ico_close_modal.svg) no-repeat center;
   background-size: 2rem;
 }
-
-.modal .modal-dialog .modal-btn .btn {
-  min-width: 9.2rem;
+.modal.alert .modal-dialog {
+  width: 56rem;
+}
+.modal.alert .modal-dialog .modal-conts {
+  gap: 2.4rem;
+}
+.modal.alert .modal-dialog .modal-btn .btn {
+  min-width: 7.8rem;
 }
 
-.btn.md {
-  height: 4.8rem;
-  padding: 0 var(--krds-btn-px-md);
-  border-radius: var(--krds-btn-rd-md);
-  font-size: var(--krds-btn-fz-md);
-}
-
-.btn.primary {
-  background-color: var(--krds-primary);
-  border: 1px solid var(--krds-primary);
-  color: var(--krds-white);
-}
-
-.btn.tertiary {
-  background-color: var(--krds-white);
-  border: 1px solid var(--krds-gray-90);
-  color: var(--krds-secondary-90);
+/* modal open 시 contents (전체모달 아닌경우) */
+.modal-open {
+  /*padding-right: 17px;*/
+  overflow: hidden;
 }
 
 .btn-txt.ico-filter {
@@ -2478,7 +2688,7 @@ caption {
 table thead tr {
   position: sticky;
   top: 0px;
-  background-color: gray !important;
+  background-color: var(--krds-gray-10) !important;
   border-top: 1px solid gray;
   border-bottom: 1px solid gray;
   box-sizing: border-box;
@@ -2520,14 +2730,6 @@ table td {
   font-size: 1.4rem;
 }
 
-button {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 3px;
-}
-
 .btn {
   display: inline-flex;
   align-items: center;
@@ -2547,35 +2749,91 @@ button {
   white-space: nowrap;
   transition: 0.4s ease-in-out;
 }
-
-.btn-txt:hover {
-  background-color: var(--krds-secondary-5);
+.btn:hover {
+  background-color: var(--krds-primary-60);
+  border-color: var(--krds-primary-60);
 }
-
-.btn-txt {
-  color: inherit;
-  border: 0;
-  background-color: inherit;
-  padding: 0 var(--krds-spacer-default2) !important;
+.btn:active {
+  background-color: var(--krds-primary-70);
+  border-color: var(--krds-primary-70);
 }
-
-.btn-txt.underline {
-  text-decoration: underline;
+.btn:focus {
+  outline-offset: -0.4rem;
+  outline: 2px solid rgba(255, 255, 255, 0.9);
+  transition: none;
 }
-
-.btn-txt.sm[class*=ico-]::before,
-.btn-txt.sm[class*=ico-]::after {
-  width: 2rem;
-  height: 2rem;
+.btn[disabled] {
+  background-color: var(--krds-gray-30);
+  border-color: var(--krds-gray-30);
+  color: var(--krds-gray-60);
+  cursor: default;
 }
-
-.btn.sm {
-  height: 4rem;
-  padding: 0 var(--krds-btn-px-sm);
-  border-radius: var(--krds-btn-rd-sm);
-  font-size: var(--krds-btn-fz-sm);
+.btn.primary {
+  background-color: var(--krds-primary);
+  border: 1px solid var(--krds-primary);
+  color: var(--krds-white);
 }
-
+.btn.primary:hover {
+  background-color: var(--krds-primary-60);
+  border-color: var(--krds-primary-60);
+}
+.btn.primary:active {
+  background-color: var(--krds-primary-70);
+  border-color: var(--krds-primary-70);
+}
+.btn.primary[disabled] {
+  background-color: var(--krds-gray-30);
+  border-color: var(--krds-gray-30);
+  color: var(--krds-gray-60);
+}
+.btn.secondary {
+  background-color: var(--krds-white);
+  border: 1px solid var(--krds-primary);
+  color: #1d56bc;
+}
+.btn.secondary:hover {
+  background-color: var(--krds-primary-5);
+}
+.btn.secondary:active {
+  background-color: var(--krds-primary-10);
+}
+.btn.secondary:focus {
+  outline-offset: -0.4rem;
+  outline: 2px solid rgba(36, 107, 235, 0.8);
+}
+.btn.secondary[disabled] {
+  background-color: var(--krds-gray-30);
+  border-color: var(--krds-gray-40);
+  color: var(--krds-gray-60);
+}
+.btn.secondary.ico-arr-down::after {
+  background-image: url(../../img/component/common/ico_arr_20_down_blue.svg);
+  background-size: contain;
+  background-position: center;
+}
+.btn.secondary.active.ico-arr-down::after {
+  transform: rotate(180deg);
+}
+.btn.tertiary {
+  background-color: var(--krds-white);
+  border: 1px solid var(--krds-gray-90);
+  color: var(--krds-secondary-90);
+}
+.btn.tertiary:hover {
+  background-color: var(--krds-gray-5);
+}
+.btn.tertiary:active {
+  background-color: var(--krds-gray-10);
+}
+.btn.tertiary:focus {
+  outline-offset: -0.4rem;
+  outline: 2px solid rgba(36, 107, 235, 0.8);
+}
+.btn.tertiary[disabled] {
+  background-color: var(--krds-gray-30);
+  border-color: var(--krds-gray-40);
+  color: var(--krds-gray-60);
+}
 .btn[class*=ico-]::after {
   display: inline-flex;
   content: "";
@@ -2584,24 +2842,75 @@ button {
   background-repeat: no-repeat;
   background-size: contain;
 }
-
-.btn-txt[class*=ico-]::after {
+.btn[class*=ico-].ico-before::before {
+  display: inline-flex;
+  content: "";
+  width: 2.4rem;
+  height: 2.4rem;
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
 }
-
-.ico-arr::after {
-  background-image: url(https://uiux.egovframe.go.kr/resources/img/component/common/ico_arr_20_right.svg);
+.btn[class*=ico-].ico-before::after {
+  display: none;
+}
+.btn.ico-sch::before, .btn.ico-sch::after {
+  background-image: url(../../img/component/common/ico_sch_20_wh.svg);
+}
+.btn.ico-arr::before, .btn.ico-arr::after {
+  background-image: url(../../img/component/common/ico_arr_20_right.svg);
+}
+.btn.ico-upload::before, .btn.ico-upload::after {
+  background-image: url(../../img/component/common/ico_upload_20_wh.svg);
+}
+.btn.xsm[class*=ico-]::after {
+  width: 1.6rem;
+  height: 1.6rem;
+}
+.btn.sm .btn[class*=ico-]::after {
+  width: 2rem;
+  height: 2rem;
 }
 
-.btn-txt.ico-go::before,
-.btn-txt.ico-go::after {
-  background-image: url(https://uiux.egovframe.go.kr/resources/img/component/common/ico_go_20.svg);
+/* **** button : chips **** */
+.btn-chip-fill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--krds-gray-10);
+}
+.btn-chip-fill:hover {
+  background-color: var(--krds-secondary-5);
+}
+.btn-chip-fill:active {
+  background-color: var(--krds-secondary-10);
+}
+.btn-chip-fill[disabled], .btn-chip-fill.disabled {
+  background-color: var(--krds-gray-30);
 }
 
-.btn-txt.ico-more::after {
-  background-image: url(https://uiux.egovframe.go.kr/resources/img/component/common/ico_arr1_20_right.svg);
+.btn-chip-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  gap: 0.2rem;
+  background-color: var(--krds-white);
+  border: 0.1rem solid var(--krds-gray-40);
+}
+.btn-chip-outline:hover {
+  background-color: var(--krds-secondary-5);
+}
+.btn-chip-outline:active {
+  background-color: var(--krds-secondary-10);
+}
+.btn-chip-outline:disabled, .btn-chip-outline.disabled {
+  background-color: var(--krds-gray-30);
+}
+
+/* **** button area **** */
+.btn-wrap {
+  width: 100%;
 }
 
 /* 공통 :: 라디오버튼 & 체크박스 */
@@ -3048,7 +3357,9 @@ textarea {
   box-sizing: border-box;
 }
 
-/* pages */
+/* *****************************
+* 폴더구조_05 : pages
+******************************** */
 /* *******************************************************
 * 파일이름 : home.scss
 * 파일설명 : 메인화면 커스텀

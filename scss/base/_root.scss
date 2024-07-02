@@ -1,0 +1,63 @@
+/*  @import root.scss */
+// 설명 :: 공통 전체 root
+
+:root {
+  /* **** 공통color_01 :: System_color : 시스템 색상 ****/
+  @each $color, $value in $colors {
+    --#{$prefix}#{$color}: #{$value};
+  }
+  /* **** 공통color_02 :: Primary_color : 주요 색상 ****/
+  @each $num, $value in $primary-colors {
+    --#{$prefix}primary-#{$num}: #{$value};
+  }
+  /* **** 공통color_03 :: Secondary_color : 보조 색상 ****/
+  @each $num, $value in $secondary-colors {
+    --#{$prefix}secondary-#{$num}: #{$value};
+  }
+  /* **** 공통color_04 :: Point_color : 집중 색상 ****/
+  @each $num, $value in $point-colors {
+    --#{$prefix}point-#{$num}: #{$value};
+  }
+  /* **** 공통color_05 :: Grayscale : BG, Text, Line 색상 ****/
+  @each $num, $value in $gray-colors {
+    --#{$prefix}gray-#{$num}: #{$value};
+  }
+  /* **** 공통shape_01 :: Font-size ****/
+  @each $type, $size in map-get($font-size, "sizes") {
+    @each $key, $value in $size {
+      --#{$prefix}fz-#{$type}-#{$key}: #{$value};
+    }
+  }
+  /* **** 공통shape_02 :: Border-radius  ****/
+  @each $size, $value in $border-radius {
+    --#{$prefix}rd-#{$size}: #{$value};
+  }
+
+  /* **** 공통shape_03 :: Button ****/
+  //btn setting
+  @each $type, $size in map-get($btns, "setting") {
+    @each $key, $value in $size {
+      --#{$prefix}btn-#{$type}-#{$key}: #{$value};
+    }
+  }
+
+  /* **** 공통shape_04 :: BtnChipFill ****/
+  @each $key, $value in $size {
+    --#{$prefix}btnChipFill-#{$type}-#{$key}: #{$value};
+  }
+
+  /* **** 공통shape_05 :: BtnChipOutline ****/
+  @each $type, $size in map-get($btnChipOutline, "setting") {
+    @each $key, $value in $size {
+      --#{$prefix}btnChipOutline-#{$type}-#{$key}: #{$value};
+    }
+  }
+
+  /* **** 공통shape_06 :: Input ****/
+  /* **** 공통shape_07 :: Radiobox ****/
+  /* **** 공통shape_08 :: Checkbox ****/
+  /* **** 공통shape_09 :: Selectbox ****/
+  /* **** 공통shape_10 :: Switch ****/
+  /* **** 공통shape_11 :: Tab ****/
+  /* **** 공통shape_12 :: Space ****/
+}

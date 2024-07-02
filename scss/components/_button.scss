@@ -1,78 +1,311 @@
-button {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 3px;
-}
 .btn {
+  //default : primary color height lg
+  $size: lg;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 0.4rem;
   width: auto;
-  height: var(--krds-btn-h-lg);
-  padding: 0 var(--krds-btn-px-lg);
-  background-color: var(--krds-primary);
-  border: 1px solid var(--krds-primary);
-  border-radius: var(--krds-btn-rd-lg);
-  font-size: var(--krds-fz-body-lg);
-  color: var(--krds-white);
-  font-weight: 400;
+  height: var(--#{$prefix}btn-h-#{$size});
+  padding: 0 var(--#{$prefix}btn-px-#{$size});
+  background-color: var(--#{$prefix}primary);
+  border: 1px solid var(--#{$prefix}primary);
+  border-radius: var(--#{$prefix}btn-rd-#{$size});
+  font-size: var(--#{$prefix}fz-body-#{$size});
+  color: var(--#{$prefix}white);
+  font-weight: map-get($fws, normal);
   line-height: 1;
   cursor: pointer;
   white-space: nowrap;
-  transition: 0.4s ease-in-out;
+  transition: $transition-base;
+  &:hover {
+    background-color: var(--#{$prefix}primary-60);
+    border-color: var(--#{$prefix}primary-60);
+  }
+  &:active {
+    background-color: var(--#{$prefix}primary-70);
+    border-color: var(--#{$prefix}primary-70);
+  }
+  &:focus {
+    @include focus($color: $white, $alpha: 0.9);
+    transition: none;
+  }
+  &[disabled] {
+    background-color: var(--#{$prefix}gray-30);
+    border-color: var(--#{$prefix}gray-30);
+    color: var(--#{$prefix}gray-60);
+    cursor: default;
+  }
+
+  //color
+  &.primary {
+    background-color: var(--#{$prefix}primary);
+    border: 1px solid var(--#{$prefix}primary);
+    color: var(--#{$prefix}white);
+    &:hover {
+      background-color: var(--#{$prefix}primary-60);
+      border-color: var(--#{$prefix}primary-60);
+    }
+    &:active {
+      background-color: var(--#{$prefix}primary-70);
+      border-color: var(--#{$prefix}primary-70);
+    }
+    &[disabled] {
+      background-color: var(--#{$prefix}gray-30);
+      border-color: var(--#{$prefix}gray-30);
+      color: var(--#{$prefix}gray-60);
+    }
+  }
+  &.secondary {
+    background-color: var(--#{$prefix}white);
+    border: 1px solid var(--#{$prefix}primary);
+    color: $primary-60;
+    &:hover {
+      background-color: var(--#{$prefix}primary-5);
+    }
+    &:active {
+      background-color: var(--#{$prefix}primary-10);
+    }
+    &:focus {
+      @include focus($color: $primary);
+    }
+    &[disabled] {
+      background-color: var(--#{$prefix}gray-30);
+      border-color: var(--#{$prefix}gray-40);
+      color: var(--#{$prefix}gray-60);
+    }
+    &.ico-arr-down {
+      &::after {
+        background-image: url(#{$url}/component/common/ico_arr_20_down_blue.svg);
+        background-size: contain;
+        background-position: center;
+      }
+    }
+    &.active {
+      &.ico-arr-down {
+        &::after {
+          transform: rotate(180deg);
+        }
+      }
+    }
+  }
+  &.tertiary {
+    background-color: var(--#{$prefix}white);
+    border: 1px solid var(--#{$prefix}gray-90);
+    color: var(--#{$prefix}secondary-90);
+    &:hover {
+      background-color: var(--#{$prefix}gray-5);
+    }
+    &:active {
+      background-color: var(--#{$prefix}gray-10);
+    }
+    &:focus {
+      @include focus($color: $primary);
+    }
+    &[disabled] {
+      background-color: var(--#{$prefix}gray-30);
+      border-color: var(--#{$prefix}gray-40);
+      color: var(--#{$prefix}gray-60);
+    }
+  }
+
+  //txt + ico
+  &[class*="ico-"] {
+    &::after {
+      display: inline-flex;
+      content: "";
+      width: 2.4rem;
+      height: 2.4rem;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+    &.ico-before {
+      &::before {
+        display: inline-flex;
+        content: "";
+        width: 2.4rem;
+        height: 2.4rem;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+      }
+      &::after {
+        display: none;
+      }
+    }
+  }
+  &.ico-sch {
+    &::before,
+    &::after {
+      background-image: url(#{$url}/component/common/ico_sch_20_wh.svg);
+    }
+  }
+  &.ico-arr {
+    &::before,
+    &::after {
+      background-image: url(#{$url}/component/common/ico_arr_20_right.svg);
+    }
+  }
+  &.ico-upload {
+    &::before,
+    &::after {
+      background-image: url(#{$url}/component/common/ico_upload_20_wh.svg);
+    }
+  }
+  &.xsm {
+    &[class*="ico-"] {
+      &::after {
+        width: 1.6rem;
+        height: 1.6rem;
+      }
+    }
+  }
+  &.sm &[class*="ico-"] {
+    &::after {
+      width: 2rem;
+      height: 2rem;
+    }
+  }
 }
 
-.btn-txt:hover {
-  background-color: var(--krds-secondary-5);
-}
-.btn-txt {
-  color: inherit;
-  border: 0;
-  background-color: inherit;
-  padding: 0 var(--krds-spacer-default2) !important;
+//btn setting
+@mixin btn() {
+  @each $type, $size in map-get($btns, "setting") {
+    @each $key, $value in $size {
+      --#{$prefix}btn-#{$type}-#{$key}: #{$value};
+
+      @if ($type == "h") {
+        //높이별 class값 추가
+        @at-root .btn.#{$key} {
+          height: #{$value};
+          padding: 0 var(--#{$prefix}btn-px-#{$key});
+          border-radius: var(--#{$prefix}btn-rd-#{$key});
+          font-size: var(--#{$prefix}btn-fz-#{$key});
+        }
+      }
+    }
+  }
 }
 
-.btn-txt.underline {
-  text-decoration: underline;
+//btn chips
+@mixin btn-chip($name, $default) {
+  @if ($name == "outline") {
+    @if ($type == "h") {
+      @at-root .btn-chip-outline.#{$key} {
+        height: var(--#{$prefix}btnChipOutline-h-#{$key});
+        padding: var(--#{$prefix}btnChipOutline-pd-#{$key});
+        border-radius: var(--#{$prefix}btnChipOutline-rd-#{$key});
+        font-size: var(--#{$prefix}btnChipOutline-fz-#{$key});
+        .btn-del {
+          width: var(--#{$prefix}btnChipOutline-size-#{$key});
+          height: var(--#{$prefix}btnChipOutline-size-#{$key});
+          background: url(#{$url}/component/common/ico_chip_del.svg) no-repeat 0
+            0;
+          background-size: contain;
+        }
+      }
+    }
+
+    @if ($default) {
+      @at-root .btn-chip-outline {
+        height: var(--#{$prefix}btnChipOutline-h-#{$default});
+        padding: var(--#{$prefix}btnChipOutline-pd-#{$default});
+        border-radius: var(--#{$prefix}btnChipOutline-rd-#{$default});
+        font-size: var(--#{$prefix}btnChipOutline-fz-#{$default});
+        .btn-del {
+          width: var(--#{$prefix}btnChipOutline-size-#{$default});
+          height: var(--#{$prefix}btnChipOutline-size-#{$default});
+          background: url(#{$url}/component/common/ico_chip_del.svg) no-repeat 0
+            0;
+          background-size: contain;
+          &:focus {
+            @include focus($offset: 0.4rem);
+          }
+        }
+      }
+    }
+  } @else if ($name == "fill") {
+    @if ($type == "h") {
+      @at-root .btn-chip-fill.#{$key} {
+        height: var(--#{$prefix}btnChipFill-h-#{$key});
+        padding: var(--#{$prefix}btnChipFill-pd-#{$key});
+        border-radius: var(--#{$prefix}btnChipFill-rd-#{$key});
+        font-size: var(--#{$prefix}btnChipFill-fz-#{$key});
+      }
+    }
+
+    @if ($default) {
+      @at-root .btn-chip-fill {
+        height: var(--#{$prefix}btnChipFill-h-#{$default});
+        padding: var(--#{$prefix}btnChipFill-pd-#{$default});
+        border-radius: var(--#{$prefix}btnChipFill-rd-#{$default});
+        font-size: var(--#{$prefix}btnChipFill-fz-#{$default});
+        &:focus {
+          @include focus($offset: 0.4rem);
+        }
+      }
+    }
+  }
 }
 
-.btn-txt.sm[class*="ico-"]::before,
-.btn-txt.sm[class*="ico-"]::after {
-  width: 2rem;
-  height: 2rem;
+//reset text : popover/tooltip
+@mixin reset-text {
+  font-family: var(--#{$prefix}-fz-body-md);
+  font-style: normal;
+  font-weight: map-get($fws, normal);
+  line-height: $line-height-base;
+  text-align: left;
+  text-decoration: none;
+  text-shadow: none;
+  text-transform: none;
+  letter-spacing: normal;
+  //word-break: normal;
+  white-space: normal;
+  word-spacing: normal;
+  line-break: auto;
 }
-.btn.sm {
-  height: 4rem;
-  padding: 0 var(--krds-btn-px-sm);
-  border-radius: var(--krds-btn-rd-sm);
-  font-size: var(--krds-btn-fz-sm);
-}
-.btn[class*="ico-"]::after {
+
+/* **** button : chips **** */
+// 배경색이 있는 타입
+.btn-chip-fill {
   display: inline-flex;
-  content: "";
-  width: 2.4rem;
-  height: 2.4rem;
-  background-repeat: no-repeat;
-  background-size: contain;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--#{$prefix}gray-10);
+  &:hover {
+    background-color: var(--#{$prefix}secondary-5);
+  }
+  &:active {
+    background-color: var(--#{$prefix}secondary-10);
+  }
+  &[disabled],
+  &.disabled {
+    background-color: var(--#{$prefix}gray-30);
+  }
 }
 
-.btn-txt[class*="ico-"]::after {
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
+//외곽 라인이 있는 타입
+.btn-chip-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  gap: 0.2rem;
+  background-color: var(--#{$prefix}white);
+  border: 0.1rem solid var(--#{$prefix}gray-40);
+  &:hover {
+    background-color: var(--#{$prefix}secondary-5);
+  }
+  &:active {
+    background-color: var(--#{$prefix}secondary-10);
+  }
+  &:disabled,
+  &.disabled {
+    background-color: var(--#{$prefix}gray-30);
+  }
 }
 
-.ico-arr::after {
-  background-image: url(https://uiux.egovframe.go.kr/resources/img/component/common/ico_arr_20_right.svg);
-}
-.btn-txt.ico-go::before,
-.btn-txt.ico-go::after {
-  background-image: url(https://uiux.egovframe.go.kr/resources/img/component/common/ico_go_20.svg);
-}
-
-.btn-txt.ico-more::after {
-  background-image: url(https://uiux.egovframe.go.kr/resources/img/component/common/ico_arr1_20_right.svg);
+/* **** button area **** */
+.btn-wrap {
+  width: 100%;
 }

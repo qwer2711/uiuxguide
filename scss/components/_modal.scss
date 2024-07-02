@@ -1,17 +1,29 @@
+//default
+.modal-back,
+.modal {
+  display: none;
+  visibility: hidden;
+  z-index: -1;
+  &.in {
+    visibility: visible;
+  }
+}
 .modal-back {
   position: fixed;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
-  background-color: rgba(0, 0, 0, 0.25);
+  background-color: transparentize($black, 0.25);
+  //opacity: 0;
+  //transition: visibility 0s .3s;
+  &.in {
+    display: block;
+    z-index: 1000;
+  }
 }
-.modal-back.in {
-  display: block;
-  z-index: 1000;
-}
-
 .modal {
+  /*@include flex-layout($ai: center, $jc: center, $fd: column);*/
   display: none;
   position: fixed;
   top: 0;
@@ -25,129 +37,122 @@
   width: 100%;
   height: 100%;
   opacity: 0;
+  @include reset-text;
   transition: visibility 0.15s 0.3s, z-index 0s 0.3s, opacity 0.2s;
-}
-.modal.in {
-  z-index: 1010;
-  transition-delay: 0s;
-  opacity: 1;
-}
-.modal.shown {
-  display: block;
+  > * {
+    width: 100%;
+  }
+  &.in {
+    z-index: 1010;
+    transition-delay: 0s;
+    opacity: 1;
+  }
+  &.shown {
+    display: block;
+  }
+
+  .modal-dialog {
+    //기본 타입
+    $p: var(--#{$prefix}spacer-10);
+    $gap: var(--#{$prefix}spacer-8);
+    $m: var(--#{$prefix}spacer-20);
+    @include flex-layout($ai: center);
+    position: relative;
+    z-index: 1020;
+    width: 84.6rem;
+    height: calc(100% - $m * 2);
+    min-height: calc(100% - $m * 2);
+    margin: $m auto;
+    .modal-content {
+      @include flex-layout($ai: center, $fd: column);
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+      max-height: 100%;
+      background-color: var(--#{$prefix}white);
+      border-radius: var(--#{$prefix}rd-12);
+      outline-color: transparent;
+      transition: outline-color 0.1s;
+      > * {
+        width: 100%;
+      }
+      &:focus {
+        @include focus($offset: 0.4rem, $color: $white, $alpha: 0.9);
+      }
+    }
+    .modal-header {
+      width: 100%;
+      padding: $p 6.8rem $gap $p;
+      background-color: inherit;
+      border-top-left-radius: inherit;
+      border-top-right-radius: inherit;
+      .modal-title {
+        @include ellipsis(1);
+        font-size: var(--#{$prefix}fz-title-sm);
+        font-weight: map-get($fws, bold);
+      }
+    }
+    .modal-conts {
+      @include flex-layout($fd: column);
+      gap: $gap;
+      position: relative;
+      overflow-y: auto;
+      width: 100%;
+      padding: 0 $p;
+      color: var(--#{$prefix}gray-90);
+      > * {
+        width: 100%;
+      }
+
+      .conts-tit {
+        font-size: var(--#{$prefix}fz-title-md);
+        font-weight: map-get($fws, bold);
+      }
+      .conts-area {
+        @include flex-layout($fd: column);
+        gap: $gap;
+        > * {
+          width: 100%;
+        }
+      }
+    }
+    .modal-btn {
+      @include flex-layout($ai: center, $jc: flex-end);
+      gap: 0.8rem;
+      width: 100%;
+      padding: $gap $p $p;
+      .btn {
+        min-width: 9.2rem;
+      }
+    }
+    .btn-close {
+      @include position($t: 3.2rem, $r: 3.2rem);
+      z-index: 901;
+      width: 3.6rem;
+      height: 3.6rem;
+      background: url(#{$url}/component/common/ico_close_modal.svg) no-repeat
+        center;
+      background-size: 2rem;
+    }
+  }
+  &.alert {
+    //얼럿 타입
+    .modal-dialog {
+      width: 56rem;
+      .modal-conts {
+        gap: 2.4rem;
+      }
+      .modal-btn {
+        .btn {
+          min-width: 7.8rem;
+        }
+      }
+    }
+  }
 }
 
-.modal-back,
-.modal {
-  display: none;
-  visibility: hidden;
-  z-index: -1;
-}
-.modal-back,
-.modal.in {
-  visibility: visible;
-}
-
-.modal-back.in,
-.modal.in {
-  visibility: visible;
-}
-
-.modal.in {
-  z-index: 1010;
-  transition-delay: 0s;
-  opacity: 1;
-}
-
-.modal .modal-dialog {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  flex-direction: row;
-  position: relative;
-  z-index: 1020;
-  width: 84.6rem;
-  height: calc(100% - var(--krds-spacer-20) * 2);
-  min-height: calc(100% - var(--krds-spacer-20) * 2);
-  margin: var(--krds-spacer-20) auto;
-}
-
-.modal .modal-dialog .modal-content {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  flex-direction: column;
-  position: relative;
+/* modal open 시 contents (전체모달 아닌경우) */
+.modal-open {
+  /*padding-right: 17px;*/
   overflow: hidden;
-  width: 100%;
-  max-height: 100%;
-  background-color: var(--krds-white);
-  border-radius: var(--krds-rd-12);
-  outline-color: transparent;
-  transition: outline-color 0.1s;
-}
-
-.modal .modal-dialog .modal-header {
-  width: 100%;
-  padding: var(--krds-spacer-10) 6.8rem var(--krds-spacer-8)
-    var(--krds-spacer-10);
-  background-color: inherit;
-  border-top-left-radius: inherit;
-  border-top-right-radius: inherit;
-}
-
-.modal .modal-dialog .modal-conts {
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-  flex-direction: column;
-  gap: var(--krds-spacer-8);
-  position: relative;
-  overflow-y: auto;
-  width: 100%;
-  padding: 0 var(--krds-spacer-10);
-  color: var(--krds-gray-90);
-}
-.modal .modal-dialog .modal-btn {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  flex-direction: row;
-  gap: 0.8rem;
-  width: 100%;
-  padding: var(--krds-spacer-8) var(--krds-spacer-10) var(--krds-spacer-10);
-}
-
-.modal .modal-dialog .btn-close {
-  position: absolute;
-  top: 3.2rem;
-  right: 3.2rem;
-  z-index: 901;
-  width: 3.6rem;
-  height: 3.6rem;
-  background: url(https://uiux.egovframe.go.kr/resources/img/component/common/ico_close_modal.svg)
-    no-repeat center;
-  background-size: 2rem;
-}
-
-.modal .modal-dialog .modal-btn .btn {
-  min-width: 9.2rem;
-}
-
-.btn.md {
-  height: 4.8rem;
-  padding: 0 var(--krds-btn-px-md);
-  border-radius: var(--krds-btn-rd-md);
-  font-size: var(--krds-btn-fz-md);
-}
-
-.btn.primary {
-  background-color: var(--krds-primary);
-  border: 1px solid var(--krds-primary);
-  color: var(--krds-white);
-}
-
-.btn.tertiary {
-  background-color: var(--krds-white);
-  border: 1px solid var(--krds-gray-90);
-  color: var(--krds-secondary-90);
 }

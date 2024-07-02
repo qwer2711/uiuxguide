@@ -1,17 +1,126 @@
 @charset "utf-8";
-
-/* *******************************************************
-* 파일이름 : _variables.scss
-* 파일설명 : Scss 환경 전역변수
-
-=== 이 CSS 파일은 담당자만 수정, 추가, 삭제할 수 있습니다. ===
-
-* 최종업데이트 : 2024-06-27-목
-
-******************************************************** */
+/* @import variables.scss */
+// 설명 :: Scss 환경 전역변수
 
 //prefix
 $prefix: krds- !default;
+
+//colors
+$white: #fff !default;
+$black: #000 !default;
+$gray: #8e8e8e !default;
+$primary: #246beb !default;
+$secondary: #003675 !default;
+$point: #e71825 !default;
+$danger: #eb003b !default;
+$warning: #ffb724 !default;
+$success: #008a1e !default;
+$information: #2768ff !default;
+$colors: (
+  "white": $white,
+  "black": $black,
+  "primary": $primary,
+  "secondary": $secondary,
+  "point": $point,
+  "danger": $danger,
+  "warning": $warning,
+  "success": $success,
+  "information": $information,
+);
+
+//primary colors
+$primary-5: #eff5ff !default;
+$primary-10: #d3e1fb !default;
+$primary-20: #a7c4f7 !default;
+$primary-30: #7ca6f3 !default;
+$primary-40: #5089ef !default;
+$primary-60: #1d56bc !default;
+$primary-70: #16408d !default;
+$primary-80: #0e2b5e !default;
+$primary-90: #07152f !default;
+
+$primary-colors: (
+  "5": $primary-5,
+  "10": $primary-10,
+  "20": $primary-20,
+  "30": $primary-30,
+  "40": $primary-40,
+  "60": $primary-60,
+  "70": $primary-70,
+  "80": $primary-80,
+  "90": $primary-90,
+) !default;
+
+//secondary colors
+$secondary-5: #edf1f5 !default;
+$secondary-10: #cdd7e4 !default;
+$secondary-20: #b4c4d6 !default;
+$secondary-30: #99b0cb !default;
+$secondary-40: #2a5c96 !default;
+$secondary-60: #002b5e !default;
+$secondary-70: #002046 !default;
+$secondary-80: #00162f !default;
+$secondary-90: #000b17 !default;
+
+$secondary-colors: (
+  "5": $secondary-5,
+  "10": $secondary-10,
+  "20": $secondary-20,
+  "30": $secondary-30,
+  "40": $secondary-40,
+  "60": $secondary-60,
+  "70": $secondary-70,
+  "80": $secondary-80,
+  "90": $secondary-90,
+) !default;
+
+//point colors
+$point-5: #fdf2f3 !default;
+$point-10: #fad1d3 !default;
+$point-20: #f5a3a8 !default;
+$point-30: #f1747c !default;
+$point-40: #ec4651 !default;
+$point-60: #b9131e !default;
+$point-70: #8b0e16 !default;
+$point-80: #5c0a0f !default;
+$point-90: #2e0507 !default;
+
+$point-colors: (
+  "5": $point-5,
+  "10": $point-10,
+  "20": $point-20,
+  "30": $point-30,
+  "40": $point-40,
+  "60": $point-60,
+  "70": $point-70,
+  "80": $point-80,
+  "90": $point-90,
+) !default;
+
+//gray colors
+$gray-5: #f8f8f8 !default;
+$gray-10: #f0f0f0 !default;
+$gray-20: #e4e4e4 !default;
+$gray-30: #d8d8d8 !default;
+$gray-40: #c6c6c6 !default;
+$gray-50: #8e8e8e !default;
+$gray-60: #717171 !default;
+$gray-70: #555555 !default;
+$gray-80: #2d2d2d !default;
+$gray-90: #1d1d1d !default;
+
+$gray-colors: (
+  "5": $gray-5,
+  "10": $gray-10,
+  "20": $gray-20,
+  "30": $gray-30,
+  "40": $gray-40,
+  "50": $gray-50,
+  "60": $gray-60,
+  "70": $gray-70,
+  "80": $gray-80,
+  "90": $gray-90,
+) !default;
 
 //breakpoints
 $breakpoint-xsm: 390px !default;

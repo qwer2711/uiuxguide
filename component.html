@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="ko" data-device="pc">
+
+<head>
+    <meta charset="utf-8" />
+    <title>UIUX가이드라인 by박지연</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <!-- 소개 -->
+    <meta name="description" content="UIUX가이드라인" />
+    <!-- 검색엔진 -->
+    <meta name="keywords" content="UIUX가이드라인" />
+    <!-- 제작자 -->
+    <meta name="author" content="jypark" />
+    <!-- 전화, 주소, 이메일 자동링크 없앨때 -->
+    <meta name="format-detection" content="telephone=no, address=no, email=no" />
+
+    <!-- Favicon -->
+    <!-- <link rel="shortcut icon" href="favicon/favicon.png" /> -->
+
+    <!-- Icon -->
+    <link rel="stylesheet" href="">
+
+    <!-- Custom :: CSS -->
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <script src="js/plugin/fullcalender.min.js"></script>
+
+    <!-- Jquery -->
+    <script src="js/vendor/jquery.min.js"></script>
+
+    <!-- simplebar -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.js"></script> -->
+    <!-- HTLM5shiv ie6~8 -->
+    <!--[if lt IE 9]>
+      <script src="js/vendor/html5shiv.min.js"></script>
+      <script type="text/javascript">
+        alert(
+          "현재 당신이 보는 브라우저는 지원하지 않습니다. 최신 브라우저로 업데이트해주세요!"
+        );
+      </script>
+    <![endif]-->
+    <style>
+        .right {
+            width: calc(100% - 350px);
+            margin-left: 350px;
+            gap: var(--krds-spacer-15);
+        }
+
+        .right>div {
+            border-bottom: 1px solid var(--krds-gray-10);
+            padding-bottom: var(--krds-spacer-15);
+        }
+    </style>
+</head>
+
+
+<body>
+
+    <!-- 탭키를누르면 메뉴바로가기로 이동 : 시각장애인들을 위한 웹표준 방법 -->
+
+    <div id="skipNav">
+        <a href="#container">본문 바로가기</a>
+        <a href="#">gnb 바로가기</a>
+    </div>
+
+    <!-- 왼쪽메뉴 영역 -->
+    <div class="flex-row gap-10">
+        <aside id="sideMenu" role="sidemenu">
+            <div id="simpleBar" class="dropdown-wrap">
+                <ul class="side-nav dropdown-ul">
+                    <li class="side-nav-item">
+                        <a href="#" class="side-nav-header flex-row justify-between align-center">
+                            <div class="left-tit flex-row justify-between align-center gap-10">
+                                <div class="icon">
+                                    <i class="fa-solid fa-house"></i>
+                                </div>
+                                <span>Base UI</span>
+                            </div>
+                            <i class="fa-solid fa-angle-right"></i>
+                        </a>
+                        <div class="side-nav-content">
+                            <ul class="sub-side-nav dropdown-ul">
+                                <li class="sub-side-nav-item">
+                                    <a href="#" class="sub-side-nav-header flex-row justify-between">
+                                        <span>Color</span>
+                                        <span><i class="fa-solid fa-angle-right"></i></span>
+                                    </a>
+                                    <div class="sub-side-nav-content">
+                                        <ul class="last-side-nav dropdown-ul">
+                                            <li class="last-side-nav-item"><a href="#"
+                                                    class="last-side-nav-header">one</a>
+                                            </li>
+                                            <li class="last-side-nav-item"><a href="#"
+                                                    class="last-side-nav-header">two</a>
+                                            </li>
+                                            <li class="last-side-nav-item"><a href="#"
+                                                    class="last-side-nav-header">three</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="sub-side-nav-item">
+                                    <a href="#" class="sub-side-nav-header flex-row justify-between">
+                                        <span>Layout</span>
+                                        <span><i class="fa-solid fa-angle-right"></i></span>
+                                    </a>
+                                    <div class="sub-side-nav-content">
+                                        <ul class="last-side-nav dropdown-ul">
+                                            <li class="last-side-nav-item"><a href="#"
+                                                    class="last-side-nav-header">one</a>
+                                            </li>
+                                            <li class="last-side-nav-item"><a href="#"
+                                                    class="last-side-nav-header">two</a>
+                                            </li>
+                                            <li class="last-side-nav-item"><a href="#"
+                                                    class="last-side-nav-header">three</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+
+                </ul>
+            </div>
+        </aside>
+        <div class="right flex-col">
+            <div class="com_01">
+                <!-- breadcrumb -->
+                <div class="breadcrumb-wrap">
+                    <ol class="breadcrumb">
+                        <li class="home"><a href="#" class="txt">홈</a></li>
+                        <li><a href="#" class="txt">1차메뉴</a></li>
+                        <li><a href="#" class="txt">2차메뉴</a></li>
+                        <li><a href="#" class="txt">3차메뉴</a></li>
+                    </ol>
+                </div>
+                <!-- breadcrumb -->
+            </div>
+            <div class="com_02">
+                <!-- 사이드 내 재탐색 -->
+                <div class="quick-nav-area pc-only">
+                    <div class="quick-title-wrap">
+                        <p class="guide-txt">이 페이지의 구성</p>
+                        <h3 class="sec-tit">장애아동수당</h3>
+                    </div>
+                    <nav class="quick-list">
+                        <ul>
+                            <li><a href="#section_01" class="active">서비스 개요</a></li>
+                            <li><a href="#section_02">서비스 상세</a></li>
+                            <li><a href="#section_03">신청 방법 및 절차</a></li>
+                            <li><a href="#section_04">제출 서류</a></li>
+                            <li><a href="#section_05">함께 신청할 수 있는 서비스</a></li>
+                            <li><a href="#section_06">부가정보</a></li>
+                            <li><a href="#section_07">정보 변경 내역</a></li>
+                        </ul>
+                    </nav>
+                    <div class="btn-wrap">
+                        <button type="button" class="btn primary">장애아동수단 온라인 신청하기</button>
+                        <p class="guide-txt">장애아동수당 외 <strong>1건</strong></p>
+                    </div>
+                </div>
+                <!-- 사이드 내 재탐색 -->
+            </div>
+            <div class="com_03">
+                <!-- paging : 웹 -->
+                <h2>웹 페이지네이션</h2>
+                <div class="pagination w-page">
+                    <a class="page-navi prev" href="#">이전</a>
+                    <div class="page-links">
+                        <a class="page-link" href="#">1</a>
+                        <span class="page-link link-dot"></span>
+                        <a class="page-link" href="#">6</a>
+                        <a class="page-link" href="#">7</a>
+                        <a class="page-link active" href="#">8</a>
+                        <a class="page-link" href="#">9</a>
+                        <a class="page-link" href="#">10</a>
+                        <a class="page-link" href="#">11</a>
+                        <span class="page-link link-dot"></span>
+                        <a class="page-link" href="#">120</a>
+                    </div>
+                    <a class="page-navi next" href="#">다음</a>
+                </div>
+                <!-- //paging : 웹 -->
+
+                <h2>모바일 페이지네이션</h2>
+                <!-- paging : 모바일 -->
+                <div class="pagination m-page">
+                    <div class="page-navis">
+                        <a class="page-navi prev" href="#">이전</a>
+                        <a class="page-navi next" href="#">다음</a>
+                    </div>
+                    <div class="page-links">
+                        <a class="page-link" href="#">1</a>
+                        <span class="page-link link-dot"></span>
+                        <a class="page-link" href="#">7</a>
+                        <a class="page-link active" href="#">8</a>
+                        <a class="page-link" href="#">9</a>
+                        <span class="page-link link-dot"></span>
+                        <a class="page-link" href="#">120</a>
+                    </div>
+                </div>
+                <!-- //paging : 모바일 -->
+
+                <h2>svg 페이지네이션</h2>
+
+                <!-- paging : svg -->
+                <div class="page_box">
+                    <div class="page_wrap">
+                        <div class="page_nation">
+                            <a class="arrow prev" href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="6.54" height="11.08"
+                                    viewBox="0 0 6.54 11.08">
+                                    <path d="M0,4.54,4.54,9.08ZM4.54,0,0,4.54Z" transform="translate(1 1)" fill="none"
+                                        stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                                    </path>
+                                </svg>
+                            </a>
+                            <a href="#" class="on">1</a>
+                            <a href="#">2</a>
+                            <a href="#">3</a>
+                            <a href="#">4</a>
+                            <a href="#">5</a>
+                            <a href="#">6</a>
+                            <a href="#">7</a>
+                            <a href="#">8</a>
+                            <a class="arrow next" href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="6.54" height="11.08"
+                                    viewBox="0 0 6.54 11.08">
+                                    <path d="M0,4.54,4.54,0ZM4.54,9.08,0,4.54Z"
+                                        transform="translate(5.54 10.08) rotate(180)" fill="none" stroke="#fff"
+                                        stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                                    </path>
+                                </svg>
+
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- //paging : svg -->
+            </div>
+            <div class="com_04">
+                <div id="source-calendar" class="calendar"></div>
+            </div>
+            <div class="com_05">
+                <div class="krds-disclosure conts-expand-area">
+                    <button type="button" class="btn-conts-expand">신청 서비스안내</button>
+                    <div class="expand-wrap">
+                        <div class="expand-in">
+                            <ul class="list-bullet">
+                                <li>하나의 아이디로 안전하고 편리하게 여러 전자정부 서비스를 이용할 수 있는 서비스입니다.</li>
+                                <li>디지털원패스 이용문의 : 1533-3713 (평일9~18시, 공휴일제외)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="com_06">
+                <button type="button" class="btn open-modal" data-target="modal_sample_03">기본형
+                    호출</button>
+                <!-- modal -->
+                <section id="modal_sample_03" class="modal fade" aria-hidden="true" role="dialog"
+                    aria-labelledby="tit_modal_sample_03">
+                    <div class="modal-dialog">
+                        <d iv class="modal-content">
+                            <!-- modal title -->
+                            <div class="modal-header">
+                                <h2 id="tit_modal_sample_03" class="modal-title">
+                                    모달 제목
+                                </h2>
+                            </div>
+                            <!-- //modal title -->
+                            <!-- modal contents -->
+                            <div class="modal-conts">
+                                <h3 class="conts-tit">내용 타이틀</h3>
+                                <div class="conts-area">
+                                    시작 <br>
+                                    대화 상자는 사용자에게 작업에 대해 알리고 중요한 정보를 포함하거나 결정이 필요하거나 여러 작업을 포함할 수 있습니다.
+                                    <br>
+                                    대화 상자는 사용자에게 작업에 대해 알리고 중요한 정보를 포함하거나 결정이 필요하거나 여러 작업을 포함할 수 있습니다.
+                                    <br>
+                                    대화 상자는 사용자에게 작업에 대해 알리고 중요한 정보를 포함하거나 결정이 필요하거나 여러 작업을 포함할 수 있습니다.
+                                    <br>
+                                    대화 상자는 사용자에게 작업에 대해 알리고 중요한 정보를 포함하거나 결정이 필요하거나 여러 작업을 포함할 수 있습니다.
+                                    <br>
+                                    대화 상자는 사용자에게 작업에 대해 알리고 중요한 정보를 포함하거나 결정이 필요하거나 여러 작업을 포함할 수 있습니다.
+                                    <br>
+                                    대화 상자는 사용자에게 작업에 대해 알리고 중요한 정보를 포함하거나 결정이 필요하거나 여러 작업을 포함할 수 있습니다.
+                                    <br>
+                                    대화 상자는 사용자에게 작업에 대해 알리고 중요한 정보를 포함하거나 결정이 필요하거나 여러 작업을 포함할 수 있습니다.
+                                    <br>
+                                    대화 상자는 사용자에게 작업에 대해 알리고 중요한 정보를 포함하거나 결정이 필요하거나 여러 작업을 포함할 수 있습니다.
+                                    <br>
+                                    대화 상자는 사용자에게 작업에 대해 알리고 중요한 정보를 포함하거나 결정이 필요하거나 여러 작업을 포함할 수 있습니다.
+                                    <br>
+                                    대화 상자는 사용자에게 작업에 대해 알리고 중요한 정보를 포함하거나 결정이 필요하거나 여러 작업을 포함할 수 있습니다.
+                                    <br>
+                                    대화 상자는 사용자에게 작업에 대해 알리고 중요한 정보를 포함하거나 결정이 필요하거나 여러 작업을 포함할 수 있습니다.
+                                    <br>
+                                    대화 상자는 사용자에게 작업에 대해 알리고 중요한 정보를 포함하거나 결정이 필요하거나 여러 작업을 포함할 수 있습니다.
+                                    <br>
+                                    대화 상자는 사용자에게 작업에 대해 알리고 중요한 정보를 포함하거나 결정이 필요하거나 여러 작업을 포함할 수 있습니다.
+                                    <br>
+                                    끝
+                                </div>
+                            </div>
+                            <!-- //modal contents -->
+                            <!-- modal btn -->
+                            <div class="modal-btn btn-wrap">
+                                <button type="button" class="btn tertiary md close-modal">아니요</button>
+                                <button type="button" class="btn primary md close-modal">예</button>
+                            </div>
+                            <!-- //modal btn -->
+                            <!-- close button -->
+                            <button type="button" class="btn-close close-modal"><span class="sr-only">닫기</span></button>
+                            <!-- //close button -->
+                        </d>
+                    </div>
+                    <div class="modal-back"></div>
+                </section>
+                <!-- //modal -->
+                <button type="button" class="btn tertiary open-modal" data-target="modal_sample_02">얼렷형
+                    호출</button>
+                <!-- modal -->
+                <section id="modal_sample_02" class="modal fade alert" aria-hidden="true" role="alert"
+                    aria-labelledby="tit_modal_sample_02">
+                    <div class="modal-dialog">
+                        <div class="modal-content" tabindex="0">
+                            <!-- modal title -->
+                            <div class="modal-header">
+                                <h2 id="tit_modal_sample_02" class="modal-title">
+                                    모달 제목 - 얼럿형
+                                </h2>
+                            </div>
+                            <!-- //modal title -->
+                            <!-- modal contents -->
+                            <div class="modal-conts">
+                                <h3 class="conts-tit">내용 타이틀</h3>
+                                <div class="conts-area">
+                                    대화 상자는 사용자에게 작업에 대해 알리고 중요한 정보를 포함하거나 결정이 필요하거나 여러 작업을 포함할 수
+                                    있습니다.
+                                </div>
+                            </div>
+                            <!-- //modal contents -->
+                            <!-- modal btn -->
+                            <div class="modal-btn btn-wrap">
+                                <button type="button" class="btn tertiary md close-modal">아니요</button>
+                                <button type="button" class="btn primary md close-modal">예</button>
+                            </div>
+                            <!-- //modal btn -->
+                            <!-- close button -->
+                            <button type="button" class="btn-close close-modal"><span class="sr-only">닫기</span></button>
+                            <!-- //close button -->
+                        </div>
+                    </div>
+                    <div class="modal-back in"></div>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <!-- //왼쪽메뉴 영역 -->
+    <script src="./js/common.js"></script>
+</body>
+
+</html>

@@ -11,26 +11,35 @@
 
 ******************************************************** */
 
-/* abstracts */
+/* *****************************
+* 폴더구조_01 : abstracts
+******************************** */
+
 @import "./abstracts/variables";
 @import "./abstracts/mixins";
 
-/* base */
+/* *****************************
+* 폴더구조_02 : base
+******************************** */
 @import "./base/reset";
+@import "./base/root";
 @import "./base/color";
 @import "./base/font";
-@import "./base/shape.scss";
 @import "./base/class";
 @import "./base/icon";
 
-/* layout */
+/* *****************************
+* 폴더구조_03 : layout
+******************************** */
 @import "./layout/header";
 @import "./layout/footer";
 @import "./layout/sidebar";
 @import "./layout/forms";
 @import "./layout/container";
 
-/* components */
+/* *****************************
+* 폴더구조_04 : components
+******************************** */
 @import "./components/skipnavigation";
 @import "./components/breadcrumb";
 @import "./components/in_page_navigation";
@@ -63,5 +72,7 @@
 @import "./components/login_form";
 @import "./components/filtering_form";
 
-/* pages */
+/* *****************************
+* 폴더구조_05 : pages
+******************************** */
 @import "./pages/home";

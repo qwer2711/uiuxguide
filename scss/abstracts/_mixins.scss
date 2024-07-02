@@ -1,18 +1,7 @@
-@charset "utf-8";
-
-/* *******************************************************
-* 파일이름 : _mixins.scss
-* 파일설명 : Scss 환경 함수
-
-=== 이 CSS 파일은 담당자만 수정, 추가, 삭제할 수 있습니다. ===
-
-* 최종업데이트 : 2024-06-27-목
-
-******************************************************** */
-@import "./variables";
+/* @import mixins.scss */
+// 설명 :: Scss 환경 함수
 
 // 반응형 mixins
-
 @mixin mobileLess {
   @media (max-width: $breakpoint-xsm) {
     @content;
@@ -42,4 +31,56 @@
   @media (max-width: $breakpoint-xlg) {
     @content;
   }
+}
+
+//reset text : popover/tooltip
+@mixin reset-text {
+  font-family: var(--#{$prefix}-fz-body-md);
+  font-style: normal;
+  font-weight: map-get($fws, normal);
+  line-height: $line-height-base;
+  text-align: left;
+  text-decoration: none;
+  text-shadow: none;
+  text-transform: none;
+  letter-spacing: normal;
+  //word-break: normal;
+  white-space: normal;
+  word-spacing: normal;
+  line-break: auto;
+}
+
+//focus color
+@mixin focus($offset: -0.4rem, $color: $primary, $alpha: 0.8) {
+  //border-radius: inherit;
+  outline-offset: $offset;
+  $transparent: 1 - $alpha;
+  $focus-color: transparentize($color, $transparent);
+  outline: 2px solid $focus-color;
+}
+
+//flex layout
+@mixin flex-layout($d: flex, $ai: flex-start, $jc: flex-start, $fd: row) {
+  display: $d;
+  align-items: $ai;
+  justify-content: $jc;
+  flex-direction: $fd;
+}
+
+//text ellipsis
+@mixin ellipsis($line) {
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: $line;
+}
+
+//position
+@mixin position($p: absolute, $t: null, $b: null, $l: null, $r: null) {
+  position: $p;
+  top: $t;
+  bottom: $b;
+  left: $l;
+  right: $r;
 }
