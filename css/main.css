@@ -746,6 +746,289 @@ caption {
   --krds-spacer-full: 100%;
 }
 
+/* *******************************************************
+* 파일이름 : class.scss
+* 파일설명 : 공통 통합 클래스
+
+=== 이 CSS 파일은 담당자만 수정, 추가, 삭제할 수 있습니다. ===
+
+* 최종업데이트 : 2024-06-27-목
+
+******************************************************** */
+/* 리스트(검색 시 활용) */
+/* **** 공통class_01 :: Flex ****/
+/* **** 공통class_02 :: Width/Height  ****/
+/* **** 공통class_03 :: Position ****/
+/* **** 공통class_04 :: Text ****/
+/* **** 공통class_05 :: Scrollbar ****/
+/* **** 공통class_06 :: Image ****/
+/* **** 공통class_07 :: Ir ****/
+/* ************** 공통class_01 :: Flex **************/
+/* flex-direction */
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+/* justify-content */
+.justify-center {
+  justify-content: center;
+}
+
+.justify-around {
+  justify-content: space-around;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.justify-evenly {
+  justify-content: space-evenly;
+}
+
+.justify-end {
+  justify-content: end;
+}
+
+/* align-items */
+.align-start {
+  align-items: start;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.align-end {
+  align-items: end;
+}
+
+/* ************** 공통class_02 :: Width / Height ************** */
+.wd-100 {
+  width: 100%;
+}
+
+.wd-50 {
+  width: 50%;
+}
+
+.wd-33 {
+  width: 33.3333333333%;
+}
+
+.wd-25 {
+  width: 25%;
+}
+
+.wd-20 {
+  width: 20%;
+}
+
+.ht-100 {
+  height: 100%;
+}
+
+.ht-50 {
+  height: 50%;
+}
+
+.ht-33 {
+  height: 33.3333333333%;
+}
+
+.ht-25 {
+  height: 25%;
+}
+
+.ht-20 {
+  height: 20%;
+}
+
+.wdht-100 {
+  width: 100%;
+  height: 100%;
+}
+
+.wdht-50 {
+  width: 50%;
+  height: 50%;
+}
+
+.wdht-33 {
+  width: 33.3333333333%;
+  height: 33.3333333333%;
+}
+
+.wdht-25 {
+  width: 25%;
+  height: 25%;
+}
+
+.wdht-20 {
+  width: 20%;
+  height: 20%;
+}
+
+/* ************** 공통class_03 :: Position ************** */
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.fixed {
+  position: fixed;
+}
+
+.sticky {
+  position: sticky;
+}
+
+/* ************** 공통class_04 :: Text ************** */
+/* text-align */
+.t-al {
+  text-align: left;
+}
+
+.t-ac {
+  text-align: center;
+}
+
+.t-ar {
+  text-align: right;
+}
+
+/* word-break */
+.t-ba {
+  word-break: break-all;
+}
+
+.t-ka {
+  word-break: keep-all;
+}
+
+/* ellipsis */
+.t-el-1 {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.t-el-2 {
+  display: block;
+  max-width: 100%;
+  height: 68px;
+  margin: 0 auto;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.t-el-3 {
+  display: block;
+  max-width: 100%;
+  height: 68px;
+  margin: 0 auto;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ************** 공통class_05 :: scrollbar ************** */
+.scr-bar {
+  overflow-y: auto;
+}
+
+/* 너비*/
+.scr-bar::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+/* 막대 */
+.scr-bar::-webkit-scrollbar-thumb {
+  height: 30px;
+  background: var(--color-primary);
+  border-radius: 10px;
+  /* background-clip: padding-box; */
+  border: 2px solid transparent;
+}
+
+/* 배경 */
+.scr-bar::-webkit-scrollbar-track {
+  background-color: #d5d7df;
+}
+
+/* ************** 공통class_06 :: Image ************** */
+.img-box > img {
+  display: block;
+  width: 100%;
+}
+
+.img-wdht-100 > img {
+  width: 100%;
+  height: 100%;
+}
+
+.img-wd-100 > img {
+  width: 100%;
+}
+
+.img-ht-100 > img {
+  height: 100%;
+}
+
+/* ************** 공통class_07 :: ir기법 ************** */
+/*  이미지를 볼 수 없는 사용자에게 적절한 대체 텍스트 제공  */
+/* css background-image 배경이 투명일경우 */
+.ir-pm {
+  display: block;
+  overflow: hidden;
+  font-size: 0;
+  line-height: 0;
+  text-indent: -9999px;
+}
+
+/* 중요한 이미지가 로딩이 되지 않거나 손실되어 off될 때 대체 텍스트 제공 */
+/* ex)버튼이 css background-image이미지라서 로딩이 느려질경우 */
+.ir-wa {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+}
+
+/* 스크린리더기 인식x  / for 접근성 준수*/
+.screen-out {
+  overflow: hidden;
+  position: absolute;
+  width: 0;
+  height: 0;
+  line-height: 0;
+  text-indent: -9999px;
+}
+
+/* *******************************************************
+* 파일이름 : icon.scss
+* 파일설명 : 공통 아이콘 스타일
+
+=== 이 CSS 파일은 담당자만 수정, 추가, 삭제할 수 있습니다. ===
+
+* 최종업데이트 : 2024-06-27-목
+
+******************************************************** */
 /* layout */
 /* *******************************************************
 * 파일이름 : header.scss
@@ -960,11 +1243,11 @@ caption {
   transition: color 0.15s ease-in;
 }
 
-.accordion li .left-tit .icon img {
+.side-nav li .left-tit .icon img {
   filter: opacity(0.5);
 }
 
-.accordion li.open .left-tit .icon img {
+.side-nav li.open .left-tit .icon img {
   filter: opacity(1);
 }
 
@@ -974,33 +1257,33 @@ caption {
 }
 
 /* one-depth */
-.accordion {
+.side-nav {
   width: 100%;
 }
 
-.accordion-header {
+.side-nav-header {
   position: relative;
   padding: 10px 24px;
   cursor: pointer;
 }
 
-.accordion-header .left-tit .icon {
+.side-nav-header .left-tit .icon {
   width: 20px;
   height: 20px;
 }
 
-.accordion > li.open > a {
+.side-nav > li.open > a {
   color: rgb(255, 255, 255);
 }
 
-.accordion-item .accordion-content {
+.side-nav-item .side-nav-content {
   opacity: 0;
   visibility: hidden;
   overflow: hidden;
   max-height: 0;
 }
 
-.accordion-item.open .accordion-content {
+.side-nav-item.open .side-nav-content {
   opacity: 1;
   visibility: visible;
   max-height: auto;
@@ -1009,25 +1292,25 @@ caption {
 }
 
 /* two-depth */
-.sub-accordion {
+.sub-side-nav {
   margin-left: 31px;
 }
 
-.sub-accordion-item.open .sub-accordion-header i {
+.sub-side-nav-item.open .sub-side-nav-header i {
   transform: rotate(90deg);
 }
 
-.sub-accordion > li.open > a {
+.sub-side-nav > li.open > a {
   color: rgb(255, 255, 255);
 }
 
-.sub-accordion-header {
+.sub-side-nav-header {
   position: relative;
   padding: 8px 24px;
   cursor: pointer;
 }
 
-.sub-accordion-header::before {
+.sub-side-nav-header::before {
   content: "";
   position: absolute;
   top: 50%;
@@ -1037,14 +1320,14 @@ caption {
   background: #fff;
 }
 
-.sub-accordion-content {
+.sub-side-nav-content {
   opacity: 0;
   visibility: hidden;
   overflow: hidden;
   max-height: 0;
 }
 
-.sub-accordion-item.open .sub-accordion-content {
+.sub-side-nav-item.open .sub-side-nav-content {
   opacity: 1;
   visibility: visible;
   max-height: auto;
@@ -1052,22 +1335,22 @@ caption {
 }
 
 /* last-depth */
-.last-accordion {
+.last-side-nav {
   margin-left: 24px;
 }
 
-.last-accordion > li.open > a {
+.last-side-nav > li.open > a {
   color: rgb(255, 255, 255);
 }
 
-.last-accordion-header {
+.last-side-nav-header {
   position: relative;
   display: block;
   padding: 8px 15px;
   cursor: pointer;
 }
 
-.last-accordion-header::before {
+.last-side-nav-header::before {
   content: "";
   position: absolute;
   top: 50%;
@@ -1894,19 +2177,17 @@ caption {
   width: 300px;
   border-top: 1px solid var(--krds-gray-40);
 }
-
-.accordion-item {
+.accordion .accordion-item {
   background-color: var(--krds-white);
   border-bottom: 1px solid var(--krds-gray-40);
 }
-
-.accordion-item .accordion-collapse {
+.accordion .accordion-item .accordion-collapse {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.5s cubic-bezier(0, 1, 0, 1);
 }
 
-.accordion-item.active .accordion-collapse {
+.accordion-item .accordion-item.active .accordion-collapse {
   height: auto;
   max-height: 1000vh;
   transition: max-height 1.5s ease-in-out;
