@@ -1,0 +1,466 @@
+@charset "utf-8";
+
+/* *******************************************************
+* 파일이름 : _variables.scss
+* 파일설명 : Scss 환경 전역변수
+
+=== 이 CSS 파일은 담당자만 수정, 추가, 삭제할 수 있습니다. ===
+
+* 최종업데이트 : 2024-06-27-목
+
+******************************************************** */
+
+//prefix
+$prefix: krds- !default;
+
+//breakpoints
+$breakpoint-xsm: 390px !default;
+$breakpoint-sm: 768px !default;
+$breakpoint-md: 1024px !default;
+$breakpoint-lg: 1440px !default;
+$breakpoint-xlg: 1920px !default;
+$breakpoints: (
+  "xsm": $breakpoint-xsm,
+  "sm": $breakpoint-sm,
+  "md": $breakpoint-md,
+  "lg": $breakpoint-lg,
+  "xlg": $breakpoint-xlg,
+) !default;
+
+//spacers
+$spacers: (
+  "0": "0",
+  "default": ".1rem",
+  "default2": ".2rem",
+  "full": "100%",
+) !default;
+
+//font style
+$font-family-base: "Pretendard GOV", sans-serif !default;
+$font-size-root: 62.5% !default; //10px 1rem으로 설정
+//$font-size-base: 1rem !default;
+
+$font-size: (
+  sizes: (
+    display: (
+      "sm": "4rem",
+      "md": "5rem",
+      "lg": "6.6rem",
+    ),
+    heading: (
+      "sm": "3.2rem",
+      "md": "4rem",
+      "lg": "5rem",
+    ),
+    title: (
+      "xsm": "1.5rem",
+      "sm": "1.7rem",
+      "md": "1.9rem",
+      "lg": "2.1rem",
+      "xlg": "2.5rem",
+      "xxlg": "3.2rem",
+    ),
+    body: (
+      "sm": "1.5rem",
+      "md": "1.7rem",
+      "lg": "1.9rem",
+    ),
+    link: (
+      "sm": "1.5rem",
+      "md": "1.7rem",
+      "lg": "1.9rem",
+    ),
+    detail: (
+      "sm": "1.3rem",
+      "md": "1.5rem",
+      "lg": "1.7rem",
+    ),
+    label: (
+      "xsm": "1.3rem",
+      "sm": "1.5rem",
+      "md": "1.7rem",
+      "lg": "1.9rem",
+    ),
+  ),
+) !default;
+
+$fws: (
+  "light": 300,
+  "normal": 400,
+  "medium": 500,
+  "bold": 700,
+  "bolder": 800,
+) !default;
+
+//line height style
+$line-height-none: 1 !default;
+$line-height-base: 1.5 !default;
+
+//border radius
+$border-radius: (
+  "1": ".1rem",
+  "2": ".2rem",
+  "4": ".4rem",
+  "6": ".6rem",
+  "8": ".8rem",
+  "10": "1rem",
+  "12": "1.2rem",
+  "full": "100%",
+) !default;
+
+//btn setting
+$btns: (
+  setting: (
+    //height
+    h:
+      (
+        "xsm": "3.2rem",
+        "sm": "4rem",
+        "md": "4.8rem",
+        "lg": "5.6rem",
+        "xlg": "6.4rem",
+      ),
+    //padding-x
+    px:
+      (
+        "xsm": "1rem",
+        "sm": "1.2rem",
+        "md": "1.6rem",
+        "lg": "2rem",
+        "xlg": "2.4rem",
+      ),
+    //border radius
+    rd:
+      (
+        "xsm": ".6rem",
+        "sm": ".6rem",
+        "md": ".8rem",
+        "lg": ".8rem",
+        "xlg": ".8rem",
+      ),
+    //font size
+    fz:
+      (
+        "xsm": "1.5rem",
+        "sm": "1.7rem",
+        "md": "1.7rem",
+        "lg": "1.9rem",
+        "xlg": "1.9rem",
+      ),
+  ),
+) !default;
+
+//btn chips
+$btnChipOutline: (
+  setting: (
+    h: (
+      "md": "3.2rem",
+      "lg": "3.6rem",
+    ),
+    pd: (
+      "md": "0rem 1.2rem",
+      "lg": "0rem 1.2rem",
+    ),
+    rd: (
+      "md": "10rem",
+      "lg": "10rem",
+    ),
+    fz: (
+      "md": "1.5rem",
+      "lg": "1.7rem",
+    ),
+    gap: (
+      "md": ".2rem",
+      "lg": ".2rem",
+    ),
+    size: (
+      "md": "1.2rem",
+      "lg": "1.6rem",
+    ),
+  ),
+) !default;
+
+$btnChipFill: (
+  setting: (
+    h: (
+      "md": "3.2rem",
+      "lg": "3.6rem",
+    ),
+    pd: (
+      "md": "0rem 1.2rem",
+      "lg": "0rem 1.2rem",
+    ),
+    rd: (
+      "md": ".6rem",
+      "lg": ".6rem",
+    ),
+    fz: (
+      "md": "1.5rem",
+      "lg": "1.7rem",
+    ),
+  ),
+) !default;
+
+//input setting
+$inputs: (
+  setting: (
+    h: (
+      "sm": "4rem",
+      "md": "4.8rem",
+      "lg": "5.6rem",
+      "xlg": "8rem",
+    ),
+    px: (
+      "sm": "1.6rem",
+      "md": "1.6rem",
+      "lg": "1.6rem",
+      "xlg": "2.4rem",
+    ),
+    rd: (
+      "sm": ".6rem",
+      "md": ".8rem",
+      "lg": ".8rem",
+      "xlg": "1.2rem",
+    ),
+    fz: (
+      "sm": "1.5rem",
+      "md": "1.7rem",
+      "lg": "1.9rem",
+      "xlg": "2.5rem",
+    ),
+  ),
+) !default;
+
+//radio checkbox setting
+$radios: (
+  setting: (
+    size: (
+      "sm": "1.6rem",
+      "md": "2rem",
+      "lg": "2.4rem",
+    ),
+    chk: (
+      "sm": ".8rem",
+      "md": "1rem",
+      "lg": "1.4rem",
+    ),
+    pos: (
+      "sm": ".2rem",
+      "md": ".5rem",
+      "lg": "1rem",
+    ),
+    fz: (
+      "sm": "1.5rem",
+      "md": "1.7rem",
+      "lg": "1.9rem",
+    ),
+  ),
+) !default;
+
+//form chips
+$rdoChipOutline: (
+  setting: (
+    h: (
+      "sm": "3.2rem",
+      "md": "4rem",
+      "lg": "4.8rem",
+    ),
+    pd: (
+      "sm": "0 1rem",
+      "md": "0 1.2rem",
+      "lg": "0 1.6rem",
+    ),
+    rd: (
+      "sm": ".6rem",
+      "md": ".6rem",
+      "lg": ".8rem",
+    ),
+    fz: (
+      "sm": "1.5rem",
+      "md": "1.7rem",
+      "lg": "1.7rem",
+    ),
+  ),
+) !default;
+
+$chkChipOutline: (
+  setting: (
+    h: (
+      "sm": "3.2rem",
+      "md": "4rem",
+      "lg": "4.8rem",
+    ),
+    pd: (
+      "sm": "0 1rem 0 .8rem",
+      "md": "0 1.2rem 0 1rem",
+      "lg": "0 1.6rem 0 1.2rem",
+    ),
+    rd: (
+      "sm": ".6rem",
+      "md": ".6rem",
+      "lg": ".8rem",
+    ),
+    fz: (
+      "sm": "1.5rem",
+      "md": "1.7rem",
+      "lg": "1.7rem",
+    ),
+    gap: (
+      "sm": ".4rem",
+      "md": ".4rem",
+      "lg": ".4rem",
+    ),
+    ico: (
+      "sm": "1.6rem",
+      "md": "2rem",
+      "lg": "2rem",
+    ),
+  ),
+) !default;
+
+// checkbox
+$checkboxes: (
+  setting: (
+    size: (
+      "sm": "1.6rem",
+      "md": "2rem",
+      "lg": "2.4rem",
+    ),
+    primary-chk: (
+      "sm": "1.2rem",
+      "md": "1.6rem",
+      "lg": "2rem",
+    ),
+    secondary-chk: (
+      "md": "2rem",
+    ),
+    pos: (
+      "md": ".5rem",
+    ),
+    fz: (
+      "sm": "1.5rem",
+      "md": "1.7rem",
+      "lg": "1.9rem",
+    ),
+  ),
+) !default;
+
+//select setting
+$select: (
+  setting: (
+    h: (
+      "sm": "4rem",
+      "md": "4.8rem",
+      "lg": "5.6rem",
+    ),
+    pd: (
+      "sm": "0 5.2rem 0 1.6rem",
+      "md": "0 5.2rem 0 1.6rem",
+      "lg": "0 5.2rem 0 1.6rem",
+    ),
+    rd: (
+      "sm": ".6rem",
+      "md": ".8rem",
+      "lg": ".8rem",
+    ),
+    fz: (
+      "sm": "1.5rem",
+      "md": "1.7rem",
+      "lg": "1.9rem",
+    ),
+    rn: (
+      "sm": "1.6rem",
+      "md": "1.6rem",
+      "lg": "1.6rem",
+    ),
+    bgs: (
+      "sm": "2rem",
+      "md": "2rem",
+      "lg": "2.4rem",
+    ),
+  ),
+) !default;
+
+//switch setting
+$switch: (
+  setting: (
+    h: (
+      "md": "2rem",
+      "lg": "2.4rem",
+    ),
+    w: (
+      "md": "3.2rem",
+      "lg": "4rem",
+    ),
+    b: (
+      "md": "1.6rem",
+      "lg": "2rem",
+    ),
+    br: (
+      "md": "0.2rem",
+      "lg": "0.2rem",
+    ),
+    pd: (
+      "md": "0.8rem",
+      "lg": "0.8rem",
+    ),
+    rd: (
+      "md": "4rem",
+      "lg": "4rem",
+    ),
+    fz: (
+      "md": "1.7rem",
+      "lg": "1.9rem",
+    ),
+  ),
+) !default;
+
+//tab setting
+$tabs: (
+  setting: (
+    h: (
+      full: "5.6rem",
+      fill: "4.8rem",
+      line: "4.8rem",
+    ),
+    fz: (
+      full: "1.9rem",
+      fill: "1.9rem",
+      ilne: "1.9rem",
+    ),
+    px: (
+      full: "0",
+      fill: "1.6rem",
+      line: ".2rem",
+    ),
+    ml: (
+      full: "0",
+      fill: ".8rem",
+      line: "1.6rem",
+    ),
+    rd: (
+      full: ".8rem",
+      fill: ".8rem",
+      line: "0",
+    ),
+  ),
+) !default;
+
+//table setting
+
+//form control setting
+
+//transition
+$transition-base: 0.4s ease-in-out !default;
+$transition-fade: opacity 0.4s linear !default;
+$transition-collapse: max-height 0.4s ease !default;
+$transition-collapse-width: width 0.4s ease !default;
+
+//box shadow
+$box-shadow-base: 2px 2px 2px 0px rgba(0, 0, 0, 0.15) !default;
+
+//img url 대치
+$url: "../../img" !default;
+
+//position 종류
+$position-type: (x, y, both);

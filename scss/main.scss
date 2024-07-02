@@ -1,0 +1,65 @@
+@charset "utf-8";
+
+/* *******************************************************
+* 파일이름 : main.css
+* 파일설명 : import 통합 파일 
+            (HTML파일에 이 main.css 파일만 단독으로 Link 해준다.)
+
+=== 이 CSS 파일은 담당자만 수정, 추가, 삭제할 수 있습니다. ===
+
+* 최종업데이트 : 2024-07-01-월
+
+******************************************************** */
+
+/* abstracts */
+@import "./abstracts/variables";
+@import "./abstracts/mixins";
+
+/* base */
+@import "./base/reset";
+@import "./base/color";
+@import "./base/font";
+@import "./base/shape.scss";
+
+/* layout */
+@import "./layout/header";
+@import "./layout/footer";
+@import "./layout/sidebar";
+@import "./layout/forms";
+@import "./layout/container";
+
+/* components */
+@import "./components/skipnavigation";
+@import "./components/breadcrumb";
+@import "./components/in_page_navigation";
+@import "./components/pagenation";
+@import "./components/calendar";
+@import "./components/disclosure";
+@import "./components/modal";
+@import "./components/badge";
+@import "./components/accordion";
+@import "./components/carousel";
+@import "./components/tab";
+@import "./components/table";
+@import "./components/link";
+@import "./components/button";
+@import "./components/radio_button";
+@import "./components/checkbox";
+@import "./components/selectbox";
+@import "./components/tag";
+@import "./components/step_indicator";
+@import "./components/spinner";
+@import "./components/tooltip";
+@import "./components/coachmark";
+@import "./components/date_input";
+@import "./components/text_input";
+@import "./components/textarea";
+@import "./components/file_upload";
+@import "./components/personal_information";
+@import "./components/search";
+@import "./components/error";
+@import "./components/login_form";
+@import "./components/filtering_form";
+
+/* pages */
+@import "./pages/home";

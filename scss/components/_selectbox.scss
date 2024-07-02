@@ -4,6 +4,26 @@
 //   background-repeat: no-repeat;
 //   appearance: none;
 // }
+
+/* 공통 :: input / 셀렉트박스 / 텍스트영역 */
+input,
+select {
+  height: 32px;
+}
+
+input,
+select,
+textarea {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  vertical-align: middle;
+  padding: 0 10px;
+  font-size: 1.4rem;
+  color: #333333;
+  box-sizing: border-box;
+}
+
+// select 박스
 .form-select {
   width: 100%;
   height: var(--krds-select-h-lg);

@@ -1,0 +1,71 @@
+@charset "utf-8";
+
+/* *******************************************************
+* 파일이름 : footer.scss
+* 파일설명 : 공통 푸터 영역
+
+=== 이 CSS 파일은 담당자만 수정, 추가, 삭제할 수 있습니다. ===
+
+* 최종업데이트 : 2024-06-27-목
+
+******************************************************** */
+
+/* ************** 공통layout_05 :: 푸터 영역 ************** */
+
+#footer {
+  width: 100%;
+  text-align: center;
+  background-color: var(--krds-gray-5);
+  border-top: 1px solid var(--krds-gray-40);
+}
+
+#footer .inner {
+  padding: var(--krds-spacer-6);
+  text-align: left;
+}
+#footer .inner .logo {
+  font-size: var(--krds-fz-title-xlg);
+  color: var(--krds-gray-90);
+  font-weight: 700;
+}
+#footer .inner .main-footer-wrap {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-direction: row;
+  margin-top: var(--krds-spacer-4);
+  padding-top: var(--krds-spacer-8);
+  border-top: 1px solid var(--krds-gray-30);
+}
+#footer .inner .main-footer-wrap .info-cs {
+  display: flex;
+  align-items: normal;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: var(--krds-spacer-4);
+}
+#footer .inner .main-footer-wrap .info-cs li {
+  display: flex;
+  align-items: center;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+  gap: var(--krds-spacer-2);
+}
+#footer .inner .main-footer-wrap .copyright {
+  font-size: var(--krds-fz-body-sm);
+  color: var(--krds-gray-70);
+}
+
+// 반응형
+@include pc {
+}
+@include desktop {
+}
+@include tablet {
+}
+@include mobile {
+}
+@include mobileLess {
+}

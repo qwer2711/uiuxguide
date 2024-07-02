@@ -1,0 +1,106 @@
+@charset "utf-8";
+
+/* *******************************************************
+* 파일이름 : header.scss
+* 파일설명 : 공통 헤더 영역
+
+=== 이 CSS 파일은 담당자만 수정, 추가, 삭제할 수 있습니다. ===
+
+* 최종업데이트 : 2024-06-27-목
+
+******************************************************** */
+
+/* **** 공통layout :: 헤더 영역  ****/
+
+#header {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  background: var(--color-white);
+}
+
+#header .inner {
+  display: flex;
+  align-items: center;
+  padding: 0 1.6rem;
+}
+
+#header .inner .logo {
+  font-size: var(--krds-fz-title-xlg);
+  color: #555555;
+}
+
+#header .inner .logo a {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+}
+
+/* #header .inner .logo a::before {
+  content: "";
+  width: 4rem;
+  height: 4rem;
+  margin-right: var(--krds-spacer-3);
+  background: url(../images/logo/logo-pc.svg) no-repeat center;
+  background-size: contain;
+} */
+#header .inner .gnb {
+  margin-left: auto;
+}
+
+#header .inner .gnb ul {
+  display: flex;
+  padding: 1.6rem 0;
+}
+
+#header .inner .gnb ul li {
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 0 var(--krds-spacer-2);
+}
+
+#header .inner .gnb ul li a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  padding: var(--krds-spacer-4) var(--krds-spacer-3);
+  font-size: var(--krds-fz-body-lg);
+  color: var(--krds-gray-90);
+  font-weight: 700;
+  line-height: 1;
+}
+
+#header .inner .gnb ul li a:hover {
+  border-radius: 3px;
+  background-color: #efefef;
+  transition: all 0.3s;
+}
+
+/* 사이드메뉴_PC/Mobile_상태_로고변경 */
+[data-device="pc"] .top-bar .logo-mb,
+[data-device="mobile"] .top-bar .logo-pc {
+  display: none;
+}
+
+[data-device="pc"] .top-bar .logo-pc,
+[data-device="mobile"] .top-bar .logo-mb {
+  display: block;
+}
+
+// 반응형
+@include pc {
+}
+@include desktop {
+}
+@include tablet {
+}
+@include mobile {
+}
+@include mobileLess {
+}

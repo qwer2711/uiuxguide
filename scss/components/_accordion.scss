@@ -1,18 +1,18 @@
 .accordion {
   width: 300px;
   border-top: 1px solid var(--krds-gray-40);
-}
-.accordion-item {
-  background-color: var(--krds-white);
-  border-bottom: 1px solid var(--krds-gray-40);
-}
-.accordion-item .accordion-collapse {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.5s cubic-bezier(0, 1, 0, 1);
+  .accordion-item {
+    background-color: var(--krds-white);
+    border-bottom: 1px solid var(--krds-gray-40);
+    .accordion-collapse {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.5s cubic-bezier(0, 1, 0, 1);
+    }
+  }
 }
 
-.accordion-item.active .accordion-collapse {
+.accordion-item .accordion-item.active .accordion-collapse {
   height: auto;
   max-height: 1000vh;
   transition: max-height 1.5s ease-in-out;

@@ -1,0 +1,186 @@
+@charset "utf-8";
+
+/* *******************************************************
+* 파일이름 : sidebar.scss
+* 파일설명 : 공통 사이드메뉴 영역
+
+=== 이 CSS 파일은 담당자만 수정, 추가, 삭제할 수 있습니다. ===
+
+* 최종업데이트 : 2024-06-27-목
+
+******************************************************** */
+
+[data-page="main"] #sideMenu {
+  display: none;
+}
+#sideMenu {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 300px;
+  height: 100vh;
+  background: rgba(29, 34, 139, 0.9);
+  z-index: 999;
+}
+/* logo */
+.side-menu-logo {
+  width: 100%;
+  height: 100px;
+  text-align: center;
+  -webkit-transition: all 0.1s ease-out;
+  transition: all 0.1s ease-out;
+}
+.side-menu-logo .logo-mb {
+  display: none;
+}
+/* [data-device="pc"] .side-menu-logo .logo-pc,
+[data-device="mobile"] .side-menu-logo .logo-mb {
+    display: none;
+}
+[data-device="pc"] .side-menu-logo .logo-lg,
+[data-device="mobile"] .side-menu-logo .logo-mb {
+    display: block;
+} */
+
+/* dropdown-menu */
+.dropdown-wrap {
+  width: 100%;
+  height: 90vh;
+  box-sizing: border-box;
+}
+
+/* 공통 */
+.dropdown-ul li a {
+  color: rgba(255, 255, 255, 0.568);
+}
+
+.dropdown-ul li a:hover {
+  color: rgba(0, 0, 0, 1);
+  transition: color 0.15s ease-in;
+}
+.side-nav li .left-tit .icon img {
+  filter: opacity(0.5);
+}
+.side-nav li.open .left-tit .icon img {
+  filter: opacity(1);
+}
+
+.dropdown-ul li a i {
+  font-size: 10px;
+  transition: transform 0.2s;
+}
+
+/* one-depth */
+.side-nav {
+  width: 100%;
+}
+
+.side-nav-header {
+  position: relative;
+  padding: 10px 24px;
+  cursor: pointer;
+}
+.side-nav-header .left-tit .icon {
+  width: 20px;
+  height: 20px;
+}
+
+.side-nav > li.open > a {
+  color: rgba(255, 255, 255, 1);
+}
+
+.side-nav-item .side-nav-content {
+  opacity: 0;
+  visibility: hidden;
+  overflow: hidden;
+  max-height: 0;
+}
+.side-nav-item.open .side-nav-content {
+  opacity: 1;
+  visibility: visible;
+  max-height: auto;
+  /* transition: max-height 0.5s ease; */
+  transition: 0.3s ease-in-out max-height;
+}
+
+/* two-depth */
+.sub-side-nav {
+  margin-left: 31px;
+}
+
+.sub-side-nav-item.open .sub-side-nav-header i {
+  transform: rotate(90deg);
+}
+
+.sub-side-nav > li.open > a {
+  color: rgba(255, 255, 255, 1);
+}
+
+.sub-side-nav-header {
+  position: relative;
+  padding: 8px 24px;
+  cursor: pointer;
+}
+
+.sub-side-nav-header::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 6px;
+  height: 1px;
+  background: #fff;
+}
+
+.sub-side-nav-content {
+  opacity: 0;
+  visibility: hidden;
+  overflow: hidden;
+  max-height: 0;
+}
+
+.sub-side-nav-item.open .sub-side-nav-content {
+  opacity: 1;
+  visibility: visible;
+  max-height: auto;
+  transition: 0.3s ease-in-out max-height;
+}
+/* last-depth */
+.last-side-nav {
+  margin-left: 24px;
+}
+
+.last-side-nav > li.open > a {
+  color: rgba(255, 255, 255, 1);
+}
+
+.last-side-nav-header {
+  position: relative;
+  display: block;
+  padding: 8px 15px;
+  cursor: pointer;
+}
+
+.last-side-nav-header::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  border: 1px solid #fff;
+}
+
+// 반응형
+@include pc {
+}
+@include desktop {
+}
+@include tablet {
+}
+@include mobile {
+}
+@include mobileLess {
+}

@@ -1,0 +1,3187 @@
+@charset "UTF-8";
+/* *******************************************************
+* 파일이름 : main.css
+* 파일설명 : import 통합 파일 
+            (HTML파일에 이 main.css 파일만 단독으로 Link 해준다.)
+
+=== 이 CSS 파일은 담당자만 수정, 추가, 삭제할 수 있습니다. ===
+
+* 최종업데이트 : 2024-07-01-월
+
+******************************************************** */
+/* abstracts */
+/* *******************************************************
+* 파일이름 : _variables.scss
+* 파일설명 : Scss 환경 전역변수
+
+=== 이 CSS 파일은 담당자만 수정, 추가, 삭제할 수 있습니다. ===
+
+* 최종업데이트 : 2024-06-27-목
+
+******************************************************** */
+/* *******************************************************
+* 파일이름 : _mixins.scss
+* 파일설명 : Scss 환경 함수
+
+=== 이 CSS 파일은 담당자만 수정, 추가, 삭제할 수 있습니다. ===
+
+* 최종업데이트 : 2024-06-27-목
+
+******************************************************** */
+/* *******************************************************
+* 파일이름 : _variables.scss
+* 파일설명 : Scss 환경 전역변수
+
+=== 이 CSS 파일은 담당자만 수정, 추가, 삭제할 수 있습니다. ===
+
+* 최종업데이트 : 2024-06-27-목
+
+******************************************************** */
+/* base */
+/* *******************************************************
+* 파일이름 : c_reset.scss
+* 파일설명 : 퍼블리싱 환경 초기화 reset작업
+
+=== 이 CSS 파일은 담당자만 수정, 추가, 삭제할 수 있습니다. ===
+
+* 최종업데이트 : 2024-06-27-목
+
+******************************************************** */
+/* --------------------- 시작 --------------------- */
+html,
+body {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  font-family: "Pretendard GOV", sans-serif;
+  color: var(--krds-gray-90);
+  font-weight: 400;
+  line-height: 1.5;
+  word-break: keep-all;
+  word-wrap: break-word;
+  -webkit-tap-highlight-color: transparent;
+  scroll-behavior: smooth;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: var(--krds-fz-body-md);
+  overflow-x: hidden;
+}
+
+*:focus {
+  outline-offset: 0rem;
+  outline: 2px solid rgba(36, 107, 235, 0.8);
+}
+
+::-moz-selection {
+  background: var(--krds-secondary);
+  color: var(--krds-white);
+}
+
+::selection {
+  background: #003675;
+  color: var(--krds-white);
+}
+
+body,
+div,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+ol,
+li,
+dl,
+dt,
+dd,
+table,
+th,
+td,
+form,
+fieldset,
+legend,
+input,
+textarea,
+a,
+button,
+select,
+ul,
+li,
+span,
+em,
+label,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-text-size-adjust: none;
+  font-family: inherit;
+  line-height: 1.5;
+  letter-spacing: inherit;
+}
+
+pre {
+  font-family: inherit;
+}
+
+input,
+textarea,
+a,
+button,
+select,
+span,
+label,
+:before,
+:after {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong {
+  font-weight: 700;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section {
+  display: block;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img,
+fieldset {
+  border: 0;
+}
+
+fieldset {
+  min-width: 100%;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: top;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+em,
+address,
+i {
+  font-style: normal;
+}
+
+a,
+a:hover,
+a:active,
+a:focus {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input[type=submit],
+input[type=button] {
+  overflow: visible;
+  margin: 0;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font: inherit;
+  color: inherit;
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+textarea {
+  resize: none;
+}
+
+label {
+  cursor: pointer;
+}
+
+select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+input[type=text],
+input[type=tel],
+input[type=password],
+input[type=file],
+input[type=number],
+input[type=email],
+input[type=date],
+input[type=search],
+textarea {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+caption {
+  position: static !important;
+  margin: 0 !important;
+}
+
+table {
+  table-layout: fixed;
+  max-width: none;
+  width: auto;
+  min-width: 100%;
+  border-collapse: collapse;
+}
+
+[role=button] {
+  cursor: pointer;
+}
+
+.img img {
+  min-width: 100%;
+  max-width: 100%;
+}
+
+.img.bg-img {
+  background-size: cover;
+}
+
+.blind,
+hr,
+.sr-only,
+legend,
+caption {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+.hide {
+  display: none !important;
+}
+
+.show {
+  display: block !important;
+}
+
+/* *******************************************************
+* 파일이름 : color.scss
+* 파일설명 : 공통 색상 스타일
+
+=== 이 CSS 파일은 담당자만 수정, 추가, 삭제할 수 있습니다. ===
+
+* 최종업데이트 : 2024-06-27-목
+
+******************************************************** */
+/* 리스트(검색 시 활용) */
+/* **** 공통color_01 :: System_color : 시스템 색상 ****/
+/* **** 공통color_02 :: Primary_color : 주요 색상 ****/
+/* **** 공통color_03 :: Secondary_color : 보조 색상 ****/
+/* **** 공통color_04 :: Point_color : 집중 색상 ****/
+/* **** 공통color_05 :: Grayscale : BG, Text, Line 색상 ****/
+/* *******************************************************
+* 파일이름 : _variables.scss
+* 파일설명 : Scss 환경 전역변수
+
+=== 이 CSS 파일은 담당자만 수정, 추가, 삭제할 수 있습니다. ===
+
+* 최종업데이트 : 2024-06-27-목
+
+******************************************************** */
+/* --------------------- 시작 --------------------- */
+:root {
+  --krds-white: #fff;
+  --krds-black: #000;
+  --krds-primary: #246beb;
+  --krds-secondary: #003675;
+  --krds-point: #e71825;
+  --krds-danger: #eb003b;
+  --krds-warning: #ffb724;
+  --krds-success: #008a1e;
+  --krds-information: #2768ff;
+  --krds-primary-5: #eff5ff;
+  --krds-primary-10: #d3e1fb;
+  --krds-primary-20: #a7c4f7;
+  --krds-primary-30: #7ca6f3;
+  --krds-primary-40: #5089ef;
+  --krds-primary-60: #1d56bc;
+  --krds-primary-70: #16408d;
+  --krds-primary-80: #0e2b5e;
+  --krds-primary-90: #07152f;
+  --krds-secondary-5: #edf1f5;
+  --krds-secondary-10: #cdd7e4;
+  --krds-secondary-20: #b4c4d6;
+  --krds-secondary-30: #99b0cb;
+  --krds-secondary-40: #2a5c96;
+  --krds-secondary-60: #002b5e;
+  --krds-secondary-70: #002046;
+  --krds-secondary-80: #00162f;
+  --krds-secondary-90: #000b17;
+  --krds-point-5: #fdf2f3;
+  --krds-point-10: #fad1d3;
+  --krds-point-20: #f5a3a8;
+  --krds-point-30: #f1747c;
+  --krds-point-40: #ec4651;
+  --krds-point-60: #b9131e;
+  --krds-point-70: #8b0e16;
+  --krds-point-80: #5c0a0f;
+  --krds-point-90: #2e0507;
+  --krds-gray-5: #f8f8f8;
+  --krds-gray-10: #f0f0f0;
+  --krds-gray-20: #e4e4e4;
+  --krds-gray-30: #d8d8d8;
+  --krds-gray-40: #c6c6c6;
+  --krds-gray-50: #8e8e8e;
+  --krds-gray-60: #717171;
+  --krds-gray-70: #555555;
+  --krds-gray-80: #2d2d2d;
+  --krds-gray-90: #1d1d1d;
+}
+
+/* *******************************************************
+* 파일이름 : font.scss
+* 파일설명 : 공통 폰트 스타일
+
+=== 이 CSS 파일은 담당자만 수정, 추가, 삭제할 수 있습니다. ===
+
+* 최종업데이트 : 2024-06-27-목
+
+******************************************************** */
+/* --------------------- 시작 --------------------- */
+@font-face {
+  font-family: "Pretendard GOV";
+  font-weight: 400;
+  font-style: normal;
+  src: url("../../font/pretendardGOV/PretendardGOV-Regular.subset.woff") format("woff");
+}
+/* Medium */
+@font-face {
+  font-family: "Pretendard GOV";
+  font-weight: 500;
+  font-style: normal;
+  src: url("../../font/pretendardGOV/PretendardGOV-Medium.subset.woff") format("woff");
+}
+/* Bold */
+@font-face {
+  font-family: "Pretendard GOV";
+  font-weight: 700;
+  font-style: normal;
+  src: url("../../font/pretendardGOV/PretendardGOV-Bold.subset.woff") format("woff");
+}
+/* *******************************************************
+* 파일이름 : shape.scss
+* 파일설명 : 퍼블리싱 환경 초기화 reset작업
+
+=== 이 CSS 파일은 담당자만 수정, 추가, 삭제할 수 있습니다. ===
+
+* 최종업데이트 : 2024-06-27-목
+
+******************************************************** */
+/* 리스트(검색 시 활용) */
+/* **** 공통shape_01 :: Font-size ****/
+/* **** 공통shape_02 :: Border-radius  ****/
+/* **** 공통shape_03 :: Button ****/
+/* **** 공통shape_04 :: BtnChipFill ****/
+/* **** 공통shape_05 :: BtnChipOutline ****/
+/* **** 공통shape_06 :: Input ****/
+/* **** 공통shape_07 :: Radiobox ****/
+/* **** 공통shape_08 :: Checkbox ****/
+/* **** 공통shape_09 :: Selectbox ****/
+/* **** 공통shape_10 :: Switch ****/
+/* **** 공통shape_11 :: Tab ****/
+/* **** 공통shape_12 :: Space ****/
+/* --------------------- 시작 --------------------- */
+:root {
+  /* **** 공통shape_01 :: Font-size ****/
+  --krds-fz-display-sm: 4rem;
+  --krds-fz-display-md: 5rem;
+  --krds-fz-display-lg: 6.6rem;
+  --krds-fz-heading-sm: 3.2rem;
+  --krds-fz-heading-md: 4rem;
+  --krds-fz-heading-lg: 5rem;
+  --krds-fz-title-xsm: 1.5rem;
+  --krds-fz-title-sm: 1.7rem;
+  --krds-fz-title-md: 1.9rem;
+  --krds-fz-title-lg: 2.1rem;
+  --krds-fz-title-xlg: 2.5rem;
+  --krds-fz-title-xxlg: 3.2rem;
+  --krds-fz-body-sm: 1.5rem;
+  --krds-fz-body-md: 1.7rem;
+  --krds-fz-body-lg: 1.9rem;
+  --krds-fz-link-sm: 1.5rem;
+  --krds-fz-link-md: 1.7rem;
+  --krds-fz-link-lg: 1.9rem;
+  --krds-fz-detail-sm: 1.3rem;
+  --krds-fz-detail-md: 1.5rem;
+  --krds-fz-detail-lg: 1.7rem;
+  --krds-fz-label-xsm: 1.3rem;
+  --krds-fz-label-sm: 1.5rem;
+  --krds-fz-label-md: 1.7rem;
+  --krds-fz-label-lg: 1.9rem;
+  /* **** 공통shape_02 :: border-radius ****/
+  --krds-rd-1: 0.1rem;
+  --krds-rd-2: 0.2rem;
+  --krds-rd-4: 0.4rem;
+  --krds-rd-6: 0.6rem;
+  --krds-rd-8: 0.8rem;
+  --krds-rd-10: 1rem;
+  --krds-rd-12: 1.2rem;
+  --krds-rd-full: 100%;
+  /* **** 공통shape_03 :: Button ****/
+  /* height */
+  --krds-btn-h-xsm: 3.2rem;
+  --krds-btn-h-sm: 4rem;
+  --krds-btn-h-md: 4.8rem;
+  --krds-btn-h-lg: 5.6rem;
+  --krds-btn-h-xlg: 6.4rem;
+  /* padding */
+  --krds-btn-px-xsm: 1rem;
+  --krds-btn-px-sm: 1.2rem;
+  --krds-btn-px-md: 1.6rem;
+  --krds-btn-px-lg: 2rem;
+  --krds-btn-px-xlg: 2.4rem;
+  /* border-radius */
+  --krds-btn-rd-xsm: 0.6rem;
+  --krds-btn-rd-sm: 0.6rem;
+  --krds-btn-rd-md: 0.8rem;
+  --krds-btn-rd-lg: 0.8rem;
+  --krds-btn-rd-xlg: 0.8rem;
+  /* font-size */
+  --krds-btn-fz-xsm: 1.5rem;
+  --krds-btn-fz-sm: 1.7rem;
+  --krds-btn-fz-md: 1.7rem;
+  --krds-btn-fz-lg: 1.9rem;
+  --krds-btn-fz-xlg: 1.9rem;
+  /* **** 공통shape_04 :: BtnChipFill ****/
+  /* height */
+  --krds-btnChipFill-h-md: 3.2rem;
+  --krds-btnChipFill-h-lg: 3.6rem;
+  /* padding */
+  --krds-btnChipFill-pd-md: 0rem 1.2rem;
+  --krds-btnChipFill-pd-lg: 0rem 1.2rem;
+  /* border-radius */
+  --krds-btnChipFill-rd-md: 0.6rem;
+  --krds-btnChipFill-rd-lg: 0.6rem;
+  /* font-size */
+  --krds-btnChipFill-fz-md: 1.5rem;
+  --krds-btnChipFill-fz-lg: 1.7rem;
+  /* **** 공통shape_05 :: btnChipOutline ****/
+  /* height */
+  --krds-btnChipOutline-h-md: 3.2rem;
+  --krds-btnChipOutline-h-lg: 3.6rem;
+  /* padding */
+  --krds-btnChipOutline-pd-md: 0rem 1.2rem;
+  --krds-btnChipOutline-pd-lg: 0rem 1.2rem;
+  /* border-radius */
+  --krds-btnChipOutline-rd-md: 10rem;
+  --krds-btnChipOutline-rd-lg: 10rem;
+  /* font-size */
+  --krds-btnChipOutline-fz-md: 1.5rem;
+  --krds-btnChipOutline-fz-lg: 1.7rem;
+  /* gap */
+  --krds-btnChipOutline-gap-md: 0.2rem;
+  --krds-btnChipOutline-gap-lg: 0.2rem;
+  /* size */
+  --krds-btnChipOutline-size-md: 1.2rem;
+  --krds-btnChipOutline-size-lg: 1.6rem;
+  /* **** 공통shape_06 :: Input ****/
+  /* height */
+  --krds-input-h-sm: 4rem;
+  --krds-input-h-md: 4.8rem;
+  --krds-input-h-lg: 5.6rem;
+  --krds-input-h-xlg: 8rem;
+  /* padding */
+  --krds-input-px-sm: 1.6rem;
+  --krds-input-px-md: 1.6rem;
+  --krds-input-px-lg: 1.6rem;
+  --krds-input-px-xlg: 2.4rem;
+  /* border-radius */
+  --krds-input-rd-sm: 0.6rem;
+  --krds-input-rd-md: 0.8rem;
+  --krds-input-rd-lg: 0.8rem;
+  --krds-input-rd-xlg: 1.2rem;
+  /* border-font-size */
+  --krds-input-fz-sm: 1.5rem;
+  --krds-input-fz-md: 1.7rem;
+  --krds-input-fz-lg: 1.9rem;
+  --krds-input-fz-xlg: 2.5rem;
+  /* **** 공통shape_07 :: Radiobox ****/
+  /* size*/
+  --krds-rdo-size-sm: 1.6rem;
+  --krds-rdo-size-md: 2rem;
+  --krds-rdo-size-lg: 2.4rem;
+  /* chk*/
+  --krds-rdo-chk-sm: 0.8rem;
+  --krds-rdo-chk-md: 1rem;
+  --krds-rdo-chk-lg: 1.4rem;
+  /* pos*/
+  --krds-rdo-pos-sm: 0.2rem;
+  --krds-rdo-pos-md: 0.5rem;
+  --krds-rdo-pos-lg: 1rem;
+  /* font-size*/
+  --krds-rdo-fz-sm: 1.5rem;
+  --krds-rdo-fz-md: 1.7rem;
+  --krds-rdo-fz-lg: 1.9rem;
+  /* height */
+  --krds-rdoChipOutline-h-sm: 3.2rem;
+  --krds-rdoChipOutline-h-md: 4rem;
+  --krds-rdoChipOutline-h-lg: 4.8rem;
+  /* padding */
+  --krds-rdoChipOutline-pd-sm: 0 1rem;
+  --krds-rdoChipOutline-pd-md: 0 1.2rem;
+  --krds-rdoChipOutline-pd-lg: 0 1.6rem;
+  /* border-radius */
+  --krds-rdoChipOutline-rd-sm: 0.6rem;
+  --krds-rdoChipOutline-rd-md: 0.6rem;
+  --krds-rdoChipOutline-rd-lg: 0.8rem;
+  /*font-size */
+  --krds-rdoChipOutline-fz-sm: 1.5rem;
+  --krds-rdoChipOutline-fz-md: 1.7rem;
+  --krds-rdoChipOutline-fz-lg: 1.7rem;
+  /* **** 공통shape_08 :: Checkbox ****/
+  /* size*/
+  --krds-chk-size-sm: 1.6rem;
+  --krds-chk-size-md: 2rem;
+  --krds-chk-size-lg: 2.4rem;
+  /* primary*/
+  --krds-chk-primary-chk-sm: 1.2rem;
+  --krds-chk-primary-chk-md: 1.6rem;
+  --krds-chk-primary-chk-lg: 2rem;
+  /* secondary*/
+  --krds-chk-secondary-chk-md: 2rem;
+  /* pos*/
+  --krds-chk-pos-md: 0.5rem;
+  /* font-size*/
+  --krds-chk-fz-sm: 1.5rem;
+  --krds-chk-fz-md: 1.7rem;
+  --krds-chk-fz-lg: 1.9rem;
+  /* height */
+  --krds-chkChipOutline-h-sm: 3.2rem;
+  --krds-chkChipOutline-h-md: 4rem;
+  --krds-chkChipOutline-h-lg: 4.8rem;
+  /* padding */
+  --krds-chkChipOutline-pd-sm: 0 1rem 0 0.8rem;
+  --krds-chkChipOutline-pd-md: 0 1.2rem 0 1rem;
+  --krds-chkChipOutline-pd-lg: 0 1.6rem 0 1.2rem;
+  /* border-radius */
+  --krds-chkChipOutline-rd-sm: 0.6rem;
+  --krds-chkChipOutline-rd-md: 0.6rem;
+  --krds-chkChipOutline-rd-lg: 0.8rem;
+  /* font-size */
+  --krds-chkChipOutline-fz-sm: 1.5rem;
+  --krds-chkChipOutline-fz-md: 1.7rem;
+  --krds-chkChipOutline-fz-lg: 1.7rem;
+  /* gap */
+  --krds-chkChipOutline-gap-sm: 0.4rem;
+  --krds-chkChipOutline-gap-md: 0.4rem;
+  --krds-chkChipOutline-gap-lg: 0.4rem;
+  /* icon */
+  --krds-chkChipOutline-ico-sm: 1.6rem;
+  --krds-chkChipOutline-ico-md: 2rem;
+  --krds-chkChipOutline-ico-lg: 2rem;
+  /* **** 공통shape_09 :: Selectkbox ****/
+  /* height */
+  --krds-select-h-sm: 4rem;
+  --krds-select-h-md: 4.8rem;
+  --krds-select-h-lg: 5.6rem;
+  /* padding */
+  --krds-select-pd-sm: 0 5.2rem 0 1.6rem;
+  --krds-select-pd-md: 0 5.2rem 0 1.6rem;
+  --krds-select-pd-lg: 0 5.2rem 0 1.6rem;
+  /* border-radius */
+  --krds-select-rd-sm: 0.6rem;
+  --krds-select-rd-md: 0.8rem;
+  --krds-select-rd-lg: 0.8rem;
+  /* font-size */
+  --krds-select-fz-sm: 1.5rem;
+  --krds-select-fz-md: 1.7rem;
+  --krds-select-fz-lg: 1.9rem;
+  /* rn */
+  --krds-select-rn-sm: 1.6rem;
+  --krds-select-rn-md: 1.6rem;
+  --krds-select-rn-lg: 1.6rem;
+  /* background-size */
+  --krds-select-bgs-sm: 2rem;
+  --krds-select-bgs-md: 2rem;
+  --krds-select-bgs-lg: 2.4rem;
+  /* **** 공통shape_10 :: Switch ****/
+  /* height */
+  --krds-switch-h-md: 2rem;
+  --krds-switch-h-lg: 2.4rem;
+  /* width */
+  --krds-switch-w-md: 3.2rem;
+  --krds-switch-w-lg: 4rem;
+  /* box */
+  --krds-switch-b-md: 1.6rem;
+  --krds-switch-b-lg: 2rem;
+  /* box */
+  --krds-switch-br-md: 0.2rem;
+  --krds-switch-br-lg: 0.2rem;
+  /* padding */
+  --krds-switch-pd-md: 0.8rem;
+  --krds-switch-pd-lg: 0.8rem;
+  /* border-radius */
+  --krds-switch-rd-md: 4rem;
+  --krds-switch-rd-lg: 4rem;
+  /* font-size */
+  --krds-switch-fz-md: 1.7rem;
+  --krds-switch-fz-lg: 1.9rem;
+  /* **** 공통shape_11 :: Tap ****/
+  /* height */
+  --krds-tab-h-full: 5.6rem;
+  --krds-tab-h-fill: 4.8rem;
+  --krds-tab-h-line: 4.8rem;
+  /* font-size */
+  --krds-tab-fz-full: 1.9rem;
+  --krds-tab-fz-fill: 1.9rem;
+  --krds-tab-fz-ilne: 1.9rem;
+  /* padding */
+  --krds-tab-px-full: 0;
+  --krds-tab-px-fill: 1.6rem;
+  --krds-tab-px-line: 0.2rem;
+  /* margin-left */
+  --krds-tab-ml-full: 0;
+  --krds-tab-ml-fill: 0.8rem;
+  --krds-tab-ml-line: 1.6rem;
+  /* border-radius */
+  --krds-tab-rd-full: 0.8rem;
+  --krds-tab-rd-fill: 0.8rem;
+  --krds-tab-rd-line: 0;
+  /* **** 공통shape_12 :: Space ****/
+  --krds-spacer-50: 20rem;
+  --krds-spacer-49: 19.6rem;
+  --krds-spacer-48: 19.2rem;
+  --krds-spacer-47: 18.8rem;
+  --krds-spacer-46: 18.4rem;
+  --krds-spacer-45: 18rem;
+  --krds-spacer-44: 17.6rem;
+  --krds-spacer-43: 17.2rem;
+  --krds-spacer-42: 16.8rem;
+  --krds-spacer-41: 16.4rem;
+  --krds-spacer-40: 16rem;
+  --krds-spacer-39: 15.6rem;
+  --krds-spacer-38: 15.2rem;
+  --krds-spacer-37: 14.8rem;
+  --krds-spacer-36: 14.4rem;
+  --krds-spacer-35: 14rem;
+  --krds-spacer-34: 13.6rem;
+  --krds-spacer-33: 13.2rem;
+  --krds-spacer-32: 12.8rem;
+  --krds-spacer-31: 12.4rem;
+  --krds-spacer-30: 12rem;
+  --krds-spacer-29: 11.6rem;
+  --krds-spacer-28: 11.2rem;
+  --krds-spacer-27: 10.8rem;
+  --krds-spacer-26: 10.4rem;
+  --krds-spacer-25: 10rem;
+  --krds-spacer-24: 9.6rem;
+  --krds-spacer-23: 9.2rem;
+  --krds-spacer-22: 8.8rem;
+  --krds-spacer-21: 8.4rem;
+  --krds-spacer-20: 8rem;
+  --krds-spacer-19: 7.6rem;
+  --krds-spacer-18: 7.2rem;
+  --krds-spacer-17: 6.8rem;
+  --krds-spacer-16: 6.4rem;
+  --krds-spacer-15: 6rem;
+  --krds-spacer-14: 5.6rem;
+  --krds-spacer-13: 5.2rem;
+  --krds-spacer-12: 4.8rem;
+  --krds-spacer-11: 4.4rem;
+  --krds-spacer-10: 4rem;
+  --krds-spacer-9: 3.6rem;
+  --krds-spacer-8: 3.2rem;
+  --krds-spacer-7: 2.8rem;
+  --krds-spacer-6: 2.4rem;
+  --krds-spacer-5: 2rem;
+  --krds-spacer-4: 1.6rem;
+  --krds-spacer-3: 1.2rem;
+  --krds-spacer-2: 0.8rem;
+  --krds-spacer-1: 0.4rem;
+  --krds-spacer-0: 0;
+  --krds-spacer-default: 0.1rem;
+  --krds-spacer-default2: 0.2rem;
+  --krds-spacer-full: 100%;
+}
+
+/* layout */
+/* *******************************************************
+* 파일이름 : header.scss
+* 파일설명 : 공통 헤더 영역
+
+=== 이 CSS 파일은 담당자만 수정, 추가, 삭제할 수 있습니다. ===
+
+* 최종업데이트 : 2024-06-27-목
+
+******************************************************** */
+/* **** 공통layout :: 헤더 영역  ****/
+#header {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  background: var(--color-white);
+}
+
+#header .inner {
+  display: flex;
+  align-items: center;
+  padding: 0 1.6rem;
+}
+
+#header .inner .logo {
+  font-size: var(--krds-fz-title-xlg);
+  color: #555555;
+}
+
+#header .inner .logo a {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+}
+
+/* #header .inner .logo a::before {
+  content: "";
+  width: 4rem;
+  height: 4rem;
+  margin-right: var(--krds-spacer-3);
+  background: url(../images/logo/logo-pc.svg) no-repeat center;
+  background-size: contain;
+} */
+#header .inner .gnb {
+  margin-left: auto;
+}
+
+#header .inner .gnb ul {
+  display: flex;
+  padding: 1.6rem 0;
+}
+
+#header .inner .gnb ul li {
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 0 var(--krds-spacer-2);
+}
+
+#header .inner .gnb ul li a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  padding: var(--krds-spacer-4) var(--krds-spacer-3);
+  font-size: var(--krds-fz-body-lg);
+  color: var(--krds-gray-90);
+  font-weight: 700;
+  line-height: 1;
+}
+
+#header .inner .gnb ul li a:hover {
+  border-radius: 3px;
+  background-color: #efefef;
+  transition: all 0.3s;
+}
+
+/* 사이드메뉴_PC/Mobile_상태_로고변경 */
+[data-device=pc] .top-bar .logo-mb,
+[data-device=mobile] .top-bar .logo-pc {
+  display: none;
+}
+
+[data-device=pc] .top-bar .logo-pc,
+[data-device=mobile] .top-bar .logo-mb {
+  display: block;
+}
+
+/* *******************************************************
+* 파일이름 : footer.scss
+* 파일설명 : 공통 푸터 영역
+
+=== 이 CSS 파일은 담당자만 수정, 추가, 삭제할 수 있습니다. ===
+
+* 최종업데이트 : 2024-06-27-목
+
+******************************************************** */
+/* ************** 공통layout_05 :: 푸터 영역 ************** */
+#footer {
+  width: 100%;
+  text-align: center;
+  background-color: var(--krds-gray-5);
+  border-top: 1px solid var(--krds-gray-40);
+}
+
+#footer .inner {
+  padding: var(--krds-spacer-6);
+  text-align: left;
+}
+
+#footer .inner .logo {
+  font-size: var(--krds-fz-title-xlg);
+  color: var(--krds-gray-90);
+  font-weight: 700;
+}
+
+#footer .inner .main-footer-wrap {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-direction: row;
+  margin-top: var(--krds-spacer-4);
+  padding-top: var(--krds-spacer-8);
+  border-top: 1px solid var(--krds-gray-30);
+}
+
+#footer .inner .main-footer-wrap .info-cs {
+  display: flex;
+  align-items: normal;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: var(--krds-spacer-4);
+}
+
+#footer .inner .main-footer-wrap .info-cs li {
+  display: flex;
+  align-items: center;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+  gap: var(--krds-spacer-2);
+}
+
+#footer .inner .main-footer-wrap .copyright {
+  font-size: var(--krds-fz-body-sm);
+  color: var(--krds-gray-70);
+}
+
+/* *******************************************************
+* 파일이름 : sidebar.scss
+* 파일설명 : 공통 사이드메뉴 영역
+
+=== 이 CSS 파일은 담당자만 수정, 추가, 삭제할 수 있습니다. ===
+
+* 최종업데이트 : 2024-06-27-목
+
+******************************************************** */
+[data-page=main] #sideMenu {
+  display: none;
+}
+
+#sideMenu {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 300px;
+  height: 100vh;
+  background: rgba(29, 34, 139, 0.9);
+  z-index: 999;
+}
+
+/* logo */
+.side-menu-logo {
+  width: 100%;
+  height: 100px;
+  text-align: center;
+  -webkit-transition: all 0.1s ease-out;
+  transition: all 0.1s ease-out;
+}
+
+.side-menu-logo .logo-mb {
+  display: none;
+}
+
+/* [data-device="pc"] .side-menu-logo .logo-pc,
+[data-device="mobile"] .side-menu-logo .logo-mb {
+    display: none;
+}
+[data-device="pc"] .side-menu-logo .logo-lg,
+[data-device="mobile"] .side-menu-logo .logo-mb {
+    display: block;
+} */
+/* dropdown-menu */
+.dropdown-wrap {
+  width: 100%;
+  height: 90vh;
+  box-sizing: border-box;
+}
+
+/* 공통 */
+.dropdown-ul li a {
+  color: rgba(255, 255, 255, 0.568);
+}
+
+.dropdown-ul li a:hover {
+  color: rgb(0, 0, 0);
+  transition: color 0.15s ease-in;
+}
+
+.accordion li .left-tit .icon img {
+  filter: opacity(0.5);
+}
+
+.accordion li.open .left-tit .icon img {
+  filter: opacity(1);
+}
+
+.dropdown-ul li a i {
+  font-size: 10px;
+  transition: transform 0.2s;
+}
+
+/* one-depth */
+.accordion {
+  width: 100%;
+}
+
+.accordion-header {
+  position: relative;
+  padding: 10px 24px;
+  cursor: pointer;
+}
+
+.accordion-header .left-tit .icon {
+  width: 20px;
+  height: 20px;
+}
+
+.accordion > li.open > a {
+  color: rgb(255, 255, 255);
+}
+
+.accordion-item .accordion-content {
+  opacity: 0;
+  visibility: hidden;
+  overflow: hidden;
+  max-height: 0;
+}
+
+.accordion-item.open .accordion-content {
+  opacity: 1;
+  visibility: visible;
+  max-height: auto;
+  /* transition: max-height 0.5s ease; */
+  transition: 0.3s ease-in-out max-height;
+}
+
+/* two-depth */
+.sub-accordion {
+  margin-left: 31px;
+}
+
+.sub-accordion-item.open .sub-accordion-header i {
+  transform: rotate(90deg);
+}
+
+.sub-accordion > li.open > a {
+  color: rgb(255, 255, 255);
+}
+
+.sub-accordion-header {
+  position: relative;
+  padding: 8px 24px;
+  cursor: pointer;
+}
+
+.sub-accordion-header::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 6px;
+  height: 1px;
+  background: #fff;
+}
+
+.sub-accordion-content {
+  opacity: 0;
+  visibility: hidden;
+  overflow: hidden;
+  max-height: 0;
+}
+
+.sub-accordion-item.open .sub-accordion-content {
+  opacity: 1;
+  visibility: visible;
+  max-height: auto;
+  transition: 0.3s ease-in-out max-height;
+}
+
+/* last-depth */
+.last-accordion {
+  margin-left: 24px;
+}
+
+.last-accordion > li.open > a {
+  color: rgb(255, 255, 255);
+}
+
+.last-accordion-header {
+  position: relative;
+  display: block;
+  padding: 8px 15px;
+  cursor: pointer;
+}
+
+.last-accordion-header::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  border: 1px solid #fff;
+}
+
+/* *******************************************************
+* 파일이름 : forms.scss
+* 파일설명 : 공통 입력폼 영역
+
+=== 이 CSS 파일은 담당자만 수정, 추가, 삭제할 수 있습니다. ===
+
+* 최종업데이트 : 2024-06-27-목
+
+******************************************************** */
+/* *******************************************************
+* 파일이름 : container.scss
+* 파일설명 : 공통 컨테이너/콘텐츠 영역
+
+=== 이 CSS 파일은 담당자만 수정, 추가, 삭제할 수 있습니다. ===
+
+* 최종업데이트 : 2024-06-27-목
+
+******************************************************** */
+#wrap {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+/* ************** 공통Container_02 :: 컨테이너 영역 ************** */
+#container {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+#container .inner {
+  max-width: 128rem;
+  margin: 0 auto;
+}
+
+[data-page=main] #container {
+  padding: 0 0 10rem 0;
+}
+
+/* ************** 공통Container_03 :: 콘텐츠 영역 ************** */
+#contents {
+  position: relative;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.contents > * {
+  width: 100%;
+}
+
+.contents {
+  flex: 1;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 6.4rem;
+}
+
+/* components */
+#skipNav {
+  position: relative;
+}
+
+#skipNav a {
+  position: absolute;
+  left: 0px;
+  top: -50px;
+  border: 1px solid #fff;
+  color: #fff;
+  background: #333;
+  line-height: 30px;
+  width: 100%;
+  text-align: center;
+  z-index: 1000;
+}
+
+#skipNav a:active,
+#skipNav a:focus {
+  top: 0;
+}
+
+.breadcrumb-wrap {
+  display: flex;
+  justify-content: center;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: row;
+  padding-top: var(--krds-spacer-6);
+}
+
+.breadcrumb-wrap .breadcrumb {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+  gap: var(--krds-spacer-1);
+  width: 100%;
+  max-width: 130rem;
+  padding-left: var(--krds-spacer-1);
+  padding-right: var(--krds-spacer-1);
+}
+
+.breadcrumb-wrap .breadcrumb .home {
+  gap: 0;
+}
+
+.breadcrumb-wrap .breadcrumb li {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+  font-size: 1.5rem;
+}
+
+.breadcrumb-wrap .breadcrumb li .txt {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+  line-height: 1.2;
+  border-bottom: 0.1rem solid var(--krds-gray-50);
+}
+
+.breadcrumb-wrap .breadcrumb .home::before {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+  content: "";
+  width: 2.4rem;
+  height: 2.4rem;
+  background: url(https://uiux.egovframe.go.kr/resources/img/pattern/common/ico_bread_home.svg) no-repeat;
+  background-size: contain;
+}
+
+.breadcrumb-wrap .breadcrumb li:not(:last-child)::after {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+  content: "";
+  width: 1.6rem;
+  height: 1.6rem;
+  margin-left: var(--krds-spacer-1);
+  background: url(https://uiux.egovframe.go.kr/resources/img/pattern/common/ico_bread_arr.svg) no-repeat;
+  background-size: contain;
+}
+
+.quick-nav-area {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: var(--krds-spacer-10);
+  position: sticky;
+  top: 24.4rem;
+  width: 29.6rem;
+  transition: 0.4s ease-in-out;
+}
+
+.quick-nav-area {
+  top: 6rem;
+}
+
+.quick-nav-area > * {
+  width: 100%;
+}
+
+.guide-txt {
+  font-size: var(--krds-fz-body-md);
+  padding: var(--krds-spacer-4) var(--krds-spacer-6);
+  border-radius: 0.8rem;
+  background-color: var(--krds-secondary-5);
+}
+
+.quick-title-wrap .guide-txt {
+  padding: 0 0 var(--krds-spacer-4) 0;
+  background-color: transparent;
+  border-radius: 0;
+  font-size: var(--krds-fz-title-xsm);
+}
+
+.sec-tit {
+  font-size: var(--krds-fz-title-xlg);
+  font-weight: 700;
+}
+
+.quick-nav-area > * {
+  width: 100%;
+}
+
+.quick-list li > a {
+  display: block;
+  position: relative;
+  padding: 0.7rem 0 0.7rem 2.6rem;
+  transition: 0.4s ease-in-out;
+}
+
+.quick-list li > a.active {
+  background-color: var(--krds-secondary-5);
+  color: var(--krds-secondary);
+  font-weight: 700;
+}
+
+.quick-list li > a.active::before {
+  width: 0.4rem;
+  background-color: var(--krds-secondary);
+}
+
+.quick-list li > a::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  width: 0.2rem;
+  height: 100%;
+  background-color: var(--krds-secondary-10);
+  transition: 0.4s ease-in-out;
+}
+
+.quick-nav-area .btn-wrap .btn {
+  width: 100%;
+}
+
+.btn-wrap .guide-txt {
+  padding: var(--krds-spacer-4) 0 0 0;
+  background-color: transparent;
+  border-radius: 0;
+  text-align: center;
+}
+
+.btn.primary {
+  background-color: var(--krds-primary);
+  border: 1px solid var(--krds-primary);
+  color: var(--krds-white);
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: var(--krds-spacer-2);
+  width: 100%;
+  margin-top: var(--krds-spacer-10);
+}
+
+.pagination .page-navi {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  color: var(--krds-gray-70);
+  min-width: 6.2rem;
+  height: 4rem;
+}
+
+.pagination .page-navi.prev {
+  order: 1;
+  padding: 0 var(--krds-spacer-2) 0 var(--krds-spacer-1);
+}
+
+.pagination .page-navi.prev::before {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  content: "";
+  width: 2rem;
+  height: 2rem;
+  background-image: url(https://uiux.egovframe.go.kr/resources/img/component/common/ico_page_arr_left.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.pagination .page-navi.next::after {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  content: "";
+  width: 2rem;
+  height: 2rem;
+  background-image: url(https://uiux.egovframe.go.kr/resources/img/component/common/ico_page_arr_right.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.pagination .page-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  order: 2;
+  gap: var(--krds-spacer-2);
+}
+
+.pagination .page-links .page-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  color: var(--krds-gray-70);
+  min-width: 4rem;
+  height: 4rem;
+}
+
+.pagination .page-links .page-link:hover {
+  border-radius: 0.6rem;
+  background-color: var(--krds-secondary-5);
+  transition: 0.4s ease-in-out;
+}
+
+.pagination .page-links .page-link:active {
+  font-weight: 700;
+  color: var(--krds-white);
+  border-radius: 6px;
+  background-color: var(--krds-secondary);
+}
+
+.pagination .page-links .page-link:hover {
+  border-radius: 0.6rem;
+  background-color: var(--krds-secondary-5);
+  transition: 0.4s ease-in-out;
+}
+
+.pagination .page-links .page-link.link-dot {
+  background-image: url(https://uiux.egovframe.go.kr/resources/img/component/common/ico_page_dot.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.pagination .page-navi {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  color: #555555;
+  min-width: 6.2rem;
+  height: 4rem;
+}
+
+.m-page {
+  flex-direction: column;
+}
+
+.pagination .page-navis {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  color: #555555;
+  min-width: 6.2rem;
+  height: 4rem;
+}
+
+/* =========== paging : svg============= */
+.page_box {
+  position: relative;
+  width: 100%;
+  margin-top: 3rem;
+}
+
+.page_wrap {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.page_nation {
+  display: inline-block;
+}
+
+.page_nation a {
+  display: inline-block;
+  margin: 0 3px;
+  width: 25px;
+  height: 25px;
+  line-height: 25px;
+  text-align: center;
+  font-size: 16px;
+  color: #fff;
+  background: #9eaaca;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.page_nation a.on {
+  color: #fff;
+  font-weight: 700;
+  background: #396aff;
+}
+
+#source-calendar {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 20px;
+}
+
+/* border 제거 */
+.fc-theme-standard .fc-scrollgrid {
+  border: 0 !important;
+}
+
+.fc-theme-standard td,
+.fc-theme-standard th {
+  border: 0 !important;
+}
+
+/* --- table header ---*/
+.fc-col-header-cell {
+  background: var(--color-white);
+}
+
+.fc-scrollgrid th {
+  background: transparent;
+}
+
+/* 위치조정 */
+.fc-col-header-cell .fc-scrollgrid-sync-inner {
+  line-height: 30px;
+}
+
+.fc .fc-daygrid-day-top {
+  justify-content: center;
+}
+
+/* 글씨색 변경 */
+.fc-scrollgrid-sync-inner a {
+  color: var(--color-text-50);
+}
+
+/* 버튼 효과 변경 */
+.fc-button {
+  box-shadow: none !important;
+}
+
+.fc .fc-button-primary {
+  color: var(--color-primary);
+  border-color: transparent;
+  background: transparent;
+}
+
+.fc .fc-button-primary:hover {
+  color: var(--color-primary);
+  border-color: transparent;
+  background: var(--color-white);
+}
+
+.fc .fc-button-primary:disabled {
+  color: var(--color-primary);
+  border-color: transparent;
+  background: var(--color-white);
+}
+
+.fc .fc-button-primary:focus {
+  color: var(--color-primary);
+  border-color: transparent;
+  background: var(--color-white);
+}
+
+.fc .fc-button-primary:not(:disabled):active,
+.fc .fc-button-primary:not(:disabled).fc-button-active {
+  color: var(--color-primary);
+  border-color: transparent;
+  background: var(--color-white);
+}
+
+.fc .fc-button-primary:not(:disabled):active:focus,
+.fc .fc-button-primary:not(:disabled).fc-button-active:focus {
+  color: var(--color-primary);
+  border-color: transparent;
+  background: var(--color-white);
+}
+
+/* 날짜 */
+.fc .fc-toolbar-title {
+  font-size: var(--font-size-16);
+  font-weight: var(--font-weight-200);
+}
+
+/* 버튼 위치 수정 */
+.fc-toolbar-ltr {
+  position: relative;
+}
+
+.fc-toolbar-chunk {
+  position: absolute;
+}
+
+.fc-toolbar-chunk:nth-child(1) {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.fc-toolbar-chunk:nth-child(2) {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.fc .fc-button-group {
+  position: absolute;
+  display: inline-flex;
+  vertical-align: middle;
+  top: 44%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60%;
+  justify-content: space-between;
+}
+
+.fc .fc-button-group > .fc-button {
+  position: relative;
+  flex: auto;
+}
+
+.fc-today-button {
+  position: absolute;
+  right: 0;
+}
+
+.fc .fc-toolbar.fc-header-toolbar {
+  margin-bottom: 0;
+  height: 35px;
+}
+
+/* 스크롤 없애기 */
+.fc-scrollgrid thead .fc-scroller {
+  overflow: hidden !important;
+}
+
+.conts-expand-area .btn-conts-expand {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+  position: relative;
+  border-radius: 0;
+}
+
+.conts-expand-area .expand-wrap {
+  position: relative;
+  overflow: hidden;
+  transition: max-height 0.5s cubic-bezier(0, 1, 0, 1);
+}
+
+.krds-disclosure .expand-wrap {
+  max-height: 0;
+}
+
+.conts-expand-area.active .expand-wrap {
+  max-height: 1000vh !important;
+  transition: max-height 1.5s ease-in-out;
+}
+
+.krds-disclosure .btn-conts-expand::before {
+  display: inline-flex;
+  content: "";
+  width: 2rem;
+  height: 2rem;
+  margin-right: var(--krds-spacer-1);
+  background-image: url(https://uiux.egovframe.go.kr/resources/img/component/common/ico_arr_func_20.svg);
+  background-size: contain;
+  transition: 0.4s ease-in-out;
+  transform: rotate(0);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.krds-disclosure.active .btn-conts-expand::before {
+  transform: rotate(-90deg);
+}
+
+.conts-expand-area .expand-wrap {
+  position: relative;
+  overflow: hidden;
+  transition: max-height 0.5s cubic-bezier(0, 1, 0, 1);
+}
+
+.krds-disclosure .expand-wrap .expand-in {
+  padding: var(--krds-spacer-6);
+}
+
+.list-bullet {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: var(--krds-spacer-6);
+}
+
+.list-bullet > li {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: row;
+  gap: var(--krds-spacer-1);
+  color: var(--krds-gray-70);
+}
+
+.list-bullet > li::before {
+  content: "•";
+}
+
+.modal-back {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.25);
+}
+
+.modal-back.in {
+  display: block;
+  z-index: 1000;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  visibility: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: visibility 0.15s 0.3s, z-index 0s 0.3s, opacity 0.2s;
+}
+
+.modal.in {
+  z-index: 1010;
+  transition-delay: 0s;
+  opacity: 1;
+}
+
+.modal.shown {
+  display: block;
+}
+
+.modal-back,
+.modal {
+  display: none;
+  visibility: hidden;
+  z-index: -1;
+}
+
+.modal-back,
+.modal.in {
+  visibility: visible;
+}
+
+.modal-back.in,
+.modal.in {
+  visibility: visible;
+}
+
+.modal.in {
+  z-index: 1010;
+  transition-delay: 0s;
+  opacity: 1;
+}
+
+.modal .modal-dialog {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+  position: relative;
+  z-index: 1020;
+  width: 84.6rem;
+  height: calc(100% - var(--krds-spacer-20) * 2);
+  min-height: calc(100% - var(--krds-spacer-20) * 2);
+  margin: var(--krds-spacer-20) auto;
+}
+
+.modal .modal-dialog .modal-content {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  max-height: 100%;
+  background-color: var(--krds-white);
+  border-radius: var(--krds-rd-12);
+  outline-color: transparent;
+  transition: outline-color 0.1s;
+}
+
+.modal .modal-dialog .modal-header {
+  width: 100%;
+  padding: var(--krds-spacer-10) 6.8rem var(--krds-spacer-8) var(--krds-spacer-10);
+  background-color: inherit;
+  border-top-left-radius: inherit;
+  border-top-right-radius: inherit;
+}
+
+.modal .modal-dialog .modal-conts {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: var(--krds-spacer-8);
+  position: relative;
+  overflow-y: auto;
+  width: 100%;
+  padding: 0 var(--krds-spacer-10);
+  color: var(--krds-gray-90);
+}
+
+.modal .modal-dialog .modal-btn {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-direction: row;
+  gap: 0.8rem;
+  width: 100%;
+  padding: var(--krds-spacer-8) var(--krds-spacer-10) var(--krds-spacer-10);
+}
+
+.modal .modal-dialog .btn-close {
+  position: absolute;
+  top: 3.2rem;
+  right: 3.2rem;
+  z-index: 901;
+  width: 3.6rem;
+  height: 3.6rem;
+  background: url(https://uiux.egovframe.go.kr/resources/img/component/common/ico_close_modal.svg) no-repeat center;
+  background-size: 2rem;
+}
+
+.modal .modal-dialog .modal-btn .btn {
+  min-width: 9.2rem;
+}
+
+.btn.md {
+  height: 4.8rem;
+  padding: 0 var(--krds-btn-px-md);
+  border-radius: var(--krds-btn-rd-md);
+  font-size: var(--krds-btn-fz-md);
+}
+
+.btn.primary {
+  background-color: var(--krds-primary);
+  border: 1px solid var(--krds-primary);
+  color: var(--krds-white);
+}
+
+.btn.tertiary {
+  background-color: var(--krds-white);
+  border: 1px solid var(--krds-gray-90);
+  color: var(--krds-secondary-90);
+}
+
+.btn-txt.ico-filter {
+  position: relative;
+}
+
+.btn-txt {
+  color: inherit;
+  border: 0;
+  background-color: inherit;
+  padding: 0 var(--krds-spacer-default2) !important;
+}
+
+.btn-txt.ico-filter .num {
+  display: inline-flex;
+  position: absolute;
+  right: 0.1rem;
+  z-index: 1;
+  height: 2rem;
+  font-size: var(--krds-fz-label-sm);
+  color: var(--krds-white);
+  padding: 0 var(--krds-spacer-2);
+  margin-top: -3rem;
+  border-radius: 2rem;
+  background-color: var(--krds-primary);
+}
+
+.btn-txt.ico-filter::before,
+.btn-txt.ico-filter::after {
+  background-image: url(https://uiux.egovframe.go.kr/resources/img/component/common/ico_filter_20.svg);
+}
+
+.btn[class*=ico-]::after {
+  display: inline-flex;
+  content: "";
+  width: 2.4rem;
+  height: 2.4rem;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.accordion {
+  width: 300px;
+  border-top: 1px solid var(--krds-gray-40);
+}
+
+.accordion-item {
+  background-color: var(--krds-white);
+  border-bottom: 1px solid var(--krds-gray-40);
+}
+
+.accordion-item .accordion-collapse {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s cubic-bezier(0, 1, 0, 1);
+}
+
+.accordion-item.active .accordion-collapse {
+  height: auto;
+  max-height: 1000vh;
+  transition: max-height 1.5s ease-in-out;
+}
+
+.accordion-item .accordion-body {
+  padding-top: var(--krds-spacer-1);
+  padding-bottom: var(--krds-spacer-5);
+}
+
+.accordion-item .btn-accordion {
+  position: relative;
+  width: 100%;
+  min-height: 6.4rem;
+  padding: var(--krds-spacer-5) var(--krds-spacer-10) var(--krds-spacer-5) 0;
+  font-size: var(--krds-fz-body-lg);
+  font-weight: 700;
+  text-align: left;
+}
+
+.accordion-item .btn-accordion::after {
+  position: absolute;
+  top: 2.2rem;
+  right: 0;
+  content: "";
+  width: 2.4rem;
+  height: 2.4rem;
+  background: url(https://uiux.egovframe.go.kr/resources/img/component/common/ico_arr_accordion.svg) no-repeat center;
+  background-size: 2rem;
+  transition: 0.4s ease-in-out;
+  transform: rotate(0deg);
+}
+
+/* 공통 */
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+[class^=swiper-button-]::after {
+  content: "";
+  font-size: 0 !important;
+  width: 2.4rem;
+  height: 2.4rem;
+  background-repeat: no-repeat;
+}
+
+[class^=swiper-button-] {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  width: 4rem;
+  height: 4rem;
+  border-radius: var(--krds-rd-full);
+  border: 0.1rem solid var(--krds-gray-20);
+  background-color: var(--krds-white);
+}
+
+.swiper-button-prev::after {
+  background-image: url(https://uiux.egovframe.go.kr/resources/img/component/common/ico_swiper_prev.svg);
+}
+
+.swiper-button-next::after {
+  background-image: url(https://uiux.egovframe.go.kr/resources/img/component/common/ico_swiper_next.svg);
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  background-position: center;
+  background-size: contain;
+}
+
+.swiper-button-stop::after {
+  background-image: url(https://uiux.egovframe.go.kr/resources/img/component/common/ico_swiper_stop.svg);
+}
+
+.swiper-button-play::after {
+  background-image: url(https://uiux.egovframe.go.kr/resources/img/component/common/ico_swiper_play.svg);
+}
+
+/* 커스텀 */
+.swiper-1 {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  border: 1px solid black;
+}
+
+.swiper-2 {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  display: flex;
+  align-items: normal;
+  justify-content: flex-start;
+  flex-direction: column;
+  z-index: 1;
+  border: 1px solid black;
+}
+
+.swiper-indicator {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  gap: var(--krds-spacer-2);
+  flex-shrink: 0;
+}
+
+.swiper-indicator .swiper-pagination {
+  top: auto;
+  bottom: auto;
+  width: auto;
+}
+
+.swiper-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  position: relative;
+  top: auto;
+  bottom: auto;
+  height: 4rem;
+}
+
+.swiper-2 .swiper-indicator .swiper-pagination,
+.swiper-2 .swiper-indicator .swiper-navigation,
+.swiper-2 .swiper-indicator .swiper-controller {
+  display: flex;
+  flex-direction: row;
+}
+
+.swiper-2 .swiper-indicator .swiper-navigation {
+  gap: var(--krds-spacer-2);
+}
+
+.swiper-indicator .swiper-pagination {
+  top: auto;
+  bottom: auto;
+  width: auto;
+}
+
+.swiper-indicator .swiper-button-next,
+.swiper-indicator .swiper-button-prev {
+  position: relative;
+  top: auto;
+  left: auto;
+  right: auto;
+  margin: auto;
+}
+
+.tab.full {
+  width: 100%;
+}
+
+.tab > ul {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  position: relative;
+  width: 100%;
+}
+
+.tab button:focus {
+  outline: 0px solid rgba(36, 107, 235, 0.8);
+}
+
+.tab.full > ul > li {
+  flex: 1 1 0px;
+  min-width: 0;
+}
+
+.tab li,
+.tab .btn-tab {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  position: relative;
+  white-space: nowrap;
+}
+
+.tab .btn-tab {
+  width: 100%;
+  height: 60px !important;
+  background-color: var(--krds-white);
+  border: 1px solid var(--krds-white);
+  color: var(--krds-gray-70);
+  font-weight: 700;
+  transition: 0.4s ease-in-out;
+}
+
+.tab.line .active .btn-tab {
+  color: var(--krds-secondary);
+}
+
+.tab.line .btn-tab:before {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  content: "";
+  width: 0;
+  height: 0.2rem;
+  background-color: var(--krds-secondary);
+  transition: 0.4s ease-in-out;
+}
+
+.tab.line .btn-tab {
+  padding-left: 0;
+  padding-right: 0;
+  border: 0;
+  border-bottom: 2px solid var(--krds-gray-30);
+}
+
+.tab.line .active .btn-tab:before {
+  position: absolute;
+  left: 0;
+  width: 100%;
+}
+
+.tab-conts {
+  display: none;
+  margin-top: var(--krds-spacer-10);
+}
+
+.tab-conts.active {
+  display: flex;
+  align-items: normal;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: var(--krds-spacer-10);
+}
+
+.helper-box {
+  width: 100%;
+  padding: var(--krds-spacer-6);
+  background-color: var(--krds-secondary-5);
+  border: 1px solid var(--krds-gray-20);
+  border-radius: 0.6rem;
+}
+
+.helper-box .helper-tit {
+  display: flex;
+  position: relative;
+  color: var(--krds-secondary);
+  font-weight: 700;
+}
+
+.helper-box .helper-tit::before {
+  margin-right: var(--krds-spacer-1);
+  content: "";
+  width: 2rem;
+  height: 2rem;
+  margin-top: var(--krds-spacer-default2);
+  background-image: url(https://uiux.egovframe.go.kr/resources/img/pattern/content/ico_helper_info.svg);
+  background-size: contain;
+}
+
+.helper-box .helper-desc-wrap {
+  margin-top: var(--krds-spacer-5);
+  margin-left: var(--krds-spacer-6);
+}
+
+.helper-box .helper-desc-wrap .info-list:first-child {
+  margin-top: 0;
+}
+
+.info-list > li {
+  position: relative;
+  padding-left: var(--krds-spacer-3);
+  color: var(--krds-gray-70);
+}
+
+.info-list.decimal > li::before {
+  content: "•";
+}
+
+.link-txt {
+  text-decoration: underline;
+}
+
+/* ==========  테이블 스크롤시 head 고정 시 넣어줘야하는 코드 ========== */
+table thead tr {
+  position: sticky;
+  top: 0px;
+  background-color: gray !important;
+  border-top: 1px solid gray;
+  border-bottom: 1px solid gray;
+  box-sizing: border-box;
+}
+
+table {
+  width: 100%;
+  border-left: 1px solid var(--color-border);
+  border: 1px solid var(--color-border);
+  text-align: center;
+  word-break: keep-all;
+}
+
+table th {
+  border-right: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+  background: var(--color-table-header);
+  vertical-align: middle;
+  font-weight: 600;
+  height: 30px;
+  font-size: 1.6rem;
+}
+
+table th:last-child,
+table tr td:last-child {
+  border-right: 0;
+}
+
+table tr:last-child td {
+  border-bottom: 0;
+}
+
+table td {
+  border-right: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+  vertical-align: middle;
+  word-break: keep-all;
+  padding: 12px;
+  font-size: 1.4rem;
+}
+
+button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 3px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  width: auto;
+  height: var(--krds-btn-h-lg);
+  padding: 0 var(--krds-btn-px-lg);
+  background-color: var(--krds-primary);
+  border: 1px solid var(--krds-primary);
+  border-radius: var(--krds-btn-rd-lg);
+  font-size: var(--krds-fz-body-lg);
+  color: var(--krds-white);
+  font-weight: 400;
+  line-height: 1;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: 0.4s ease-in-out;
+}
+
+.btn-txt:hover {
+  background-color: var(--krds-secondary-5);
+}
+
+.btn-txt {
+  color: inherit;
+  border: 0;
+  background-color: inherit;
+  padding: 0 var(--krds-spacer-default2) !important;
+}
+
+.btn-txt.underline {
+  text-decoration: underline;
+}
+
+.btn-txt.sm[class*=ico-]::before,
+.btn-txt.sm[class*=ico-]::after {
+  width: 2rem;
+  height: 2rem;
+}
+
+.btn.sm {
+  height: 4rem;
+  padding: 0 var(--krds-btn-px-sm);
+  border-radius: var(--krds-btn-rd-sm);
+  font-size: var(--krds-btn-fz-sm);
+}
+
+.btn[class*=ico-]::after {
+  display: inline-flex;
+  content: "";
+  width: 2.4rem;
+  height: 2.4rem;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.btn-txt[class*=ico-]::after {
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.ico-arr::after {
+  background-image: url(https://uiux.egovframe.go.kr/resources/img/component/common/ico_arr_20_right.svg);
+}
+
+.btn-txt.ico-go::before,
+.btn-txt.ico-go::after {
+  background-image: url(https://uiux.egovframe.go.kr/resources/img/component/common/ico_go_20.svg);
+}
+
+.btn-txt.ico-more::after {
+  background-image: url(https://uiux.egovframe.go.kr/resources/img/component/common/ico_arr1_20_right.svg);
+}
+
+/* 공통 :: 라디오버튼 & 체크박스 */
+.chk-area {
+  display: flex;
+  gap: var(--krds-spacer-6);
+}
+
+input[type=radio] {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+.form-check input[type=radio] ~ label {
+  position: relative;
+  display: inline-flex;
+  min-height: var(--krds-rdo-size-md);
+  padding-left: calc(var(--krds-rdo-size-md) + var(--krds-spacer-2));
+  font-size: var(--krds-rdo-fz-md);
+  line-height: var(--krds-rdo-size-md);
+}
+
+.form-check input[type=radio] ~ label:before,
+.form-check input[type=radio] ~ label:after {
+  content: "";
+  display: block;
+  transition: 0.4s cubic-bezier(0.4, 0, 0.23, 1);
+  box-sizing: border-box;
+}
+
+/* 큰 circle */
+.form-check input[type=radio] ~ label:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: var(--krds-rdo-size-md);
+  height: var(--krds-rdo-size-md);
+  background-color: var(--krds-white);
+  border: 1px solid var(--krds-gray-60);
+  border-radius: var(--krds-rd-full);
+}
+
+/* 작은 circle */
+.form-check input[type=radio] ~ label:after {
+  position: absolute;
+  top: calc((var(--krds-rdo-size-md) - var(--krds-rdo-chk-md)) / 2);
+  left: calc((var(--krds-rdo-size-md) - var(--krds-rdo-chk-md)) / 2);
+  width: var(--krds-rdo-chk-md);
+  height: var(--krds-rdo-chk-md);
+  background-color: var(--krds-white);
+  border-radius: var(--krds-rd-full);
+}
+
+/* circle z-index 작업 */
+.form-check input[type=radio] ~ label:before {
+  z-index: 3;
+}
+
+.form-check input[type=radio] ~ label:after {
+  z-index: 4;
+}
+
+/* 선택된 라디오버튼 */
+.form-check input[type=radio]:checked ~ label:after {
+  background-color: var(--krds-primary);
+}
+
+.form-check input[type=radio]:checked ~ label:before {
+  border-color: var(--krds-primary);
+}
+
+/* 비활성화 라디오버튼 */
+.form-check input[type=radio]:disabled + label,
+.form-check input[type=checkbox]:disabled + label {
+  color: var(--krds-gray-50);
+  cursor: default;
+}
+
+.form-check input[type=radio]:disabled ~ label:before {
+  border-color: var(--krds-gray-40);
+  background-color: var(--krds-gray-20);
+}
+
+.form-check input[type=radio]:disabled ~ label:after {
+  display: none;
+  background-color: var(--krds-gray-40);
+}
+
+/* 선택된 비활성화 라디오버튼 */
+.form-check input[type=radio]:checked:disabled ~ label:after {
+  display: block;
+  background-color: var(--krds-gray-40);
+}
+
+/* === 라디오버튼 박스형  === */
+.g-example {
+  padding: var(--krds-spacer-10) var(--krds-spacer-10);
+  background-color: #fff;
+  border: 1px solid var(--krds-gray-40);
+}
+
+.chk-group-area .chk-group-wrap {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: var(--krds-spacer-6);
+}
+
+.chk-group-area .chk-group-wrap > li {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: var(--krds-spacer-6);
+  width: 100%;
+  padding: var(--krds-spacer-6);
+  border: 1px solid var(--krds-gray-40);
+  border-radius: var(--krds-rd-12);
+  transition: 0.4s ease-in-out;
+}
+
+.chk-group-area .chk-group-wrap > li.checked {
+  border-color: var(--krds-primary);
+}
+
+.chk-group-area .chk-group-wrap > li.disabled {
+  background-color: var(--krds-gray-5);
+  border-color: var(--krds-gray-30);
+}
+
+/* 공통 :: 라디오버튼 & 체크박스 */
+.chk-area {
+  display: flex;
+  gap: var(--krds-spacer-6);
+}
+
+input[type=checkbox] {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+.form-check input[type=checkbox] ~ label {
+  position: relative;
+  display: inline-flex;
+  min-height: var(--krds-rdo-size-md);
+  padding-left: calc(var(--krds-rdo-size-md) + var(--krds-spacer-2));
+  font-size: var(--krds-rdo-fz-md);
+  line-height: var(--krds-rdo-size-md);
+}
+
+.form-check input[type=checkbox] ~ label:before,
+.form-check input[type=checkbox] ~ label:after {
+  content: "";
+  display: block;
+  transition: 0.4s cubic-bezier(0.4, 0, 0.23, 1);
+  box-sizing: border-box;
+}
+
+/* === 체크박스 === */
+.form-check input[type=checkbox] ~ label:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: var(--krds-chk-size-md);
+  height: var(--krds-chk-size-md);
+  background-color: var(--krds-white);
+  border: 1px solid var(--krds-gray-60);
+  border-radius: var(--krds-rd-4);
+}
+
+.form-check input[type=checkbox] ~ label:after {
+  position: absolute;
+  top: calc((var(--krds-chk-size-md) - var(--krds-chk-primary-chk-md)) / 2);
+  left: calc((var(--krds-chk-size-md) - var(--krds-chk-primary-chk-md)) / 2);
+  width: var(--krds-chk-primary-chk-md);
+  height: var(--krds-chk-primary-chk-md);
+  background: url(https://uiux.egovframe.go.kr/resources/img/component/common/ico_check_primary_checked.svg) no-repeat 0 0;
+  background-size: contain;
+  opacity: 0;
+}
+
+.form-check input[type=checkbox]:checked ~ label:before {
+  background-color: var(--krds-primary);
+  border-color: var(--krds-primary);
+}
+
+.form-check input[type=checkbox]:checked ~ label:after {
+  opacity: 1;
+  transition-delay: 0.2s;
+}
+
+.form-check input[type=checkbox]:disabled ~ label:before {
+  border-color: var(--krds-gray-40);
+  background-color: var(--krds-gray-20);
+}
+
+.form-check input[type=checkbox]:disabled ~ label:after {
+  background-image: url(https://uiux.egovframe.go.kr/resources/img/component/common/ico_check_primary_checked.svg);
+}
+
+.form-check input[type=checkbox]:disabled ~ label:after {
+  background-image: url(https://uiux.egovframe.go.kr/resources/img/component/common/ico_check_primary_disabled.svg);
+}
+
+/* 크기별 */
+.form-check.sm > [type=checkbox] ~ label {
+  font-size: var(--krds-chk-fz-sm);
+  line-height: var(--krds-chk-size-sm);
+  min-height: var(--krds-chk-size-sm);
+  padding-left: calc(var(--krds-chk-size-sm) + var(--krds-spacer-2));
+}
+
+.form-check.sm > [type=checkbox] ~ label::before {
+  width: var(--krds-chk-size-sm);
+  height: var(--krds-chk-size-sm);
+}
+
+.form-check.sm > [type=checkbox] ~ label::after {
+  width: var(--krds-chk-primary-chk-sm);
+  height: var(--krds-chk-primary-chk-sm);
+}
+
+.form-check.lg > [type=checkbox] ~ label {
+  font-size: var(--krds-chk-fz-lg);
+  line-height: var(--krds-chk-size-lg);
+  min-height: var(--krds-chk-size-lg);
+  padding-left: calc(var(--krds-chk-size-lg) + var(--krds-spacer-2));
+}
+
+.form-check.lg > [type=checkbox] ~ label::before {
+  width: var(--krds-chk-size-lg);
+  height: var(--krds-chk-size-lg);
+}
+
+.form-check.lg > [type=checkbox] ~ label::after {
+  width: var(--krds-chk-primary-chk-lg);
+  height: var(--krds-chk-primary-chk-lg);
+}
+
+/* 공통 :: input / 셀렉트박스 / 텍스트영역 */
+input,
+select {
+  height: 32px;
+}
+
+input,
+select,
+textarea {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  vertical-align: middle;
+  padding: 0 10px;
+  font-size: 1.4rem;
+  color: #333333;
+  box-sizing: border-box;
+}
+
+.form-select {
+  width: 100%;
+  height: var(--krds-select-h-lg);
+  padding: var(--krds-select-pd-lg);
+  background-color: var(--krds-white);
+  background-image: url(https://uiux.egovframe.go.kr/resources/img/component/common/ico_select_lg.svg);
+  background-repeat: no-repeat;
+  background-position: center right var(--krds-select-rn-lg);
+  border: 1px solid var(--krds-gray-60);
+  border-radius: var(--krds-select-rd-lg);
+  font-family: inherit;
+  font-size: var(--krds-select-fz-lg);
+  color: var(--krds-gray-90);
+  opacity: 1;
+}
+
+.form-select.md {
+  height: 4.8rem;
+  padding: var(--krds-select-pd-md);
+  border-radius: var(--krds-select-rd-md);
+  font-size: var(--krds-select-fz-md);
+  background-size: var(--krds-select-bgs-md);
+}
+
+.form-select.sm {
+  height: 4rem;
+  padding: var(--krds-select-pd-sm);
+  border-radius: var(--krds-select-rd-sm);
+  font-size: var(--krds-select-fz-sm);
+  background-size: var(--krds-select-bgs-sm);
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--krds-spacer-3);
+  width: 100%;
+}
+
+input[type=date]::-webkit-datetime-edit-text {
+  -webkit-appearance: none;
+  color: transparent;
+}
+
+input[type=date]:valid::-webkit-datetime-edit-text {
+  color: inherit;
+}
+
+input[type=date]::-webkit-calendar-picker-indicator {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  color: transparent;
+  cursor: pointer;
+}
+
+input[type=date]::-webkit-datetime-edit-month-field {
+  color: transparent;
+}
+
+input[type=date]::-webkit-datetime-edit-day-field {
+  color: transparent;
+}
+
+input[type=date]::-webkit-datetime-edit-year-field {
+  color: transparent;
+}
+
+input[type=date]:valid::-webkit-datetime-edit-month-field {
+  color: #000;
+}
+
+input[type=date]:valid::-webkit-datetime-edit-day-field {
+  color: #000;
+}
+
+input[type=date]:valid::-webkit-datetime-edit-year-field {
+  color: #000;
+}
+
+.date-form-control {
+  position: relative;
+  width: 100%;
+  height: var(--krds-input-h-lg);
+  padding: 0 60px;
+  background-color: var(--krds-white);
+  border: 1px solid var(--krds-gray-60);
+  border-radius: var(--krds-input-rd-lg);
+  font-family: inherit;
+  font-size: var(--krds-input-fz-lg);
+  transition: 0.4s ease-in-out;
+  padding-top: 3px;
+}
+
+input[type=date] {
+  position: relative;
+}
+
+input[type=date]::before {
+  content: attr(placeholder);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  color: var(--krds-gray-60);
+  padding-top: 1px;
+  letter-spacing: -1px;
+}
+
+input[type=date]:valid::before {
+  display: none;
+}
+
+input[type=date]::after {
+  content: "";
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 50%;
+  left: 18px;
+  transform: translateY(-50%);
+  background: url(https://uiux.egovframe.go.kr/resources/img/component/common/ico_calendar.svg) no-repeat;
+  background-position: center;
+  cursor: pointer;
+}
+
+.form-group [class^=form-hint] {
+  font-size: var(--krds-fz-label-sm);
+  color: var(--krds-gray-70);
+  padding-left: calc(2rem + var(--krds-spacer-1));
+}
+
+.form-group [class^=form-hint]::before {
+  display: inline-flex;
+  width: 2rem;
+  height: 2rem;
+  flex-shrink: 0;
+  flex-grow: 0;
+  content: "";
+  margin-left: calc((2rem + var(--krds-spacer-1)) * -1);
+  margin-right: var(--krds-spacer-1);
+  vertical-align: top;
+  background: url(https://uiux.egovframe.go.kr/resources/img/component/common/ico_hint_20.svg) no-repeat center;
+  background-size: contain;
+}
+
+/* 공통 :: input / 셀렉트박스 / 텍스트영역 */
+input {
+  height: 32px;
+}
+
+input {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  vertical-align: middle;
+  padding: 0 10px;
+  font-size: 1.4rem;
+  color: #333333;
+  box-sizing: border-box;
+}
+
+/* 공통 :: input / 셀렉트박스 / 텍스트영역 */
+textarea {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  vertical-align: middle;
+  padding: 0 10px;
+  font-size: 1.4rem;
+  color: #333333;
+  box-sizing: border-box;
+}
+
+/* pages */
+/* *******************************************************
+* 파일이름 : home.scss
+* 파일설명 : 메인화면 커스텀
+
+=== 이 CSS 파일은 담당자만 수정, 추가, 삭제할 수 있습니다. ===
+
+* 최종업데이트 : 2024-06-27-목
+
+******************************************************** */
+/* 메인 배너 */
+.visual-area {
+  width: 100%;
+  background-color: #edf1f5;
+}
+
+.visual-area .inner::before {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: url(../images/index_visual.png) no-repeat 100% 100%;
+  background-size: contain;
+}
+
+.visual-area .tit,
+.visual-area .desc {
+  position: relative;
+  z-index: 2;
+}
+
+.visual-area .inner {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: var(--krds-spacer-6);
+  position: relative;
+  padding: var(--krds-spacer-20) 0;
+}
+
+.visual-area .tit {
+  font-size: var(--krds-fz-display-md);
+  font-weight: 700;
+}
+
+.search-area .area-tit {
+  margin-bottom: var(--krds-spacer-6);
+  font-size: var(--krds-fz-title-xlg);
+}
+
+.search-top-box .sch-form-wrap {
+  margin-bottom: var(--krds-spacer-10);
+}
+
+.sch-form-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+  gap: var(--krds-spacer-4);
+}
+
+.sch-input {
+  display: flex;
+  position: relative;
+}
+
+.form-control {
+  position: relative;
+  width: 100%;
+  height: var(--krds-input-h-lg);
+  padding: 0 var(--krds-input-px-lg);
+  background-color: var(--krds-white);
+  border: 1px solid var(--krds-gray-60);
+  border-radius: var(--krds-input-rd-lg);
+  font-family: inherit;
+  font-size: var(--krds-input-fz-lg);
+  color: var(--krds-gray-90);
+  transition: 0.4s ease-in-out;
+}
+
+.form-control:placeholder-shown {
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+}
+
+.search-top-box .sch-form-wrap .sch-input .form-control {
+  width: 54.8rem;
+}
+
+.sch-input .form-control {
+  padding: 0 var(--krds-spacer-12) 0 var(--krds-spacer-4);
+}
+
+.sch-input .form-control ~ .ico-sch {
+  width: 2.4rem;
+  height: 2.4rem;
+}
+
+.sch-input .ico-sch {
+  position: absolute;
+  top: 50%;
+  right: var(--krds-spacer-4);
+  transform: translateY(-50%);
+}
+
+.btn-ico.ico-sch {
+  background-image: url(../images/icon/ico_sch_40.svg);
+}
+
+.btn-ico[class*=ico-] {
+  width: 4rem;
+  height: 4rem;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  width: auto;
+  height: var(--krds-btn-h-lg);
+  padding: 0 var(--krds-btn-px-lg);
+  border: 1px solid var(--krds-primary);
+  border-radius: var(--krds-btn-rd-lg);
+  font-size: var(--krds-fz-body-lg);
+  color: var(--krds-white);
+  font-weight: 400;
+  line-height: 1;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: 0.4s ease-in-out;
+}
+
+.btn:hover {
+  background-color: var(--krds-primary-60);
+  border-color: var(--krds-primary-60);
+}
+
+.btn:active {
+  background-color: var(--krds-primary-70);
+  border-color: var(--krds-primary-60);
+}
+
+.btn:focus {
+  color: rgba(255, 255, 255, 0.9);
+  transition: none;
+}
+
+.btn[disabled] {
+  background-color: var(--krds-gray-30);
+  border-color: var(--krds-gray-30);
+  color: var(--krds-gray-60);
+  cursor: default;
+}
+
+.btn-ico {
+  color: inherit !important;
+  border: 0 !important;
+  background-color: inherit !important;
+  padding: 0 !important;
+}
+
+.search-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: var(--krds-spacer-6);
+}
+
+.search-area .search-list.sty-guide {
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.search-area .search-list.compo-guide {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.search-list .li {
+  display: flex;
+  align-items: normal;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: var(--krds-spacer-6);
+  padding: var(--krds-spacer-6);
+  overflow-x: auto;
+  box-sizing: border-box;
+  border-radius: var(--krds-rd-12);
+  border: 0.1rem solid var(--krds-gray-40);
+}
+
+.search-list .li {
+  padding: 0;
+}
+
+.search-list .img-wrap {
+  height: 20rem;
+  background-color: #edf1f5;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 350px;
+  border-radius: inherit;
+  text-align: center;
+  border-bottom: 1px solid var(--krds-gray-40);
+}
+
+.sty-guide .img-wrap.sty_guide_1 {
+  background-image: url(../images/img_sty_guide_1.png);
+}
+.sty-guide .img-wrap.sty_guide_2 {
+  background-image: url(../images/img_sty_guide_2.png);
+}
+.sty-guide .img-wrap.sty_guide_3 {
+  background-image: url(../images/img_sty_guide_3.png);
+}
+.sty-guide .img-wrap.sty_guide_4 {
+  background-image: url(../images/img_sty_guide_4.png);
+}
+.sty-guide .img-wrap.sty_guide_5 {
+  background-image: url(../images/img_sty_guide_5.png);
+}
+
+.compo-guide .img-wrap.com_guide_1 {
+  background-image: url(../images/img_com_guide_1.png);
+}
+.compo-guide .img-wrap.com_guide_2 {
+  background-image: url(../images/img_com_guide_2.png);
+}
+.compo-guide .img-wrap.com_guide_3 {
+  background-image: url(../images/img_com_guide_3.png);
+}
+.compo-guide .img-wrap.com_guide_4 {
+  background-image: url(../images/img_com_guide_4.png);
+}
+.compo-guide .img-wrap.com_guide_5 {
+  background-image: url(../images/img_com_guide_5.png);
+}
+.compo-guide .img-wrap.com_guide_6 {
+  background-image: url(../images/img_com_guide_6.png);
+}
+.compo-guide .img-wrap.com_guide_7 {
+  background-image: url(../images/img_com_guide_7.png);
+}
+.compo-guide .img-wrap.com_guide_8 {
+  background-image: url(../images/img_com_guide_8.png);
+}
+.compo-guide .img-wrap.com_guide_9 {
+  background-image: url(../images/img_com_guide_9.png);
+}
+.compo-guide .img-wrap.com_guide_10 {
+  background-image: url(../images/img_com_guide_10.png);
+}
+.compo-guide .img-wrap.com_guide_11 {
+  background-image: url(../images/img_com_guide_11.png);
+}
+.compo-guide .img-wrap.com_guide_12 {
+  background-image: url(../images/img_com_guide_12.png);
+}
+.compo-guide .img-wrap.com_guide_13 {
+  background-image: url(../images/img_com_guide_13.png);
+}
+.compo-guide .img-wrap.com_guide_14 {
+  background-image: url(../images/img_com_guide_14.png);
+}
+.compo-guide .img-wrap.com_guide_15 {
+  background-image: url(../images/img_com_guide_15.png);
+}
+.compo-guide .img-wrap.com_guide_16 {
+  background-image: url(../images/img_com_guide_16.png);
+}
+.compo-guide .img-wrap.com_guide_17 {
+  background-image: url(../images/img_com_guide_17.png);
+}
+.compo-guide .img-wrap.com_guide_18 {
+  background-image: url(../images/img_com_guide_18.png);
+}
+.compo-guide .img-wrap.com_guide_19 {
+  background-image: url(../images/img_com_guide_19.png);
+}
+.compo-guide .img-wrap.com_guide_20 {
+  background-image: url(../images/img_com_guide_20.png);
+}
+.compo-guide .img-wrap.com_guide_21 {
+  background-image: url(../images/img_com_guide_21.png);
+}
+.compo-guide .img-wrap.com_guide_22 {
+  background-image: url(../images/img_com_guide_22.png);
+}
+.compo-guide .img-wrap.com_guide_23 {
+  background-image: url(../images/img_com_guide_23.png);
+}
+.compo-guide .img-wrap.com_guide_24 {
+  background-image: url(../images/img_com_guide_24.png);
+}
+.compo-guide .img-wrap.com_guide_25 {
+  background-image: url(../images/img_com_guide_25.png);
+}
+.compo-guide .img-wrap.com_guide_26 {
+  background-image: url(../images/img_com_guide_26.png);
+}
+.compo-guide .img-wrap.com_guide_27 {
+  background-image: url(../images/img_com_guide_27.png);
+}
+.compo-guide .img-wrap.com_guide_28 {
+  background-image: url(../images/img_com_guide_28.png);
+}
+.compo-guide .img-wrap.com_guide_29 {
+  background-image: url(../images/img_com_guide_29.png);
+}
+.compo-guide .img-wrap.com_guide_30 {
+  background-image: url(../images/img_com_guide_30.png);
+}
+.compo-guide .img-wrap.com_guide_31 {
+  background-image: url(../images/img_com_guide_31.png);
+}
+.compo-guide .img-wrap.com_guide_32 {
+  background-image: url(../images/img_com_guide_32.png);
+}
+.compo-guide .img-wrap.com_guide_33 {
+  background-image: url(../images/img_com_guide_33.png);
+}
+.compo-guide .img-wrap.com_guide_34 {
+  background-image: url(../images/img_com_guide_34.png);
+}
+
+.search-list .conts-wrap {
+  position: relative;
+  height: calc(100% - 20rem);
+  gap: var(--krds-spacer-3);
+  padding: var(--krds-spacer-6);
+}
+
+.conts-wrap {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: var(--krds-spacer-18);
+  width: 100%;
+  color: var(--krds-gray-70);
+}
+
+.conts-wrap > * {
+  width: 100%;
+}
+
+.krds-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  font-size: var(--krds-fz-label-sm);
+  color: var(--krds-primary-60);
+  height: 2.4rem;
+  padding: 0 var(--krds-spacer-2);
+  border-radius: 0.4rem;
+  background-color: var(--krds-primary-5);
+}
+
+.search-area .search-list .conts-wrap .tit {
+  margin-top: calc(var(--krds-spacer-2) * -1);
+  font-size: var(--krds-fz-title-md);
+}
+
+.search-area .search-list .conts-wrap .tit .sub {
+  font-size: var(--krds-fz-body-sm);
+  color: #555555;
+  font-weight: 500;
+}
+
+.search-area .search-list .conts-wrap .desc {
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5;
+  height: 60%;
+}
+
+.move-link {
+  gap: 1.5rem;
+  align-self: flex-end;
+}
+
+.move-link a {
+  text-decoration: underline;
+  font-size: var(--krds-btn-fz-sm);
+  font-weight: 700;
+}
+
+.move-link a:hover {
+  color: var(--krds-primary);
+  text-decoration: underline;
+}
+
+.sty-guide .move-link {
+  gap: 1rem;
+  align-self: flex-end;
+}
+
+.sty-guide .move-link a {
+  text-decoration: underline;
+  font-size: var(--krds-btn-fz-xsm);
+  font-weight: 700;
+}

@@ -1,3 +1,38 @@
+/* 공통 :: 라디오버튼 & 체크박스 */
+.chk-area {
+  display: flex;
+  gap: var(--krds-spacer-6);
+}
+
+input[type="radio"] {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+.form-check input[type="radio"] ~ label {
+  position: relative;
+  display: inline-flex;
+  min-height: var(--krds-rdo-size-md);
+  padding-left: calc(var(--krds-rdo-size-md) + var(--krds-spacer-2));
+  font-size: var(--krds-rdo-fz-md);
+  line-height: var(--krds-rdo-size-md);
+}
+
+.form-check input[type="radio"] ~ label:before,
+.form-check input[type="radio"] ~ label:after {
+  content: "";
+  display: block;
+  transition: 0.4s cubic-bezier(0.4, 0, 0.23, 1);
+  box-sizing: border-box;
+}
+
 /* 큰 circle */
 .form-check input[type="radio"] ~ label:before {
   position: absolute;
@@ -22,13 +57,11 @@
 }
 
 /* circle z-index 작업 */
-.form-check input[type="radio"] ~ label:before,
-.form-check input[type="checkbox"] ~ label:before {
+.form-check input[type="radio"] ~ label:before {
   z-index: 3;
 }
 
-.form-check input[type="radio"] ~ label:after,
-.form-check input[type="checkbox"] ~ label:after {
+.form-check input[type="radio"] ~ label:after {
   z-index: 4;
 }
 
