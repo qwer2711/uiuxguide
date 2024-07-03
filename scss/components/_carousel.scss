@@ -31,7 +31,7 @@
   background-color: var(--krds-white);
 }
 .swiper-button-prev::after {
-  background-image: url(#{$url}/ico/components/common/ico_select.svg);
+  background-image: url(../../images/ico/components/common/ico_select.svg);
 }
 .swiper-button-next::after {
   background-image: url(#{$url}/ico/components/common/ico_select.svg);

@@ -12,7 +12,7 @@
   }
 }
 
-.accordion-item .accordion-item.active .accordion-collapse {
+.accordion-item.active .accordion-collapse {
   height: auto;
   max-height: 1000vh;
   transition: max-height 1.5s ease-in-out;

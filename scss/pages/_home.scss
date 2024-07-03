@@ -102,59 +102,6 @@
   right: var(--#{$prefix}spacer-4);
   transform: translateY(-50%);
 }
-.btn-ico.ico-sch {
-  background-image: url(../images/icon/ico_sch_40.svg);
-}
-.btn-ico[class*="ico-"] {
-  width: 4rem;
-  height: 4rem;
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
-}
-
-.btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.4rem;
-  width: auto;
-  height: var(--#{$prefix}btn-h-lg);
-  padding: 0 var(--#{$prefix}btn-px-lg);
-  border: 1px solid var(--#{$prefix}primary);
-  border-radius: var(--#{$prefix}btn-rd-lg);
-  font-size: var(--#{$prefix}fz-body-lg);
-  color: var(--#{$prefix}white);
-  font-weight: 400;
-  line-height: 1;
-  cursor: pointer;
-  white-space: nowrap;
-  transition: 0.4s ease-in-out;
-}
-.btn:hover {
-  background-color: var(--#{$prefix}primary-60);
-  border-color: var(--#{$prefix}primary-60);
-}
-.btn:active {
-  background-color: var(--#{$prefix}primary-70);
-  border-color: var(--#{$prefix}primary-60);
-}
-.btn:focus {
-  color: rgba(255, 255, 255, 0.9);
-  transition: none;
-}
-.btn[disabled] {
-  background-color: var(--#{$prefix}gray-30);
-  border-color: var(--#{$prefix}gray-30);
-  color: var(--#{$prefix}gray-60);
-  cursor: default;
-}
-.btn-ico {
-  color: inherit !important;
-  border: 0 !important;
-  background-color: inherit !important;
-  padding: 0 !important;
-}
 .search-list {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;

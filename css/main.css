@@ -2396,7 +2396,7 @@ caption {
   transition: max-height 0.5s cubic-bezier(0, 1, 0, 1);
 }
 
-.accordion-item .accordion-item.active .accordion-collapse {
+.accordion-item.active .accordion-collapse {
   height: auto;
   max-height: 1000vh;
   transition: max-height 1.5s ease-in-out;
@@ -2704,6 +2704,8 @@ table {
   border: 1px solid var(--color-border);
   text-align: center;
   word-break: keep-all;
+  border-collapse: separate;
+  border-spacing: 0;
 }
 
 table th {
@@ -2859,13 +2861,13 @@ table td {
   display: none;
 }
 .btn.ico-sch::before, .btn.ico-sch::after {
-  background-image: url(../../images/component/common/ico_sch_20_wh.svg);
+  background-image: url(../../images/ico/components/common/ico_select.svg/ico_sch_20_wh.svg);
 }
 .btn.ico-arr::before, .btn.ico-arr::after {
-  background-image: url(../../images/component/common/ico_arr_20_right.svg);
+  background-image: url(../../images/ico/components/common/ico_select.svg/ico_arr_20_right.svg);
 }
 .btn.ico-upload::before, .btn.ico-upload::after {
-  background-image: url(../../images/component/common/ico_upload_20_wh.svg);
+  background-image: url(../../images/ico/components/common/ico_select.svg);
 }
 .btn.xsm[class*=ico-]::after {
   width: 1.6rem;
@@ -2874,6 +2876,197 @@ table td {
 .btn.sm .btn[class*=ico-]::after {
   width: 2rem;
   height: 2rem;
+}
+
+/* **** button : text button **** */
+.btn-txt {
+  color: inherit;
+  border: 0;
+  background-color: inherit;
+  padding: 0 var(--krds-spacer-default2) !important;
+}
+.btn-txt:hover, .btn-txt:active {
+  background-color: inherit;
+}
+.btn-txt:hover {
+  background-color: var(--krds-secondary-5);
+}
+.btn-txt:active {
+  background-color: var(--krds-secondary-10);
+}
+.btn-txt:focus {
+  outline-offset: 0.4rem;
+  outline: 2px solid rgba(36, 107, 235, 0.8);
+}
+.btn-txt[disabled] {
+  color: var(--krds-gray-50);
+}
+.btn-txt[class*=ico-]::after {
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+.btn-txt[class*=ico-].ico-before::before {
+  display: inline-flex;
+  content: "";
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+.btn-txt[class*=ico-].ico-before::after {
+  display: none;
+}
+.btn-txt[class*=ico-].ico-call::before {
+  background-image: url(../../images/ico/components/common/ico_select.svg);
+}
+.btn-txt[class*=ico-].ico-call::after {
+  background-image: url(../../images/ico/components/common/ico_select.svg);
+}
+.btn-txt[class*=ico-].ico-faq::before {
+  background-image: url(../../images/ico/components/common/ico_select.sv);
+}
+.btn-txt[class*=ico-].ico-faq::after {
+  background-image: url(../../images/ico/components/common/ico_select.sv);
+}
+.btn-txt.underline {
+  text-decoration: underline;
+}
+.btn-txt.link {
+  height: auto;
+  text-decoration: underline !important;
+}
+.btn-txt.ico-like::before, .btn-txt.ico-like::after {
+  background-image: url(../../images/ico/components/common/ico_select.svg);
+}
+.btn-txt.ico-share::before, .btn-txt.ico-share::after {
+  background-image: url(../../images/ico/components/common/ico_select.svg);
+}
+.btn-txt.ico-arr::after {
+  background-image: url(../../images/ico/components/common/ico_select.svg);
+}
+.btn-txt.ico-arr-down::after {
+  background-image: url(../../images/component/common/ico_arr_16_down.svg);
+}
+.btn-txt.ico-more::after {
+  background-image: url(../../images/ico/components/common/ico_select.svg);
+}
+.btn-txt.ico-sch::before, .btn-txt.ico-sch::after {
+  background-image: url(../../images/ico/components/common/ico_select.svg);
+}
+.btn-txt.ico-sch1::before, .btn-txt.ico-sch1::after {
+  background-image: url(../../images/ico/components/common/ico_select.svg);
+}
+.btn-txt.ico-go::before, .btn-txt.ico-go::after {
+  background-image: url(../../images/ico/components/common/ico_select.svg);
+}
+.btn-txt.ico-down::before, .btn-txt.ico-down::after {
+  background-image: url(../../images/ico/components/common/ico_select.svg);
+}
+.btn-txt.ico-filter {
+  position: relative;
+}
+.btn-txt.ico-filter::before, .btn-txt.ico-filter::after {
+  background-image: url(../../images/ico/components/common/ico_select.svg);
+}
+.btn-txt.ico-filter .num {
+  display: inline-flex;
+  position: absolute;
+  right: 0.1rem;
+  z-index: 1;
+  height: 2rem;
+  font-size: var(--krds-fz-label-sm);
+  color: var(--krds-white);
+  padding: 0 var(--krds-spacer-2);
+  margin-top: -3rem;
+  border-radius: 2rem;
+  background-color: var(--krds-primary);
+}
+.btn-txt.ico-reset::before, .btn-txt.ico-reset::after {
+  background-image: url(../../images/ico/components/common/ico_select.svg);
+}
+.btn-txt.ico-log::before, .btn-txt.ico-log::after {
+  background-image: url(../../images/ico/components/common/ico_select.svg);
+}
+.btn-txt.ico-func {
+  gap: var(--krds-spacer-2);
+}
+.btn-txt.ico-func::before, .btn-txt.ico-func::after {
+  background-image: url(../../images/ico/components/common/ico_select.svg);
+}
+.btn-txt.ico-logout {
+  gap: var(--krds-spacer-2);
+}
+.btn-txt.ico-logout::before, .btn-txt.ico-logout::after {
+  background-image: url(../../images/ico/components/common/ico_select.svg);
+}
+.btn-txt.ico-email {
+  gap: var(--krds-spacer-2);
+}
+.btn-txt.ico-email::before, .btn-txt.ico-email::after {
+  background-image: url(../../images/ico/components/common/ico_select.svg);
+}
+.btn-txt.ico-print {
+  gap: var(--krds-spacer-2);
+}
+.btn-txt.ico-print::before, .btn-txt.ico-print::after {
+  background-image: url(../../images/ico/components/common/ico_select.svg);
+}
+.btn-txt.ico-scrap {
+  gap: var(--krds-spacer-2);
+}
+.btn-txt.ico-scrap::before, .btn-txt.ico-scrap::after {
+  background-image: url(../../images/ico/components/common/ico_select.svg);
+}
+.btn-txt.ico-del {
+  gap: var(--krds-spacer-2);
+}
+.btn-txt.ico-del::before, .btn-txt.ico-del::after {
+  background-image: url(../../images/ico/components/common/ico_select.svg);
+}
+.btn-txt.ico-plus {
+  gap: var(--krds-spacer-2);
+}
+.btn-txt.ico-plus::before, .btn-txt.ico-plus::after {
+  background-image: url(../../images/ico/components/common/ico_select.svg);
+}
+.btn-txt.ico-setting {
+  gap: var(--krds-spacer-2);
+}
+.btn-txt.ico-setting::before, .btn-txt.ico-setting::after {
+  background-image: url(../../images/ico/components/common/ico_select.svg);
+}
+.btn-txt.ico-link {
+  gap: var(--krds-spacer-2);
+}
+.btn-txt.ico-link::before, .btn-txt.ico-link::after {
+  background-image: url(../../images/ico/components/common/ico_select.svg);
+}
+.btn-txt.ico-comment {
+  gap: var(--krds-spacer-2);
+}
+.btn-txt.ico-comment::before, .btn-txt.ico-comment::after {
+  background-image: url(../../images/ico/components/common/ico_select.svg);
+}
+.btn-txt.ico-prev {
+  gap: var(--krds-spacer-2);
+}
+.btn-txt.ico-prev::before, .btn-txt.ico-prev::after {
+  background-image: url(../../images/ico/components/common/ico_select.svg);
+}
+.btn-txt.sm[class*=ico-]::before, .btn-txt.sm[class*=ico-]::after {
+  width: 2rem;
+  height: 2rem;
+}
+.btn-txt.xsm[class*=ico-] {
+  gap: var(--krds-spacer-default2);
+}
+.btn-txt.xsm[class*=ico-]::before, .btn-txt.xsm[class*=ico-]::after {
+  width: 1.6rem;
+  height: 1.6rem;
+}
+.btn-txt.h-auto {
+  height: auto;
+  padding: var(--krds-spacer-default2) !important;
 }
 
 /* **** button : chips **** */
@@ -3473,66 +3666,6 @@ textarea {
   top: 50%;
   right: var(--krds-spacer-4);
   transform: translateY(-50%);
-}
-
-.btn-ico.ico-sch {
-  background-image: url(../images/icon/ico_sch_40.svg);
-}
-
-.btn-ico[class*=ico-] {
-  width: 4rem;
-  height: 4rem;
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
-}
-
-.btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.4rem;
-  width: auto;
-  height: var(--krds-btn-h-lg);
-  padding: 0 var(--krds-btn-px-lg);
-  border: 1px solid var(--krds-primary);
-  border-radius: var(--krds-btn-rd-lg);
-  font-size: var(--krds-fz-body-lg);
-  color: var(--krds-white);
-  font-weight: 400;
-  line-height: 1;
-  cursor: pointer;
-  white-space: nowrap;
-  transition: 0.4s ease-in-out;
-}
-
-.btn:hover {
-  background-color: var(--krds-primary-60);
-  border-color: var(--krds-primary-60);
-}
-
-.btn:active {
-  background-color: var(--krds-primary-70);
-  border-color: var(--krds-primary-60);
-}
-
-.btn:focus {
-  color: rgba(255, 255, 255, 0.9);
-  transition: none;
-}
-
-.btn[disabled] {
-  background-color: var(--krds-gray-30);
-  border-color: var(--krds-gray-30);
-  color: var(--krds-gray-60);
-  cursor: default;
-}
-
-.btn-ico {
-  color: inherit !important;
-  border: 0 !important;
-  background-color: inherit !important;
-  padding: 0 !important;
 }
 
 .search-list {

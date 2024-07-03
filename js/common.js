@@ -14,6 +14,7 @@ var common = (function () {
         common.sideMenu();
         common.calender();
         common.disclosure();
+        common.tab();
       }
     },
     sideMenu: function () {
@@ -130,6 +131,63 @@ var common = (function () {
       function disclosureBtnRotate(e) {
         e.target.parentNode.classList.toggle("active");
       }
+    },
+    tab: function () {
+      /* layer tab */
+      function layerTab() {
+        const layerTabArea = document.querySelectorAll(".tab-area.layer");
+
+        /* 탭 접근성 텍스트 세팅 */
+        const tabAccText = document.createTextNode(" 선택됨");
+        const tabAccTag = document.createElement("i");
+        tabAccTag.setAttribute("class", "sr-only created");
+        tabAccTag.appendChild(tabAccText);
+
+        layerTabArea.forEach((e) => {
+          const layerTabEle = e.querySelectorAll(".tab > ul > li");
+          const tabPanel = e.querySelectorAll(".tab-conts");
+
+          function tab() {
+            layerTabEle.forEach((ele) => {
+              const control = ele.getAttribute("aria-controls");
+              const selectedTabPanel = document.getElementById(control);
+
+              if (ele.classList.contains("active")) {
+                //선택됨 텍스트 추가
+                ele.querySelector("button").append(tabAccTag);
+              }
+
+              ele.addEventListener("click", () => {
+                layerTabInitial(); //레이어탭 초기화
+
+                ele.classList.add("active");
+                ele.querySelector("button").append(tabAccTag); //선택됨 텍스트 추가
+                ele.setAttribute("aria-selected", "true");
+                selectedTabPanel.classList.add("active");
+              });
+            });
+          }
+
+          //레이어탭 초기화
+          function layerTabInitial() {
+            layerTabEle.forEach((ele) => {
+              ele.classList.remove("active");
+              ele.setAttribute("aria-selected", "false");
+              //ele.removeAttribute('style');
+              if (ele.classList.contains("active")) {
+                const text = ele.querySelector(".sr-only.created");
+                ele.querySelector("button").removeChild(text);
+              }
+            });
+            tabPanel.forEach((ele) => {
+              ele.classList.remove("active");
+              //ele.removeAttribute('style');
+            });
+          }
+          tab();
+        });
+      }
+      layerTab();
     },
   };
 })();
@@ -264,17 +322,76 @@ const kds_accordion = {
 };
 
 /*** * swiper * ***/
-const $swiperPlayBtn = document.querySelectorAll(".btn-accordion");
 const kds_swiper = {
   init: () => {
-    kds_swiper.swiperMain();
+    kds_swiper.swiperList();
   },
-  swiperMain: () => {},
-  stop: () => {},
+  swiperList: () => {
+    //풀 배너
+    const Swiper1 = new Swiper(".swiper-1 .swiper", {
+      slidesPerView: 1,
+      spaceBetween: 0,
+      speed: 400,
+      loop: true,
+      navigation: {
+        nextEl: ".swiper-1 .swiper .swiper-button-next",
+        prevEl: ".swiper-1 .swiper .swiper-button-prev",
+      },
+      pagination: {
+        el: ".swiper-1 .swiper .swiper-pagination",
+      },
+    });
+
+    //요소 배너
+    const swiper2 = new Swiper(".swiper-2 .swiper", {
+      slidesPerView: 1,
+      spaceBetween: 16,
+      speed: 400,
+      loop: true,
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
+      navigation: {
+        nextEl: ".swiper-2 .swiper .swiper-button-next",
+        prevEl: ".swiper-2 .swiper .swiper-button-prev",
+      },
+      pagination: {
+        el: ".swiper-2 .swiper .swiper-pagination",
+        type: "fraction",
+      },
+    });
+
+    const $eleBanSwiperPlay = document.querySelector(
+      ".swiper-2 .swiper .swiper-button-play"
+    );
+    const $eleBanSwiperStop = document.querySelector(
+      ".swiper-2 .swiper .swiper-button-stop"
+    );
+
+    if ($eleBanSwiperPlay != null) {
+      $eleBanSwiperPlay.style.display = "none";
+
+      $eleBanSwiperPlay.addEventListener("click", () => {
+        swiper2.autoplay.start();
+        $eleBanSwiperStop.style.display = "";
+        $eleBanSwiperPlay.style.display = "none";
+      });
+    }
+
+    if ($eleBanSwiperStop != null) {
+      $eleBanSwiperStop.addEventListener("click", () => {
+        swiper2.autoplay.stop();
+        $eleBanSwiperStop.style.display = "none";
+        $eleBanSwiperPlay.style.display = "";
+      });
+    }
+  },
 };
 
 window.addEventListener("DOMContentLoaded", function () {
   common.init();
   kds_modal.init();
   kds_accordion.init();
+  kds_swiper.init();
 });

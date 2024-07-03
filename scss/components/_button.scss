@@ -1,3 +1,31 @@
+//btn reset
+@mixin btn-reset {
+  color: inherit;
+  border: 0;
+  background-color: inherit;
+  &:hover,
+  &:active {
+    background-color: inherit;
+  }
+}
+
+//reset text : popover/tooltip
+@mixin reset-text {
+  font-family: var(--#{$prefix}-fz-body-md);
+  font-style: normal;
+  font-weight: map-get($fws, normal);
+  line-height: $line-height-base;
+  text-align: left;
+  text-decoration: none;
+  text-shadow: none;
+  text-transform: none;
+  letter-spacing: normal;
+  //word-break: normal;
+  white-space: normal;
+  word-spacing: normal;
+  line-break: auto;
+}
+
 .btn {
   //default : primary color height lg
   $size: lg;
@@ -137,19 +165,19 @@
   &.ico-sch {
     &::before,
     &::after {
-      background-image: url(#{$url}/component/common/ico_sch_20_wh.svg);
+      background-image: url(#{$url}/ico/components/common/ico_select.svg/ico_sch_20_wh.svg);
     }
   }
   &.ico-arr {
     &::before,
     &::after {
-      background-image: url(#{$url}/component/common/ico_arr_20_right.svg);
+      background-image: url(#{$url}/ico/components/common/ico_select.svg/ico_arr_20_right.svg);
     }
   }
   &.ico-upload {
     &::before,
     &::after {
-      background-image: url(#{$url}/component/common/ico_upload_20_wh.svg);
+      background-image: url(#{$url}/ico/components/common/ico_select.svg);
     }
   }
   &.xsm {
@@ -168,22 +196,247 @@
   }
 }
 
-//btn setting
-@mixin btn() {
-  @each $type, $size in map-get($btns, "setting") {
-    @each $key, $value in $size {
-      --#{$prefix}btn-#{$type}-#{$key}: #{$value};
-
-      @if ($type == "h") {
-        //높이별 class값 추가
-        @at-root .btn.#{$key} {
-          height: #{$value};
-          padding: 0 var(--#{$prefix}btn-px-#{$key});
-          border-radius: var(--#{$prefix}btn-rd-#{$key});
-          font-size: var(--#{$prefix}btn-fz-#{$key});
-        }
+/* **** button : text button **** */
+.btn-txt {
+  @include btn-reset;
+  padding: 0 var(--#{$prefix}spacer-default2) !important;
+  &:hover {
+    background-color: var(--#{$prefix}secondary-5);
+  }
+  &:active {
+    background-color: var(--#{$prefix}secondary-10);
+  }
+  &:focus {
+    @include focus($offset: 0.4rem);
+  }
+  &[disabled] {
+    color: var(--#{$prefix}gray-50);
+  }
+  &[class*="ico-"] {
+    &::after {
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+    }
+    &.ico-before {
+      &::before {
+        display: inline-flex;
+        content: "";
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+      }
+      &::after {
+        display: none;
       }
     }
+    &.ico-call {
+      &::before {
+        background-image: url(#{$url}/ico/components/common/ico_select.svg);
+      }
+      &::after {
+        background-image: url(#{$url}/ico/components/common/ico_select.svg);
+      }
+    }
+    &.ico-faq {
+      &::before {
+        background-image: url(#{$url}/ico/components/common/ico_select.sv);
+      }
+      &::after {
+        background-image: url(#{$url}/ico/components/common/ico_select.sv);
+      }
+    }
+  }
+  &.underline {
+    text-decoration: underline;
+  }
+  &.link {
+    //링크이면서 텍스트사이에 있는경우 높이값 초기화
+    height: auto;
+    text-decoration: underline !important;
+  }
+  &.ico-like {
+    &::before,
+    &::after {
+      background-image: url(#{$url}/ico/components/common/ico_select.svg);
+    }
+  }
+  &.ico-share {
+    &::before,
+    &::after {
+      background-image: url(#{$url}/ico/components/common/ico_select.svg);
+    }
+  }
+  &.ico-arr {
+    &::after {
+      background-image: url(#{$url}/ico/components/common/ico_select.svg);
+    }
+  }
+  &.ico-arr-down {
+    &::after {
+      background-image: url(#{$url}/component/common/ico_arr_16_down.svg);
+    }
+  }
+  &.ico-more {
+    &::after {
+      background-image: url(#{$url}/ico/components/common/ico_select.svg);
+    }
+  }
+  &.ico-sch {
+    &::before,
+    &::after {
+      background-image: url(#{$url}/ico/components/common/ico_select.svg);
+    }
+  }
+  &.ico-sch1 {
+    &::before,
+    &::after {
+      background-image: url(#{$url}/ico/components/common/ico_select.svg);
+    }
+  }
+  &.ico-go {
+    &::before,
+    &::after {
+      background-image: url(#{$url}/ico/components/common/ico_select.svg);
+    }
+  }
+  &.ico-down {
+    &::before,
+    &::after {
+      background-image: url(#{$url}/ico/components/common/ico_select.svg);
+    }
+  }
+  &.ico-filter {
+    position: relative;
+    &::before,
+    &::after {
+      background-image: url(#{$url}/ico/components/common/ico_select.svg);
+    }
+    .num {
+      display: inline-flex;
+      position: absolute;
+      right: 0.1rem;
+      z-index: 1;
+      height: 2rem;
+      font-size: var(--#{$prefix}fz-label-sm);
+      color: var(--#{$prefix}white);
+      padding: 0 var(--#{$prefix}spacer-2);
+      margin-top: -3rem;
+      border-radius: 2rem;
+      background-color: var(--#{$prefix}primary);
+    }
+  }
+  &.ico-reset {
+    &::before,
+    &::after {
+      background-image: url(#{$url}/ico/components/common/ico_select.svg);
+    }
+  }
+  &.ico-log {
+    &::before,
+    &::after {
+      background-image: url(#{$url}/ico/components/common/ico_select.svg);
+    }
+  }
+  &.ico-func {
+    gap: var(--#{$prefix}spacer-2);
+    &::before,
+    &::after {
+      background-image: url(#{$url}/ico/components/common/ico_select.svg);
+    }
+  }
+  &.ico-logout {
+    gap: var(--#{$prefix}spacer-2);
+    &::before,
+    &::after {
+      background-image: url(#{$url}/ico/components/common/ico_select.svg);
+    }
+  }
+  &.ico-email {
+    gap: var(--#{$prefix}spacer-2);
+    &::before,
+    &::after {
+      background-image: url(#{$url}/ico/components/common/ico_select.svg);
+    }
+  }
+  &.ico-print {
+    gap: var(--#{$prefix}spacer-2);
+    &::before,
+    &::after {
+      background-image: url(#{$url}/ico/components/common/ico_select.svg);
+    }
+  }
+  &.ico-scrap {
+    gap: var(--#{$prefix}spacer-2);
+    &::before,
+    &::after {
+      background-image: url(#{$url}/ico/components/common/ico_select.svg);
+    }
+  }
+  &.ico-del {
+    gap: var(--#{$prefix}spacer-2);
+    &::before,
+    &::after {
+      background-image: url(#{$url}/ico/components/common/ico_select.svg);
+    }
+  }
+  &.ico-plus {
+    gap: var(--#{$prefix}spacer-2);
+    &::before,
+    &::after {
+      background-image: url(#{$url}/ico/components/common/ico_select.svg);
+    }
+  }
+  &.ico-setting {
+    gap: var(--#{$prefix}spacer-2);
+    &::before,
+    &::after {
+      background-image: url(#{$url}/ico/components/common/ico_select.svg);
+    }
+  }
+  &.ico-link {
+    gap: var(--#{$prefix}spacer-2);
+    &::before,
+    &::after {
+      background-image: url(#{$url}/ico/components/common/ico_select.svg);
+    }
+  }
+  &.ico-comment {
+    gap: var(--#{$prefix}spacer-2);
+    &::before,
+    &::after {
+      background-image: url(#{$url}/ico/components/common/ico_select.svg);
+    }
+  }
+  &.ico-prev {
+    gap: var(--#{$prefix}spacer-2);
+    &::before,
+    &::after {
+      background-image: url(#{$url}/ico/components/common/ico_select.svg);
+    }
+  }
+  &.sm {
+    &[class*="ico-"] {
+      &::before,
+      &::after {
+        width: 2rem;
+        height: 2rem;
+      }
+    }
+  }
+  &.xsm {
+    &[class*="ico-"] {
+      gap: var(--#{$prefix}spacer-default2);
+      &::before,
+      &::after {
+        width: 1.6rem;
+        height: 1.6rem;
+      }
+    }
+  }
+  &.h-auto {
+    height: auto;
+    padding: var(--#{$prefix}spacer-default2) !important;
   }
 }
 
@@ -199,8 +452,8 @@
         .btn-del {
           width: var(--#{$prefix}btnChipOutline-size-#{$key});
           height: var(--#{$prefix}btnChipOutline-size-#{$key});
-          background: url(#{$url}/component/common/ico_chip_del.svg) no-repeat 0
-            0;
+          background: url(#{$url}/ico/components/common/ico_select.svg/ico_chip_del.svg)
+            no-repeat 0 0;
           background-size: contain;
         }
       }
@@ -215,8 +468,8 @@
         .btn-del {
           width: var(--#{$prefix}btnChipOutline-size-#{$default});
           height: var(--#{$prefix}btnChipOutline-size-#{$default});
-          background: url(#{$url}/component/common/ico_chip_del.svg) no-repeat 0
-            0;
+          background: url(#{$url}/ico/components/common/ico_select.svg/ico_chip_del.svg)
+            no-repeat 0 0;
           background-size: contain;
           &:focus {
             @include focus($offset: 0.4rem);
@@ -246,23 +499,6 @@
       }
     }
   }
-}
-
-//reset text : popover/tooltip
-@mixin reset-text {
-  font-family: var(--#{$prefix}-fz-body-md);
-  font-style: normal;
-  font-weight: map-get($fws, normal);
-  line-height: $line-height-base;
-  text-align: left;
-  text-decoration: none;
-  text-shadow: none;
-  text-transform: none;
-  letter-spacing: normal;
-  //word-break: normal;
-  white-space: normal;
-  word-spacing: normal;
-  line-break: auto;
 }
 
 /* **** button : chips **** */
