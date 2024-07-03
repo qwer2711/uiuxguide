@@ -30,7 +30,7 @@
   content: "";
   width: 2rem;
   height: 2rem;
-  background-image: url(https://uiux.egovframe.go.kr/resources/img/component/common/ico_page_arr_left.svg);
+  background-image: url(#{$url}/ico/components/common/ico_select.svg);
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -43,7 +43,7 @@
   content: "";
   width: 2rem;
   height: 2rem;
-  background-image: url(https://uiux.egovframe.go.kr/resources/img/component/common/ico_page_arr_right.svg);
+  background-image: url(#{$url}/ico/components/common/ico_select.svg);
   background-repeat: no-repeat;
   background-position: center;
 }

@@ -56,10 +56,35 @@
   }
 
   /* **** 공통shape_06 :: Input ****/
+  @each $type, $size in map-get($inputs, "setting") {
+    @each $key, $value in $size {
+      --#{$prefix}input-#{$type}-#{$key}: #{$value};
+    }
+  }
   /* **** 공통shape_07 :: Radiobox ****/
+  @each $type, $size in map-get($radios, "setting") {
+    @each $key, $value in $size {
+      --#{$prefix}rdo-#{$type}-#{$key}: #{$value};
+    }
+  }
   /* **** 공통shape_08 :: Checkbox ****/
+  @each $type, $size in map-get($checkboxes, "setting") {
+    @each $key, $value in $size {
+      --#{$prefix}chk-#{$type}-#{$key}: #{$value};
+    }
+  }
   /* **** 공통shape_09 :: Selectbox ****/
+  @each $type, $size in map-get($select, "setting") {
+    @each $key, $value in $size {
+      --#{$prefix}select-#{$type}-#{$key}: #{$value};
+    }
+  }
   /* **** 공통shape_10 :: Switch ****/
+  @each $type, $size in map-get($switch, "setting") {
+    @each $key, $value in $size {
+      --#{$prefix}switch-#{$type}-#{$key}: #{$value};
+    }
+  }
   /* **** 공통shape_11 :: Tab ****/
   @each $type, $size in map-get($tabs, "setting") {
     @each $key, $value in $size {

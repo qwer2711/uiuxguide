@@ -31,10 +31,10 @@
   background-color: var(--krds-white);
 }
 .swiper-button-prev::after {
-  background-image: url(https://uiux.egovframe.go.kr/resources/img/component/common/ico_swiper_prev.svg);
+  background-image: url(#{$url}/ico/components/common/ico_select.svg);
 }
 .swiper-button-next::after {
-  background-image: url(https://uiux.egovframe.go.kr/resources/img/component/common/ico_swiper_next.svg);
+  background-image: url(#{$url}/ico/components/common/ico_select.svg);
 }
 .swiper-button-next::after,
 .swiper-button-prev::after {
@@ -42,10 +42,10 @@
   background-size: contain;
 }
 .swiper-button-stop::after {
-  background-image: url(https://uiux.egovframe.go.kr/resources/img/component/common/ico_swiper_stop.svg);
+  background-image: url(#{$url}/ico/components/common/ico_select.svg);
 }
 .swiper-button-play::after {
-  background-image: url(https://uiux.egovframe.go.kr/resources/img/component/common/ico_swiper_play.svg);
+  background-image: url(#{$url}/ico/components/common/ico_select.svg);
 }
 
 /* 커스텀 */

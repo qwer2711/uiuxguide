@@ -5,6 +5,9 @@
 //prefix
 $prefix: krds- !default;
 
+//url 대치
+$url: "../../images" !default;
+
 //colors
 $white: #fff !default;
 $black: #000 !default;
@@ -567,9 +570,6 @@ $transition-collapse-width: width 0.4s ease !default;
 
 //box shadow
 $box-shadow-base: 2px 2px 2px 0px rgba(0, 0, 0, 0.15) !default;
-
-//img url 대치
-$url: "../../img" !default;
 
 //position 종류
 $position-type: (x, y, both);

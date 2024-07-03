@@ -233,8 +233,48 @@ const kds_modal = {
   },
 };
 
+/*** * accordion * ***/
+const $accordionBtn = document.querySelectorAll(".btn-accordion");
+const kds_accordion = {
+  init: () => {
+    kds_accordion.expand();
+  },
+  expand: () => {
+    $accordionBtn.forEach((e) => {
+      const $wrapper = e.closest(".accordion");
+      const $wrapAll = $wrapper.querySelectorAll(".accordion-item");
+      const $wrap = e.closest(".accordion-item");
+
+      e.addEventListener("click", () => {
+        if (!$wrap.classList.contains("active")) {
+          $wrapAll.forEach((ele) => {
+            ele.classList.remove("active");
+            ele.querySelector(".btn-accordion").classList.remove("active");
+          });
+
+          $wrap.classList.add("active");
+          e.classList.add("active");
+        } else {
+          $wrap.classList.remove("active");
+          e.classList.remove("active");
+        }
+      });
+    });
+  },
+};
+
+/*** * swiper * ***/
+const $swiperPlayBtn = document.querySelectorAll(".btn-accordion");
+const kds_swiper = {
+  init: () => {
+    kds_swiper.swiperMain();
+  },
+  swiperMain: () => {},
+  stop: () => {},
+};
+
 window.addEventListener("DOMContentLoaded", function () {
   common.init();
   kds_modal.init();
-  // keyFilter.exec();
+  kds_accordion.init();
 });

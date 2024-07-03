@@ -409,10 +409,81 @@ caption {
   --krds-btnChipOutline-size-md: 1.2rem;
   --krds-btnChipOutline-size-lg: 1.6rem;
   /* **** 공통shape_06 :: Input ****/
+  --krds-input-h-sm: 4rem;
+  --krds-input-h-md: 4.8rem;
+  --krds-input-h-lg: 5.6rem;
+  --krds-input-h-xlg: 8rem;
+  --krds-input-px-sm: 1.6rem;
+  --krds-input-px-md: 1.6rem;
+  --krds-input-px-lg: 1.6rem;
+  --krds-input-px-xlg: 2.4rem;
+  --krds-input-rd-sm: .6rem;
+  --krds-input-rd-md: .8rem;
+  --krds-input-rd-lg: .8rem;
+  --krds-input-rd-xlg: 1.2rem;
+  --krds-input-fz-sm: 1.5rem;
+  --krds-input-fz-md: 1.7rem;
+  --krds-input-fz-lg: 1.9rem;
+  --krds-input-fz-xlg: 2.5rem;
   /* **** 공통shape_07 :: Radiobox ****/
+  --krds-rdo-size-sm: 1.6rem;
+  --krds-rdo-size-md: 2rem;
+  --krds-rdo-size-lg: 2.4rem;
+  --krds-rdo-chk-sm: .8rem;
+  --krds-rdo-chk-md: 1rem;
+  --krds-rdo-chk-lg: 1.4rem;
+  --krds-rdo-pos-sm: .2rem;
+  --krds-rdo-pos-md: .5rem;
+  --krds-rdo-pos-lg: 1rem;
+  --krds-rdo-fz-sm: 1.5rem;
+  --krds-rdo-fz-md: 1.7rem;
+  --krds-rdo-fz-lg: 1.9rem;
   /* **** 공통shape_08 :: Checkbox ****/
+  --krds-chk-size-sm: 1.6rem;
+  --krds-chk-size-md: 2rem;
+  --krds-chk-size-lg: 2.4rem;
+  --krds-chk-primary-chk-sm: 1.2rem;
+  --krds-chk-primary-chk-md: 1.6rem;
+  --krds-chk-primary-chk-lg: 2rem;
+  --krds-chk-secondary-chk-md: 2rem;
+  --krds-chk-pos-md: .5rem;
+  --krds-chk-fz-sm: 1.5rem;
+  --krds-chk-fz-md: 1.7rem;
+  --krds-chk-fz-lg: 1.9rem;
   /* **** 공통shape_09 :: Selectbox ****/
+  --krds-select-h-sm: 4rem;
+  --krds-select-h-md: 4.8rem;
+  --krds-select-h-lg: 5.6rem;
+  --krds-select-pd-sm: 0 5.2rem 0 1.6rem;
+  --krds-select-pd-md: 0 5.2rem 0 1.6rem;
+  --krds-select-pd-lg: 0 5.2rem 0 1.6rem;
+  --krds-select-rd-sm: .6rem;
+  --krds-select-rd-md: .8rem;
+  --krds-select-rd-lg: .8rem;
+  --krds-select-fz-sm: 1.5rem;
+  --krds-select-fz-md: 1.7rem;
+  --krds-select-fz-lg: 1.9rem;
+  --krds-select-rn-sm: 1.6rem;
+  --krds-select-rn-md: 1.6rem;
+  --krds-select-rn-lg: 1.6rem;
+  --krds-select-bgs-sm: 2rem;
+  --krds-select-bgs-md: 2rem;
+  --krds-select-bgs-lg: 2.4rem;
   /* **** 공통shape_10 :: Switch ****/
+  --krds-switch-h-md: 2rem;
+  --krds-switch-h-lg: 2.4rem;
+  --krds-switch-w-md: 3.2rem;
+  --krds-switch-w-lg: 4rem;
+  --krds-switch-b-md: 1.6rem;
+  --krds-switch-b-lg: 2rem;
+  --krds-switch-br-md: 0.2rem;
+  --krds-switch-br-lg: 0.2rem;
+  --krds-switch-pd-md: 0.8rem;
+  --krds-switch-pd-lg: 0.8rem;
+  --krds-switch-rd-md: 4rem;
+  --krds-switch-rd-lg: 4rem;
+  --krds-switch-fz-md: 1.7rem;
+  --krds-switch-fz-lg: 1.9rem;
   /* **** 공통shape_11 :: Tab ****/
   --krds-tab-h-full: 5.6rem;
   --krds-tab-h-fill: 4.8rem;
@@ -1616,7 +1687,7 @@ caption {
   content: "";
   width: 2.4rem;
   height: 2.4rem;
-  background: url(https://uiux.egovframe.go.kr/resources/img/pattern/common/ico_bread_home.svg) no-repeat;
+  background: url(../../images/ico/components/common/ico_select.svg) no-repeat;
   background-size: contain;
 }
 
@@ -1629,7 +1700,7 @@ caption {
   width: 1.6rem;
   height: 1.6rem;
   margin-left: var(--krds-spacer-1);
-  background: url(https://uiux.egovframe.go.kr/resources/img/pattern/common/ico_bread_arr.svg) no-repeat;
+  background: url(../../images/ico/components/common/ico_select.svg) no-repeat;
   background-size: contain;
 }
 
@@ -1755,7 +1826,7 @@ caption {
   content: "";
   width: 2rem;
   height: 2rem;
-  background-image: url(https://uiux.egovframe.go.kr/resources/img/component/common/ico_page_arr_left.svg);
+  background-image: url(../../images/ico/components/common/ico_select.svg);
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -1768,7 +1839,7 @@ caption {
   content: "";
   width: 2rem;
   height: 2rem;
-  background-image: url(https://uiux.egovframe.go.kr/resources/img/component/common/ico_page_arr_right.svg);
+  background-image: url(../../images/ico/components/common/ico_select.svg);
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -2049,7 +2120,7 @@ caption {
   width: 2rem;
   height: 2rem;
   margin-right: var(--krds-spacer-1);
-  background-image: url(https://uiux.egovframe.go.kr/resources/img/component/common/ico_arr_func_20.svg);
+  background-image: url(../../images/ico/components/common/ico_select.svg);
   background-size: contain;
   transition: 0.4s ease-in-out;
   transform: rotate(0);
@@ -2253,7 +2324,7 @@ caption {
   z-index: 901;
   width: 3.6rem;
   height: 3.6rem;
-  background: url(../../img/component/common/ico_close_modal.svg) no-repeat center;
+  background: url(../../images/ico/components/common/ico_select.svg) no-repeat center;
   background-size: 2rem;
 }
 .modal.alert .modal-dialog {
@@ -2299,7 +2370,7 @@ caption {
 
 .btn-txt.ico-filter::before,
 .btn-txt.ico-filter::after {
-  background-image: url(https://uiux.egovframe.go.kr/resources/img/component/common/ico_filter_20.svg);
+  background-image: url(../../images/ico/components/common/ico_select.svg);
 }
 
 .btn[class*=ico-]::after {
@@ -2353,7 +2424,7 @@ caption {
   content: "";
   width: 2.4rem;
   height: 2.4rem;
-  background: url(https://uiux.egovframe.go.kr/resources/img/component/common/ico_arr_accordion.svg) no-repeat center;
+  background: url(../../images/ico/components/common/ico_select.svg) no-repeat center;
   background-size: 2rem;
   transition: 0.4s ease-in-out;
   transform: rotate(0deg);
@@ -2393,11 +2464,11 @@ caption {
 }
 
 .swiper-button-prev::after {
-  background-image: url(https://uiux.egovframe.go.kr/resources/img/component/common/ico_swiper_prev.svg);
+  background-image: url(../../images/ico/components/common/ico_select.svg);
 }
 
 .swiper-button-next::after {
-  background-image: url(https://uiux.egovframe.go.kr/resources/img/component/common/ico_swiper_next.svg);
+  background-image: url(../../images/ico/components/common/ico_select.svg);
 }
 
 .swiper-button-next::after,
@@ -2407,11 +2478,11 @@ caption {
 }
 
 .swiper-button-stop::after {
-  background-image: url(https://uiux.egovframe.go.kr/resources/img/component/common/ico_swiper_stop.svg);
+  background-image: url(../../images/ico/components/common/ico_select.svg);
 }
 
 .swiper-button-play::after {
-  background-image: url(https://uiux.egovframe.go.kr/resources/img/component/common/ico_swiper_play.svg);
+  background-image: url(../../images/ico/components/common/ico_select.svg);
 }
 
 /* 커스텀 */
@@ -2590,7 +2661,7 @@ caption {
   width: 2rem;
   height: 2rem;
   margin-top: var(--krds-spacer-default2);
-  background-image: url(https://uiux.egovframe.go.kr/resources/img/pattern/content/ico_helper_info.svg);
+  background-image: url(../../images/ico/components/common/ico_select.svg);
   background-size: contain;
 }
 
@@ -2740,7 +2811,7 @@ table td {
   color: var(--krds-gray-60);
 }
 .btn.secondary.ico-arr-down::after {
-  background-image: url(../../img/component/common/ico_arr_20_down_blue.svg);
+  background-image: url(../../images/ico/components/common/ico_select.svg);
   background-size: contain;
   background-position: center;
 }
@@ -2788,13 +2859,13 @@ table td {
   display: none;
 }
 .btn.ico-sch::before, .btn.ico-sch::after {
-  background-image: url(../../img/component/common/ico_sch_20_wh.svg);
+  background-image: url(../../images/component/common/ico_sch_20_wh.svg);
 }
 .btn.ico-arr::before, .btn.ico-arr::after {
-  background-image: url(../../img/component/common/ico_arr_20_right.svg);
+  background-image: url(../../images/component/common/ico_arr_20_right.svg);
 }
 .btn.ico-upload::before, .btn.ico-upload::after {
-  background-image: url(../../img/component/common/ico_upload_20_wh.svg);
+  background-image: url(../../images/component/common/ico_upload_20_wh.svg);
 }
 .btn.xsm[class*=ico-]::after {
   width: 1.6rem;
@@ -3035,7 +3106,7 @@ input[type=checkbox] {
   left: calc((var(--krds-chk-size-md) - var(--krds-chk-primary-chk-md)) / 2);
   width: var(--krds-chk-primary-chk-md);
   height: var(--krds-chk-primary-chk-md);
-  background: url(https://uiux.egovframe.go.kr/resources/img/component/common/ico_check_primary_checked.svg) no-repeat 0 0;
+  background: url(../../images/ico/components/common/ico_select.svg) no-repeat 0 0;
   background-size: contain;
   opacity: 0;
 }
@@ -3056,11 +3127,11 @@ input[type=checkbox] {
 }
 
 .form-check input[type=checkbox]:disabled ~ label:after {
-  background-image: url(https://uiux.egovframe.go.kr/resources/img/component/common/ico_check_primary_checked.svg);
+  background-image: url(../../images/ico/components/common/ico_select.svg);
 }
 
 .form-check input[type=checkbox]:disabled ~ label:after {
-  background-image: url(https://uiux.egovframe.go.kr/resources/img/component/common/ico_check_primary_disabled.svg);
+  background-image: url(../../images/ico/components/common/ico_select.svg);
 }
 
 /* 크기별 */
@@ -3121,7 +3192,7 @@ textarea {
   height: var(--krds-select-h-lg);
   padding: var(--krds-select-pd-lg);
   background-color: var(--krds-white);
-  background-image: url(https://uiux.egovframe.go.kr/resources/img/component/common/ico_select_lg.svg);
+  background-image: url(../../images/ico/components/common/ico_select.svg);
   background-repeat: no-repeat;
   background-position: center right var(--krds-select-rn-lg);
   border: 1px solid var(--krds-gray-60);
@@ -3239,7 +3310,7 @@ input[type=date]::after {
   top: 50%;
   left: 18px;
   transform: translateY(-50%);
-  background: url(https://uiux.egovframe.go.kr/resources/img/component/common/ico_calendar.svg) no-repeat;
+  background: url(../../images/ico/components/common/ico_select.svg) no-repeat;
   background-position: center;
   cursor: pointer;
 }
@@ -3260,7 +3331,7 @@ input[type=date]::after {
   margin-left: calc((2rem + var(--krds-spacer-1)) * -1);
   margin-right: var(--krds-spacer-1);
   vertical-align: top;
-  background: url(https://uiux.egovframe.go.kr/resources/img/component/common/ico_hint_20.svg) no-repeat center;
+  background: url(../../images/ico/components/common/ico_select.svg) no-repeat center;
   background-size: contain;
 }
 

@@ -51,8 +51,7 @@ input[type="checkbox"] {
   left: calc((var(--krds-chk-size-md) - var(--krds-chk-primary-chk-md)) / 2);
   width: var(--krds-chk-primary-chk-md);
   height: var(--krds-chk-primary-chk-md);
-  background: url(https://uiux.egovframe.go.kr/resources/img/component/common/ico_check_primary_checked.svg)
-    no-repeat 0 0;
+  background: url(#{$url}/ico/components/common/ico_select.svg) no-repeat 0 0;
   background-size: contain;
   opacity: 0;
 }
@@ -73,11 +72,11 @@ input[type="checkbox"] {
 }
 
 .form-check input[type="checkbox"]:disabled ~ label:after {
-  background-image: url(https://uiux.egovframe.go.kr/resources/img/component/common/ico_check_primary_checked.svg);
+  background-image: url(#{$url}/ico/components/common/ico_select.svg);
 }
 
 .form-check input[type="checkbox"]:disabled ~ label:after {
-  background-image: url(https://uiux.egovframe.go.kr/resources/img/component/common/ico_check_primary_disabled.svg);
+  background-image: url(#{$url}/ico/components/common/ico_select.svg);
 }
 
 /* 크기별 */

@@ -23,7 +23,7 @@
 
 .btn-txt.ico-filter::before,
 .btn-txt.ico-filter::after {
-  background-image: url(https://uiux.egovframe.go.kr/resources/img/component/common/ico_filter_20.svg);
+  background-image: url(#{$url}/ico/components/common/ico_select.svg);
 }
 
 .btn[class*="ico-"]::after {

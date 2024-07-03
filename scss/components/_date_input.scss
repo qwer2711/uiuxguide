@@ -85,8 +85,7 @@ input[type="date"]::after {
   top: 50%;
   left: 18px;
   transform: translateY(-50%);
-  background: url(https://uiux.egovframe.go.kr/resources/img/component/common/ico_calendar.svg)
-    no-repeat;
+  background: url(#{$url}/ico/components/common/ico_select.svg) no-repeat;
   background-position: center;
   cursor: pointer;
 }
@@ -107,7 +106,6 @@ input[type="date"]::after {
   margin-left: calc((2rem + var(--krds-spacer-1)) * -1);
   margin-right: var(--krds-spacer-1);
   vertical-align: top;
-  background: url(https://uiux.egovframe.go.kr/resources/img/component/common/ico_hint_20.svg)
-    no-repeat center;
+  background: url(#{$url}/ico/components/common/ico_select.svg) no-repeat center;
   background-size: contain;
 }
