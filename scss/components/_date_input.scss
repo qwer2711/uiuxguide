@@ -59,6 +59,7 @@ input[type="date"]:valid::-webkit-datetime-edit-year-field {
   font-size: var(--krds-input-fz-lg);
   transition: 0.4s ease-in-out;
   padding-top: 3px;
+  padding-left: var(--krds-spacer-15) !important;
 }
 
 input[type="date"] {
@@ -85,7 +86,7 @@ input[type="date"]::after {
   top: 50%;
   left: 18px;
   transform: translateY(-50%);
-  background: url(#{$url}/ico/components/common/ico_select.svg) no-repeat;
+  background: url(#{$url}/ico/components/common/ico_calendar.svg) no-repeat;
   background-position: center;
   cursor: pointer;
 }

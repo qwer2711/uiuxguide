@@ -46,13 +46,13 @@
       </script>
     <![endif]-->
     <style>
-        .right {
+        .right-layout {
             width: calc(100% - 350px);
             margin-left: 350px;
             gap: var(--krds-spacer-15);
         }
 
-        .right>div {
+        .right-layout>div {
             border-bottom: 1px solid var(--krds-gray-10);
             padding-bottom: var(--krds-spacer-15);
         }
@@ -135,7 +135,7 @@
                 </ul>
             </div>
         </aside>
-        <div class="right flex-col">
+        <div class="right-layout flex-col">
             <div class="com_01">
                 <!-- breadcrumb -->
                 <div class="breadcrumb-wrap">
@@ -783,7 +783,7 @@
                     <option value="">항목</option>
                 </select>
             </div>
-            <div class="com_17">
+            <div class="com_17 flex-row gap-1">
                 <span class="btn-chip-outline">
                     Input-chips
                     <button type="button" class="btn-del">
@@ -802,6 +802,232 @@
                         <span class="sr-only">삭제</span>
                     </button>
                 </span>
+            </div>
+            <div class="com_18">
+                <!-- 스텝 -->
+                <ol class="step-wrap">
+                    <li class="done">
+                        <span>
+                            <i class="step">1단계</i>
+                            <p class="step-tit">단계 레이블</p>
+                        </span>
+                    </li>
+                    <li class="done">
+                        <span>
+                            <i class="step">2단계</i>
+                            <p class="step-tit">단계 레이블</p>
+                        </span>
+                    </li>
+                    <li class="done">
+                        <span>
+                            <i class="step">3단계</i>
+                            <p class="step-tit">단계 레이블</p>
+                        </span>
+                    </li>
+                    <li class="active">
+                        <span>
+                            <em class="sr-only">현재단계</em>
+                            <i class="step">4단계</i>
+                            <p class="step-tit">단계 레이블</p>
+                        </span>
+                    </li>
+                    <li>
+                        <span>
+                            <i class="step">5단계</i>
+                            <p class="step-tit">단계 레이블</p>
+                        </span>
+                    </li>
+                </ol>
+                <!-- //스텝 -->
+            </div>
+            <div class="com_19">
+                <!-- spinner -->
+                <div class="spinner">
+                    Loading data..
+                </div>
+                <!-- //spinner -->
+            </div>
+            <div class="com_20 flex-row align-center">
+                <!-- tooltip : 위치 - 상단 왼쪽 -->
+                <div class="krds-tooltip-wrap top left">
+                    <div class="tool-txt">
+                        예시이미지(상단 왼쪽)
+                        <button type="button" class="tool-btn">
+                            <span class="sr-only">열기</span>
+                        </button>
+                    </div>
+                    <div class="tool-in">
+                        <h4 class="tool-tit">도움말 제목</h4>
+                        <div class="tool-cnt">
+                            <p>컴포넌트 주변에 배치되어 해당 컴포넌트의 상태나 관련된 상세 정보를 제공하는 컴포넌트이다. 맥락적 도움말은 정보 아이콘이나 도움 아이콘 버튼을 통해 사용자가
+                                요청하는 경우에만 화면에
+                                표시된다.</p>
+                            <p><a href="#" class="btn btn-txt ico-arr xsm">바로가기</a></p>
+                        </div>
+                        <button type="button" class="tool-close">
+                            <span class="sr-only">닫기</span>
+                        </button>
+                    </div>
+                </div>
+                <!-- //tooltip : 위치 - 상단 왼쪽 -->
+
+                <!-- tooltip : 위치 - 상단 중앙 -->
+                <div class="krds-tooltip-wrap top center">
+                    <div class="tool-txt">
+                        예시이미지(상단 중앙)
+                        <button type="button" class="tool-btn">
+                            <span class="sr-only">열기</span>
+                        </button>
+                    </div>
+                    <div class="tool-in">
+                        <h4 class="tool-tit">도움말 제목</h4>
+                        <div class="tool-cnt">
+                            <p>컴포넌트 주변에 배치되어 해당 컴포넌트의 상태나 관련된 상세 정보를 제공하는 컴포넌트이다. 맥락적 도움말은 정보 아이콘이나 도움 아이콘 버튼을 통해 사용자가
+                                요청하는 경우에만 화면에
+                                표시된다.</p>
+                            <p><a href="#" class="btn btn-txt ico-arr xsm">바로가기</a></p>
+                        </div>
+                        <button type="button" class="tool-close">
+                            <span class="sr-only">닫기</span>
+                        </button>
+                    </div>
+                </div>
+                <!-- //tooltip : 위치 - 상단 중앙 -->
+
+                <!-- tooltip : 위치 - 상단 오른쪽 -->
+                <div class="krds-tooltip-wrap top right">
+                    <div class="tool-txt">
+                        예시이미지(상단 오른쪽)
+                        <button type="button" class="tool-btn">
+                            <span class="sr-only">열기</span>
+                        </button>
+                    </div>
+                    <div class="tool-in">
+                        <h4 class="tool-tit">도움말 제목</h4>
+                        <div class="tool-cnt">
+                            <p>컴포넌트 주변에 배치되어 해당 컴포넌트의 상태나 관련된 상세 정보를 제공하는 컴포넌트이다. 맥락적 도움말은 정보 아이콘이나 도움 아이콘 버튼을 통해 사용자가
+                                요청하는 경우에만 화면에
+                                표시된다.</p>
+                            <p><a href="#" class="btn btn-txt ico-arr xsm">바로가기</a></p>
+                        </div>
+                        <button type="button" class="tool-close">
+                            <span class="sr-only">닫기</span>
+                        </button>
+                    </div>
+                </div>
+                <!-- //tooltip : 위치 - 상단 오른쪽 -->
+                <br><br>
+                <!-- tooltip : 위치 - 하단 왼쪽 -->
+                <div class="krds-tooltip-wrap bottom left">
+                    <div class="tool-txt">
+                        예시이미지(하단 왼쪽)
+                        <button type="button" class="tool-btn">
+                            <span class="sr-only">열기</span>
+                        </button>
+                    </div>
+                    <div class="tool-in">
+                        <h4 class="tool-tit">도움말 제목</h4>
+                        <div class="tool-cnt">
+                            <p>컴포넌트 주변에 배치되어 해당 컴포넌트의 상태나 관련된 상세 정보를 제공하는 컴포넌트이다. 맥락적 도움말은 정보 아이콘이나 도움 아이콘 버튼을 통해 사용자가
+                                요청하는 경우에만 화면에
+                                표시된다.</p>
+                            <p><a href="#" class="btn btn-txt ico-arr xsm">바로가기</a></p>
+                        </div>
+                        <button type="button" class="tool-close">
+                            <span class="sr-only">닫기</span>
+                        </button>
+                    </div>
+                </div>
+                <!-- //tooltip : 위치 - 하단 왼쪽 -->
+
+                <!-- tooltip : 위치 - 하단 중앙 -->
+                <div class="krds-tooltip-wrap bottom center">
+                    <div class="tool-txt">
+                        예시이미지(하단 중앙)
+                        <button type="button" class="tool-btn">
+                            <span class="sr-only">열기</span>
+                        </button>
+                    </div>
+                    <div class="tool-in">
+                        <h4 class="tool-tit">도움말 제목</h4>
+                        <div class="tool-cnt">
+                            <p>컴포넌트 주변에 배치되어 해당 컴포넌트의 상태나 관련된 상세 정보를 제공하는 컴포넌트이다. 맥락적 도움말은 정보 아이콘이나 도움 아이콘 버튼을 통해 사용자가
+                                요청하는 경우에만 화면에
+                                표시된다.</p>
+                            <p><a href="#" class="btn btn-txt ico-arr xsm">바로가기</a></p>
+                        </div>
+                        <button type="button" class="tool-close">
+                            <span class="sr-only">닫기</span>
+                        </button>
+                    </div>
+                </div>
+                <!-- //tooltip : 위치 - 하단 중앙 -->
+
+                <!-- tooltip : 위치 - 하단 오른쪽 -->
+                <div class="krds-tooltip-wrap bottom right">
+                    <div class="tool-txt">
+                        예시이미지(하단 오른쪽)
+                        <button type="button" class="tool-btn">
+                            <span class="sr-only">열기</span>
+                        </button>
+                    </div>
+                    <div class="tool-in">
+                        <h4 class="tool-tit">도움말 제목</h4>
+                        <div class="tool-cnt">
+                            <p>컴포넌트 주변에 배치되어 해당 컴포넌트의 상태나 관련된 상세 정보를 제공하는 컴포넌트이다. 맥락적 도움말은 정보 아이콘이나 도움 아이콘 버튼을 통해 사용자가
+                                요청하는 경우에만 화면에
+                                표시된다.</p>
+                            <p><a href="#" class="btn btn-txt ico-arr xsm">바로가기</a></p>
+                        </div>
+                        <button type="button" class="tool-close">
+                            <span class="sr-only">닫기</span>
+                        </button>
+                    </div>
+                </div>
+                <!-- //tooltip : 위치 - 하단 오른쪽 -->
+            </div>
+            <div class="com_21">
+                <!-- 폼그룹 -->
+                <div class="form-group">
+                    <div class="form-tit">
+                        생년월일
+                    </div>
+                    <div class="form-conts">
+                        <input type="date" class="form-control date-form-control" placeholder="YYYY - MM - DD" required>
+                    </div>
+                    <p class="form-hint">도움말</p>
+                </div>
+                <!-- //폼그룹 -->
+            </div>
+            <div class="com_22">
+                <!-- 폼그룹 -->
+                <div class="form-group">
+                    <div class="form-tit">
+                        레이블
+                    </div>
+                    <div class="form-conts">
+                        <input type="text" id="consult_name" class="form-control" placeholder="플레이스홀더">
+                    </div>
+                    <p class="form-hint">도움말</p>
+                </div>
+                <!-- //폼그룹 -->
+            </div>
+            <div class="com_23">
+                <!-- 폼그룹 -->
+                <div class="form-group">
+                    <div class="form-tit">
+                        레이블
+                    </div>
+                    <div class="form-conts">
+                        <div class="textarea-wrap">
+                            <textarea name="" class="form-control" placeholder="플레이스홀더"></textarea>
+                            <p class="textarea-count">
+                                <span class="text-primary">0</span><span class="text-num">/100</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- //폼그룹 -->
             </div>
         </div>
     </div>
