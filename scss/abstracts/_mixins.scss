@@ -84,3 +84,18 @@
   left: $l;
   right: $r;
 }
+
+//spacer
+@mixin spacer($num) {
+  @for $i from 1 through $num {
+    $key: $i;
+    $value: ($i * 4 * 0.1) + rem;
+    //default spacers value: _variables.scss
+    $spacers: map-merge(
+      (
+        $key: $value,
+      ),
+      $spacers
+    ) !global;
+  }
+}

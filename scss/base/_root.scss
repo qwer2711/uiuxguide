@@ -42,8 +42,10 @@
   }
 
   /* **** 공통shape_04 :: BtnChipFill ****/
-  @each $key, $value in $size {
-    --#{$prefix}btnChipFill-#{$type}-#{$key}: #{$value};
+  @each $type, $size in map-get($btnChipFill, "setting") {
+    @each $key, $value in $size {
+      --#{$prefix}btnChipFill-#{$type}-#{$key}: #{$value};
+    }
   }
 
   /* **** 공통shape_05 :: BtnChipOutline ****/
@@ -59,5 +61,15 @@
   /* **** 공통shape_09 :: Selectbox ****/
   /* **** 공통shape_10 :: Switch ****/
   /* **** 공통shape_11 :: Tab ****/
+  @each $type, $size in map-get($tabs, "setting") {
+    @each $key, $value in $size {
+      --#{$prefix}tab-#{$type}-#{$key}: #{$value};
+    }
+  }
   /* **** 공통shape_12 :: Space ****/
+  //@include spacer;
+  @include spacer(50);
+  @each $size, $value in $spacers {
+    --#{$prefix}spacer-#{$size}: #{$value};
+  }
 }
