@@ -22,12 +22,14 @@
     <link rel="stylesheet" href="">
 
     <!-- Custom :: CSS -->
-    <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="css/plugin/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/main.css" />
 
+    <!-- Plugin :: CSS -->
     <script src="js/plugin/fullcalender.min.js"></script>
+    <script src="js/plugin/swiper-bundle.min.js"></script>
 
     <!-- Jquery -->
     <script src="js/vendor/jquery.min.js"></script>
@@ -53,6 +55,10 @@
         .right>div {
             border-bottom: 1px solid var(--krds-gray-10);
             padding-bottom: var(--krds-spacer-15);
+        }
+
+        .tbl-wrap.scr-bar {
+            height: 150px;
         }
     </style>
 </head>
@@ -364,7 +370,7 @@
             </div>
             <div class="com_07">
                 <!-- 숫자 뱃지 -->
-                <button type="button" class="btn btn-txt ico-filter">
+                <button type="button" class="btn btn-txt ico-filter h-auto">
                     <span class="span">필터</span>
                     <span class="num">10</span>
                 </button>
@@ -376,9 +382,8 @@
                     <div class="accordion-item">
                         <h2 id="accordionHeaderSample01" class="accordion-header">
                             <button type="button" class="btn-accordion">Accordion Title 1</button>
-
                         </h2>
-                        <div id="accordionCollapseSample01" class="accordion-collapse collapse" aria-expanded="false">
+                        <div class="accordion-collapse collapse" aria-expanded="false">
                             <div class="accordion-body">
                                 <!-- accordion contents -->
                                 Accordion ContentsAccordion ContentsAccordion ContentsAccordion ContentsAccordion
@@ -395,11 +400,9 @@
                         </div>
                     </div>
                     <div class="accordion-item">
-                        <h2 id="accordionHeaderSample02" class="accordion-header"><button type="button"
-                                class="btn-accordion">Accordion
+                        <h2 class="accordion-header"><button type="button" class="btn-accordion">Accordion
                                 Title 1</button></h2>
-                        <div id="accordionCollapseSample02" class="accordion-collapse collapse" aria-expanded="false"
-                            aria-labelledby="accordionHeaderSample02">
+                        <div class="accordion-collapse collapse" aria-expanded="false">
                             <div class="accordion-body">
                                 <!-- accordion contents -->
                                 Accordion ContentsAccordion ContentsAccordion ContentsAccordion ContentsAccordion
@@ -473,9 +476,167 @@
                     </div>
                 </div>
             </div>
-            <div class="com_10"></div>
-            <div class="com_11"></div>
-            <div class="com_12"></div>
+            <div class="com_10">
+                <div class="tab-area layer">
+                    <!-- tab list -->
+                    <div class="tab line full">
+                        <ul role="tablist">
+                            <li id="tab_login_01" aria-selected="true" aria-controls="panel_login_01" class="active">
+                                <button type="button" class="btn-tab">일반 회원 로그인 <i class="sr-only created"> 선택됨</i><i
+                                        class="sr-only created"> 선택됨</i></button>
+                            </li>
+                            <li id="tab_login_02" aria-selected="false" aria-controls="panel_login_02" class=""><button
+                                    type="button" class="btn-tab">기관 회원 로그인</button></li>
+                        </ul>
+                    </div>
+                    <!-- //tab list -->
+
+                    <!-- tab contents -->
+                    <div class="tab-conts-wrap">
+                        <section id="panel_login_01" role="tabpanel" class="tab-conts active">
+                            <h3 class="sr-only">일반 회원 로그인</h3>
+                            <p class="text-gray-70">
+                                일반 개인 회원을 위한 국립중앙도서관 통합 로그인입니다. <br class="br">
+                                로그인을 하시면 보다 더 많은 정보와 서비스를 이용하실 수 있습니다.
+                            </p>
+                            <!-- 도움박스 -->
+                            <div class="helper-box">
+                                <p class="helper-tit">로그인에 어려움이 있으신가요?</p>
+                                <div class="helper-desc-wrap">
+                                    <ul class="info-list decimal">
+                                        <li>로그인 <a href="#" class="link-txt">관련 도움말</a>이나 다른 사용자가 <a href="#"
+                                                class="link-txt">자주 찾는
+                                                질문</a>을 확인해보세요.</li>
+                                        <li>02-3703-2500 (내선번호 4번)으로 전화주세요. 서비스에 로그인할 수 있도록 도와드리겠습니다.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- //도움박스 -->
+                        </section>
+                        <section id="panel_login_02" role="tabpanel" class="tab-conts">
+                            <h3 class="sr-only">기관 회원 로그인</h3>
+                            <p class="text-gray-70">
+                                기관 회원을 위한 국립중앙도서관 통합 로그인입니다. <br class="br">
+                                로그인을 하시면 보다 더 많은 정보와 서비스를 이용하실 수 있습니다.
+                            </p>
+                            <!-- 도움박스 -->
+                            <div class="helper-box">
+                                <p class="helper-tit">로그인에 어려움이 있으신가요?</p>
+                                <div class="helper-desc-wrap">
+                                    <ul class="info-list decimal">
+                                        <li>로그인 <a href="#" class="link-txt">관련 도움말</a>이나 다른 사용자가 <a href="#"
+                                                class="link-txt">자주 찾는
+                                                질문</a>을 확인해보세요.</li>
+                                        <li>02-3703-2500 (내선번호 4번)으로 전화주세요. 서비스에 로그인할 수 있도록 도와드리겠습니다.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- //도움박스 -->
+                        </section>
+                    </div>
+                    <!-- //tab contents -->
+                </div>
+            </div>
+            <div class="com_11">
+                <!-- table list -->
+
+                <h3>[ 기본 테이블 ]</h3>
+
+                <div class="tbl-wrap">
+                    <table class="tbl">
+                        <caption>추가 민원 신청 여부 확인 표로 민원 신청인, 구분으로 구성되어있으며 민원 신청인인 전출지 전 세대주,새로운 세대주,전입지
+                            세대주로 구성되어 있음</caption>
+                        <colgroup>
+                            <col style="width: 30%;">
+                            <col>
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th scope="col">민원 신청인</th>
+                                <th scope="col">구분</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">전출지 전 세대주</th>
+                                <td>세대주가 아닌 세대원이 신청하면서 세대주(또는 미성년자)를 포함하여 이사하는 경우</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">새로운 세대주</th>
+                                <td>세대주 변경이 있는 경우</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">전입지 세대주</th>
+                                <td>이사온 곳에 기존에 살고 있는 세대주가 있는 경우</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- //table list -->
+
+
+                <h3>[ 스크롤시 head 고정 ]</h3>
+
+                <!-- table scroll list -->
+                <div class="tbl-wrap scr-bar">
+                    <table>
+                        <caption>추가 민원 신청 여부 확인 표로 민원 신청인, 구분으로 구성되어있으며 민원 신청인인 전출지 전 세대주,새로운 세대주,전입지
+                            세대주로 구성되어 있음</caption>
+                        <colgroup>
+                            <col style="width: 30%;">
+                            <col>
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th scope="col">민원 신청인</th>
+                                <th scope="col">구분</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">전출지 전 세대주</th>
+                                <td>세대주가 아닌 세대원이 신청하면서 세대주(또는 미성년자)를 포함하여 이사하는 경우</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">새로운 세대주</th>
+                                <td>세대주 변경이 있는 경우</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">전입지 세대주</th>
+                                <td>이사온 곳에 기존에 살고 있는 세대주가 있는 경우</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">전입지 세대주</th>
+                                <td>이사온 곳에 기존에 살고 있는 세대주가 있는 경우</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">전입지 세대주</th>
+                                <td>이사온 곳에 기존에 살고 있는 세대주가 있는 경우</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">전입지 세대주</th>
+                                <td>이사온 곳에 기존에 살고 있는 세대주가 있는 경우</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">전입지 세대주</th>
+                                <td>이사온 곳에 기존에 살고 있는 세대주가 있는 경우</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">전입지 세대주</th>
+                                <td>이사온 곳에 기존에 살고 있는 세대주가 있는 경우</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- //table list -->
+            </div>
+            <div class="com_12">
+                <!-- 링크버튼 -->
+                <a href="#" class="btn btn-txt ico-arr sm underline">링크</a>
+                <button type="button" class="btn sm btn-txt ico-go">바로가기</button>
+                <button type="button" class="btn sm btn-txt ico-more">자세히 보기</button>
+                <!-- //링크버튼 -->
+            </div>
             <div class="com_13"></div>
         </div>
     </div>
