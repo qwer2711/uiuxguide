@@ -1,0 +1,118 @@
+//btn chips
+/* dddddd */
+
+//btn chips
+@mixin btn-chip($name, $default) {
+  @if ($name == "outline") {
+    @each $type, $size in map-get($btnChipOutline, "setting") {
+      @each $key, $value in $size {
+        @if ($type == "h") {
+          @at-root .btn-chip-outline.#{$key} {
+            height: var(--#{$prefix}btnChipOutline-h-#{$key});
+            padding: var(--#{$prefix}btnChipOutline-pd-#{$key});
+            border-radius: var(--#{$prefix}btnChipOutline-rd-#{$key});
+            font-size: var(--#{$prefix}btnChipOutline-fz-#{$key});
+            .btn-del {
+              width: var(--#{$prefix}btnChipOutline-size-#{$key});
+              height: var(--#{$prefix}btnChipOutline-size-#{$key});
+              background: url(#{$url}/ico/components/common/ico_chip_del.svg)
+                no-repeat 0 0;
+              background-size: contain;
+            }
+          }
+        }
+
+        @if ($default) {
+          @at-root .btn-chip-outline {
+            height: var(--#{$prefix}btnChipOutline-h-#{$default});
+            padding: var(--#{$prefix}btnChipOutline-pd-#{$default});
+            border-radius: var(--#{$prefix}btnChipOutline-rd-#{$default});
+            font-size: var(--#{$prefix}btnChipOutline-fz-#{$default});
+            .btn-del {
+              width: var(--#{$prefix}btnChipOutline-size-#{$default});
+              height: var(--#{$prefix}btnChipOutline-size-#{$default});
+              background: url(#{$url}/ico/components/common/ico_chip_del.svg)
+                no-repeat 0 0;
+              background-size: contain;
+              &:focus {
+                @include focus($offset: 0.4rem);
+              }
+            }
+          }
+        }
+      }
+    }
+  } @else if ($name == "fill") {
+    @each $type, $size in map-get($btnChipFill, "setting") {
+      @each $key, $value in $size {
+        @if ($type == "h") {
+          @at-root .btn-chip-fill.#{$key} {
+            height: var(--#{$prefix}btnChipFill-h-#{$key});
+            padding: var(--#{$prefix}btnChipFill-pd-#{$key});
+            border-radius: var(--#{$prefix}btnChipFill-rd-#{$key});
+            font-size: var(--#{$prefix}btnChipFill-fz-#{$key});
+          }
+        }
+
+        @if ($default) {
+          @at-root .btn-chip-fill {
+            height: var(--#{$prefix}btnChipFill-h-#{$default});
+            padding: var(--#{$prefix}btnChipFill-pd-#{$default});
+            border-radius: var(--#{$prefix}btnChipFill-rd-#{$default});
+            font-size: var(--#{$prefix}btnChipFill-fz-#{$default});
+            &:focus {
+              @include focus($offset: 0.4rem);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+//btn setting
+@include btn-chip(fill, lg);
+@include btn-chip(outline, lg);
+
+/* **** button : chips **** */
+// 배경색이 있는 타입
+.btn-chip-fill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--#{$prefix}gray-10);
+  color: var(--#{$prefix}--#{$prefix}gray-90);
+
+  &:hover {
+    background-color: var(--#{$prefix}secondary-5);
+  }
+  &:active {
+    background-color: var(--#{$prefix}secondary-10);
+  }
+  &[disabled],
+  &.disabled {
+    background-color: var(--#{$prefix}gray-30);
+  }
+}
+
+//외곽 라인이 있는 타입
+.btn-chip-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  gap: 0.2rem;
+  background-color: var(--#{$prefix}white);
+  border: 0.1rem solid var(--#{$prefix}gray-40);
+  color: var(--#{$prefix}--#{$prefix}gray-90);
+
+  &:hover {
+    background-color: var(--#{$prefix}secondary-5);
+  }
+  &:active {
+    background-color: var(--#{$prefix}secondary-10);
+  }
+  &:disabled,
+  &.disabled {
+    background-color: var(--#{$prefix}gray-30);
+  }
+}

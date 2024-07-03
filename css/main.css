@@ -999,6 +999,47 @@ caption {
   align-items: end;
 }
 
+/* gap */
+.gap-1 {
+  gap: var(--krds-spacer-1);
+}
+
+.gap-2 {
+  gap: var(--krds-spacer-2);
+}
+
+.gap-1 {
+  gap: var(--krds-spacer-3);
+}
+
+.gap-1 {
+  gap: var(--krds-spacer-4);
+}
+
+.gap-1 {
+  gap: var(--krds-spacer-5);
+}
+
+.gap-1 {
+  gap: var(--krds-spacer-6);
+}
+
+.gap-1 {
+  gap: var(--krds-spacer-7);
+}
+
+.gap-1 {
+  gap: var(--krds-spacer-8);
+}
+
+.gap-1 {
+  gap: var(--krds-spacer-9);
+}
+
+.gap-1 {
+  gap: var(--krds-spacer-10);
+}
+
 /* ************** 공통class_02 :: Width / Height ************** */
 .wd-100 {
   width: 100%;
@@ -3069,42 +3110,6 @@ table td {
   padding: var(--krds-spacer-default2) !important;
 }
 
-/* **** button : chips **** */
-.btn-chip-fill {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  background-color: var(--krds-gray-10);
-}
-.btn-chip-fill:hover {
-  background-color: var(--krds-secondary-5);
-}
-.btn-chip-fill:active {
-  background-color: var(--krds-secondary-10);
-}
-.btn-chip-fill[disabled], .btn-chip-fill.disabled {
-  background-color: var(--krds-gray-30);
-}
-
-.btn-chip-outline {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  gap: 0.2rem;
-  background-color: var(--krds-white);
-  border: 0.1rem solid var(--krds-gray-40);
-}
-.btn-chip-outline:hover {
-  background-color: var(--krds-secondary-5);
-}
-.btn-chip-outline:active {
-  background-color: var(--krds-secondary-10);
-}
-.btn-chip-outline:disabled, .btn-chip-outline.disabled {
-  background-color: var(--krds-gray-30);
-}
-
 /* **** button area **** */
 .btn-wrap {
   width: 100%;
@@ -3410,6 +3415,377 @@ textarea {
   border-radius: var(--krds-select-rd-sm);
   font-size: var(--krds-select-fz-sm);
   background-size: var(--krds-select-bgs-sm);
+}
+
+/* dddddd */
+.btn-chip-fill.md {
+  height: var(--krds-btnChipFill-h-md);
+  padding: var(--krds-btnChipFill-pd-md);
+  border-radius: var(--krds-btnChipFill-rd-md);
+  font-size: var(--krds-btnChipFill-fz-md);
+}
+
+.btn-chip-fill {
+  height: var(--krds-btnChipFill-h-lg);
+  padding: var(--krds-btnChipFill-pd-lg);
+  border-radius: var(--krds-btnChipFill-rd-lg);
+  font-size: var(--krds-btnChipFill-fz-lg);
+}
+.btn-chip-fill:focus {
+  outline-offset: 0.4rem;
+  outline: 2px solid rgba(36, 107, 235, 0.8);
+}
+
+.btn-chip-fill.lg {
+  height: var(--krds-btnChipFill-h-lg);
+  padding: var(--krds-btnChipFill-pd-lg);
+  border-radius: var(--krds-btnChipFill-rd-lg);
+  font-size: var(--krds-btnChipFill-fz-lg);
+}
+
+.btn-chip-fill {
+  height: var(--krds-btnChipFill-h-lg);
+  padding: var(--krds-btnChipFill-pd-lg);
+  border-radius: var(--krds-btnChipFill-rd-lg);
+  font-size: var(--krds-btnChipFill-fz-lg);
+}
+.btn-chip-fill:focus {
+  outline-offset: 0.4rem;
+  outline: 2px solid rgba(36, 107, 235, 0.8);
+}
+
+.btn-chip-fill {
+  height: var(--krds-btnChipFill-h-lg);
+  padding: var(--krds-btnChipFill-pd-lg);
+  border-radius: var(--krds-btnChipFill-rd-lg);
+  font-size: var(--krds-btnChipFill-fz-lg);
+}
+.btn-chip-fill:focus {
+  outline-offset: 0.4rem;
+  outline: 2px solid rgba(36, 107, 235, 0.8);
+}
+
+.btn-chip-fill {
+  height: var(--krds-btnChipFill-h-lg);
+  padding: var(--krds-btnChipFill-pd-lg);
+  border-radius: var(--krds-btnChipFill-rd-lg);
+  font-size: var(--krds-btnChipFill-fz-lg);
+}
+.btn-chip-fill:focus {
+  outline-offset: 0.4rem;
+  outline: 2px solid rgba(36, 107, 235, 0.8);
+}
+
+.btn-chip-fill {
+  height: var(--krds-btnChipFill-h-lg);
+  padding: var(--krds-btnChipFill-pd-lg);
+  border-radius: var(--krds-btnChipFill-rd-lg);
+  font-size: var(--krds-btnChipFill-fz-lg);
+}
+.btn-chip-fill:focus {
+  outline-offset: 0.4rem;
+  outline: 2px solid rgba(36, 107, 235, 0.8);
+}
+
+.btn-chip-fill {
+  height: var(--krds-btnChipFill-h-lg);
+  padding: var(--krds-btnChipFill-pd-lg);
+  border-radius: var(--krds-btnChipFill-rd-lg);
+  font-size: var(--krds-btnChipFill-fz-lg);
+}
+.btn-chip-fill:focus {
+  outline-offset: 0.4rem;
+  outline: 2px solid rgba(36, 107, 235, 0.8);
+}
+
+.btn-chip-fill {
+  height: var(--krds-btnChipFill-h-lg);
+  padding: var(--krds-btnChipFill-pd-lg);
+  border-radius: var(--krds-btnChipFill-rd-lg);
+  font-size: var(--krds-btnChipFill-fz-lg);
+}
+.btn-chip-fill:focus {
+  outline-offset: 0.4rem;
+  outline: 2px solid rgba(36, 107, 235, 0.8);
+}
+
+.btn-chip-fill {
+  height: var(--krds-btnChipFill-h-lg);
+  padding: var(--krds-btnChipFill-pd-lg);
+  border-radius: var(--krds-btnChipFill-rd-lg);
+  font-size: var(--krds-btnChipFill-fz-lg);
+}
+.btn-chip-fill:focus {
+  outline-offset: 0.4rem;
+  outline: 2px solid rgba(36, 107, 235, 0.8);
+}
+
+.btn-chip-outline.md {
+  height: var(--krds-btnChipOutline-h-md);
+  padding: var(--krds-btnChipOutline-pd-md);
+  border-radius: var(--krds-btnChipOutline-rd-md);
+  font-size: var(--krds-btnChipOutline-fz-md);
+}
+.btn-chip-outline.md .btn-del {
+  width: var(--krds-btnChipOutline-size-md);
+  height: var(--krds-btnChipOutline-size-md);
+  background: url(../../images/ico/components/common/ico_chip_del.svg) no-repeat 0 0;
+  background-size: contain;
+}
+
+.btn-chip-outline {
+  height: var(--krds-btnChipOutline-h-lg);
+  padding: var(--krds-btnChipOutline-pd-lg);
+  border-radius: var(--krds-btnChipOutline-rd-lg);
+  font-size: var(--krds-btnChipOutline-fz-lg);
+}
+.btn-chip-outline .btn-del {
+  width: var(--krds-btnChipOutline-size-lg);
+  height: var(--krds-btnChipOutline-size-lg);
+  background: url(../../images/ico/components/common/ico_chip_del.svg) no-repeat 0 0;
+  background-size: contain;
+}
+.btn-chip-outline .btn-del:focus {
+  outline-offset: 0.4rem;
+  outline: 2px solid rgba(36, 107, 235, 0.8);
+}
+
+.btn-chip-outline.lg {
+  height: var(--krds-btnChipOutline-h-lg);
+  padding: var(--krds-btnChipOutline-pd-lg);
+  border-radius: var(--krds-btnChipOutline-rd-lg);
+  font-size: var(--krds-btnChipOutline-fz-lg);
+}
+.btn-chip-outline.lg .btn-del {
+  width: var(--krds-btnChipOutline-size-lg);
+  height: var(--krds-btnChipOutline-size-lg);
+  background: url(../../images/ico/components/common/ico_chip_del.svg) no-repeat 0 0;
+  background-size: contain;
+}
+
+.btn-chip-outline {
+  height: var(--krds-btnChipOutline-h-lg);
+  padding: var(--krds-btnChipOutline-pd-lg);
+  border-radius: var(--krds-btnChipOutline-rd-lg);
+  font-size: var(--krds-btnChipOutline-fz-lg);
+}
+.btn-chip-outline .btn-del {
+  width: var(--krds-btnChipOutline-size-lg);
+  height: var(--krds-btnChipOutline-size-lg);
+  background: url(../../images/ico/components/common/ico_chip_del.svg) no-repeat 0 0;
+  background-size: contain;
+}
+.btn-chip-outline .btn-del:focus {
+  outline-offset: 0.4rem;
+  outline: 2px solid rgba(36, 107, 235, 0.8);
+}
+
+.btn-chip-outline {
+  height: var(--krds-btnChipOutline-h-lg);
+  padding: var(--krds-btnChipOutline-pd-lg);
+  border-radius: var(--krds-btnChipOutline-rd-lg);
+  font-size: var(--krds-btnChipOutline-fz-lg);
+}
+.btn-chip-outline .btn-del {
+  width: var(--krds-btnChipOutline-size-lg);
+  height: var(--krds-btnChipOutline-size-lg);
+  background: url(../../images/ico/components/common/ico_chip_del.svg) no-repeat 0 0;
+  background-size: contain;
+}
+.btn-chip-outline .btn-del:focus {
+  outline-offset: 0.4rem;
+  outline: 2px solid rgba(36, 107, 235, 0.8);
+}
+
+.btn-chip-outline {
+  height: var(--krds-btnChipOutline-h-lg);
+  padding: var(--krds-btnChipOutline-pd-lg);
+  border-radius: var(--krds-btnChipOutline-rd-lg);
+  font-size: var(--krds-btnChipOutline-fz-lg);
+}
+.btn-chip-outline .btn-del {
+  width: var(--krds-btnChipOutline-size-lg);
+  height: var(--krds-btnChipOutline-size-lg);
+  background: url(../../images/ico/components/common/ico_chip_del.svg) no-repeat 0 0;
+  background-size: contain;
+}
+.btn-chip-outline .btn-del:focus {
+  outline-offset: 0.4rem;
+  outline: 2px solid rgba(36, 107, 235, 0.8);
+}
+
+.btn-chip-outline {
+  height: var(--krds-btnChipOutline-h-lg);
+  padding: var(--krds-btnChipOutline-pd-lg);
+  border-radius: var(--krds-btnChipOutline-rd-lg);
+  font-size: var(--krds-btnChipOutline-fz-lg);
+}
+.btn-chip-outline .btn-del {
+  width: var(--krds-btnChipOutline-size-lg);
+  height: var(--krds-btnChipOutline-size-lg);
+  background: url(../../images/ico/components/common/ico_chip_del.svg) no-repeat 0 0;
+  background-size: contain;
+}
+.btn-chip-outline .btn-del:focus {
+  outline-offset: 0.4rem;
+  outline: 2px solid rgba(36, 107, 235, 0.8);
+}
+
+.btn-chip-outline {
+  height: var(--krds-btnChipOutline-h-lg);
+  padding: var(--krds-btnChipOutline-pd-lg);
+  border-radius: var(--krds-btnChipOutline-rd-lg);
+  font-size: var(--krds-btnChipOutline-fz-lg);
+}
+.btn-chip-outline .btn-del {
+  width: var(--krds-btnChipOutline-size-lg);
+  height: var(--krds-btnChipOutline-size-lg);
+  background: url(../../images/ico/components/common/ico_chip_del.svg) no-repeat 0 0;
+  background-size: contain;
+}
+.btn-chip-outline .btn-del:focus {
+  outline-offset: 0.4rem;
+  outline: 2px solid rgba(36, 107, 235, 0.8);
+}
+
+.btn-chip-outline {
+  height: var(--krds-btnChipOutline-h-lg);
+  padding: var(--krds-btnChipOutline-pd-lg);
+  border-radius: var(--krds-btnChipOutline-rd-lg);
+  font-size: var(--krds-btnChipOutline-fz-lg);
+}
+.btn-chip-outline .btn-del {
+  width: var(--krds-btnChipOutline-size-lg);
+  height: var(--krds-btnChipOutline-size-lg);
+  background: url(../../images/ico/components/common/ico_chip_del.svg) no-repeat 0 0;
+  background-size: contain;
+}
+.btn-chip-outline .btn-del:focus {
+  outline-offset: 0.4rem;
+  outline: 2px solid rgba(36, 107, 235, 0.8);
+}
+
+.btn-chip-outline {
+  height: var(--krds-btnChipOutline-h-lg);
+  padding: var(--krds-btnChipOutline-pd-lg);
+  border-radius: var(--krds-btnChipOutline-rd-lg);
+  font-size: var(--krds-btnChipOutline-fz-lg);
+}
+.btn-chip-outline .btn-del {
+  width: var(--krds-btnChipOutline-size-lg);
+  height: var(--krds-btnChipOutline-size-lg);
+  background: url(../../images/ico/components/common/ico_chip_del.svg) no-repeat 0 0;
+  background-size: contain;
+}
+.btn-chip-outline .btn-del:focus {
+  outline-offset: 0.4rem;
+  outline: 2px solid rgba(36, 107, 235, 0.8);
+}
+
+.btn-chip-outline {
+  height: var(--krds-btnChipOutline-h-lg);
+  padding: var(--krds-btnChipOutline-pd-lg);
+  border-radius: var(--krds-btnChipOutline-rd-lg);
+  font-size: var(--krds-btnChipOutline-fz-lg);
+}
+.btn-chip-outline .btn-del {
+  width: var(--krds-btnChipOutline-size-lg);
+  height: var(--krds-btnChipOutline-size-lg);
+  background: url(../../images/ico/components/common/ico_chip_del.svg) no-repeat 0 0;
+  background-size: contain;
+}
+.btn-chip-outline .btn-del:focus {
+  outline-offset: 0.4rem;
+  outline: 2px solid rgba(36, 107, 235, 0.8);
+}
+
+.btn-chip-outline {
+  height: var(--krds-btnChipOutline-h-lg);
+  padding: var(--krds-btnChipOutline-pd-lg);
+  border-radius: var(--krds-btnChipOutline-rd-lg);
+  font-size: var(--krds-btnChipOutline-fz-lg);
+}
+.btn-chip-outline .btn-del {
+  width: var(--krds-btnChipOutline-size-lg);
+  height: var(--krds-btnChipOutline-size-lg);
+  background: url(../../images/ico/components/common/ico_chip_del.svg) no-repeat 0 0;
+  background-size: contain;
+}
+.btn-chip-outline .btn-del:focus {
+  outline-offset: 0.4rem;
+  outline: 2px solid rgba(36, 107, 235, 0.8);
+}
+
+.btn-chip-outline {
+  height: var(--krds-btnChipOutline-h-lg);
+  padding: var(--krds-btnChipOutline-pd-lg);
+  border-radius: var(--krds-btnChipOutline-rd-lg);
+  font-size: var(--krds-btnChipOutline-fz-lg);
+}
+.btn-chip-outline .btn-del {
+  width: var(--krds-btnChipOutline-size-lg);
+  height: var(--krds-btnChipOutline-size-lg);
+  background: url(../../images/ico/components/common/ico_chip_del.svg) no-repeat 0 0;
+  background-size: contain;
+}
+.btn-chip-outline .btn-del:focus {
+  outline-offset: 0.4rem;
+  outline: 2px solid rgba(36, 107, 235, 0.8);
+}
+
+.btn-chip-outline {
+  height: var(--krds-btnChipOutline-h-lg);
+  padding: var(--krds-btnChipOutline-pd-lg);
+  border-radius: var(--krds-btnChipOutline-rd-lg);
+  font-size: var(--krds-btnChipOutline-fz-lg);
+}
+.btn-chip-outline .btn-del {
+  width: var(--krds-btnChipOutline-size-lg);
+  height: var(--krds-btnChipOutline-size-lg);
+  background: url(../../images/ico/components/common/ico_chip_del.svg) no-repeat 0 0;
+  background-size: contain;
+}
+.btn-chip-outline .btn-del:focus {
+  outline-offset: 0.4rem;
+  outline: 2px solid rgba(36, 107, 235, 0.8);
+}
+
+/* **** button : chips **** */
+.btn-chip-fill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--krds-gray-10);
+  color: var(--krds---krds-gray-90);
+}
+.btn-chip-fill:hover {
+  background-color: var(--krds-secondary-5);
+}
+.btn-chip-fill:active {
+  background-color: var(--krds-secondary-10);
+}
+.btn-chip-fill[disabled], .btn-chip-fill.disabled {
+  background-color: var(--krds-gray-30);
+}
+
+.btn-chip-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  gap: 0.2rem;
+  background-color: var(--krds-white);
+  border: 0.1rem solid var(--krds-gray-40);
+  color: var(--krds---krds-gray-90);
+}
+.btn-chip-outline:hover {
+  background-color: var(--krds-secondary-5);
+}
+.btn-chip-outline:active {
+  background-color: var(--krds-secondary-10);
+}
+.btn-chip-outline:disabled, .btn-chip-outline.disabled {
+  background-color: var(--krds-gray-30);
 }
 
 .form-group {

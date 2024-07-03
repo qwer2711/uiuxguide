@@ -41,6 +41,39 @@
   align-items: end;
 }
 
+/* gap */
+
+.gap-1 {
+  gap: var(--krds-spacer-1);
+}
+.gap-2 {
+  gap: var(--krds-spacer-2);
+}
+.gap-1 {
+  gap: var(--krds-spacer-3);
+}
+.gap-1 {
+  gap: var(--krds-spacer-4);
+}
+.gap-1 {
+  gap: var(--krds-spacer-5);
+}
+.gap-1 {
+  gap: var(--krds-spacer-6);
+}
+.gap-1 {
+  gap: var(--krds-spacer-7);
+}
+.gap-1 {
+  gap: var(--krds-spacer-8);
+}
+.gap-1 {
+  gap: var(--krds-spacer-9);
+}
+.gap-1 {
+  gap: var(--krds-spacer-10);
+}
+
 /* ************** 공통class_02 :: Width / Height ************** */
 .wd-100 {
   width: 100%;
