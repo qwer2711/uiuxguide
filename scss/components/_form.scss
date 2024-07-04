@@ -1,0 +1,285 @@
+/* form area */
+.fieldset {
+  display: flex;
+  flex-direction: column;
+  gap: var(--#{$prefix}spacer-6);
+}
+
+// 개인정보식별입력폼
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--#{$prefix}spacer-3);
+  width: 100%;
+  .form-tit {
+    width: 100%;
+  }
+  .form-conts {
+    display: flex;
+    flex-direction: column;
+    gap: var(--krds-spacer-3);
+    width: 100%;
+    &.keyword-sch {
+      width: 58.8rem;
+    }
+    .form-label {
+      display: flex;
+      // font-size: 1.5rem;
+      font-size: var(--#{$prefix}fz-label-sm);
+      width: 100%;
+    }
+    &.btn-ico-wrap {
+      //input안에 button 노출
+      position: relative;
+      .form-control {
+        padding-right: var(--#{$prefix}spacer-14);
+      }
+      .btn {
+        @include position($t: 50%, $r: 1.6rem);
+        transform: translateY(-50%);
+      }
+    }
+    &.datepicker-conts {
+      gap: 0;
+    }
+    .form-check {
+      .form-check-cnt {
+        margin-top: 1.2rem;
+        .form-check-p {
+          color: var(--#{$prefix}gray-70);
+        }
+      }
+    }
+  }
+  > p {
+    width: 100%;
+  }
+  [class^="form-hint"] {
+    $value: calc(2rem + var(--#{$prefix}spacer-1));
+    font-size: var(--#{$prefix}fz-label-sm);
+    color: var(--#{$prefix}gray-70);
+    padding-left: $value;
+    &::before {
+      display: inline-flex;
+      @include foursquare(2rem);
+      @include flex-size(0, 0);
+      @include pseudo();
+      margin-left: calc($value * -1);
+      margin-right: var(--#{$prefix}spacer-1);
+      vertical-align: top;
+      background: url(#{$url}/ico/components/common/ico_hint.svg) no-repeat
+        center;
+      background-size: contain;
+    }
+  }
+  .is-error {
+    ~ .form-hint-invalid {
+      color: var(--#{$prefix}point);
+      &::before {
+        background-color: transparent;
+        background-image: url(#{$url}/ico/components/common/ico_hint_error.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+      }
+    }
+  }
+}
+
+/* 신청하기 검색 폼 */
+.search-top-box {
+  .sch-form-wrap {
+    margin-bottom: var(--#{$prefix}spacer-10);
+    .input-group {
+      width: 48rem;
+      .sch-input {
+        flex: 1;
+        .form-control {
+          width: 100%;
+        }
+      }
+    }
+    .sch-input {
+      .form-control {
+        width: 54.8rem;
+      }
+    }
+  }
+
+  .sch-filter-box {
+    padding: var(--#{$prefix}spacer-10);
+    border-radius: var(--#{$prefix}rd-12);
+    background: var(--#{$prefix}secondary-5);
+    .filter-form {
+      @include flex-layout($ai: normal);
+      gap: var(--#{$prefix}spacer-6);
+      max-width: 100%;
+      > div {
+        @include flex-layout($d: inline-flex, $ai: center);
+        gap: var(--#{$prefix}spacer-3);
+        width: 100%;
+        max-width: 25.5rem;
+      }
+      .label {
+        font-weight: map-get($fws, bold);
+        white-space: nowrap;
+        min-width: 6.3rem;
+      }
+      .form-select {
+        width: 100%;
+        max-width: 18rem;
+      }
+      .form-control {
+        width: 100%;
+        max-width: 18rem;
+      }
+    }
+    .filter-chip {
+      @include flex-layout();
+      gap: var(--#{$prefix}spacer-4);
+      margin-top: var(--#{$prefix}spacer-6);
+      padding-top: var(--#{$prefix}spacer-6);
+      border-top: 0.1rem solid var(--#{$prefix}gray-40);
+      dt {
+        display: flex;
+        align-items: center;
+        font-weight: map-get($fws, bold);
+        white-space: nowrap;
+        height: 3.2rem;
+        .num {
+          color: var(--#{$prefix}primary-60);
+        }
+      }
+      dd {
+        display: flex;
+        gap: var(--#{$prefix}spacer-2);
+        flex: 1;
+        .ico-refresh {
+          flex-shrink: 0;
+        }
+        .chip-wrap {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: flex-start;
+          gap: var(--#{$prefix}spacer-2);
+        }
+      }
+    }
+  }
+}
+
+/* ** 검색 : 공통 ** */
+/* 검색 공통 : 결과 리스트 상단 */
+.search-list-top {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--#{$prefix}spacer-10);
+  .sch-left {
+    @include flex-layout($ai: center);
+    gap: var(--#{$prefix}spacer-4);
+    .btn-txt {
+      &.sm {
+        height: 2.4rem;
+      }
+    }
+  }
+  .sch-info {
+    font-size: var(--#{$prefix}fz-title-lg);
+    font-weight: map-get($fws, bold);
+    .keyword {
+      color: var(--#{$prefix}primary-60);
+    }
+    .br {
+      display: none;
+    }
+  }
+  .sch-sort {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    li {
+      display: flex;
+      align-items: center;
+      &:not(:first-child) {
+        margin-left: var(--#{$prefix}spacer-4);
+        &::before {
+          display: inline-flex;
+          content: "";
+          width: 0.1rem;
+          height: 2rem;
+          margin-right: var(--#{$prefix}spacer-4);
+          background-color: var(--#{$prefix}gray-30);
+        }
+      }
+    }
+    .sort-label {
+      font-weight: map-get($fws, bold);
+      white-space: nowrap;
+      margin-right: var(--#{$prefix}spacer-3);
+    }
+    .sort-select {
+      color: var(--#{$prefix}gray-90);
+      padding-right: var(--#{$prefix}spacer-6);
+      border: 0;
+      background: url(#{$url}/ico/components/common/ico_select.svg) no-repeat
+        center right;
+      background-size: auto 2rem;
+    }
+    .w-sort-btn {
+      display: flex;
+      align-items: center;
+      gap: var(--#{$prefix}spacer-4);
+      button {
+        &.active {
+          text-decoration: underline;
+        }
+        &:hover {
+          border-radius: var(--#{$prefix}rd-6);
+          background-color: var(--#{$prefix}secondary-5);
+          transition: $transition-base;
+        }
+        &:active {
+          background-color: var(--#{$prefix}secondary-10);
+          transition: $transition-base;
+        }
+      }
+    }
+    .m-sort-btn {
+      display: none;
+    }
+  }
+  .side-line-ul {
+    @include flex-layout();
+    flex-wrap: wrap;
+    gap: var(--#{$prefix}spacer-4) var(--#{$prefix}spacer-2);
+    li {
+      display: inline-flex;
+      align-items: center;
+      &:not(:last-child) {
+        &::after {
+          display: inline-flex;
+          content: "";
+          width: 0.1rem;
+          height: 1.2rem;
+          margin-left: var(--#{$prefix}spacer-2);
+          background-color: var(--#{$prefix}gray-40);
+        }
+      }
+    }
+  }
+  &.type1 {
+    padding: var(--#{$prefix}spacer-10) 0;
+    &.align-top {
+      align-items: flex-start;
+      .sch-left {
+        align-items: flex-start;
+      }
+    }
+  }
+  &.type2 {
+    flex-wrap: wrap;
+    padding: var(--#{$prefix}spacer-4) 0 var(--#{$prefix}spacer-6);
+    margin-bottom: var(--#{$prefix}spacer-10);
+    border-bottom: 0.1rem solid var(--#{$prefix}gray-40);
+  }
+}

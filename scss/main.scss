@@ -10,16 +10,14 @@
 * 최종업데이트 : 2024-07-01-월
 
 ******************************************************** */
-
 /* *****************************
-* 폴더구조_01 : abstracts
+* scss 전역변수 및 mixin
 ******************************** */
-
 @import "./abstracts/variables";
 @import "./abstracts/mixins";
 
 /* *****************************
-* 폴더구조_02 : base
+* 초기화 : reset
 ******************************** */
 @import "./base/reset";
 @import "./base/root";
@@ -29,7 +27,7 @@
 @import "./base/icon";
 
 /* *****************************
-* 폴더구조_03 : layout
+* 레이아웃 : layout
 ******************************** */
 @import "./layout/header";
 @import "./layout/footer";
@@ -38,7 +36,7 @@
 @import "./layout/container";
 
 /* *****************************
-* 폴더구조_04 : components
+* 모든 컴포넌트
 ******************************** */
 @import "./components/skipnavigation";
 @import "./components/breadcrumb";
@@ -46,7 +44,8 @@
 @import "./components/pagenation";
 @import "./components/calendar";
 @import "./components/disclosure";
-@import "./components/form_input";
+@import "./components/input";
+@import "./components/form";
 @import "./components/modal";
 @import "./components/badge";
 @import "./components/accordion";
@@ -62,8 +61,6 @@
 @import "./components/step_indicator";
 @import "./components/spinner";
 @import "./components/tooltip";
-@import "./components/date_input";
-@import "./components/text_input";
 @import "./components/textarea";
 @import "./components/file_upload";
 @import "./components/personal_information";
@@ -71,8 +68,9 @@
 @import "./components/error";
 @import "./components/login_form";
 @import "./components/filtering_form";
+@import "./components/go_top";
 
 /* *****************************
-* 폴더구조_05 : pages
+* 페이지 : pages
 ******************************** */
 @import "./pages/home";

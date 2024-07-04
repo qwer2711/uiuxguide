@@ -2,6 +2,7 @@
 /* @import variables.scss */
 // 설명 :: Scss 환경 전역변수
 
+
 //prefix
 $prefix: krds- !default;
 
@@ -150,7 +151,6 @@ $spacers: (
 //font style
 $font-family-base: "Pretendard GOV", sans-serif !default;
 $font-size-root: 62.5% !default; //10px 1rem으로 설정
-//$font-size-base: 1rem !default;
 
 $font-size: (
   sizes: (

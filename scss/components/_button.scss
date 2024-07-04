@@ -1,31 +1,3 @@
-//btn reset
-@mixin btn-reset {
-  color: inherit;
-  border: 0;
-  background-color: inherit;
-  &:hover,
-  &:active {
-    background-color: inherit;
-  }
-}
-
-//reset text : popover/tooltip
-@mixin reset-text {
-  font-family: var(--#{$prefix}-fz-body-md);
-  font-style: normal;
-  font-weight: map-get($fws, normal);
-  line-height: $line-height-base;
-  text-align: left;
-  text-decoration: none;
-  text-shadow: none;
-  text-transform: none;
-  letter-spacing: normal;
-  //word-break: normal;
-  white-space: normal;
-  word-spacing: normal;
-  line-break: auto;
-}
-
 .btn {
   //default : primary color height lg
   $size: lg;
@@ -165,7 +137,7 @@
   &.ico-sch {
     &::before,
     &::after {
-      background-image: url(#{$url}/ico/components/common/ico_select.svg/ico_sch_20_wh.svg);
+      background-image: url(#{$url}/ico/components/common/ico_sch.svg);
     }
   }
   &.ico-arr {
@@ -177,7 +149,7 @@
   &.ico-upload {
     &::before,
     &::after {
-      background-image: url(#{$url}/ico/components/common/ico_select.svg);
+      background-image: url(#{$url}/ico/components/common/ico_upload_wh.svg);
     }
   }
   &.xsm {
@@ -437,6 +409,95 @@
   &.h-auto {
     height: auto;
     padding: var(--#{$prefix}spacer-default2) !important;
+  }
+}
+
+/* **** button : only icon **** */
+.btn-ico {
+  @include btn-reset;
+  padding: 0 !important;
+  &:focus {
+    @include focus($offset: 0.4rem);
+  }
+  &[class*="ico-"] {
+    width: 4rem;
+    height: 4rem;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    &::after {
+      display: none;
+    }
+    &.md {
+      width: 2.4rem;
+      height: 2.4rem;
+    }
+    &.sm {
+      width: 2rem;
+      height: 2rem;
+    }
+    &.sm-m {
+      width: 2.4rem;
+      height: 2.4rem;
+    }
+    &.sm-l {
+      width: 3.2rem;
+      height: 3.2rem;
+    }
+    &.xsm {
+      width: 1.6rem;
+      height: 1.6rem;
+    }
+  }
+  &.ico-sch {
+    background-image: url(#{$url}/ico/components/common/ico_sch.svg);
+  }
+  &.ico-info {
+    background-image: url(#{$url}/pattern/common/ico_info.svg);
+    &.sm {
+      background-position: center;
+      background-size: 1.6rem;
+    }
+  }
+  &.ico-refresh {
+    border-radius: 10rem;
+    border: 0.1rem solid var(--#{$prefix}gray-40);
+    background-color: var(--#{$prefix}white);
+    background-image: url(#{$url}/ico/components/common/ico_refresh.svg);
+    background-size: 1.6rem;
+  }
+  &.ico-toggle-r {
+    border-radius: 10rem;
+    border: 0.1rem solid var(--#{$prefix}gray-40);
+    background-color: var(--#{$prefix}white);
+    background-image: url(#{$url}/component/common/ico_arr_16_down.svg);
+    background-size: 1.6rem;
+  }
+  &.ico-pw-visible {
+    background-image: url(#{$url}/component/common/ico_pw_visible.svg);
+  }
+  &.ico-help {
+    background-image: url(#{$url}/component/common/ico_help_24.svg);
+  }
+  &.ico-page-prev {
+    border-radius: 10rem;
+    border: 0.1rem solid var(--#{$prefix}gray-40);
+    background-color: var(--#{$prefix}white);
+    background-image: url(#{$url}/component/common/ico_swiper_prev.svg);
+    background-size: 2.4rem;
+    &.disabled {
+      background-color: var(--#{$prefix}secondary-5);
+    }
+  }
+  &.ico-page-next {
+    border-radius: 10rem;
+    border: 0.1rem solid var(--#{$prefix}gray-40);
+    background-color: var(--#{$prefix}white);
+    background-image: url(#{$url}/component/common/ico_swiper_next.svg);
+    background-size: 2.4rem;
+    &.disabled {
+      background-color: var(--#{$prefix}secondary-5);
+    }
   }
 }
 

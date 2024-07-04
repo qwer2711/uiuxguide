@@ -1,9 +1,6 @@
 .breadcrumb-wrap {
   display: flex;
-  justify-content: center;
-  display: flex;
   align-items: flex-start;
-  justify-content: center;
   flex-direction: row;
   padding-top: var(--krds-spacer-6);
 }
@@ -48,7 +45,7 @@
   content: "";
   width: 2.4rem;
   height: 2.4rem;
-  background: url(#{$url}/ico/components/common/ico_select.svg) no-repeat;
+  background: url(#{$url}/ico/components/common/ico_bread_home.svg) no-repeat;
   background-size: contain;
 }
 
@@ -61,6 +58,6 @@
   width: 1.6rem;
   height: 1.6rem;
   margin-left: var(--krds-spacer-1);
-  background: url(#{$url}/ico/components/common/ico_select.svg) no-repeat;
+  background: url(#{$url}/ico/components/common/ico_bread_arr.svg) no-repeat;
   background-size: contain;
 }

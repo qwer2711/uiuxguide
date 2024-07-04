@@ -1,0 +1,25 @@
+.go-top {
+  align-self: flex-end;
+  @include position($p: sticky, $r: 0, $b: 4rem);
+  visibility: hidden;
+  z-index: -1;
+  width: auto;
+  height: auto;
+  padding-top: var(--#{$prefix}spacer-6);
+  padding-bottom: var(--#{$prefix}spacer-2);
+  opacity: 0;
+  &::after {
+    @include position($t: var(--#{$prefix}spacer-1), $l: 50%);
+    @include pseudo();
+    width: 2rem;
+    height: 2rem;
+    background: url(#{$url}/ico/components/common/ico_select.svg) no-repeat;
+    background-size: contain;
+    transform: translateX(-50%) rotate(180deg);
+  }
+  &.active {
+    visibility: visible;
+    z-index: auto;
+    opacity: 0.75;
+  }
+}

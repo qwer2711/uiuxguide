@@ -46,6 +46,8 @@
   font-weight: 700;
 }
 
+/* ------------------------------------------ */
+
 .search-area .area-tit {
   margin-bottom: var(--#{$prefix}spacer-6);
   font-size: var(--#{$prefix}fz-title-xlg);
@@ -54,54 +56,14 @@
 .search-top-box .sch-form-wrap {
   margin-bottom: var(--#{$prefix}spacer-10);
 }
-.sch-form-wrap {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  flex-direction: row;
-  gap: var(--#{$prefix}spacer-4);
-}
-.sch-input {
-  display: flex;
-  position: relative;
-}
 
-.form-control {
-  position: relative;
-  width: 100%;
-  height: var(--#{$prefix}input-h-lg);
-  padding: 0 var(--#{$prefix}input-px-lg);
-  background-color: var(--#{$prefix}white);
-  border: 1px solid var(--#{$prefix}gray-60);
-  border-radius: var(--#{$prefix}input-rd-lg);
-  font-family: inherit;
-  font-size: var(--#{$prefix}input-fz-lg);
-  color: var(--#{$prefix}gray-90);
-  transition: 0.4s ease-in-out;
-}
-.form-control:placeholder-shown {
-  display: -webkit-box;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 1;
-}
-.search-top-box .sch-form-wrap .sch-input .form-control {
+.search-top-box .sch-input .form-control {
   width: 54.8rem;
 }
-.sch-input .form-control {
-  padding: 0 var(--#{$prefix}spacer-12) 0 var(--#{$prefix}spacer-4);
-}
-.sch-input .form-control ~ .ico-sch {
-  width: 2.4rem;
-  height: 2.4rem;
-}
-.sch-input .ico-sch {
-  position: absolute;
-  top: 50%;
-  right: var(--#{$prefix}spacer-4);
-  transform: translateY(-50%);
-}
+
+/* ------------------------------------------ */
+
+
 .search-list {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;

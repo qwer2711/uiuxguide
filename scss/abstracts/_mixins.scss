@@ -1,5 +1,6 @@
 /* @import mixins.scss */
-// 설명 :: Scss 환경 함수
+
+@import "./variables";
 
 // 반응형 mixins
 @mixin mobileLess {
@@ -31,6 +32,104 @@
   @media (max-width: $breakpoint-xlg) {
     @content;
   }
+}
+
+//btn reset
+@mixin btn-reset {
+  color: inherit;
+  border: 0;
+  background-color: inherit;
+  &:hover,
+  &:active {
+    background-color: inherit;
+  }
+}
+
+//btn chips
+/* 버튼칩 */
+@mixin btn-chip($name, $default) {
+  @if ($name == "outline") {
+    @each $type, $size in map-get($btnChipOutline, "setting") {
+      @each $key, $value in $size {
+        @if ($type == "h") {
+          @at-root .btn-chip-outline.#{$key} {
+            height: var(--#{$prefix}btnChipOutline-h-#{$key});
+            padding: var(--#{$prefix}btnChipOutline-pd-#{$key});
+            border-radius: var(--#{$prefix}btnChipOutline-rd-#{$key});
+            font-size: var(--#{$prefix}btnChipOutline-fz-#{$key});
+            .btn-del {
+              width: var(--#{$prefix}btnChipOutline-size-#{$key});
+              height: var(--#{$prefix}btnChipOutline-size-#{$key});
+              background: url(#{$url}/ico/components/common/ico_chip_del.svg)
+                no-repeat 0 0;
+              background-size: contain;
+            }
+          }
+        }
+
+        @if ($default) {
+          @at-root .btn-chip-outline {
+            height: var(--#{$prefix}btnChipOutline-h-#{$default});
+            padding: var(--#{$prefix}btnChipOutline-pd-#{$default});
+            border-radius: var(--#{$prefix}btnChipOutline-rd-#{$default});
+            font-size: var(--#{$prefix}btnChipOutline-fz-#{$default});
+            .btn-del {
+              width: var(--#{$prefix}btnChipOutline-size-#{$default});
+              height: var(--#{$prefix}btnChipOutline-size-#{$default});
+              background: url(#{$url}/ico/components/common/ico_chip_del.svg)
+                no-repeat 0 0;
+              background-size: contain;
+              &:focus {
+                @include focus($offset: 0.4rem);
+              }
+            }
+          }
+        }
+      }
+    }
+  } @else if ($name == "fill") {
+    @each $type, $size in map-get($btnChipFill, "setting") {
+      @each $key, $value in $size {
+        @if ($type == "h") {
+          @at-root .btn-chip-fill.#{$key} {
+            height: var(--#{$prefix}btnChipFill-h-#{$key});
+            padding: var(--#{$prefix}btnChipFill-pd-#{$key});
+            border-radius: var(--#{$prefix}btnChipFill-rd-#{$key});
+            font-size: var(--#{$prefix}btnChipFill-fz-#{$key});
+          }
+        }
+
+        @if ($default) {
+          @at-root .btn-chip-fill {
+            height: var(--#{$prefix}btnChipFill-h-#{$default});
+            padding: var(--#{$prefix}btnChipFill-pd-#{$default});
+            border-radius: var(--#{$prefix}btnChipFill-rd-#{$default});
+            font-size: var(--#{$prefix}btnChipFill-fz-#{$default});
+            &:focus {
+              @include focus($offset: 0.4rem);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+//reset text : popover/tooltip
+@mixin reset-text {
+  font-family: var(--#{$prefix}-fz-body-md);
+  font-style: normal;
+  font-weight: map-get($fws, normal);
+  line-height: $line-height-base;
+  text-align: left;
+  text-decoration: none;
+  text-shadow: none;
+  text-transform: none;
+  letter-spacing: normal;
+  //word-break: normal;
+  white-space: normal;
+  word-spacing: normal;
+  line-break: auto;
 }
 
 //reset text : popover/tooltip
@@ -98,4 +197,48 @@
       $spacers
     ) !global;
   }
+}
+
+//pseudo element setting
+@mixin pseudo($c: null) {
+  content: "" + $c + "";
+}
+
+//width height 같게
+@mixin foursquare($size) {
+  width: $size;
+  height: $size;
+}
+
+//flex 확대 축소
+@mixin flex-size($shrink, $grow) {
+  flex-shrink: $shrink;
+  flex-grow: $grow;
+}
+
+//group contents
+@mixin group-wrap() {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  position: relative;
+  width: 100%;
+}
+@mixin group() {
+  flex: 1 1 auto;
+  position: relative;
+  width: 1%;
+  min-width: 0;
+}
+//sr-only
+@mixin sr-only {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
 }

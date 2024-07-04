@@ -51,7 +51,8 @@ input[type="checkbox"] {
   left: calc((var(--krds-chk-size-md) - var(--krds-chk-primary-chk-md)) / 2);
   width: var(--krds-chk-primary-chk-md);
   height: var(--krds-chk-primary-chk-md);
-  background: url(#{$url}/ico/components/common/ico_select.svg) no-repeat 0 0;
+  background: url(#{$url}/ico/components/common/ico_check_primary_checked.svg)
+    no-repeat 0 0;
   background-size: contain;
   opacity: 0;
 }
@@ -72,13 +73,9 @@ input[type="checkbox"] {
 }
 
 .form-check input[type="checkbox"]:disabled ~ label:after {
-  background-image: url(#{$url}/ico/components/common/ico_select.svg);
+  background-image: url(#{$url}/ico/components/common/ico_check_primary_checked.svg);
 }
-
-.form-check input[type="checkbox"]:disabled ~ label:after {
-  background-image: url(#{$url}/ico/components/common/ico_select.svg);
-}
-
+v
 /* 크기별 */
 .form-check.sm > [type="checkbox"] ~ label {
   font-size: var(--krds-chk-fz-sm);

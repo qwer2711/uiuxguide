@@ -17,254 +17,89 @@ let winSize;
 //   }
 // }
 
-// 공통JS
-var common = (function () {
-  return {
-    init: function () {
-      if (document.getElementById("sideMenu")) {
-        common.sideMenu();
-        common.calender();
-        common.disclosure();
-        common.tab();
-        common.calenderInput();
-      }
-    },
-    sideMenu: function () {
-      const accordionHeaders = document.querySelectorAll(".side-nav-header");
-      const subAccordionHeaders = document.querySelectorAll(
-        ".sub-side-nav-header"
-      );
-
-      accordionHeaders.forEach((header) => {
-        header.addEventListener("click", function () {
-          const accordionItem = this.parentNode;
-          const content = accordionItem.querySelector(".side-nav-content");
-
-          if (!accordionItem.classList.contains("open")) {
-            closeAllAccordions();
-            accordionItem.classList.add("open");
-            // content.style.maxHeight = "100%";
-            content.style.maxHeight = content.scrollHeight + "px";
-          } else {
-            closeAllAccordions();
-            accordionItem.classList.remove("open");
-            content.style.maxHeight = "0";
-          }
+/*** * 01_skipNavGoTop * ***/
+const kds_skipNavGoTop = {
+  init: () => {
+    kds_skipNavGoTop.goTop();
+  },
+  goTop: () => {
+    /* ** 스킵네비게이션 클릭 시 scroll 맨 위로 ** */
+    const $skip = document.querySelector("#skipNav");
+    $skip.addEventListener("click", () => {
+      setTimeout(() => {
+        window.scrollTo({
+          left: 0,
+          top: 0,
+          behavior: "smooth",
         });
-      });
+      }, 300);
+    });
+  },
+};
+/*** * 02_calender * ***/
+const kds_calender = {
+  init: () => {
+    kds_calender.show();
+  },
+  show: () => {
+    var srcCalendarEl = document.getElementById("source-calendar");
 
-      subAccordionHeaders.forEach((header) => {
-        header.addEventListener("click", function () {
-          const subAccordionItem = this.parentNode;
-          const content = subAccordionItem.querySelector(
-            ".sub-side-nav-content"
-          );
-          const closest = subAccordionItem.closest(".side-nav-content");
-          closest.style.maxHeight = "100%";
+    var srcCalendar = new FullCalendar.Calendar(srcCalendarEl, {
+      editable: false,
+      headerToolbar: {
+        left: "prev,next today",
+        center: "title",
+        // right: 'dayGridMonth,timeGridWeek,timeGridDay,listWeek'
+        right: "",
+      },
+      locale: "ko",
+      titleFormat: {
+        month: "long",
+        year: "numeric",
+        day: "numeric",
+        weekday: "long",
+      },
+      fixedWeekCount: false,
+      allDaySlot: false,
+      dayCellContent: function (info) {
+        var number = document.createElement("a");
+        number.innerHTML = info.dayNumberText.replace("일", "");
+        if (info.view.type === "dayGridMonth") {
+          return { html: number.outerHTML };
+        }
+        return {
+          domNodes: [],
+        };
+      },
+      titleFormat: function (date) {
+        // title 설정
+        return date.date.year + "년 " + (date.date.month + 1) + "월";
+      },
+      events: [],
+      eventLeave: function (info) {
+        console.log("event left!", info.event);
+      },
+    });
 
-          if (!subAccordionItem.classList.contains("open")) {
-            closeAllSubAccordions();
-            subAccordionItem.classList.add("open");
-            content.style.maxHeight = content.scrollHeight + "px";
-          } else {
-            subAccordionItem.classList.remove("open");
-            content.style.maxHeight = "0";
-          }
-        });
-      });
+    srcCalendar.render();
+  },
+};
 
-      function closeAllAccordions() {
-        accordionHeaders.forEach((header) => {
-          const accordionItem = header.parentNode;
-          const content = accordionItem.querySelector(".side-nav-content");
-          accordionItem.classList.remove("open");
-          content.style.maxHeight = "0";
-        });
+/*** * 03_disclosure * ***/
+const kds_disclosure = {
+  init: () => {
+    kds_disclosure.open();
+  },
+  open: () => {
+    let disclosureBtn = document.querySelector(".conts-expand-area");
+    disclosureBtn.addEventListener("click", disclosureBtnRotate);
+    function disclosureBtnRotate(e) {
+      e.target.parentNode.classList.toggle("active");
+    }
+  },
+};
 
-        closeAllSubAccordions();
-      }
-
-      function closeAllSubAccordions() {
-        subAccordionHeaders.forEach((header) => {
-          const subAccordionItem = header.parentNode;
-          const content = subAccordionItem.querySelector(
-            ".sub-side-nav-content"
-          );
-          subAccordionItem.classList.remove("open");
-          content.style.maxHeight = "0";
-        });
-      }
-    },
-    calender: function () {
-      var srcCalendarEl = document.getElementById("source-calendar");
-
-      var srcCalendar = new FullCalendar.Calendar(srcCalendarEl, {
-        editable: false,
-        headerToolbar: {
-          left: "prev,next today",
-          center: "title",
-          // right: 'dayGridMonth,timeGridWeek,timeGridDay,listWeek'
-          right: "",
-        },
-        locale: "ko",
-        titleFormat: {
-          month: "long",
-          year: "numeric",
-          day: "numeric",
-          weekday: "long",
-        },
-        fixedWeekCount: false,
-        allDaySlot: false,
-        dayCellContent: function (info) {
-          var number = document.createElement("a");
-          number.innerHTML = info.dayNumberText.replace("일", "");
-          if (info.view.type === "dayGridMonth") {
-            return { html: number.outerHTML };
-          }
-          return {
-            domNodes: [],
-          };
-        },
-        titleFormat: function (date) {
-          // title 설정
-          return date.date.year + "년 " + (date.date.month + 1) + "월";
-        },
-        events: [],
-        eventLeave: function (info) {
-          console.log("event left!", info.event);
-        },
-      });
-
-      srcCalendar.render();
-    },
-    disclosure: function () {
-      let disclosureBtn = document.querySelector(".conts-expand-area");
-      disclosureBtn.addEventListener("click", disclosureBtnRotate);
-      function disclosureBtnRotate(e) {
-        e.target.parentNode.classList.toggle("active");
-      }
-    },
-    tab: function () {
-      /* layer tab */
-      function layerTab() {
-        const layerTabArea = document.querySelectorAll(".tab-area.layer");
-
-        /* 탭 접근성 텍스트 세팅 */
-        const tabAccText = document.createTextNode(" 선택됨");
-        const tabAccTag = document.createElement("i");
-        tabAccTag.setAttribute("class", "sr-only created");
-        tabAccTag.appendChild(tabAccText);
-
-        layerTabArea.forEach((e) => {
-          const layerTabEle = e.querySelectorAll(".tab > ul > li");
-          const tabPanel = e.querySelectorAll(".tab-conts");
-
-          function tab() {
-            layerTabEle.forEach((ele) => {
-              const control = ele.getAttribute("aria-controls");
-              const selectedTabPanel = document.getElementById(control);
-
-              if (ele.classList.contains("active")) {
-                //선택됨 텍스트 추가
-                ele.querySelector("button").append(tabAccTag);
-              }
-
-              ele.addEventListener("click", () => {
-                layerTabInitial(); //레이어탭 초기화
-
-                ele.classList.add("active");
-                ele.querySelector("button").append(tabAccTag); //선택됨 텍스트 추가
-                ele.setAttribute("aria-selected", "true");
-                selectedTabPanel.classList.add("active");
-              });
-            });
-          }
-
-          //레이어탭 초기화
-          function layerTabInitial() {
-            layerTabEle.forEach((ele) => {
-              ele.classList.remove("active");
-              ele.setAttribute("aria-selected", "false");
-              //ele.removeAttribute('style');
-              if (ele.classList.contains("active")) {
-                const text = ele.querySelector(".sr-only.created");
-                ele.querySelector("button").removeChild(text);
-              }
-            });
-            tabPanel.forEach((ele) => {
-              ele.classList.remove("active");
-              //ele.removeAttribute('style');
-            });
-          }
-          tab();
-        });
-      }
-      layerTab();
-    },
-    calenderInput: function () {
-      $(function () {
-        $("#datepicker").datepicker({
-          dateFormat: "yy-mm-dd", //달력 날짜 형태
-          showOtherMonths: true, //빈 공간에 현재월의 앞뒤월의 날짜를 표시
-          showMonthAfterYear: true, // 월- 년 순서가아닌 년도 - 월 순서
-          changeYear: true, //option값 년 선택 가능
-          changeMonth: true, //option값  월 선택 가능
-          showOn: "both", //button:버튼을 표시하고,버튼을 눌러야만 달력 표시 ^ both:버튼을 표시하고,버튼을 누르거나 input을 클릭하면 달력 표시
-          buttonImage:
-            "http://jqueryui.com/resources/demos/datepicker/images/calendar.gif", //버튼 이미지 경로
-          buttonImageOnly: true, //버튼 이미지만 깔끔하게 보이게함
-          buttonText: "선택", //버튼 호버 텍스트
-          yearSuffix: "년", //달력의 년도 부분 뒤 텍스트
-          monthNamesShort: [
-            "1월",
-            "2월",
-            "3월",
-            "4월",
-            "5월",
-            "6월",
-            "7월",
-            "8월",
-            "9월",
-            "10월",
-            "11월",
-            "12월",
-          ], //달력의 월 부분 텍스트
-          monthNames: [
-            "1월",
-            "2월",
-            "3월",
-            "4월",
-            "5월",
-            "6월",
-            "7월",
-            "8월",
-            "9월",
-            "10월",
-            "11월",
-            "12월",
-          ], //달력의 월 부분 Tooltip
-          dayNamesMin: ["일", "월", "화", "수", "목", "금", "토"], //달력의 요일 텍스트
-          dayNames: [
-            "일요일",
-            "월요일",
-            "화요일",
-            "수요일",
-            "목요일",
-            "금요일",
-            "토요일",
-          ], //달력의 요일 Tooltip
-          minDate: "-5Y", //최소 선택일자(-1D:하루전, -1M:한달전, -1Y:일년전)
-          maxDate: "+5y", //최대 선택일자(+1D:하루후, -1M:한달후, -1Y:일년후)
-        });
-
-        //초기값을 오늘 날짜로 설정해줘야 합니다.
-        $("#datepicker").datepicker("setDate", "today"); //(-1D:하루전, -1M:한달전, -1Y:일년전), (+1D:하루후, -1M:한달후, -1Y:일년후)
-      });
-    },
-  };
-})();
-
-/*** * modal * ***/
+/*** * 04_modal * ***/
 const $modalTrigger = document.querySelectorAll(".open-modal");
 const $modalCloseTrigger = document.querySelectorAll(".close-modal");
 const $kds_body = document.querySelector("body");
@@ -363,7 +198,7 @@ const kds_modal = {
   },
 };
 
-/*** * accordion * ***/
+/*** * 05_accordion * ***/
 const $accordionBtn = document.querySelectorAll(".btn-accordion");
 const kds_accordion = {
   init: () => {
@@ -393,7 +228,7 @@ const kds_accordion = {
   },
 };
 
-/*** * swiper * ***/
+/*** * 06_swiper * ***/
 const kds_swiper = {
   init: () => {
     kds_swiper.swiperList();
@@ -461,10 +296,74 @@ const kds_swiper = {
   },
 };
 
-/*** * tooltip * ***/
-const krds_tooltip = {
+/*** * 07_tab * ***/
+const kds_tab = {
   init: () => {
-    krds_tooltip.tooltipEvent();
+    kds_tab.tabSelect();
+  },
+  tabSelect: () => {
+    /* layer tab */
+    function layerTab() {
+      const layerTabArea = document.querySelectorAll(".tab-area.layer");
+
+      /* 탭 접근성 텍스트 세팅 */
+      const tabAccText = document.createTextNode(" 선택됨");
+      const tabAccTag = document.createElement("i");
+      tabAccTag.setAttribute("class", "sr-only created");
+      tabAccTag.appendChild(tabAccText);
+
+      layerTabArea.forEach((e) => {
+        const layerTabEle = e.querySelectorAll(".tab > ul > li");
+        const tabPanel = e.querySelectorAll(".tab-conts");
+
+        function tab() {
+          layerTabEle.forEach((ele) => {
+            const control = ele.getAttribute("aria-controls");
+            const selectedTabPanel = document.getElementById(control);
+
+            if (ele.classList.contains("active")) {
+              //선택됨 텍스트 추가
+              ele.querySelector("button").append(tabAccTag);
+            }
+
+            ele.addEventListener("click", () => {
+              layerTabInitial(); //레이어탭 초기화
+
+              ele.classList.add("active");
+              ele.querySelector("button").append(tabAccTag); //선택됨 텍스트 추가
+              ele.setAttribute("aria-selected", "true");
+              selectedTabPanel.classList.add("active");
+            });
+          });
+        }
+
+        //레이어탭 초기화
+        function layerTabInitial() {
+          layerTabEle.forEach((ele) => {
+            ele.classList.remove("active");
+            ele.setAttribute("aria-selected", "false");
+            //ele.removeAttribute('style');
+            if (ele.classList.contains("active")) {
+              const text = ele.querySelector(".sr-only.created");
+              ele.querySelector("button").removeChild(text);
+            }
+          });
+          tabPanel.forEach((ele) => {
+            ele.classList.remove("active");
+            //ele.removeAttribute('style');
+          });
+        }
+        tab();
+      });
+    }
+    layerTab();
+  },
+};
+
+/*** * 08_tooltip * ***/
+const kds_tooltip = {
+  init: () => {
+    kds_tooltip.tooltipEvent();
   },
   tooltipEvent: () => {
     const _toolBtns = document.querySelectorAll(".krds-tooltip-wrap .tool-btn");
@@ -533,10 +432,126 @@ const krds_tooltip = {
   },
 };
 
+/*** * 09_scrGoTop * ***/
+const kds_scrGoTop = {
+  init: () => {
+    kds_scrGoTop.goTop();
+  },
+  goTop: () => {
+    window.addEventListener("scroll", () => {
+      let scrollLocation = document.documentElement.scrollTop; // 현재 스크롤바 위치
+      let windowHeight = window.innerHeight; // 스크린 창
+      const goTopBtn = document.querySelector(".go-top");
+
+      if (scrollLocation > windowHeight) {
+        goTopBtn.classList.add("active");
+      } else {
+        goTopBtn.classList.remove("active");
+      }
+      goTopBtn.addEventListener("click", function () {
+        window.scrollTo(0, 0);
+      });
+    });
+  },
+};
+/*** * 10_sideMenu * ***/
+const kds_sideMenu = {
+  init: () => {
+    kds_sideMenu.open();
+  },
+  open: () => {
+    const accordionHeaders = document.querySelectorAll(".side-nav-header");
+    const subAccordionHeaders = document.querySelectorAll(
+      ".sub-side-nav-header"
+    );
+
+    accordionHeaders.forEach((header) => {
+      header.addEventListener("click", function () {
+        const accordionItem = this.parentNode;
+        const content = accordionItem.querySelector(".side-nav-content");
+
+        if (!accordionItem.classList.contains("open")) {
+          closeAllAccordions();
+          accordionItem.classList.add("open");
+          // content.style.maxHeight = "100%";
+          content.style.maxHeight = content.scrollHeight + "px";
+        } else {
+          closeAllAccordions();
+          accordionItem.classList.remove("open");
+          content.style.maxHeight = "0";
+        }
+      });
+    });
+
+    subAccordionHeaders.forEach((header) => {
+      header.addEventListener("click", function () {
+        const subAccordionItem = this.parentNode;
+        const content = subAccordionItem.querySelector(".sub-side-nav-content");
+        const closest = subAccordionItem.closest(".side-nav-content");
+        closest.style.maxHeight = "100%";
+
+        if (!subAccordionItem.classList.contains("open")) {
+          closeAllSubAccordions();
+          subAccordionItem.classList.add("open");
+          content.style.maxHeight = content.scrollHeight + "px";
+        } else {
+          subAccordionItem.classList.remove("open");
+          content.style.maxHeight = "0";
+        }
+      });
+    });
+
+    function closeAllAccordions() {
+      accordionHeaders.forEach((header) => {
+        const accordionItem = header.parentNode;
+        const content = accordionItem.querySelector(".side-nav-content");
+        accordionItem.classList.remove("open");
+        content.style.maxHeight = "0";
+      });
+
+      closeAllSubAccordions();
+    }
+
+    function closeAllSubAccordions() {
+      subAccordionHeaders.forEach((header) => {
+        const subAccordionItem = header.parentNode;
+        const content = subAccordionItem.querySelector(".sub-side-nav-content");
+        subAccordionItem.classList.remove("open");
+        content.style.maxHeight = "0";
+      });
+    }
+  },
+};
+
 window.addEventListener("DOMContentLoaded", function () {
-  common.init();
-  kds_modal.init();
-  kds_accordion.init();
-  kds_swiper.init();
-  krds_tooltip.init();
+  if (document.querySelector("#skipNav") !== null) {
+    kds_skipNavGoTop.init();
+  }
+  if (document.querySelector(".calendar") !== null) {
+    kds_calender.init();
+  }
+  if (document.querySelector(".krds-disclosure") !== null) {
+    kds_disclosure.init();
+  }
+  if (document.querySelector(".modal") !== null) {
+    kds_modal.init();
+  }
+  if (document.querySelector(".accordion") !== null) {
+    kds_accordion.init();
+  }
+  if (document.querySelector(".swiper") !== null) {
+    kds_swiper.init();
+  }
+  if (document.querySelector(".tab-area") !== null) {
+    kds_tab.init();
+  }
+  if (document.querySelector(".krds-tooltip-wrap") !== null) {
+    kds_tooltip.init();
+  }
+  if (document.querySelector(".go-top") !== null) {
+    kds_scrGoTop.init();
+  }
+  if (document.querySelector("#sideMenu") !== null) {
+    kds_sideMenu.init();
+  }
 });

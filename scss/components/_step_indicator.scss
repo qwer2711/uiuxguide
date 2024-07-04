@@ -1,9 +1,4 @@
-//pseudo element setting
-@mixin pseudo($c: null) {
-  content: "" + $c + "";
-}
 
-/* **** ELEMENT **** */
 /* ** step ** */
 .step-wrap {
   @include flex-layout();
