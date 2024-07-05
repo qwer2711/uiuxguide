@@ -48,34 +48,34 @@
   box-shadow: none !important;
 }
 .fc .fc-button-primary {
-  color: var(--color-primary);
+  color: var(--krds-primary);
   border-color: transparent;
   background: transparent;
 }
 .fc .fc-button-primary:hover {
-  color: var(--color-primary);
+  color: var(--krds-primary);
   border-color: transparent;
   background: var(--color-white);
 }
 .fc .fc-button-primary:disabled {
-  color: var(--color-primary);
+  color: var(--krds-primary);
   border-color: transparent;
   background: var(--color-white);
 }
 .fc .fc-button-primary:focus {
-  color: var(--color-primary);
+  color: var(--krds-primary);
   border-color: transparent;
   background: var(--color-white);
 }
 .fc .fc-button-primary:not(:disabled):active,
 .fc .fc-button-primary:not(:disabled).fc-button-active {
-  color: var(--color-primary);
+  color: var(--krds-primary);
   border-color: transparent;
   background: var(--color-white);
 }
 .fc .fc-button-primary:not(:disabled):active:focus,
 .fc .fc-button-primary:not(:disabled).fc-button-active:focus {
-  color: var(--color-primary);
+  color: var(--krds-primary);
   border-color: transparent;
   background: var(--color-white);
 }
@@ -93,21 +93,38 @@
 .fc-toolbar-chunk {
   position: absolute;
 }
-.fc-toolbar-chunk:nth-child(1) {
+
+.fc .fc-toolbar.fc-header-toolbar {
   position: relative;
+  margin-bottom: 0;
+  height: 35px;
+}
+
+.fc-toolbar-chunk:nth-child(1) {
+  position: absolute;
   width: 100%;
   height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 .fc-toolbar-chunk:nth-child(2) {
+  position: absolute;
+  width: auto;
+  top: 50%;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translate(-50%, -50%);
+}
+
+.fc-button {
+  padding: 0px !important;
 }
 
 .fc .fc-button-group {
   position: absolute;
   display: inline-flex;
   vertical-align: middle;
-  top: 44%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 60%;
@@ -121,10 +138,32 @@
   position: absolute;
   right: 0;
 }
+.fc-direction-ltr .fc-toolbar > * > :not(:first-child) {
+  margin-left: 0.75em;
+  padding: 0 10px !important;
+  background: var(--krds-primary-5) !important;
+}
 
-.fc .fc-toolbar.fc-header-toolbar {
-  margin-bottom: 0;
-  height: 35px;
+.fc-icon {
+  position: relative;
+}
+
+.fc-icon-chevron-left:before {
+  content: "\e900";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--krds-primary);
+}
+
+.fc-icon-chevron-right:before {
+  content: "\e901";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--krds-primary);
 }
 
 /* 스크롤 없애기 */

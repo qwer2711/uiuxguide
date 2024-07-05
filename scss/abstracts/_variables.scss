@@ -2,12 +2,14 @@
 /* @import variables.scss */
 // 설명 :: Scss 환경 전역변수
 
-
 //prefix
 $prefix: krds- !default;
 
 //url 대치
 $url: "../../images" !default;
+
+// layout-size
+$sideMenu-height: 300px;
 
 //colors
 $white: #fff !default;

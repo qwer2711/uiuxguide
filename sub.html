@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ko" data-device="pc">
+
+<head>
+    <meta charset="utf-8" />
+    <title>UIUX가이드라인 by박지연</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <!-- 소개 -->
+    <meta name="description" content="UIUX가이드라인" />
+    <!-- 검색엔진 -->
+    <meta name="keywords" content="UIUX가이드라인" />
+    <!-- 제작자 -->
+    <meta name="author" content="jypark" />
+    <!-- 전화, 주소, 이메일 자동링크 없앨때 -->
+    <meta name="format-detection" content="telephone=no, address=no, email=no" />
+
+    <!-- Favicon -->
+    <!-- <link rel="shortcut icon" href="favicon/favicon.png" /> -->
+
+    <!-- Icon -->
+    <link rel="stylesheet" href="">
+
+    <!-- Custom :: CSS -->
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Jquery -->
+    <script src="js/vendor/jquery.min.js"></script>
+
+    <!-- simplebar -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.js"></script> -->
+    <!-- HTLM5shiv ie6~8 -->
+    <!--[if lt IE 9]>
+      <script src="js/vendor/html5shiv.min.js"></script>
+      <script type="text/javascript">
+        alert(
+          "현재 당신이 보는 브라우저는 지원하지 않습니다. 최신 브라우저로 업데이트해주세요!"
+        );
+      </script>
+    <![endif]-->
+
+    <style>
+        .contents {
+            background: var(--krds-primary-5);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 전체 영역 -->
+    <div id="wrap" data-page="sub">
+        <!-- 헤더 영역 -->
+        <header id="header">
+            <div class="inner">
+                <h1 class="logo"><a href="index.html">로고</a></h1>
+                <nav class="gnb">
+                    <ul>
+                        <li class="on"><a href="index.html">HOME</a></li>
+                        <li><a href="#section1">Menu1</a></li>
+                        <li><a href="#section2">Menu2</a></li>
+                    </ul>
+                </nav>
+                <button type="button" class="mob-menu"><span class="sr-only">전체메뉴</span></button>
+            </div>
+        </header>
+        <!-- //헤더 영역 -->
+        <!-- 컨테이너 영역 -->
+        <div id="container" class="container flex-row">
+            <!-- 왼쪽메뉴 영역 -->
+            <aside id="sideMenu" role="sidemenu">
+                <div id="simpleBar" class="dropdown-wrap">
+                    <ul class="side-nav dropdown-ul">
+                        <li class="side-nav-item">
+                            <a href="#" class="side-nav-header flex-row justify-between align-center">
+                                <div class="left-tit flex-row justify-between align-center gap-10">
+                                    <div class="icon img-box">
+                                        <img src="" alt="home">
+                                    </div>
+                                    <span>1차메뉴1</span>
+                                </div>
+                                <i class="fa-solid fa-angle-right"></i>
+                            </a>
+                            <div class="side-nav-content">
+                                <ul class="sub-side-nav dropdown-ul">
+                                    <li class="sub-side-nav-item">
+                                        <a href="#" class="sub-side-nav-header flex-row justify-between">
+                                            <span>2차메뉴</span>
+                                            <span><i class="fa-solid fa-angle-right"></i></span>
+                                        </a>
+                                        <div class="sub-side-nav-content">
+                                            <ul class="last-side-nav dropdown-ul">
+                                                <li class="last-side-nav-item"><a href="#"
+                                                        class="last-side-nav-header">3차메뉴</a></li>
+                                                <li class="last-side-nav-item"><a href="#"
+                                                        class="last-side-nav-header">3차메뉴</a></li>
+                                                <li class="last-side-nav-item"><a href="#"
+                                                        class="last-side-nav-header">3차메뉴</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="sub-side-nav-item">
+                                        <a href="#" class="sub-side-nav-header flex-row justify-between">
+                                            <span>2차메뉴</span>
+                                            <span><i class="fa-solid fa-angle-right"></i></span>
+                                        </a>
+                                        <div class="sub-side-nav-content">
+                                            <ul class="last-side-nav dropdown-ul">
+                                                <li class="last-side-nav-item"><a href="#"
+                                                        class="last-side-nav-header">3차메뉴</a></li>
+                                                <li class="last-side-nav-item"><a href="#"
+                                                        class="last-side-nav-header">3차메뉴</a></li>
+                                                <li class="last-side-nav-item"><a href="#"
+                                                        class="last-side-nav-header">3차메뉴</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </aside>
+            <!-- //왼쪽메뉴 영역 -->
+            <!-- 컨텐츠 영역 -->
+            <section id="contents" class="contents">
+
+            </section>
+            <!-- //컨텐츠 영역 -->
+        </div>
+        <!-- //컨테이너 영역 -->
+        <!-- 푸터 영역 -->
+        <footer id="footer" class="includeJsGuide" data-include-file="layout/guide_footer.html">
+            <div class="inner">
+                <div class="logo">로고</div>
+                <div class="main-footer-wrap">
+                    <ul class="info-cs">
+                        <li><strong class="strong">전화번호 </strong><span><a
+                                    href="tel:010-4546-3388">010-1234-1234</a></span></li>
+                        <li>
+                            <strong class="strong">이메일 </strong>
+                            <span>
+                                <a href="mailto:email@email.co.kr">email@email.co.kr</a>
+                            </span>
+                        </li>
+                    </ul>
+                    <span class="copyright">Copyright 2022. Name Inc. all rights reserved.</span>
+                </div>
+            </div>
+        </footer>
+        <!-- //푸터 영역 -->
+    </div>
+    <!-- //전체 영역 -->
+
+
+    <script src="./js/common.js"></script>
+</body>
+
+</html>

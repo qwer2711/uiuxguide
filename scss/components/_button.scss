@@ -251,7 +251,7 @@
   }
   &.ico-more {
     &::after {
-      background-image: url(#{$url}/ico/components/common/ico_select.svg);
+      background-image: url(#{$url}/ico/components/common/ico_arr1_right.svg);
     }
   }
   &.ico-sch {
@@ -269,7 +269,7 @@
   &.ico-go {
     &::before,
     &::after {
-      background-image: url(#{$url}/ico/components/common/ico_select.svg);
+      background-image: url(#{$url}/ico/components/common/ico_go.svg);
     }
   }
   &.ico-down {
@@ -282,7 +282,7 @@
     position: relative;
     &::before,
     &::after {
-      background-image: url(#{$url}/ico/components/common/ico_select.svg);
+      background-image: url(#{$url}/ico/components/common/ico_filter.svg);
     }
     .num {
       display: inline-flex;
@@ -349,7 +349,7 @@
     gap: var(--#{$prefix}spacer-2);
     &::before,
     &::after {
-      background-image: url(#{$url}/ico/components/common/ico_select.svg);
+      background-image: url(#{$url}/ico/components/common/ico_del1.svg);
     }
   }
   &.ico-plus {

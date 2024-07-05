@@ -16,12 +16,16 @@
 }
 
 /* ************** 공통Container_02 :: 컨테이너 영역 ************** */
+
 #container {
   position: relative;
   top: 0;
   left: 0;
   width: 100%;
+  height: 100%;
   box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
 }
 
 #container .inner {
@@ -29,32 +33,31 @@
   margin: 0 auto;
 }
 
-[data-page="main"] #container {
-  padding: 0 0 10rem 0;
-}
-
 /* ************** 공통Container_03 :: 콘텐츠 영역 ************** */
 #contents {
   position: relative;
-  left: 0;
-  top: 0;
-  width: 100%;
+  width: calc(100% - #{$sideMenu-height});
   height: 100%;
   box-sizing: border-box;
+  background: #eee;
+}
+
+[data-page="main"] #contents {
+  width: 100%;
 }
 
 .contents > * {
   width: 100%;
 }
 
-.contents {
-  flex: 1;
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-  flex-direction: column;
-  gap: 6.4rem;
-}
+// .contents {
+//   flex: 1;
+//   display: inline-flex;
+//   align-items: flex-start;
+//   justify-content: flex-start;
+//   flex-direction: column;
+//   gap: 6.4rem;
+// }
 
 // 반응형
 @include pc {

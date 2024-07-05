@@ -241,11 +241,11 @@ const kds_swiper = {
       speed: 400,
       loop: true,
       navigation: {
-        nextEl: ".swiper-1 .swiper .swiper-button-next",
-        prevEl: ".swiper-1 .swiper .swiper-button-prev",
+        nextEl: ".swiper-1 .swiper-button-next",
+        prevEl: ".swiper-1 .swiper-button-prev",
       },
       pagination: {
-        el: ".swiper-1 .swiper .swiper-pagination",
+        el: ".swiper-1 .swiper-pagination",
       },
     });
 
@@ -260,20 +260,20 @@ const kds_swiper = {
         disableOnInteraction: false,
       },
       navigation: {
-        nextEl: ".swiper-2 .swiper .swiper-button-next",
-        prevEl: ".swiper-2 .swiper .swiper-button-prev",
+        nextEl: ".swiper-2 .swiper-button-next",
+        prevEl: ".swiper-2 .swiper-button-prev",
       },
       pagination: {
-        el: ".swiper-2 .swiper .swiper-pagination",
+        el: ".swiper-2 .swiper-pagination",
         type: "fraction",
       },
     });
 
     const $eleBanSwiperPlay = document.querySelector(
-      ".swiper-2 .swiper .swiper-button-play"
+      ".swiper-2 .swiper-button-play"
     );
     const $eleBanSwiperStop = document.querySelector(
-      ".swiper-2 .swiper .swiper-button-stop"
+      ".swiper-2 .swiper-button-stop"
     );
 
     if ($eleBanSwiperPlay != null) {
@@ -387,33 +387,33 @@ const kds_tooltip = {
           $cnt.style.display = "block";
           $cnt.setAttribute("tabindex", 0);
           $srTxt.textContent = "닫기";
-          krds_tooltip.tooltipResize($parent, $cnt);
+          kds_tooltip.tooltipResize($parent, $cnt);
         }
         $closeBtn.addEventListener("click", () => {
           $srTxt.textContent = "열기";
           $cnt.style.display = "";
           $cnt.removeAttribute("tabindex");
           $toolBtn.focus();
-          krds_tooltip.tooltipResize($parent, $cnt);
+          kds_tooltip.tooltipResize($parent, $cnt);
         });
 
         window.addEventListener("resize", () => {
-          krds_tooltip.tooltipResize($parent, $cnt);
+          kds_tooltip.tooltipResize($parent, $cnt);
         });
       });
     });
   },
   tooltipResize: ($parent, $cnt) => {
     if (winSize === "mob") {
-      krds_tooltip.tooltipMob($parent, $cnt);
+      kds_tooltip.tooltipMob($parent, $cnt);
     } else {
-      krds_tooltip.tooltipPc($cnt);
+      kds_tooltip.tooltipPc($cnt);
     }
     window.addEventListener("resize", () => {
       if (winSize === "mob") {
         krds_tooltip.tooltipMob($cnt);
       } else {
-        krds_tooltip.tooltipPc($cnt);
+        kds_tooltip.tooltipPc($cnt);
       }
     });
   },

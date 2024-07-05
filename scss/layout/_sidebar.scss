@@ -14,12 +14,12 @@
   display: none;
 }
 #sideMenu {
-  position: fixed;
+  position: relative;
   left: 0;
   top: 0;
-  width: 300px;
-  height: 100vh;
-  background: rgba(29, 34, 139, 0.9);
+  width: $sideMenu-height;
+  height: 100%;
+  background: var(--krds-primary-60);
   z-index: 999;
 }
 /* logo */
@@ -55,14 +55,11 @@
 }
 
 .dropdown-ul li a:hover {
-  color: rgba(0, 0, 0, 1);
+  color: var(--krds-gray-10);
   transition: color 0.15s ease-in;
 }
 .side-nav li .left-tit .icon img {
   filter: opacity(0.5);
-}
-.side-nav li.open .left-tit .icon img {
-  filter: opacity(1);
 }
 
 .dropdown-ul li a i {

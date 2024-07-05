@@ -1,19 +1,21 @@
 #skipNav {
-  position: relative;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
 }
 #skipNav a {
   position: absolute;
-  left: 0px;
-  top: -50px;
-  border: 1px solid #fff;
-  color: #fff;
-  background: #333;
-  line-height: 30px;
-  width: 100%;
-  text-align: center;
-  z-index: 1000;
-}
-#skipNav a:active,
-#skipNav a:focus {
   top: 0;
+  width: 100%;
+  height: 50px;
+  background: #000;
+  color: #fff;
+  text-align: center;
+  line-height: 50px;
+  transform: translateY(-100%);
+}
+#skipNav a:focus,
+#skipNav a:active {
+  transform: translateY(0);
 }
