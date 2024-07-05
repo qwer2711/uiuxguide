@@ -47,7 +47,7 @@
     <![endif]-->
     <style>
         .right-layout {
-            width: calc(85% - 50px);
+            width: calc(68% - 50px);
             padding-right: 50px;
             gap: var(--krds-spacer-15);
             padding: 30px 0;
@@ -89,6 +89,22 @@
         .accordion-body {
             width: 100%;
         }
+
+        .quick-move {
+            position: fixed;
+            top: 2rem;
+            left: 2rem;
+            background: rgba(232, 233, 255, 0.363);
+            padding: 2rem;
+            border-radius: 10px;
+            z-index: 1000;
+        }
+
+        .quick-move li a {
+            color: var(--krds-primary-60);
+            text-decoration: underline;
+            font-size: 1.4rem;
+        }
     </style>
 </head>
 
@@ -97,6 +113,41 @@
     <!-- 왼쪽메뉴 영역 -->
     <div class="flex-row gap-10">
         <div class="right-layout flex-col">
+            <ul class="quick-move">
+                <li><a href="#move_01">01_헤더</a></li>
+                <li><a href="#move_02">02_푸터(Footer)</a></li>
+                <li><a href="#move_03">03_건너뛰기 링크(Skip link)</a></li>
+                <li><a href="#move_04">04_브레드크럼(Breadcrumb)</a></li>
+                <li><a href="#move_05">05_콘텐츠 내 탐색(In-page navigation)</a></li>
+                <li><a href="#move_06">06_페이지네이션(Pagination)_</a></li>
+                <li><a href="#move_07">07_달력(Calendar)_</a></li>
+                <li><a href="#move_08">08_디스클로저(Disclosure)</a></li>
+                <li><a href="#move_091">09_01_모달(Modal)_기본형</a></li>
+                <li><a href="#move_092">09_02_모달(Modal)_얼랏형</a></li>
+                <li><a href="#move_10">10_배지(Badge)</a></li>
+                <li><a href="#move_11">11_아코디언(Accordion)</a></li>
+                <li><a href="#move_12">12_캐러셀(Carousel) :: 슬라이더</a></li>
+                <li><a href="#move_13">13_탭(Tab)</a></li>
+                <li><a href="#move_14">14_표(Table)</a></li>
+                <li><a href="#move_15">15_링크(Link)</a></li>
+                <li><a href="#move_16">16_버튼(Button)</a></li>
+                <li><a href="#move_17">17_라디오 버튼(Radio button)</a></li>
+                <li><a href="#move_18">18_체크박스(Checkbox)</a></li>
+                <li><a href="#move_19">19_셀렉트(Select Box)</a></li>
+                <li><a href="#move_20">20_태그(Tag)</a></li>
+                <li><a href="#move_21">21_단계 표시기(Step indicator)</a></li>
+                <li><a href="#move_22">22_스피너(Spinner) :: 로딩</a></li>
+                <li><a href="#move_23">23_툴팁(Tooltip)</a></li>
+                <li><a href="#move_24">24_날짜 입력 필드(Date input)</a></li>
+                <li><a href="#move_25">25_텍스트 입력 필드(Text input)</a></li>
+                <li><a href="#move_26">26_오류(Error)</a></li>
+                <li><a href="#move_27">27_텍스트 영역(Textarea)</a></li>
+                <li><a href="#move_28">28_파일 업로드(File upload)</a></li>
+                <li><a href="#move_29">29_개인 식별 정보 입력</a></li>
+                <li><a href="#move_30">30_검색(Search)</a></li>
+                <li><a href="#move_31">31_로그인폼(Login Form)</a></li>
+                <li><a href="#move_32">32_필터링정렬폼</a></li>
+            </ul>
             <h3>01_헤더</h3>
             <div id="move_01" class="com_01">
                 <h2>추후 추가 예정</h2>
@@ -162,7 +213,6 @@
                 </div>
                 <!-- //[ HTML 코드 확인 ] -->
             </div>
-
             <h3>04_브레드크럼</h3>
             <div id="move_04" class="com_04">
                 <!-- breadcrumb -->
@@ -199,8 +249,8 @@
                 </div>
                 <!-- //[ HTML 코드 확인 ] -->
             </div>
-            <h3>02_사이트 내 재탐색</h3>
-            <div id="move_04" class="com_05">
+            <h3>05_사이트 내 재탐색</h3>
+            <div id="move_05" class="com_05">
                 <!-- 사이드 내 재탐색 -->
                 <div class="quick-nav-area pc-only">
                     <div class="quick-title-wrap">
@@ -257,8 +307,8 @@
                 </div>
                 <!-- //[ HTML 코드 확인 ] -->
             </div>
-            <h3>03_페이지네이션</h3>
-            <div id="move_07" class="com_06">
+            <h3>06_페이지네이션</h3>
+            <div id="move_06" class="com_06">
                 <!-- paging : 웹 -->
                 <h2>웹 페이지네이션(반응형)</h2>
                 <div class="pagination w-page">
@@ -351,8 +401,8 @@
                 </div>
                 <!-- //[ HTML 코드 확인 ] -->
             </div>
-            <h3>04_달력</h3>
-            <div id="move_08" class="com_07">
+            <h3>07_달력</h3>
+            <div id="move_07" class="com_07">
                 <div id="source-calendar" class="calendar"></div>
                 <!-- [ HTML 코드 확인 ] -->
                 <div class="accordion code-box">
@@ -370,8 +420,8 @@
                 </div>
                 <!-- //[ HTML 코드 확인 ] -->
             </div>
-            <h3>05_디스클로져</h3>
-            <div id="move_09" class="com_08">
+            <h3>08_디스클로져</h3>
+            <div id="move_08" class="com_08">
                 <div class="krds-disclosure conts-expand-area">
                     <button type="button" class="btn-conts-expand">신청 서비스안내</button>
                     <div class="expand-wrap">
@@ -409,8 +459,8 @@
                 </div>
                 <!-- //[ HTML 코드 확인 ] -->
             </div>
-            <h3>06_01_모달(기본형)</h3>
-            <div id="move_10" class="com_9">
+            <h3>09_01_모달(기본형)</h3>
+            <div id="move_091" class="com_09">
                 <button type="button" class="btn open-modal" data-target="modal_sample_01">기본형
                     호출</button>
                 <!-- modal -->
@@ -552,8 +602,8 @@
                 </div>
                 <!-- //[ HTML 코드 확인 ] -->
             </div>
-            <h3>06_02_모달(얼럿형)</h3>
-            <div id="move_04" class="com_10">
+            <h3>09_02_모달(얼럿형)</h3>
+            <div id="move_092" class="com_09">
                 <button type="button" class="btn tertiary open-modal" data-target="modal_sample_02">얼렷형
                     호출</button>
                 <!-- modal -->
@@ -641,8 +691,8 @@
                 </div>
                 <!-- //[ HTML 코드 확인 ] -->
             </div>
-            <h3>07_뱃지</h3>
-            <div id="move_11" class="com_11">
+            <h3>10_뱃지</h3>
+            <div id="move_10" class="com_10">
                 <!-- 숫자 뱃지 -->
                 <button type="button" class="btn btn-txt ico-filter h-auto">
                     <span class="span">필터</span>
@@ -669,8 +719,8 @@
                 </div>
                 <!-- //[ HTML 코드 확인 ] -->
             </div>
-            <h3>08_아코디언</h3>
-            <div id="move_12" class="com_12">
+            <h3>11_아코디언</h3>
+            <div id="move_11" class="com_11">
                 <!-- accordion -->
                 <div class="accordion">
                     <div class="accordion-item">
@@ -770,8 +820,8 @@
                 </div>
                 <!-- //[ HTML 코드 확인 ] -->
             </div>
-            <h3>09_캐러셀(슬라이드)</h3>
-            <div id="move_13" class="com_13">
+            <h3>12_캐러셀(슬라이드)</h3>
+            <div id="move_12" class="com_12">
                 <!-- 메인배너 -->
                 <h2 style="margin-top:30px">메인 배너</h2>
                 <div class="swiper-1" style="width: 100%; height: 550px; border: 1px solid #eee;">
@@ -904,18 +954,19 @@
                 </div>
                 <!-- //[ HTML 코드 확인 ] -->
             </div>
-            <h3>10_탭</h3>
-            <div id="move_14" class="com_14">
+            <h3>13_탭</h3>
+            <div id="move_13" class="com_13">
                 <div class="tab-area layer">
                     <!-- tab list -->
                     <div class="tab line full">
                         <ul role="tablist">
                             <li id="tab_login_01" aria-selected="true" aria-controls="panel_login_01" class="active">
-                                <button type="button" class="btn-tab">일반 회원 로그인 <i class="sr-only created"> 선택됨</i><i
-                                        class="sr-only created"> 선택됨</i></button>
+                                <button type="button" class="btn-tab">일반 회원 로그인 <i class="sr-only created">
+                                        선택됨</i><i class="sr-only created"> 선택됨</i></button>
                             </li>
-                            <li id="tab_login_02" aria-selected="false" aria-controls="panel_login_02" class=""><button
-                                    type="button" class="btn-tab">기관 회원 로그인</button></li>
+                            <li id="tab_login_02" aria-selected="false" aria-controls="panel_login_02" class="">
+                                <button type="button" class="btn-tab">기관 회원 로그인</button>
+                            </li>
                         </ul>
                     </div>
                     <!-- //tab list -->
@@ -1039,8 +1090,8 @@
                 </div>
                 <!-- //[ HTML 코드 확인 ] -->
             </div>
-            <h3>11_기본 테이블(표)</h3>
-            <div id="move_15" class="com_15">
+            <h3>14_기본 테이블(표)</h3>
+            <div id="move_14" class="com_14">
                 <!-- table list -->
                 <div class="tbl-wrap">
                     <table class="tbl">
@@ -1238,8 +1289,8 @@
                 </div>
                 <!-- //[ HTML 코드 확인 ] -->
             </div>
-            <h3>12_링크</h3>
-            <div id="move_16" class="com_16">
+            <h3>15_링크</h3>
+            <div id="move_15" class="com_15">
                 <!-- 링크버튼 -->
                 <a href="#" class="btn btn-txt ico-arr sm underline">링크</a>
                 <button type="button" class="btn sm btn-txt ico-go">바로가기</button>
@@ -1264,8 +1315,8 @@
                 </div>
                 <!-- //[ HTML 코드 확인 ] -->
             </div>
-            <h3>13_버튼</h3>
-            <div id="move_17" class="com_17 flex-row gap-10" style="flex-wrap: wrap;">
+            <h3>16_버튼</h3>
+            <div id="move_16" class="com_16 flex-row gap-10" style="flex-wrap: wrap;">
                 <!-- 버튼 종류 -->
                 <button type="button" class="btn primary">버튼 : primary</button>
                 <button type="button" class="btn secondary">버튼 : secondary</button>
@@ -1309,8 +1360,8 @@
                 </div>
                 <!-- //[ HTML 코드 확인 ] -->
             </div>
-            <h3>14_라디오버튼 기본</h3>
-            <div id="move_18" class="com_18 flex-col gap-10">
+            <h3>17_라디오버튼 기본</h3>
+            <div id="move_17" class="com_17 flex-col gap-10">
                 <h3>라디오버튼 기본형</h3>
                 <div class="chk-area">
                     <div class="form-check">
@@ -1488,8 +1539,8 @@
                 </div>
                 <!-- //[ HTML 코드 확인 ] -->
             </div>
-            <h3>15_체크박스 기본</h3>
-            <div id="move_19" class="com_19 flex-col gap-10">
+            <h3>18_체크박스 기본</h3>
+            <div id="move_18" class="com_18 flex-col gap-10">
                 <div class="chk-area">
                     <h3>체크박스 기본형</h3>
                     <div class="form-check">
@@ -1586,8 +1637,8 @@
                 </div>
                 <!-- //[ HTML 코드 확인 ] -->
             </div>
-            <h3>16_셀렉트</h3>
-            <div id="move_20" class="com_20 flex-col gap-10">
+            <h3>19_셀렉트</h3>
+            <div id="move_19" class="com_19 flex-col gap-10">
                 <select class="form-select">
                     <option value="">Size : lg</option>
                     <option value="">항목</option>
@@ -1647,8 +1698,8 @@
                 </div>
                 <!-- //[ HTML 코드 확인 ] -->
             </div>
-            <h3>17_태그</h3>
-            <div id="move_21" class="com_21">
+            <h3>20_태그</h3>
+            <div id="move_20" class="com_20">
                 <div class="wd-100 flex-row gap-10">
                     <span class="btn-chip-outline">
                         Input-chips
@@ -1702,8 +1753,8 @@
                 </div>
                 <!-- //[ HTML 코드 확인 ] -->
             </div>
-            <h3>18_단계표시기</h3>
-            <div id="move_22" class="com_22">
+            <h3>21_단계표시기</h3>
+            <div id="move_21" class="com_21">
                 <!-- 스텝 -->
                 <ol class="step-wrap">
                     <li class="done">
@@ -1787,8 +1838,8 @@
                 </div>
                 <!-- //[ HTML 코드 확인 ] -->
             </div>
-            <h3>19_스피너(로딩)</h3>
-            <div id="move_23" class="com_23">
+            <h3>22_스피너(로딩)</h3>
+            <div id="move_22" class="com_22">
                 <!-- spinner -->
                 <div class="spinner">
                     Loading data..
@@ -1813,8 +1864,8 @@
                 </div>
                 <!-- //[ HTML 코드 확인 ] -->
             </div>
-            <h3>20_툴팁</h3>
-            <div id="move_24" class="com_24 flex-row align-center" style="flex-wrap: wrap;">
+            <h3>23_툴팁</h3>
+            <div id="move_23" class="com_23 flex-row align-center" style="flex-wrap: wrap;">
                 <!-- tooltip : 위치 - 상단 왼쪽 -->
                 <div class="krds-tooltip-wrap top left">
                     <div class="tool-txt">
@@ -1826,7 +1877,8 @@
                     <div class="tool-in">
                         <h4 class="tool-tit">도움말 제목</h4>
                         <div class="tool-cnt">
-                            <p>컴포넌트 주변에 배치되어 해당 컴포넌트의 상태나 관련된 상세 정보를 제공하는 컴포넌트이다. 맥락적 도움말은 정보 아이콘이나 도움 아이콘 버튼을 통해 사용자가
+                            <p>컴포넌트 주변에 배치되어 해당 컴포넌트의 상태나 관련된 상세 정보를 제공하는 컴포넌트이다. 맥락적 도움말은 정보 아이콘이나 도움 아이콘 버튼을 통해
+                                사용자가
                                 요청하는 경우에만 화면에
                                 표시된다.</p>
                             <p><a href="#" class="btn btn-txt ico-arr xsm">바로가기</a></p>
@@ -1849,7 +1901,8 @@
                     <div class="tool-in">
                         <h4 class="tool-tit">도움말 제목</h4>
                         <div class="tool-cnt">
-                            <p>컴포넌트 주변에 배치되어 해당 컴포넌트의 상태나 관련된 상세 정보를 제공하는 컴포넌트이다. 맥락적 도움말은 정보 아이콘이나 도움 아이콘 버튼을 통해 사용자가
+                            <p>컴포넌트 주변에 배치되어 해당 컴포넌트의 상태나 관련된 상세 정보를 제공하는 컴포넌트이다. 맥락적 도움말은 정보 아이콘이나 도움 아이콘 버튼을 통해
+                                사용자가
                                 요청하는 경우에만 화면에
                                 표시된다.</p>
                             <p><a href="#" class="btn btn-txt ico-arr xsm">바로가기</a></p>
@@ -1872,7 +1925,8 @@
                     <div class="tool-in">
                         <h4 class="tool-tit">도움말 제목</h4>
                         <div class="tool-cnt">
-                            <p>컴포넌트 주변에 배치되어 해당 컴포넌트의 상태나 관련된 상세 정보를 제공하는 컴포넌트이다. 맥락적 도움말은 정보 아이콘이나 도움 아이콘 버튼을 통해 사용자가
+                            <p>컴포넌트 주변에 배치되어 해당 컴포넌트의 상태나 관련된 상세 정보를 제공하는 컴포넌트이다. 맥락적 도움말은 정보 아이콘이나 도움 아이콘 버튼을 통해
+                                사용자가
                                 요청하는 경우에만 화면에
                                 표시된다.</p>
                             <p><a href="#" class="btn btn-txt ico-arr xsm">바로가기</a></p>
@@ -1895,7 +1949,8 @@
                     <div class="tool-in">
                         <h4 class="tool-tit">도움말 제목</h4>
                         <div class="tool-cnt">
-                            <p>컴포넌트 주변에 배치되어 해당 컴포넌트의 상태나 관련된 상세 정보를 제공하는 컴포넌트이다. 맥락적 도움말은 정보 아이콘이나 도움 아이콘 버튼을 통해 사용자가
+                            <p>컴포넌트 주변에 배치되어 해당 컴포넌트의 상태나 관련된 상세 정보를 제공하는 컴포넌트이다. 맥락적 도움말은 정보 아이콘이나 도움 아이콘 버튼을 통해
+                                사용자가
                                 요청하는 경우에만 화면에
                                 표시된다.</p>
                             <p><a href="#" class="btn btn-txt ico-arr xsm">바로가기</a></p>
@@ -1918,7 +1973,8 @@
                     <div class="tool-in">
                         <h4 class="tool-tit">도움말 제목</h4>
                         <div class="tool-cnt">
-                            <p>컴포넌트 주변에 배치되어 해당 컴포넌트의 상태나 관련된 상세 정보를 제공하는 컴포넌트이다. 맥락적 도움말은 정보 아이콘이나 도움 아이콘 버튼을 통해 사용자가
+                            <p>컴포넌트 주변에 배치되어 해당 컴포넌트의 상태나 관련된 상세 정보를 제공하는 컴포넌트이다. 맥락적 도움말은 정보 아이콘이나 도움 아이콘 버튼을 통해
+                                사용자가
                                 요청하는 경우에만 화면에
                                 표시된다.</p>
                             <p><a href="#" class="btn btn-txt ico-arr xsm">바로가기</a></p>
@@ -1941,7 +1997,8 @@
                     <div class="tool-in">
                         <h4 class="tool-tit">도움말 제목</h4>
                         <div class="tool-cnt">
-                            <p>컴포넌트 주변에 배치되어 해당 컴포넌트의 상태나 관련된 상세 정보를 제공하는 컴포넌트이다. 맥락적 도움말은 정보 아이콘이나 도움 아이콘 버튼을 통해 사용자가
+                            <p>컴포넌트 주변에 배치되어 해당 컴포넌트의 상태나 관련된 상세 정보를 제공하는 컴포넌트이다. 맥락적 도움말은 정보 아이콘이나 도움 아이콘 버튼을 통해
+                                사용자가
                                 요청하는 경우에만 화면에
                                 표시된다.</p>
                             <p><a href="#" class="btn btn-txt ico-arr xsm">바로가기</a></p>
@@ -2128,8 +2185,8 @@
                 </div>
                 <!-- //[ HTML 코드 확인 ] -->
             </div>
-            <h3>21_Input[type=date]</h3>
-            <div id="move_25" class="com_25">
+            <h3>24_Input[type=date]</h3>
+            <div id="move_24" class="com_24">
                 <!-- Input type=date -->
                 <div class="form-group">
                     <div class="form-tit">
@@ -2165,8 +2222,8 @@
                 </div>
                 <!-- //[ HTML 코드 확인 ] -->
             </div>
-            <h3>22_Input[type=text]</h3>
-            <div id="move_26" class="com_26">
+            <h3>25_Input[type=text]</h3>
+            <div id="move_25" class="com_25">
                 <!-- Input type=text -->
                 <div class="form-group">
                     <div class="form-tit">
@@ -2202,8 +2259,8 @@
                 </div>
                 <!-- //[ HTML 코드 확인 ] -->
             </div>
-            <h3>23_Input[type=text]_오류</h3>
-            <div id="move_27" class="com_27">
+            <h3>26_Input[type=text]_오류</h3>
+            <div id="move_26" class="com_26">
                 <!-- 폼그룹 -->
                 <div class="form-group">
                     <div class="form-tit">
@@ -2240,8 +2297,8 @@
                 </div>
                 <!-- //[ HTML 코드 확인 ] -->
             </div>
-            <h3>24_Textarea</h3>
-            <div id="move_28" class="com_28">
+            <h3>27_Textarea</h3>
+            <div id="move_27" class="com_27">
                 <!-- 텍스트영역 -->
                 <div class="form-group">
                     <div class="form-tit">
@@ -2285,8 +2342,8 @@
                 </div>
                 <!-- //[ HTML 코드 확인 ] -->
             </div>
-            <h3>25_파일업로드</h3>
-            <div id="move_29" class="com_29">
+            <h3>28_파일업로드</h3>
+            <div id="move_28" class="com_28">
                 <!-- 파일업로드 -->
                 <div class="file-upload">
                     <p class="txt">첨부할 파일을 여기에 끌어다 놓거나, 파일 선택 버튼을 눌러 파일을 직접 선택해주세요.</p>
@@ -2458,8 +2515,8 @@
                 </div>
                 <!-- //[ HTML 코드 확인 ] -->
             </div>
-            <h3>26_개인정보식별입력</h3>
-            <div id="move_30" class="com_30">
+            <h3>29_개인정보식별입력</h3>
+            <div id="move_29" class="com_29">
                 <!-- 폼그룹 -->
                 <div class="form-group">
                     <div class="form-tit">
@@ -2558,8 +2615,8 @@
                 </div>
                 <!-- //[ HTML 코드 확인 ] -->
             </div>
-            <h3>27_검색</h3>
-            <div id="move_31" class="com_31">
+            <h3>30_검색</h3>
+            <div id="move_30" class="com_30">
                 <!-- 검색 입력폼 -->
                 <fieldset>
                     <legend>가이드 관련 키워드 검색</legend>
@@ -2639,8 +2696,8 @@
                 </div>
                 <!-- //[ HTML 코드 확인 ] -->
             </div>
-            <h3>로그인폼</h3>
-            <div id="move_32" class="com_32">
+            <h3>31_로그인폼</h3>
+            <div id="move_31" class="com_31">
                 <div style="width: 500px;">
                     <fieldset>
                         <legend>로그인 폼</legend>
@@ -2744,8 +2801,8 @@
                 </div>
                 <!-- //[ HTML 코드 확인 ] -->
             </div>
-            <h3>필터검색폼</h3>
-            <div id="move_33" class="com_33">
+            <h3>32_필터검색폼</h3>
+            <div id="move_32" class="com_32">
                 <!-- 검색 입력폼 -->
                 <div class="search-top-box">
                     <div class="sch-filter-box">
@@ -2964,7 +3021,6 @@
                 </div>
                 <!-- //[ HTML 코드 확인 ] -->
             </div>
-
             <button class="btn tertiary sm go-top" type="button">TOP</button>
         </div>
     </div>
