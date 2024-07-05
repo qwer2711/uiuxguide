@@ -22,7 +22,6 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
   box-sizing: border-box;
   display: flex;
   flex-direction: row;
@@ -39,7 +38,10 @@
   width: calc(100% - #{$sideMenu-height});
   height: 100%;
   box-sizing: border-box;
-  background: #eee;
+  padding-bottom: var(--krds-spacer-10);
+  display: flex;
+  flex-direction: column;
+  gap: var(--krds-spacer-10);
 }
 
 [data-page="main"] #contents {
