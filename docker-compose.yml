@@ -1,0 +1,21 @@
+version: "3.8"
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile # 읽어들일 Dockerfile
+    ports:
+      - "8080:8080"
+      - "443:443"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro # conf의 위치 (ro = read only)
+      - .:/usr/share/nginx/html # nginx가 가지고 있을 WAS의 위치
+      # 환경변수 지정
+    environment:
+      - NODE_ENV=production
+
+    command: ["nginx", "-g", "daemon off;"]
+# 영구적으로 저장할 volume을 지정해주세요
+volumes:
+  app-data:
