@@ -20,7 +20,7 @@
 * 초기화 : reset
 ******************************** */
 /*  @import reset.scss */
-@import url(..//css/plugin/fullcalender.min.css);
+@import url(../css/plugin/fullcalender.min.css);
 html,
 body {
   position: relative;
