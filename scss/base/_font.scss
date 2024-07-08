@@ -5,7 +5,7 @@
   font-family: "Pretendard GOV";
   font-weight: 400;
   font-style: normal;
-  src: url("../../font/pretendardGOV/PretendardGOV-Regular.subset.woff")
+  src: url("(#{$url}/font/pretendardGOV/PretendardGOV-Regular.subset.woff")
     format("woff");
 }
 /* Medium */
@@ -13,7 +13,7 @@
   font-family: "Pretendard GOV";
   font-weight: 500;
   font-style: normal;
-  src: url("../../font/pretendardGOV/PretendardGOV-Medium.subset.woff")
+  src: url("(#{$url}/font/pretendardGOV/PretendardGOV-Medium.subset.woff")
     format("woff");
 }
 /* Bold */
@@ -21,6 +21,6 @@
   font-family: "Pretendard GOV";
   font-weight: 700;
   font-style: normal;
-  src: url("../../font/pretendardGOV/PretendardGOV-Bold.subset.woff")
+  src: url("(#{$url}/font/pretendardGOV/PretendardGOV-Bold.subset.woff")
     format("woff");
 }

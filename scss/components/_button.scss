@@ -474,16 +474,16 @@
     background-size: 1.6rem;
   }
   &.ico-pw-visible {
-    background-image: url(#{$url}/component/common/ico_pw_visible.svg);
+    background-image: url(#{$url}/ico/components/common/ico_pw_visible.svg);
   }
   &.ico-help {
-    background-image: url(#{$url}/component/common/ico_help_24.svg);
+    background-image: url(#{$url}/ico/components/common/ico_help_24.svg);
   }
   &.ico-page-prev {
     border-radius: 10rem;
     border: 0.1rem solid var(--#{$prefix}gray-40);
     background-color: var(--#{$prefix}white);
-    background-image: url(#{$url}/component/common/ico_swiper_prev.svg);
+    background-image: url(#{$url}/ico/components/common/ico_swiper_prev.svg);
     background-size: 2.4rem;
     &.disabled {
       background-color: var(--#{$prefix}secondary-5);
@@ -493,7 +493,7 @@
     border-radius: 10rem;
     border: 0.1rem solid var(--#{$prefix}gray-40);
     background-color: var(--#{$prefix}white);
-    background-image: url(#{$url}/component/common/ico_swiper_next.svg);
+    background-image: url(#{$url}/ico/components/common/ico_swiper_next.svg);
     background-size: 2.4rem;
     &.disabled {
       background-color: var(--#{$prefix}secondary-5);
