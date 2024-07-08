@@ -31,10 +31,10 @@
   background-color: var(--krds-white);
 }
 .swiper-button-prev::after {
-  background-image: url(#{$url}/ico/components/common/ico_swiper_prev.svg);
+  background-image: url(#{$url}images/ico/components/common/ico_swiper_prev.svg);
 }
 .swiper-button-next::after {
-  background-image: url(#{$url}/ico/components/common/ico_swiper_next.svg);
+  background-image: url(#{$url}images/ico/components/common/ico_swiper_next.svg);
 }
 
 .swiper-button-next::after,
@@ -43,10 +43,10 @@
   background-size: contain;
 }
 .swiper-button-stop::after {
-  background-image: url(#{$url}/ico/components/common/ico_swiper_stop.svg);
+  background-image: url(#{$url}images/ico/components/common/ico_swiper_stop.svg);
 }
 .swiper-button-play::after {
-  background-image: url(#{$url}/ico/components/common/ico_swiper_play.svg);
+  background-image: url(#{$url}images/ico/components/common/ico_swiper_play.svg);
 }
 
 /* 커스텀 */

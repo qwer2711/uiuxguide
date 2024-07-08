@@ -60,7 +60,7 @@
             .btn-del {
               width: var(--#{$prefix}btnChipOutline-size-#{$key});
               height: var(--#{$prefix}btnChipOutline-size-#{$key});
-              background: url(#{$url}/ico/components/common/ico_chip_del.svg)
+              background: url(#{$url}images/ico/components/common/ico_chip_del.svg)
                 no-repeat 0 0;
               background-size: contain;
             }
@@ -76,7 +76,7 @@
             .btn-del {
               width: var(--#{$prefix}btnChipOutline-size-#{$default});
               height: var(--#{$prefix}btnChipOutline-size-#{$default});
-              background: url(#{$url}/ico/components/common/ico_chip_del.svg)
+              background: url(#{$url}images/ico/components/common/ico_chip_del.svg)
                 no-repeat 0 0;
               background-size: contain;
               &:focus {

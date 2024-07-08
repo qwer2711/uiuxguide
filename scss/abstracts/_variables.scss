@@ -6,7 +6,7 @@
 $prefix: krds- !default;
 
 //url 대치
-$url: "../images" !default;
+$url: "../" !default;
 
 // layout-size
 $sideMenu-height: 300px;
@@ -104,6 +104,7 @@ $point-colors: (
 ) !default;
 
 //gray colors
+$gray-0: #ffffff !default;
 $gray-5: #f8f8f8 !default;
 $gray-10: #f0f0f0 !default;
 $gray-20: #e4e4e4 !default;
@@ -126,6 +127,23 @@ $gray-colors: (
   "70": $gray-70,
   "80": $gray-80,
   "90": $gray-90,
+) !default;
+
+//text colors
+$text-title: $gray-90 !default;
+$text-detail: $gray-70 !default;
+$text-colors: (
+  "title": $text-title,
+  "detail": $text-detail,
+) !default;
+
+$background-base: $gray-0 !default;
+$background-layer-1: $gray-5 !default;
+$background-layer-2: $secondary-5 !default;
+$background-colors: (
+  "base": $background-base,
+  "layer-1": $background-layer-1,
+  "layer-2": $background-layer-2,
 ) !default;
 
 //breakpoints

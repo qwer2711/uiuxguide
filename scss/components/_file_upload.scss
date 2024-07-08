@@ -60,10 +60,10 @@
         background-repeat: no-repeat;
         background-position: center;
         &.error {
-          background-image: url(#{$url}/ico/components/common/ico_invalid_error.svg);
+          background-image: url(#{$url}images/ico/components/common/ico_invalid_error.svg);
         }
         &.ok {
-          background-image: url(#{$url}/ico/components/common/ico_invalid_ok.svg);
+          background-image: url(#{$url}images/ico/components/common/ico_invalid_ok.svg);
         }
       }
     }

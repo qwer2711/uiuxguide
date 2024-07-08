@@ -14,8 +14,8 @@
   color: var(--#{$prefix}gray-90);
   transition: $transition-base;
   &.cal {
-    background: url(#{$url}/component/common/ico_calendar.svg) no-repeat right
-      1.6rem top 50%;
+    background: url(#{$url}images/ico/component/common/ico_calendar.svg)
+      no-repeat right 1.6rem top 50%;
     background-size: 2.4rem;
   }
 }
@@ -146,33 +146,6 @@ input[type="text"]::-ms-clear {
 }
 .form-control:placeholder-shown {
   @include ellipsis(1);
-}
-
-/* 날짜선택 */
-.datepicker-input {
-  position: relative;
-  z-index: 1;
-  .form-control {
-    padding-right: (var(--#{$prefix}spacer-14));
-    background-image: none;
-  }
-  .form-btn-datepicker {
-    position: absolute;
-    top: 50%;
-    right: 0.8rem;
-    width: 4rem;
-    height: 4rem;
-    padding: var(--#{$prefix}spacer-4);
-    transform: translateY(-50%);
-    background: url(../../img/component/common/ico_calendar.svg) no-repeat
-      center;
-    background-size: 2.4rem;
-  }
-  .range {
-    &::after {
-      display: none;
-    }
-  }
 }
 
 /* form layouts */
@@ -359,7 +332,7 @@ input[type="checkbox"] {
         @include position($t: $pos, $l: $pos);
         width: var(--#{$prefix}chk-primary-chk-#{$size});
         height: var(--#{$prefix}chk-primary-chk-#{$size});
-        background: url(#{$url}/component/common/ico_check_primary_checked.svg)
+        background: url(#{$url}images/ico/component/common/ico_check_primary_checked.svg)
           no-repeat 0 0;
         background-size: contain;
         opacity: 0;
@@ -384,7 +357,7 @@ input[type="checkbox"] {
           background-color: var(--#{$prefix}gray-20);
         }
         &:after {
-          background-image: url(#{$url}/component/common/ico_check_primary_disabled.svg);
+          background-image: url(#{$url}images/ico/component/common/ico_check_primary_disabled.svg);
         }
       }
     }
@@ -424,7 +397,7 @@ input[type="checkbox"] {
           @include position($t: $pos, $l: $pos);
           width: var(--#{$prefix}chk-secondary-chk-#{$size});
           height: var(--#{$prefix}chk-secondary-chk-#{$size});
-          background: url(#{$url}/component/common/ico_check_secondary.svg)
+          background: url(#{$url}images/ico/component/common/ico_check_secondary.svg)
             no-repeat 0 0;
           opacity: 1;
         }
@@ -436,7 +409,7 @@ input[type="checkbox"] {
             border-color: transparent;
           }
           &:after {
-            background-image: url(#{$url}/component/common/ico_check_secondary_checked.svg);
+            background-image: url(#{$url}images/ico/component/common/ico_check_secondary_checked.svg);
           }
         }
       }
@@ -447,7 +420,7 @@ input[type="checkbox"] {
             border-color: transparent;
           }
           &:after {
-            background-image: url(#{$url}/component/common/ico_check_secondary_disabled.svg);
+            background-image: url(#{$url}images/ico/component/common/ico_check_secondary_disabled.svg);
           }
         }
       }
@@ -492,7 +465,7 @@ input[type="checkbox"] {
           &.btn-txt {
             &.ico-arr {
               &::after {
-                background-image: url(#{$url}/component/common/ico_arr_20_right_disabled.svg);
+                background-image: url(#{$url}images/ico/component/common/ico_arr_20_right_disabled.svg);
                 background-position: center;
                 background-size: 1.6rem;
               }

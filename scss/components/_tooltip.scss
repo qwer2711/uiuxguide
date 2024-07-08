@@ -14,8 +14,8 @@
       content: "";
       width: 2rem;
       height: 2rem;
-      background: url(#{$url}/ico/components/common/ico_tooltip.svg) no-repeat
-        center;
+      background: url(#{$url}images/ico/components/common/ico_tooltip.svg)
+        no-repeat center;
       background-size: contain;
     }
   }
@@ -36,8 +36,8 @@
       z-index: 4;
       width: 2.2rem;
       height: 1.2rem;
-      background: url(#{$url}/ico/components/common/ico_tool_arr.svg) no-repeat
-        center;
+      background: url(#{$url}images/ico/components/common/ico_tool_arr.svg)
+        no-repeat center;
       background-size: contain;
     }
     .tool-hd {
@@ -56,7 +56,7 @@
       right: var(--krds-spacer-3);
       width: 4rem;
       height: 4rem;
-      background: url(#{$url}/ico/components/common/ico_del.svg) no-repeat
+      background: url(#{$url}images/ico/components/common/ico_del.svg) no-repeat
         center;
     }
     .tool-cnt {

@@ -26,7 +26,7 @@
         content: "";
         width: 2rem;
         height: 2rem;
-        background-image: url(#{$url}/ico/components/common/ico_page_arr_left.svg);
+        background-image: url(#{$url}images/ico/components/common/ico_page_arr_left.svg);
         background-repeat: no-repeat;
       }
     }
@@ -38,7 +38,7 @@
         content: "";
         width: 2rem;
         height: 2rem;
-        background-image: url(#{$url}/ico/components/common/ico_page_arr_right.svg);
+        background-image: url(#{$url}images/ico/components/common/ico_page_arr_right.svg);
         background-repeat: no-repeat;
       }
     }
@@ -62,7 +62,7 @@
         transition: $transition-base;
       }
       &.link-dot {
-        background-image: url(#{$url}/ico/components/common/ico_page_dot.svg);
+        background-image: url(#{$url}images/ico/components/common/ico_page_dot.svg);
         background-repeat: no-repeat;
         background-position: center;
       }

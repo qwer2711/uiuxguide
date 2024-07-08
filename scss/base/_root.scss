@@ -22,6 +22,14 @@
   @each $num, $value in $gray-colors {
     --#{$prefix}gray-#{$num}: #{$value};
   }
+  /* **** 공통color_06 :: Text 색상 ****/
+  @each $num, $value in $text-colors {
+    --#{$prefix}text-#{$num}: #{$value};
+  }
+  /* **** 공통color_06 :: Text 색상 ****/
+  @each $num, $value in $background-colors {
+    --#{$prefix}background-#{$num}: #{$value};
+  }
   /* **** 공통shape_01 :: Font-size ****/
   @each $type, $size in map-get($font-size, "sizes") {
     @each $key, $value in $size {

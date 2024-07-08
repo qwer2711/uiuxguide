@@ -39,7 +39,8 @@
   content: "";
   width: 2.4rem;
   height: 2.4rem;
-  background: url(#{$url}/ico/components/common/ico_select.svg) no-repeat center;
+  background: url(#{$url}images/ico/components/common/ico_select.svg) no-repeat
+    center;
   background-size: 2rem;
   transition: 0.4s ease-in-out;
   transform: rotate(0deg);
